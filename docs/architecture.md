@@ -34,7 +34,8 @@ Three levels of content (see ADR-002):
 3. **Learning item** — what the games teach: a sentence or word with context and skills.
 
 User data (memory states, review log, XP) is stored separately from bundled content and keyed by
-stable item ids, so content packs can be re-seeded without touching progress.
+stable item ids, so content packs can be re-seeded without touching progress. Pack format and
+validation rules: [content.md](content.md).
 
 ## Media
 
