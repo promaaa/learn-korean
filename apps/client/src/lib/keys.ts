@@ -8,46 +8,57 @@ export type Action =
   | { type: "move"; direction: Direction }
   | { type: "replay" }
   | { type: "erase" }
+  | { type: "mode" }
   | { type: "hide" };
 
 export interface KeyLike {
   key: string;
+  /** Physical key (`KeyboardEvent.code`); keeps shortcuts on the same keys on AZERTY, QWERTZ… */
+  code?: string;
   ctrlKey?: boolean;
   altKey?: boolean;
   metaKey?: boolean;
 }
 
 const MOVES: Record<string, Direction> = {
-  h: "left",
-  j: "down",
-  k: "up",
-  l: "right",
+  KeyH: "left",
+  KeyJ: "down",
+  KeyK: "up",
+  KeyL: "right",
   ArrowLeft: "left",
   ArrowDown: "down",
   ArrowUp: "up",
   ArrowRight: "right",
 };
 
+/** Physical key of a Latin letter, for events without a `code`. */
+function letterCode(key: string): string | undefined {
+  return /^[a-z]$/i.test(key) ? `Key${key.toUpperCase()}` : undefined;
+}
+
 export function actionFor(event: KeyLike): Action | null {
   if (event.ctrlKey || event.altKey || event.metaKey) return null;
-  const { key } = event;
-  if (key >= "1" && key <= "9" && key.length === 1) {
-    return { type: "choose", index: Number(key) - 1 };
-  }
-  const direction = MOVES[key] ?? MOVES[key.toLowerCase()];
+  const code = event.code || letterCode(event.key) || event.key;
+
+  // Digit row by position: on AZERTY the unshifted digit row types & é " ' … not 1 2 3 4.
+  const digit = /^(?:Digit|Numpad)([1-9])$/.exec(code)?.[1] ?? (/^[1-9]$/.test(event.key) ? event.key : undefined);
+  if (digit) return { type: "choose", index: Number(digit) - 1 };
+
+  const direction = MOVES[code] ?? MOVES[event.key];
   if (direction) return { type: "move", direction };
-  switch (key) {
+
+  if (code === "KeyR") return { type: "replay" };
+  switch (event.key) {
     case "Enter":
       return { type: "confirm" };
     case " ":
       return { type: "continue" };
-    case "r":
-    case "R":
-      return { type: "replay" };
     case "Backspace":
       return { type: "erase" };
     case "Escape":
       return { type: "hide" };
+    case "Tab":
+      return { type: "mode" };
     default:
       return null;
   }

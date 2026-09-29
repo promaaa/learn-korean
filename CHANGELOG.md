@@ -5,6 +5,15 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+## [0.5.0]
+
+### Added
+- Typing Gym (`Tab`): type Korean lines on an on-screen 2-set (dubeolsik) keyboard that highlights the next key, Shift and finger, with live IME-style composition, strict error counting, WPM, keystrokes per minute, accuracy and streak; rounds of 8 lines from unlocked content, known items first.
+- `korean_core::typing`: dubeolsik layout on physical keys, jamo decomposition, 2-set composition automaton, drill state machine.
+
+### Fixed
+- Shortcuts use physical key positions: the digit row answers on AZERTY keyboards (where it types `& é " '` without Shift).
+
 ## [0.4.0]
 
 ### Changed

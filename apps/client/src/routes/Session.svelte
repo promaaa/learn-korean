@@ -77,7 +77,7 @@
       case "feedback":
         return [{ keys: "Space", label: "next" }, { keys: "R", label: "replay" }, hide];
       default:
-        return [{ keys: "Enter", label: "new session" }, hide];
+        return [{ keys: "Enter", label: "new session" }, { keys: "Tab", label: "typing gym" }, hide];
     }
   }
 
