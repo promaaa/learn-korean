@@ -22,6 +22,7 @@ Tauri 2 · Rust · Svelte 5 · TypeScript · SQLite · FSRS.
 | arrows or `H` `J` `K` `L` | after answering: show the English of each Korean word |
 | `Space` | next card |
 | `R` | replay audio |
+| `F` | focus: words only → words, then sentences → everything |
 | `Tab` | switch between review and Typing Gym |
 | `Esc` | hide |
 

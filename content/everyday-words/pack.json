@@ -1,0 +1,680 @@
+{
+  "id": "everyday-words",
+  "version": 1,
+  "title": "Everyday words",
+  "description": "Common words used by the sentences of the legacy deck.",
+  "unlock_level": 1,
+  "items": [
+    {
+      "id": "everyday-words/student",
+      "kind": "word",
+      "korean": "학생",
+      "english": "student",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "학생"
+      ]
+    },
+    {
+      "id": "everyday-words/to-make-a-mistake",
+      "kind": "word",
+      "korean": "실수하다",
+      "english": "to make a mistake",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "실수하다"
+      ]
+    },
+    {
+      "id": "everyday-words/four",
+      "kind": "word",
+      "korean": "넷",
+      "english": "four",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "넷"
+      ]
+    },
+    {
+      "id": "everyday-words/teacher",
+      "kind": "word",
+      "korean": "선생님",
+      "english": "teacher",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "선생님"
+      ]
+    },
+    {
+      "id": "everyday-words/to-show",
+      "kind": "word",
+      "korean": "보이다",
+      "english": "to be seen, to show",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "보이다"
+      ]
+    },
+    {
+      "id": "everyday-words/nine",
+      "kind": "word",
+      "korean": "아홉",
+      "english": "nine",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "아홉"
+      ]
+    },
+    {
+      "id": "everyday-words/nearby",
+      "kind": "word",
+      "korean": "근처",
+      "english": "nearby",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "근처"
+      ]
+    },
+    {
+      "id": "everyday-words/door",
+      "kind": "word",
+      "korean": "문",
+      "english": "door",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "문"
+      ],
+      "image": "door"
+    },
+    {
+      "id": "everyday-words/to-be-fast",
+      "kind": "word",
+      "korean": "빠르다",
+      "english": "to be fast",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "빠르다"
+      ]
+    },
+    {
+      "id": "everyday-words/to-have-a-drink",
+      "kind": "word",
+      "korean": "한잔하다",
+      "english": "to have a drink",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "한잔하다"
+      ]
+    },
+    {
+      "id": "everyday-words/a-lot",
+      "kind": "word",
+      "korean": "많이",
+      "english": "a lot",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "많이"
+      ]
+    },
+    {
+      "id": "everyday-words/to-make",
+      "kind": "word",
+      "korean": "만들다",
+      "english": "to make",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "만들다"
+      ]
+    },
+    {
+      "id": "everyday-words/five",
+      "kind": "word",
+      "korean": "오",
+      "english": "five",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "오"
+      ]
+    },
+    {
+      "id": "everyday-words/every-day",
+      "kind": "word",
+      "korean": "매일",
+      "english": "every day",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "매일"
+      ]
+    },
+    {
+      "id": "everyday-words/eleven",
+      "kind": "word",
+      "korean": "열하나",
+      "english": "eleven",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "열하나"
+      ]
+    },
+    {
+      "id": "everyday-words/birthday",
+      "kind": "word",
+      "korean": "생일",
+      "english": "birthday",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "생일"
+      ],
+      "image": "birthday cake"
+    },
+    {
+      "id": "everyday-words/window",
+      "kind": "word",
+      "korean": "창문",
+      "english": "window",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "창문"
+      ],
+      "image": "window"
+    },
+    {
+      "id": "everyday-words/bus",
+      "kind": "word",
+      "korean": "버스",
+      "english": "bus",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "버스"
+      ],
+      "image": "bus"
+    },
+    {
+      "id": "everyday-words/station",
+      "kind": "word",
+      "korean": "역",
+      "english": "station",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "역"
+      ]
+    },
+    {
+      "id": "everyday-words/bag",
+      "kind": "word",
+      "korean": "가방",
+      "english": "bag",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "가방"
+      ],
+      "image": "bag"
+    },
+    {
+      "id": "everyday-words/chair",
+      "kind": "word",
+      "korean": "의자",
+      "english": "chair",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "의자"
+      ],
+      "image": "chair"
+    },
+    {
+      "id": "everyday-words/top-on",
+      "kind": "word",
+      "korean": "위",
+      "english": "top / on",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "위"
+      ]
+    },
+    {
+      "id": "everyday-words/thought",
+      "kind": "word",
+      "korean": "생각",
+      "english": "thought",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "생각"
+      ]
+    },
+    {
+      "id": "everyday-words/shoes",
+      "kind": "word",
+      "korean": "신발",
+      "english": "shoes",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "신발"
+      ],
+      "image": "shoes"
+    },
+    {
+      "id": "everyday-words/studying",
+      "kind": "word",
+      "korean": "공부",
+      "english": "studying",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "공부"
+      ]
+    },
+    {
+      "id": "everyday-words/head",
+      "kind": "word",
+      "korean": "머리",
+      "english": "head",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "머리"
+      ]
+    },
+    {
+      "id": "everyday-words/outside",
+      "kind": "word",
+      "korean": "밖",
+      "english": "outside",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "밖"
+      ]
+    },
+    {
+      "id": "everyday-words/to-be-careful",
+      "kind": "word",
+      "korean": "조심하다",
+      "english": "to be careful",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "조심하다"
+      ]
+    },
+    {
+      "id": "everyday-words/that",
+      "kind": "word",
+      "korean": "그",
+      "english": "that",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "그"
+      ]
+    },
+    {
+      "id": "everyday-words/to-be-sorry-polite",
+      "kind": "word",
+      "korean": "죄송하다",
+      "english": "to be sorry (polite)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "죄송하다"
+      ]
+    },
+    {
+      "id": "everyday-words/slowly",
+      "kind": "word",
+      "korean": "천천히",
+      "english": "slowly",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "천천히"
+      ]
+    },
+    {
+      "id": "everyday-words/korean-speech",
+      "kind": "word",
+      "korean": "한국말",
+      "english": "Korean (speech)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "한국말"
+      ]
+    },
+    {
+      "id": "everyday-words/then-well",
+      "kind": "word",
+      "korean": "그럼",
+      "english": "then / well",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "그럼"
+      ]
+    },
+    {
+      "id": "everyday-words/exam",
+      "kind": "word",
+      "korean": "시험",
+      "english": "exam",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "시험"
+      ]
+    },
+    {
+      "id": "everyday-words/soon",
+      "kind": "word",
+      "korean": "금방",
+      "english": "soon",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "금방"
+      ]
+    },
+    {
+      "id": "everyday-words/class",
+      "kind": "word",
+      "korean": "수업",
+      "english": "class",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "수업"
+      ]
+    },
+    {
+      "id": "everyday-words/to-raise-a-pet",
+      "kind": "word",
+      "korean": "키우다",
+      "english": "to raise (a pet)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "키우다"
+      ]
+    },
+    {
+      "id": "everyday-words/to-be-cute",
+      "kind": "word",
+      "korean": "귀엽다",
+      "english": "to be cute",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "귀엽다"
+      ]
+    },
+    {
+      "id": "everyday-words/to-blow",
+      "kind": "word",
+      "korean": "불다",
+      "english": "to blow",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "불다"
+      ]
+    },
+    {
+      "id": "everyday-words/to-be-jammed",
+      "kind": "word",
+      "korean": "막히다",
+      "english": "to be jammed",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "막히다"
+      ]
+    },
+    {
+      "id": "everyday-words/for-a-moment",
+      "kind": "word",
+      "korean": "잠깐",
+      "english": "for a moment",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잠깐"
+      ]
+    },
+    {
+      "id": "everyday-words/hotel",
+      "kind": "word",
+      "korean": "호텔",
+      "english": "hotel",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "호텔"
+      ],
+      "image": "hotel"
+    },
+    {
+      "id": "everyday-words/three",
+      "kind": "word",
+      "korean": "삼",
+      "english": "three",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "삼"
+      ]
+    },
+    {
+      "id": "everyday-words/during",
+      "kind": "word",
+      "korean": "동안",
+      "english": "during",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "동안"
+      ]
+    },
+    {
+      "id": "everyday-words/thirty",
+      "kind": "word",
+      "korean": "삼십",
+      "english": "thirty",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "삼십"
+      ]
+    },
+    {
+      "id": "everyday-words/hand",
+      "kind": "word",
+      "korean": "손",
+      "english": "hand",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "손"
+      ],
+      "image": "hands"
+    },
+    {
+      "id": "everyday-words/room",
+      "kind": "word",
+      "korean": "방",
+      "english": "room",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "방"
+      ]
+    },
+    {
+      "id": "everyday-words/flower",
+      "kind": "word",
+      "korean": "꽃",
+      "english": "flower",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "꽃"
+      ],
+      "image": "flowers"
+    },
+    {
+      "id": "everyday-words/other",
+      "kind": "word",
+      "korean": "다른",
+      "english": "other",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "다른"
+      ]
+    },
+    {
+      "id": "everyday-words/so-like-that",
+      "kind": "word",
+      "korean": "그렇게",
+      "english": "so / like that",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "그렇게"
+      ]
+    },
+    {
+      "id": "everyday-words/with-a-start",
+      "kind": "word",
+      "korean": "깜짝",
+      "english": "with a start",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "깜짝"
+      ]
+    },
+    {
+      "id": "everyday-words/meeting",
+      "kind": "word",
+      "korean": "회의",
+      "english": "meeting",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "회의"
+      ]
+    },
+    {
+      "id": "everyday-words/mobile-phone",
+      "kind": "word",
+      "korean": "휴대폰",
+      "english": "mobile phone",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "휴대폰"
+      ],
+      "image": "smartphone"
+    },
+    {
+      "id": "everyday-words/to-give-a-discount",
+      "kind": "word",
+      "korean": "깎다",
+      "english": "to give a discount",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "깎다"
+      ]
+    },
+    {
+      "id": "everyday-words/payment",
+      "kind": "word",
+      "korean": "결제",
+      "english": "payment",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "결제"
+      ]
+    },
+    {
+      "id": "everyday-words/help",
+      "kind": "word",
+      "korean": "도움",
+      "english": "help",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "도움"
+      ]
+    },
+    {
+      "id": "everyday-words/health",
+      "kind": "word",
+      "korean": "건강",
+      "english": "health",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "건강"
+      ]
+    },
+    {
+      "id": "everyday-words/younger-sibling",
+      "kind": "word",
+      "korean": "동생",
+      "english": "younger sibling",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "동생"
+      ]
+    },
+    {
+      "id": "everyday-words/mom",
+      "kind": "word",
+      "korean": "엄마",
+      "english": "mom",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "엄마"
+      ]
+    },
+    {
+      "id": "everyday-words/roll-counter",
+      "kind": "word",
+      "korean": "줄",
+      "english": "roll (counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "줄"
+      ]
+    }
+  ]
+}

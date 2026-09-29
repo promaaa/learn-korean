@@ -12,6 +12,10 @@ const BUNDLED: &[(&str, &str)] = &[
         include_str!("../../../../content/legacy/pack.json"),
     ),
     (
+        "everyday-words",
+        include_str!("../../../../content/everyday-words/pack.json"),
+    ),
+    (
         "small-talk",
         include_str!("../../../../content/small-talk/pack.json"),
     ),
@@ -63,5 +67,31 @@ mod tests {
             let report: Vec<String> = errors.iter().map(ToString::to_string).collect();
             panic!("invalid content:\n{}", report.join("\n"));
         }
+    }
+
+    /// Particles, the copula and grammar patterns: taught through sentences, never as word cards.
+    const GRAMMAR: &[&str] = &["이다", "에 있다", "하고", "만"];
+
+    #[test]
+    fn every_sentence_lexeme_has_a_word_card() {
+        use crate::content::ItemKind;
+        use std::collections::HashSet;
+        let packs = bundled_packs();
+        let items = || packs.iter().flat_map(|p| &p.items);
+        let carded: HashSet<&str> = items()
+            .filter(|i| i.kind == ItemKind::Word)
+            .flat_map(|i| i.lexemes.iter().map(String::as_str))
+            .collect();
+        let missing: Vec<String> = items()
+            .filter(|i| i.kind == ItemKind::Sentence)
+            .flat_map(|i| i.lexemes.iter().map(move |l| (l.as_str(), i.id.as_str())))
+            .filter(|(l, _)| !carded.contains(l) && !GRAMMAR.contains(l))
+            .map(|(l, id)| format!("{l} (in {id})"))
+            .collect();
+        assert!(
+            missing.is_empty(),
+            "sentence lexemes without a word card:\n{}",
+            missing.join("\n")
+        );
     }
 }

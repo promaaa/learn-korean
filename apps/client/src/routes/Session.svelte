@@ -4,13 +4,19 @@
   import Listening from "../games/Listening.svelte";
   import Reply from "../games/Reply.svelte";
   import { formatInterval } from "../lib/format";
-  import type { Profile } from "../lib/api";
+  import type { Focus, Profile } from "../lib/api";
   import type { Action, Direction } from "../lib/keys";
   import { SessionController } from "../lib/session.svelte";
   import { Speaker } from "../lib/speaker.svelte";
   import { ACTIVE_ATTRIBUTE, nextWord, WORD_SELECTOR } from "../lib/words";
 
   type Hint = { keys: string; label: string };
+
+  const FOCUS_LABELS: Record<Focus, string> = {
+    words: "words only",
+    guided: "words, then sentences",
+    all: "everything",
+  };
 
   let { onprofile }: { onprofile: (profile: Profile) => void } = $props();
 
@@ -58,6 +64,7 @@
 
   export function hints(): Hint[] {
     const hide = { keys: "Esc", label: "hide" };
+    const focus = { keys: "F", label: "focus" };
     if (session.phase === "exercise" && prompt?.type === "build") {
       return [
         { keys: "1-9", label: "place" },
@@ -75,6 +82,7 @@
           { keys: "J K", label: "move" },
           { keys: "Enter", label: "choose" },
           { keys: "R", label: "replay" },
+          focus,
           hide,
         ];
       case "feedback": {
@@ -87,7 +95,12 @@
         ];
       }
       default:
-        return [{ keys: "Enter", label: "new session" }, { keys: "Tab", label: "typing gym" }, hide];
+        return [
+          { keys: "Enter", label: "new session" },
+          focus,
+          { keys: "Tab", label: "typing gym" },
+          hide,
+        ];
     }
   }
 
@@ -175,6 +188,10 @@
       replay();
       return;
     }
+    if (action.type === "focus") {
+      void session.cycleFocus();
+      return;
+    }
     switch (session.phase) {
       case "exercise":
         if (prompt?.type === "build") buildAction(action);
@@ -207,6 +224,10 @@
         Math.max(1, session.progress.done + session.progress.remaining)}%"
     ></div>
   </div>
+
+  {#if session.focus}
+    <p class="focus">focus <strong>{FOCUS_LABELS[session.focus]}</strong></p>
+  {/if}
 
   {#if (session.phase === "exercise" || session.phase === "feedback") && session.exercise}
     {#key session.serial}
@@ -309,6 +330,20 @@
     height: 100%;
     background: var(--accent);
     transition: width 240ms ease;
+  }
+
+  .focus {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    margin: 0;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .focus strong {
+    color: var(--fg-dim);
+    font-weight: 600;
   }
 
   .card {

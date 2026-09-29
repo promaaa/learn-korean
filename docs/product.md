@@ -6,10 +6,11 @@ out of the way (Esc).
 ## Principles
 
 - **Speed of a TUI, richness of a GUI.** Everything is playable with `1 2 3 4`, `Space`, `Enter`,
-  `H J K L`, `R` (replay audio), `Tab` (Typing Gym) and `Esc`. Shortcuts use physical key
-  positions, so they work the same on AZERTY. Mouse is optional.
-- **Conversation over vocabulary.** The unit of learning is a sentence used in a context
-  (small talk, restaurants…). Single words feed sentences, images and typing drills.
+  `H J K L`, `R` (replay audio), `F` (focus), `Tab` (Typing Gym) and `Esc`. Shortcuts use
+  physical key positions, so they work the same on AZERTY. Mouse is optional.
+- **Conversation over vocabulary, vocabulary first.** The unit of learning is a sentence used in
+  a context (small talk, restaurants…). Its words are learned first, as word cards; the sentence
+  follows once they are known (see Focus).
 - **Hangul only.** No romanization anywhere in the UI (ADR-004).
 - **Real media.** Native Korean typography, real photos, real audio.
 - **Spaced repetition.** Every (item, skill) pair has its own memory state scheduled by FSRS.
@@ -36,6 +37,23 @@ hardware layout (QWERTY, AZERTY…) without an OS Korean IME. The on-screen keyb
 next key and Shift, names the finger, and flashes wrong keys; the line composes live like an IME
 (ㅎ → 하 → 한). Strict mode: a wrong key counts as an error and does not advance. Speed (words and
 keystrokes per minute), accuracy and streak update on every key.
+
+## Focus
+
+`F` switches what sessions draw from (saved, applied to a new session at once):
+
+| Focus | Cards |
+| --- | --- |
+| words only | word cards |
+| words, then sentences (default) | word cards, and every sentence whose words are all known |
+| everything | every card, as soon as it is due or next in line |
+
+A word is known once its listening card has left FSRS's short learning steps (a correct answer
+again in a later session, or an easy first answer). A sentence waiting for its words is not
+served, even when due; its words not seen yet are introduced in its place, so the words taught
+first are the ones the next sentences need. Words that are forgotten (lapsed) pause their
+sentences until relearned. Lemmas without a word card (particles, the copula 이다) never block a
+sentence.
 
 ## Progression
 

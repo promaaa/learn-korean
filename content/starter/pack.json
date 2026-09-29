@@ -1,10 +1,21 @@
 {
   "id": "starter",
-  "version": 1,
+  "version": 2,
   "title": "Starter",
   "description": "Survival phrases: understanding, asking, directions, getting around.",
   "unlock_level": 1,
   "items": [
+    {
+      "id": "starter/once",
+      "kind": "word",
+      "korean": "한번",
+      "english": "once",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "한번"
+      ]
+    },
     {
       "id": "starter/say-again",
       "kind": "sentence",
@@ -22,6 +33,17 @@
         "Please speak more slowly.",
         "Please write it down.",
         "Please say it in English."
+      ]
+    },
+    {
+      "id": "starter/understanding",
+      "kind": "word",
+      "korean": "이해",
+      "english": "understanding",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "이해"
       ]
     },
     {
@@ -43,6 +65,17 @@
       ]
     },
     {
+      "id": "starter/well",
+      "kind": "word",
+      "korean": "잘",
+      "english": "well",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잘"
+      ]
+    },
+    {
       "id": "starter/not-sure",
       "kind": "sentence",
       "korean": "잘 모르겠어요.",
@@ -61,6 +94,17 @@
       ]
     },
     {
+      "id": "starter/korean-language",
+      "kind": "word",
+      "korean": "한국어",
+      "english": "Korean (language)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "한국어"
+      ]
+    },
+    {
       "id": "starter/little-korean",
       "kind": "sentence",
       "korean": "한국어 조금 해요.",
@@ -76,6 +120,17 @@
         "I don't speak Korean.",
         "I'm learning Korean.",
         "I speak Korean well."
+      ]
+    },
+    {
+      "id": "starter/english-language",
+      "kind": "word",
+      "korean": "영어",
+      "english": "English (language)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "영어"
       ]
     },
     {
@@ -332,6 +387,18 @@
       }
     },
     {
+      "id": "starter/subway-station",
+      "kind": "word",
+      "korean": "지하철역",
+      "english": "subway station",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "지하철역"
+      ],
+      "image": "subway station"
+    },
+    {
       "id": "starter/where-subway",
       "kind": "sentence",
       "korean": "지하철역이 어디예요?",
@@ -393,6 +460,29 @@
       ]
     },
     {
+      "id": "starter/road-way",
+      "kind": "word",
+      "korean": "길",
+      "english": "road / way",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "길"
+      ],
+      "image": "road"
+    },
+    {
+      "id": "starter/to-lose",
+      "kind": "word",
+      "korean": "잃다",
+      "english": "to lose",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잃다"
+      ]
+    },
+    {
       "id": "starter/i-am-lost",
       "kind": "sentence",
       "korean": "길을 잃었어요.",
@@ -410,6 +500,17 @@
       ]
     },
     {
+      "id": "starter/to-help",
+      "kind": "word",
+      "korean": "돕다",
+      "english": "to help",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "돕다"
+      ]
+    },
+    {
       "id": "starter/help-me",
       "kind": "sentence",
       "korean": "도와주세요!",
@@ -424,6 +525,17 @@
         "Wait for me, please!",
         "Call the police, please!",
         "Leave me alone, please!"
+      ]
+    },
+    {
+      "id": "starter/to-take-time",
+      "kind": "word",
+      "korean": "걸리다",
+      "english": "to take (time)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "걸리다"
       ]
     },
     {
@@ -490,6 +602,17 @@
       "image": "seoul taxi"
     },
     {
+      "id": "starter/to-stop-a-car",
+      "kind": "word",
+      "korean": "세우다",
+      "english": "to stop (a car)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "세우다"
+      ]
+    },
+    {
       "id": "starter/stop-here",
       "kind": "sentence",
       "korean": "여기서 세워 주세요.",
@@ -505,6 +628,17 @@
         "Please turn left here.",
         "Please wait here.",
         "Please don't stop here."
+      ]
+    },
+    {
+      "id": "starter/to-become-be-okay",
+      "kind": "word",
+      "korean": "되다",
+      "english": "to become / be okay",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "되다"
       ]
     },
     {
@@ -552,6 +686,17 @@
       }
     },
     {
+      "id": "starter/to-take-a-photo",
+      "kind": "word",
+      "korean": "찍다",
+      "english": "to take (a photo)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "찍다"
+      ]
+    },
+    {
       "id": "starter/may-i-take-photo",
       "kind": "sentence",
       "korean": "사진 찍어도 돼요?",
@@ -594,6 +739,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "starter/a-bit-please",
+      "kind": "word",
+      "korean": "좀",
+      "english": "a bit / please",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "좀"
+      ]
     },
     {
       "id": "starter/take-photo-for-me",

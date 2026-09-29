@@ -8,6 +8,7 @@ export type Action =
   | { type: "move"; direction: Direction }
   | { type: "replay" }
   | { type: "erase" }
+  | { type: "focus" }
   | { type: "mode" }
   | { type: "hide" };
 
@@ -48,6 +49,7 @@ export function actionFor(event: KeyLike): Action | null {
   if (direction) return { type: "move", direction };
 
   if (code === "KeyR") return { type: "replay" };
+  if (code === "KeyF") return { type: "focus" };
   switch (event.key) {
     case "Enter":
       return { type: "confirm" };

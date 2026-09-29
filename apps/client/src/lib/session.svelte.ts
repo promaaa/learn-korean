@@ -2,15 +2,20 @@ import {
   sessionAnswer,
   sessionCurrent,
   sessionStart,
+  setFocus,
   type Answer,
   type ExerciseView,
   type Feedback,
+  type Focus,
   type LevelUp,
   type Profile,
   type Progress,
 } from "./api";
 
 export type Phase = "loading" | "exercise" | "feedback" | "done" | "empty" | "error";
+
+/** `F` cycles through these, from vocabulary only to everything. */
+export const FOCUS_ORDER: readonly Focus[] = ["words", "guided", "all"];
 
 const EMPTY_PROGRESS: Progress = {
   done: 0,
@@ -38,6 +43,8 @@ export class SessionController {
   levelUp = $state<LevelUp | null>(null);
   /** Increments every time a card is put on screen (a retried card counts again). */
   serial = $state(0);
+  /** Focus of the running session (`null` until the first session starts). */
+  focus = $state<Focus | null>(null);
 
   #shownAt = 0;
   #busy = false;
@@ -45,16 +52,28 @@ export class SessionController {
   constructor(private readonly now: () => number = () => performance.now()) {}
 
   async start(): Promise<void> {
+    await this.#guard(() => this.#begin());
+  }
+
+  /** Switches to the next focus and starts a fresh session with it. */
+  async cycleFocus(): Promise<void> {
     await this.#guard(async () => {
-      this.phase = "loading";
-      const started = await sessionStart();
-      if (started.total === 0) {
-        this.exercise = null;
-        this.phase = "empty";
-        return;
-      }
-      await this.#loadCurrent();
+      const index = FOCUS_ORDER.indexOf(this.focus ?? "guided");
+      await setFocus(FOCUS_ORDER[(index + 1) % FOCUS_ORDER.length] ?? "guided");
+      await this.#begin();
     });
+  }
+
+  async #begin(): Promise<void> {
+    this.phase = "loading";
+    const started = await sessionStart();
+    this.focus = started.focus;
+    if (started.total === 0) {
+      this.exercise = null;
+      this.phase = "empty";
+      return;
+    }
+    await this.#loadCurrent();
   }
 
   /** The window was hidden for a while: do not count that time as thinking time. */
