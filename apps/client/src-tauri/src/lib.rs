@@ -1,4 +1,7 @@
 mod shell;
+mod state;
+
+use tauri::Manager;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -16,8 +19,13 @@ pub fn run() {
                 .level(log::LevelFilter::Info)
                 .build(),
         )
-        .invoke_handler(tauri::generate_handler![shell::hide_window])
+        .invoke_handler(tauri::generate_handler![
+            shell::hide_window,
+            state::app_status
+        ])
         .setup(|app| {
+            let state = state::init(app.handle());
+            app.manage(state);
             #[cfg(desktop)]
             shell::register_global_shortcut(app.handle());
             shell::apply(

@@ -7,7 +7,7 @@ rollbackable: installing an older release must not destroy user data.
 ## Decision
 A single SQLite database in the platform app-data directory, accessed with `sqlx`. Embedded,
 append-only migrations. Before applying pending migrations the app writes a consistent backup
-(`VACUUM INTO`) to `backups/v<app-version>-before-schema-<n>.db`. Bundled content tables are
+(`VACUUM INTO`) to `backups/v<previous-version>-before-schema-<n>.db` (the release that last wrote the database is kept in `PRAGMA user_version`). Bundled content tables are
 re-seeded from the packs on start; user tables are keyed by stable content ids.
 
 ## Alternatives considered

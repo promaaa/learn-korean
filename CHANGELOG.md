@@ -6,6 +6,11 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 ## [Unreleased]
 
 ### Added
+- `korean-db` crate: SQLite database in the app data directory (sqlx, WAL), embedded append-only migrations.
+- Automatic `VACUUM INTO` backup to `backups/v<previous-version>-before-schema-<n>.db` before pending migrations run.
+- Older releases refuse a newer schema with an explanatory screen instead of corrupting data.
+- `migrations.lock` test: released migrations cannot be edited.
+- Schema 1: append-only `review_log` of every answer.
 - Overlay application shell: undecorated always-on-top window, hidden with `Esc`, shown with Super+Z.
 - `--toggle`, `--show`, `--hidden` command-line flags forwarded to the running instance (single instance).
 - Global Super+Z shortcut on macOS/X11; Hyprland bind, window rule and autostart via `scripts/install-omarchy.sh`.
