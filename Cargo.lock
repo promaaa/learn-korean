@@ -88,7 +88,7 @@ dependencies = [
 
 [[package]]
 name = "anki-import"
-version = "0.5.1"
+version = "0.5.2"
 dependencies = [
  "csv",
  "korean-core",
@@ -2393,7 +2393,7 @@ dependencies = [
 
 [[package]]
 name = "korean-core"
-version = "0.5.1"
+version = "0.5.2"
 dependencies = [
  "chrono",
  "rs-fsrs",
@@ -2404,7 +2404,7 @@ dependencies = [
 
 [[package]]
 name = "korean-db"
-version = "0.5.1"
+version = "0.5.2"
 dependencies = [
  "korean-core",
  "serde_json",
@@ -2418,7 +2418,7 @@ dependencies = [
 
 [[package]]
 name = "korean-providers"
-version = "0.5.1"
+version = "0.5.2"
 dependencies = [
  "futures-util",
  "reqwest 0.12.28",
@@ -2443,7 +2443,7 @@ dependencies = [
 
 [[package]]
 name = "learn-korean"
-version = "0.5.1"
+version = "0.5.2"
 dependencies = [
  "chrono",
  "korean-core",

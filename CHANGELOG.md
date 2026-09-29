@@ -5,6 +5,14 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+## [0.5.2]
+
+### Fixed
+- The WebView talks to Rust over Tauri's `ipc:` protocol again (the CSP blocked it, forcing the slower postMessage fallback — noticeable per keystroke in the Typing Gym).
+
+### Added
+- README: install instructions and key reference.
+
 ## [0.5.1]
 
 ### Fixed
