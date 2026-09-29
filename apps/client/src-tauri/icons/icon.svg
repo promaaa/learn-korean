@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="#16161e"/>
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="none" stroke="#7aa2f7" stroke-width="24"/>
+  <text x="512" y="660" text-anchor="middle" font-family="Noto Sans CJK KR" font-weight="900" font-size="520" fill="#c0caf5">한</text>
+  <rect x="312" y="780" width="400" height="28" rx="14" fill="#9ece6a"/>
+</svg>

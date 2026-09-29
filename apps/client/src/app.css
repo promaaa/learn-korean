@@ -1,0 +1,50 @@
+:root {
+  --bg: #16161e;
+  --fg: #c0caf5;
+  --muted: #565f89;
+  --accent: #7aa2f7;
+  --good: #9ece6a;
+  --bad: #f7768e;
+  --font-ui: "Inter", "Noto Sans", system-ui, sans-serif;
+  --font-ko: "Noto Sans CJK KR", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-ui);
+  user-select: none;
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+}
+
+.shell {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.brand {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+.hangul {
+  font-family: var(--font-ko);
+  font-size: 48px;
+}
