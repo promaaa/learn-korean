@@ -4,28 +4,44 @@ use std::collections::HashMap;
 
 use korean_core::content::Skill;
 use korean_core::learning::{Card, Outcome};
-use korean_core::scheduler::MemoryState;
+use korean_core::scheduler::{MemoryState, Phase};
 use sqlx::SqlitePool;
 
-type StateRow = (String, String, i64, i64, i64, i64, i64);
+#[derive(sqlx::FromRow)]
+struct StateRow {
+    item_id: String,
+    skill: String,
+    phase: i64,
+    stability: f64,
+    difficulty: f64,
+    due_at: i64,
+    last_review_at: i64,
+    scheduled_days: i64,
+    reps: i64,
+    lapses: i64,
+}
 
 /// All memory states. Rows for skills this build does not know are ignored, not deleted.
 pub async fn states(pool: &SqlitePool) -> sqlx::Result<HashMap<Card, MemoryState>> {
     let rows: Vec<StateRow> = sqlx::query_as(
-        "SELECT item_id, skill, step, due_at, reps, lapses, last_review_at FROM review_states",
+        "SELECT item_id, skill, phase, stability, difficulty, due_at, last_review_at, \
+         scheduled_days, reps, lapses FROM review_states",
     )
     .fetch_all(pool)
     .await?;
     Ok(rows
         .into_iter()
-        .filter_map(|(item_id, skill, step, due_at, reps, lapses, last)| {
-            let card = Card::new(item_id, Skill::parse(&skill)?);
+        .filter_map(|row| {
+            let card = Card::new(row.item_id, Skill::parse(&row.skill)?);
             let state = MemoryState {
-                step: step as u32,
-                due_at,
-                reps: reps as u32,
-                lapses: lapses as u32,
-                last_review_at: last,
+                phase: Phase::from_code(row.phase),
+                stability: row.stability,
+                difficulty: row.difficulty,
+                due_at: row.due_at,
+                last_review_at: row.last_review_at,
+                scheduled_days: row.scheduled_days,
+                reps: row.reps as u32,
+                lapses: row.lapses as u32,
             };
             Some((card, state))
         })
@@ -41,20 +57,25 @@ pub async fn record(pool: &SqlitePool, outcome: &Outcome) -> sqlx::Result<()> {
         elapsed_ms,
     } = outcome;
     let mut tx = pool.begin().await?;
+    // `step` belongs to the pre-FSRS ladder (schema 3) and is no longer read.
     sqlx::query(
-        "INSERT INTO review_states (item_id, skill, step, due_at, reps, lapses, last_review_at) \
-         VALUES (?, ?, ?, ?, ?, ?, ?) \
-         ON CONFLICT (item_id, skill) DO UPDATE SET step = excluded.step, \
-         due_at = excluded.due_at, reps = excluded.reps, lapses = excluded.lapses, \
-         last_review_at = excluded.last_review_at",
+        "INSERT INTO review_states (item_id, skill, step, phase, stability, difficulty, due_at, \
+         last_review_at, scheduled_days, reps, lapses) VALUES (?, ?, 0, ?, ?, ?, ?, ?, ?, ?, ?) \
+         ON CONFLICT (item_id, skill) DO UPDATE SET phase = excluded.phase, \
+         stability = excluded.stability, difficulty = excluded.difficulty, \
+         due_at = excluded.due_at, last_review_at = excluded.last_review_at, \
+         scheduled_days = excluded.scheduled_days, reps = excluded.reps, lapses = excluded.lapses",
     )
     .bind(&card.item_id)
     .bind(card.skill.as_str())
-    .bind(state.step)
+    .bind(state.phase.code())
+    .bind(state.stability)
+    .bind(state.difficulty)
     .bind(state.due_at)
+    .bind(state.last_review_at)
+    .bind(state.scheduled_days)
     .bind(state.reps)
     .bind(state.lapses)
-    .bind(state.last_review_at)
     .execute(&mut *tx)
     .await?;
     sqlx::query(
@@ -91,6 +112,7 @@ mod tests {
                 note: None,
                 streak: 0,
                 retry: false,
+                due_in_ms: 0,
             },
             card: Card::new(item, Skill::Listening),
             state: review(previous, rating, now),
@@ -122,7 +144,7 @@ mod tests {
     #[tokio::test]
     async fn unknown_skills_from_newer_builds_are_ignored() {
         let db = Database::in_memory().await.unwrap();
-        sqlx::query("INSERT INTO review_states VALUES ('a/1', 'speaking', 0, 0, 1, 0, 0)")
+        sqlx::query("INSERT INTO review_states (item_id, skill, step, due_at, reps, lapses, last_review_at) VALUES ('a/1', 'speaking', 0, 0, 1, 0, 0)")
             .execute(db.pool())
             .await
             .unwrap();

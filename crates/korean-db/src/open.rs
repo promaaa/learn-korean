@@ -302,6 +302,50 @@ mod tests {
         }
     }
 
+    /// Ladder progress recorded before schema 5 keeps its meaning under FSRS.
+    #[tokio::test]
+    async fn ladder_states_are_converted_to_fsrs() {
+        let tmp = tempfile::tempdir().unwrap();
+        let path = tmp.path().join("korean.db");
+        let real = Path::new(env!("CARGO_MANIFEST_DIR")).join("migrations");
+        let old_dir = tmp.path().join("schema4");
+        std::fs::create_dir_all(&old_dir).unwrap();
+        for entry in std::fs::read_dir(&real).unwrap() {
+            let file = entry.unwrap().path();
+            let name = file.file_name().unwrap().to_string_lossy().into_owned();
+            if name.as_str() < "0005" {
+                std::fs::copy(&file, old_dir.join(&name)).unwrap();
+            }
+        }
+        let old = Migrator::new(old_dir).await.unwrap();
+        let db = open_with(&path, "0.3.0", &old).await.unwrap();
+        sqlx::query(
+            "INSERT INTO review_states (item_id, skill, step, due_at, reps, lapses, last_review_at) \
+             VALUES ('a/new', 'listening', 0, 10, 1, 0, 0), ('a/week', 'listening', 3, 20, 4, 1, 0)",
+        )
+        .execute(db.pool())
+        .await
+        .unwrap();
+        db.pool().close().await;
+
+        let db = Database::open(&path, "0.4.0").await.unwrap();
+        assert!(db.backup().is_some());
+        let rows: Vec<(String, i64, f64, f64, i64, i64)> = sqlx::query_as(
+            "SELECT item_id, phase, stability, difficulty, scheduled_days, due_at \
+             FROM review_states ORDER BY item_id",
+        )
+        .fetch_all(db.pool())
+        .await
+        .unwrap();
+        assert_eq!(
+            rows,
+            [
+                ("a/new".into(), 1, 0.5, 5.0, 0, 10),
+                ("a/week".into(), 2, 7.0, 5.5, 7, 20),
+            ]
+        );
+    }
+
     #[test]
     fn app_versions_round_trip_through_user_version() {
         assert_eq!(decode_version(encode_version("0.5.0")), "0.5.0");

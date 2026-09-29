@@ -5,6 +5,13 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+### Changed
+- Scheduling now uses FSRS (`rs-fsrs`, FSRS-5 default weights, 90 % retention, 1/5/10-minute learning steps) instead of the interval ladder.
+
+### Added
+- Schema 5: FSRS columns on `review_states` (phase, stability, difficulty, scheduled days); ladder progress is converted in place (backup first).
+- Feedback shows when the card comes back ("next review in 3 days").
+
 ## [0.3.0]
 
 ### Added
