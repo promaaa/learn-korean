@@ -5,6 +5,10 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+### Added
+- Audio: every card is spoken when it appears; `R` (or the speaker button) replays it.
+- `korean-providers` crate with the `TtsProvider` trait: Edge neural voice (`ko-KR-SunHiNeural`) with Google Translate fallback and an in-memory cache; native playback via `rodio`.
+
 ## [0.2.0]
 
 ### Added

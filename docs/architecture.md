@@ -41,3 +41,12 @@ validation rules: [content.md](content.md).
 
 Images and audio are fetched by Rust (`reqwest`) and handed to the UI as bytes held in memory.
 Only metadata (provider, URLs, attribution) is persisted; no media files are written (ADR-005).
+
+### Speech
+
+`korean_providers::tts::TtsProvider` is the only interface the app knows. The default chain is
+`Cached<Fallback[EdgeTts, GoogleTranslateTts]>`: Microsoft Edge's neural voice
+(`ko-KR-SunHiNeural`, 10 % slower), falling back to Google Translate's voice, with the last 128
+syntheses kept in memory. Playback happens natively in Rust (`rodio`) on a dedicated audio thread,
+so it does not depend on the WebView's codecs. Swapping the voice service means adding a provider
+and changing `tts::default_provider()`; nothing else changes.

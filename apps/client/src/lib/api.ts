@@ -75,3 +75,8 @@ export function sessionCurrent(): Promise<Current> {
 export function sessionAnswer(answer: Answer, elapsedMs: number): Promise<Answered> {
   return invoke("session_answer", { answer, elapsedMs });
 }
+
+/** Speaks Korean text (synthesized in Rust, played natively). */
+export function speak(text: string): Promise<void> {
+  return invoke("speak", { text });
+}

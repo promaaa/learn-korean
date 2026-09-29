@@ -3,13 +3,29 @@
   import Listening from "../games/Listening.svelte";
   import type { Action } from "../lib/keys";
   import { SessionController } from "../lib/session.svelte";
+  import { Speaker } from "../lib/speaker.svelte";
 
   const session = new SessionController();
+  const speaker = new Speaker();
   let cursor = $state(0);
+  let spokenKey = "";
 
   $effect(() => {
     void session.start();
   });
+
+  // Every new card is spoken once when it appears.
+  $effect(() => {
+    if (session.phase !== "exercise" || !session.exercise) return;
+    const key = `${session.exercise.card.itemId}:${session.progress.done}`;
+    if (key === spokenKey) return;
+    spokenKey = key;
+    void speaker.say(session.exercise.prompt.korean);
+  });
+
+  function replay(): void {
+    if (session.exercise) void speaker.say(session.exercise.prompt.korean);
+  }
 
   const optionCount = $derived(session.exercise?.prompt.options.length ?? 0);
 
@@ -20,11 +36,13 @@
           { keys: "1-4", label: "answer" },
           { keys: "J K", label: "move" },
           { keys: "Enter", label: "choose" },
+          { keys: "R", label: "replay" },
           { keys: "Esc", label: "hide" },
         ];
       case "feedback":
         return [
           { keys: "Space", label: "next" },
+          { keys: "R", label: "replay" },
           { keys: "Esc", label: "hide" },
         ];
       default:
@@ -38,7 +56,10 @@
   /** Called when the window is summoned again. */
   export function resume(): void {
     if (session.phase === "done" || session.phase === "empty") void session.start();
-    else session.resumeTimer();
+    else {
+      session.resumeTimer();
+      if (session.phase === "exercise") replay();
+    }
   }
 
   function choose(index: number): void {
@@ -47,6 +68,10 @@
   }
 
   export function handle(action: Action): void {
+    if (action.type === "replay") {
+      replay();
+      return;
+    }
     switch (session.phase) {
       case "exercise":
         if (action.type === "choose") choose(action.index);
@@ -94,7 +119,9 @@
           feedback={session.feedback}
           chosen={session.chosen}
           {cursor}
+          audio={speaker.status}
           onchoose={choose}
+          onreplay={replay}
         />
       </div>
     {/key}

@@ -1,5 +1,7 @@
 <script lang="ts">
+  import SpeakerButton from "../components/SpeakerButton.svelte";
   import type { Feedback } from "../lib/api";
+  import type { SpeakerStatus } from "../lib/speaker.svelte";
 
   interface Props {
     korean: string;
@@ -7,9 +9,11 @@
     feedback: Feedback | null;
     chosen: number | null;
     cursor: number;
+    audio: SpeakerStatus;
     onchoose: (index: number) => void;
+    onreplay: () => void;
   }
-  let { korean, options, feedback, chosen, cursor, onchoose }: Props = $props();
+  let { korean, options, feedback, chosen, cursor, audio, onchoose, onreplay }: Props = $props();
 
   function optionState(index: number): "correct" | "wrong" | "dim" | "idle" {
     if (!feedback) return "idle";
@@ -20,6 +24,7 @@
 </script>
 
 <section class="listening">
+  <SpeakerButton status={audio} onclick={onreplay} />
   <p class="korean" lang="ko">{korean}</p>
   <p class="question">What does this mean?</p>
 
