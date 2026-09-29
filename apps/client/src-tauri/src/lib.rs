@@ -1,5 +1,6 @@
 mod session;
 mod shell;
+mod speech;
 mod state;
 
 use tauri::Manager;
@@ -27,10 +28,13 @@ pub fn run() {
             session::session_start,
             session::session_current,
             session::session_answer,
+            speech::speak,
         ])
         .setup(|app| {
-            let state = state::init(app.handle());
-            app.manage(state);
+            // Created here, not on the builder: a second instance exits before setup runs, so it
+            // never opens the database or the audio device.
+            app.manage(state::init(app.handle()));
+            app.manage(speech::Speech::new());
             #[cfg(desktop)]
             shell::register_global_shortcut(app.handle());
             shell::apply(

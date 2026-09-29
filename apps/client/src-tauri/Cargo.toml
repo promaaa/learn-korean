@@ -20,6 +20,8 @@ tauri-plugin-log = "2"
 log = "0.4"
 korean-core = { path = "../../../crates/korean-core" }
 korean-db = { path = "../../../crates/korean-db" }
+korean-providers = { path = "../../../crates/korean-providers" }
+rodio = { version = "0.22", default-features = false, features = ["playback", "mp3"] }
 serde.workspace = true
 serde_json.workspace = true
 
