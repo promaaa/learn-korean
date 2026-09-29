@@ -7,6 +7,71 @@ export interface AppStatus {
   error: string | null;
 }
 
+export type Skill = "listening" | "response" | "build";
+export type Rating = "again" | "hard" | "good" | "easy";
+
+export interface Card {
+  itemId: string;
+  skill: Skill;
+}
+
+export type Prompt = { type: "listening"; korean: string; options: string[] };
+
+export interface ExerciseView {
+  card: Card;
+  kind: "sentence" | "word";
+  prompt: Prompt;
+}
+
+export type Answer = { type: "choice"; index: number };
+
+export interface Feedback {
+  correct: boolean;
+  correctIndex: number;
+  rating: Rating;
+  korean: string;
+  english: string;
+  note: string | null;
+  streak: number;
+  retry: boolean;
+}
+
+export interface Progress {
+  done: number;
+  remaining: number;
+  correct: number;
+  streak: number;
+  bestStreak: number;
+}
+
+export interface SessionStarted {
+  total: number;
+  due: number;
+  new: number;
+}
+
+export interface Current {
+  exercise: ExerciseView | null;
+  progress: Progress;
+}
+
+export interface Answered {
+  feedback: Feedback;
+  progress: Progress;
+}
+
 export function appStatus(): Promise<AppStatus> {
   return invoke("app_status");
+}
+
+export function sessionStart(): Promise<SessionStarted> {
+  return invoke("session_start");
+}
+
+export function sessionCurrent(): Promise<Current> {
+  return invoke("session_current");
+}
+
+export function sessionAnswer(answer: Answer, elapsedMs: number): Promise<Answered> {
+  return invoke("session_answer", { answer, elapsedMs });
 }
