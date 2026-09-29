@@ -50,3 +50,13 @@ Only metadata (provider, URLs, attribution) is persisted; no media files are wri
 syntheses kept in memory. Playback happens natively in Rust (`rodio`) on a dedicated audio thread,
 so it does not depend on the WebView's codecs. Swapping the voice service means adding a provider
 and changing `tts::default_provider()`; nothing else changes.
+
+### Images
+
+`korean_providers::images::ImageProvider` searches open-licensed photos for an item's `image`
+query: Openverse first, Wikimedia Commons second (`FirstMatch`). The resolved reference
+(`provider`, `image_url`, `source_url`, `attribution`) is cached in `image_refs`; queries that found
+nothing are retried after a week. Bytes are downloaded by Rust into a small in-memory cache and
+served to the WebView through the `kimg://localhost/<item id>` protocol with `Cache-Control:
+no-store`, so no image is written to disk and the WebView never hotlinks (no CORS/hotlink issues).
+The attribution is always shown under the photo.

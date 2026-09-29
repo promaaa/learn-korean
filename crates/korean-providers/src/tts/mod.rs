@@ -4,13 +4,12 @@ mod edge;
 mod google;
 
 use std::collections::VecDeque;
-use std::pin::Pin;
 use std::sync::{Arc, Mutex};
 
 pub use edge::EdgeTts;
 pub use google::GoogleTranslateTts;
 
-pub type BoxFuture<'a, T> = Pin<Box<dyn Future<Output = T> + Send + 'a>>;
+pub use crate::BoxFuture;
 
 /// Encoded audio, playable as is.
 #[derive(Debug, Clone, PartialEq, Eq)]

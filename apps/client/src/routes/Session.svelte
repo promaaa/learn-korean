@@ -114,6 +114,8 @@
     {#key `${session.exercise.card.itemId}:${session.progress.done}`}
       <div class="card" in:fly={{ y: 14, duration: 160 }}>
         <Listening
+          itemId={session.exercise.card.itemId}
+          image={session.exercise.image}
           korean={session.exercise.prompt.korean}
           options={session.exercise.prompt.options}
           feedback={session.feedback}

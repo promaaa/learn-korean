@@ -130,6 +130,16 @@ pub async fn unlocked_items(pool: &SqlitePool, level: u32) -> sqlx::Result<Vec<I
         .collect()
 }
 
+/// One bundled item by id.
+pub async fn item(pool: &SqlitePool, id: &str) -> sqlx::Result<Option<Item>> {
+    let data: Option<String> = sqlx::query_scalar("SELECT data FROM content_items WHERE id = ?")
+        .bind(id)
+        .fetch_optional(pool)
+        .await?;
+    data.map(|d| serde_json::from_str(&d).map_err(|e| sqlx::Error::Decode(Box::new(e))))
+        .transpose()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -187,6 +197,11 @@ mod tests {
         assert_eq!((r.packs_updated, r.packs_removed), (1, 1));
         let items = unlocked_items(pool, 10).await.unwrap();
         assert_eq!(items, v2[0].items);
+        assert_eq!(
+            super::item(pool, "a/one").await.unwrap().as_ref(),
+            Some(&v2[0].items[0])
+        );
+        assert_eq!(super::item(pool, "b/one").await.unwrap(), None);
     }
 
     #[tokio::test]

@@ -18,6 +18,8 @@ tauri-build = { version = "2", features = [] }
 tauri = { version = "2", features = [] }
 tauri-plugin-log = "2"
 log = "0.4"
+percent-encoding = "2"
+reqwest = { version = "0.12", default-features = false }
 korean-core = { path = "../../../crates/korean-core" }
 korean-db = { path = "../../../crates/korean-db" }
 korean-providers = { path = "../../../crates/korean-providers" }

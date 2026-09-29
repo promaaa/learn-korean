@@ -6,8 +6,13 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 ## [Unreleased]
 
 ### Added
+- Photos on cards with an `image` query: Openverse, then Wikimedia Commons; attribution shown under every photo.
+- Schema 4: `image_refs` (provider, image URL, source URL, attribution per query). Image bytes are kept in memory and served through the `kimg://` protocol, never written to disk.
 - Audio: every card is spoken when it appears; `R` (or the speaker button) replays it.
 - `korean-providers` crate with the `TtsProvider` trait: Edge neural voice (`ko-KR-SunHiNeural`) with Google Translate fallback and an in-memory cache; native playback via `rodio`.
+
+### Changed
+- Window height 720 px to fit the photo above the card.
 
 ## [0.2.0]
 
