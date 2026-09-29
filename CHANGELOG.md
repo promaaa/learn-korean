@@ -5,6 +5,9 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+### Added
+- Progress sync between computers through a shared folder (MEGA, Syncthing...): each device writes `<device>.db` (reviews, XP, settings) when the window hides or loses focus, and merges the others' at start and on every Super+Z. Enabled by `sync.json` in the app config directory, written by `LEARN_KOREAN_SYNC_DIR=... scripts/install-omarchy.sh` (ADR-006, migration 0008: `settings.updated_at`, `sync_peers`).
+
 ## [0.6.0]
 
 ### Added

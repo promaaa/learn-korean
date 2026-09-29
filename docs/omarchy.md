@@ -26,6 +26,21 @@ o.bind("SUPER + Z", "Learn Korean", "~/.local/bin/learn-korean --toggle")
 o.launch_on_start("~/.local/bin/learn-korean --hidden")
 ```
 
+## Sync between computers
+
+Progress (reviews, XP, focus) syncs through any folder the computers already share, e.g. MEGA:
+
+```sh
+LEARN_KOREAN_SYNC_DIR=~/MegaSync/learn-korean scripts/install-omarchy.sh
+```
+
+Run it on each computer. It writes `~/.config/dev.promaaa.learnkorean/sync.json`
+(`{ "dir": "..." }`; `"device"` optionally overrides the host name) and the app then keeps
+`<host name>.db` in that folder: written when the window hides or loses focus, the other computers'
+files merged at start and on every Super+Z. Use one computer at a time and let the folder sync
+before switching; answers made on both are kept anyway. Both need the same release (a snapshot
+from another schema is skipped, see the log). Design: [ADR-006](adr/ADR-006-folder-sync.md).
+
 ## Command line
 
 | Flag | Effect |

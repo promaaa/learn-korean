@@ -1,6 +1,9 @@
 //! Overlay window behaviour: summon with Super+Z (or `learn-korean --toggle`), dismiss with Esc.
 
+use serde::Serialize;
 use tauri::{AppHandle, Emitter, Manager, WebviewWindow};
+
+use crate::sync;
 
 const MAIN: &str = "main";
 
@@ -34,39 +37,64 @@ impl Launch {
     }
 }
 
+/// Payload of `shell://shown`.
+#[derive(Clone, Serialize)]
+struct Shown {
+    /// Progress from another device was merged: the running session is stale.
+    synced: bool,
+}
+
 pub fn apply(app: &AppHandle, launch: Launch) {
     let Some(window) = app.get_webview_window(MAIN) else {
         log::error!("main window missing");
         return;
     };
     let result = match launch {
-        Launch::Show => show(&window),
+        Launch::Show => {
+            summon(app, window);
+            Ok(())
+        }
         Launch::Hidden => Ok(()),
-        Launch::Toggle => toggle(&window),
+        Launch::Toggle => toggle(app, window),
     };
     if let Err(err) = result {
         log::error!("window {launch:?} failed: {err}");
     }
 }
 
-fn toggle(window: &WebviewWindow) -> tauri::Result<()> {
+fn toggle(app: &AppHandle, window: WebviewWindow) -> tauri::Result<()> {
     if window.is_visible()? && window.is_focused()? {
-        window.hide()
+        window.hide()?;
+        sync::push_later(app);
     } else {
-        show(window)
+        summon(app, window);
     }
+    Ok(())
 }
 
-fn show(window: &WebviewWindow) -> tauri::Result<()> {
+/// Merges the other devices' progress, then shows the window.
+fn summon(app: &AppHandle, window: WebviewWindow) {
+    let app = app.clone();
+    tauri::async_runtime::spawn(async move {
+        let synced = sync::pull_now(&app).await;
+        if let Err(err) = show(&window, synced) {
+            log::error!("showing the window failed: {err}");
+        }
+    });
+}
+
+fn show(window: &WebviewWindow, synced: bool) -> tauri::Result<()> {
     window.show()?;
     window.unminimize()?;
     window.set_focus()?;
-    window.emit("shell://shown", ())
+    window.emit("shell://shown", Shown { synced })
 }
 
 #[tauri::command]
 pub fn hide_window(window: WebviewWindow) -> Result<(), String> {
-    window.hide().map_err(|e| e.to_string())
+    window.hide().map_err(|e| e.to_string())?;
+    sync::push_later(window.app_handle());
+    Ok(())
 }
 
 /// Registers Super+Z where the platform allows applications to grab global keys (macOS, X11,

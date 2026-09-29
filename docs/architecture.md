@@ -37,6 +37,9 @@ User data (memory states, review log, XP) is stored separately from bundled cont
 stable item ids, so content packs can be re-seeded without touching progress. Pack format and
 validation rules: [content.md](content.md).
 
+Progress syncs between devices through a shared folder: each device writes a snapshot of its user
+tables, `<device>.db`, and merges the others' (ADR-006, `korean_db::sync`).
+
 ## Media
 
 Images and audio are fetched by Rust (`reqwest`) and handed to the UI as bytes held in memory.

@@ -7,7 +7,9 @@ Tauri 2 · Rust · Svelte 5 · TypeScript · SQLite · FSRS.
 ## Install
 
 - **Omarchy / Hyprland**: `scripts/install-omarchy.sh` builds the app, installs it in `~/.local/bin`,
-  binds **Super + Z** and starts it hidden at login ([details](docs/omarchy.md)).
+  binds **Super + Z** and starts it hidden at login ([details](docs/omarchy.md)). Set
+  `LEARN_KOREAN_SYNC_DIR` to a shared folder (MEGA, Syncthing...) to
+  [sync progress between computers](docs/omarchy.md#sync-between-computers).
 - **Other platforms**: bundles for Linux and macOS are attached to each
   [GitHub Release](https://github.com/promaaa/learn-korean/releases).
 

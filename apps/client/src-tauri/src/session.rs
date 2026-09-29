@@ -64,7 +64,7 @@ pub async fn session_start(
 /// Persists the learner's focus; it applies from the next `session_start`.
 #[tauri::command]
 pub async fn set_focus(focus: Focus, app: State<'_, AppState>) -> Result<(), String> {
-    korean_db::settings::set_focus(app.db()?.pool(), focus)
+    korean_db::settings::set_focus(app.db()?.pool(), focus, now_ms())
         .await
         .map_err(|e| e.to_string())
 }

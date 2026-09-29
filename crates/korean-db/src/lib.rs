@@ -11,6 +11,7 @@ mod open;
 pub mod progress;
 pub mod reviews;
 pub mod settings;
+pub mod sync;
 
 pub use open::{Database, OpenError};
 pub use sqlx::SqlitePool;

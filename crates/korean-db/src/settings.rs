@@ -14,13 +14,15 @@ pub async fn focus(pool: &SqlitePool) -> sqlx::Result<Focus> {
     Ok(value.as_deref().and_then(Focus::parse).unwrap_or_default())
 }
 
-pub async fn set_focus(pool: &SqlitePool, focus: Focus) -> sqlx::Result<()> {
+/// `now_ms` stamps the change so the latest choice wins when devices sync.
+pub async fn set_focus(pool: &SqlitePool, focus: Focus, now_ms: i64) -> sqlx::Result<()> {
     sqlx::query(
-        "INSERT INTO settings (key, value) VALUES (?, ?) \
-         ON CONFLICT (key) DO UPDATE SET value = excluded.value",
+        "INSERT INTO settings (key, value, updated_at) VALUES (?, ?, ?) \
+         ON CONFLICT (key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at",
     )
     .bind(FOCUS)
     .bind(focus.as_str())
+    .bind(now_ms)
     .execute(pool)
     .await?;
     Ok(())
@@ -36,8 +38,8 @@ mod tests {
         let db = Database::in_memory().await.unwrap();
         let pool = db.pool();
         assert_eq!(focus(pool).await.unwrap(), Focus::Guided);
-        set_focus(pool, Focus::Words).await.unwrap();
-        set_focus(pool, Focus::All).await.unwrap();
+        set_focus(pool, Focus::Words, 1).await.unwrap();
+        set_focus(pool, Focus::All, 2).await.unwrap();
         assert_eq!(focus(pool).await.unwrap(), Focus::All);
         // A value written by a newer release falls back to the default.
         sqlx::query("UPDATE settings SET value = 'grammar' WHERE key = 'focus'")

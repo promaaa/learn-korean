@@ -3,12 +3,14 @@
 #   - binary in ~/.local/bin, desktop entry and icon in ~/.local/share
 #   - Super+Z bound to `learn-korean --toggle`, floating pinned overlay window rule
 #   - started hidden at login so the first Super+Z is instant
+#   - with LEARN_KOREAN_SYNC_DIR set, progress syncs through that shared folder (docs/omarchy.md)
 set -euo pipefail
 
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 bin_dir="${XDG_BIN_HOME:-$HOME/.local/bin}"
 data_dir="${XDG_DATA_HOME:-$HOME/.local/share}"
 hypr_dir="${XDG_CONFIG_HOME:-$HOME/.config}/hypr"
+app_config_dir="${XDG_CONFIG_HOME:-$HOME/.config}/dev.promaaa.learnkorean"
 
 cd "$repo"
 pnpm install --frozen-lockfile
@@ -53,6 +55,12 @@ EOF
     echo "$errors" >&2
     exit 1
   fi
+fi
+
+if [[ -n "${LEARN_KOREAN_SYNC_DIR:-}" ]]; then
+  jq -n --arg dir "$LEARN_KOREAN_SYNC_DIR" '{dir: $dir}' |
+    install -Dm644 /dev/stdin "$app_config_dir/sync.json"
+  echo "Progress sync: $LEARN_KOREAN_SYNC_DIR"
 fi
 
 # Restart the background instance so the new binary is used.

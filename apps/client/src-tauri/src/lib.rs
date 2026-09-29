@@ -4,6 +4,7 @@ mod session;
 mod shell;
 mod speech;
 mod state;
+mod sync;
 mod typing;
 
 use tauri::Manager;
@@ -19,6 +20,11 @@ pub fn run() {
     }));
 
     builder
+        .on_window_event(|window, event| {
+            if let tauri::WindowEvent::Focused(false) = event {
+                sync::push_later(window.app_handle());
+            }
+        })
         .plugin(
             tauri_plugin_log::Builder::new()
                 .level(log::LevelFilter::Info)
@@ -50,7 +56,14 @@ pub fn run() {
         .setup(|app| {
             // Created here, not on the builder: a second instance exits before setup runs, so it
             // never opens the database or the audio device.
-            app.manage(state::init(app.handle()));
+            let state = state::init(app.handle());
+            let progress_sync = sync::ProgressSync::load(app.handle());
+            // Before the UI starts a session, so it plans from the merged progress.
+            if let Ok(db) = &state.db {
+                tauri::async_runtime::block_on(progress_sync.pull(db));
+            }
+            app.manage(state);
+            app.manage(progress_sync);
             app.manage(speech::Speech::new());
             app.manage(images::Images::new());
             #[cfg(desktop)]

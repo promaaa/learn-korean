@@ -113,6 +113,11 @@
     }
   }
 
+  /** Progress changed on another device: plan a new session from it. */
+  export function restart(): void {
+    void session.start();
+  }
+
   async function choose(index: number): Promise<void> {
     if (index >= choices) return;
     await session.answer({ type: "choice", index });

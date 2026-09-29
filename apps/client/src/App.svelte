@@ -14,6 +14,17 @@
   let gym = $state<TypingGym | null>(null);
   /** Review session or Typing Gym; `Tab` switches. */
   let mode = $state<"review" | "typing">("review");
+  /** Another device's progress was merged; the review session restarts when next on screen. */
+  let stale = false;
+
+  function resumeReview(): void {
+    if (stale) {
+      stale = false;
+      session?.restart();
+    } else {
+      session?.resume();
+    }
+  }
 
   function refreshProfile(): void {
     loadProfile()
@@ -26,8 +37,9 @@
       status = s;
       if (!s.error) refreshProfile();
     });
-    const unlisten = onShown(() => {
-      if (mode === "review") session?.resume();
+    const unlisten = onShown(({ synced }) => {
+      if (synced) stale = true;
+      if (mode === "review") resumeReview();
       refreshProfile();
     });
     return () => void unlisten.then((stop) => stop());
@@ -42,7 +54,7 @@
       event.preventDefault();
       mode = mode === "review" ? "typing" : "review";
       // Time spent in the gym is not thinking time for the waiting card.
-      if (mode === "review") session?.resume();
+      if (mode === "review") resumeReview();
     } else if (mode === "typing") {
       gym?.key(event);
     } else if (action) {
