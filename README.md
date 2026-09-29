@@ -10,6 +10,9 @@ Tauri 2 · Rust · Svelte 5 · TypeScript · SQLite · FSRS.
   binds **Super + Z** and starts it hidden at login ([details](docs/omarchy.md)). Set
   `LEARN_KOREAN_SYNC_DIR` to a shared folder (MEGA, Syncthing...) to
   [sync progress between computers](docs/omarchy.md#sync-between-computers).
+- **macOS from source**: `scripts/install-macos.sh` builds `learn-korean.app` into `/Applications`,
+  starts it hidden at login (LaunchAgent) and restarts it; **Ctrl + Option + Z** shows it. The same
+  `LEARN_KOREAN_SYNC_DIR` (and optional `LEARN_KOREAN_DEVICE`) enables sync.
 - **Other platforms**: bundles for Linux and macOS are attached to each
   [GitHub Release](https://github.com/promaaa/learn-korean/releases).
 
