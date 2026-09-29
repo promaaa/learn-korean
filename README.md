@@ -22,5 +22,6 @@ Checks: see [CONTRIBUTING.md](CONTRIBUTING.md).
 - [Product](docs/product.md)
 - [Architecture](docs/architecture.md)
 - [Architecture decision records](docs/adr/)
+- [Omarchy / Hyprland integration (Super+Z)](docs/omarchy.md)
 - [Contributing: Git workflow, commits, migrations, releases](CONTRIBUTING.md)
 - [Changelog](CHANGELOG.md)

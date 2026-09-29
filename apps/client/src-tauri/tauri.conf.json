@@ -13,10 +13,14 @@
       {
         "label": "main",
         "title": "KOR",
-        "width": 720,
+        "width": 760,
         "height": 640,
         "resizable": false,
-        "center": true
+        "center": true,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "visible": false
       }
     ],
     "security": {
