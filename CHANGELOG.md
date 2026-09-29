@@ -5,11 +5,14 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+## [0.4.0]
+
 ### Changed
 - Legacy usage sentences that duplicated small-talk lines were moved to the small-talk pack (validator: one card per Korean line).
 - Scheduling now uses FSRS (`rs-fsrs`, FSRS-5 default weights, 90 % retention, 1/5/10-minute learning steps) instead of the interval ladder.
 
 ### Added
+- `restaurants` pack (unlocked at level 3): 60 sentences for a Korean restaurant or café visit — seating, ordering, spice level, allergies, refills, paying, takeout, café orders — with honorific staff lines and 30 reply exercises, plus 14 dish/utensil word cards with photos.
 - `small-talk` pack (level 1): 81 everyday conversation lines — greetings, introductions, weather, weekend, hobbies, work, family, feelings, plans, compliments, leaving — 59 with replies for the reply game.
 - XP and levels: 10 XP per correct answer (+5 easy, +5 first review, combo up to ×2), progressively longer levels, daily streak; level, XP bar and streak in the title bar, `+XP` after each answer, level-up banner listing unlocked packs.
 - Packs unlock by level: sessions draw only from packs whose `unlock_level` is reached.

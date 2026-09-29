@@ -1749,20 +1749,7 @@
       "register": "neutral",
       "image": "raw meat",
       "fix": null,
-      "usage": [
-        {
-          "id": "legacy/i-dont-eat-meat",
-          "korean": "저는 고기를 안 먹어요.",
-          "english": "I don't eat meat.",
-          "context": "food",
-          "register": "polite",
-          "distractors": [
-            "I eat a lot of meat.",
-            "I don't eat fish.",
-            "Don't you eat meat?"
-          ]
-        }
-      ]
+      "usage": []
     },
     {
       "row": 65,

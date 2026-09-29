@@ -1914,22 +1914,6 @@
       "image": "raw meat"
     },
     {
-      "id": "legacy/i-dont-eat-meat",
-      "kind": "sentence",
-      "korean": "저는 고기를 안 먹어요.",
-      "english": "I don't eat meat.",
-      "context": "food",
-      "register": "polite",
-      "lexemes": [
-        "고기"
-      ],
-      "distractors": [
-        "I eat a lot of meat.",
-        "I don't eat fish.",
-        "Don't you eat meat?"
-      ]
-    },
-    {
       "id": "legacy/65",
       "kind": "word",
       "korean": "야채",
