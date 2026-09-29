@@ -6,6 +6,10 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 ## [Unreleased]
 
 ### Added
+- `korean-core` crate with the normalized content model (raw entry, lexeme, learning item, pack) and derived skills (listening, response, build).
+- Content validator enforcing the pack contract (Hangul-only Korean, 3 distinct distractors, reply counts, chunk integrity, unique ids); bundled packs validated in CI.
+- `content/starter` pack: 22 survival phrases.
+- Schema 2: re-seedable `content_packs` / `content_items` tables, reseeded only when a pack changes; user history untouched.
 - `korean-db` crate: SQLite database in the app data directory (sqlx, WAL), embedded append-only migrations.
 - Automatic `VACUUM INTO` backup to `backups/v<previous-version>-before-schema-<n>.db` before pending migrations run.
 - Older releases refuse a newer schema with an explanatory screen instead of corrupting data.

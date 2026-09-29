@@ -5,6 +5,7 @@
 //! `backups/v<previous-version>-before-schema-<n>.db` so that reinstalling the previous release and
 //! restoring that file is always possible.
 
+pub mod content;
 mod open;
 
 pub use open::{Database, OpenError};

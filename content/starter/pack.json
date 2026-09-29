@@ -1,0 +1,636 @@
+{
+  "id": "starter",
+  "version": 1,
+  "title": "Starter",
+  "description": "Survival phrases: understanding, asking, directions, getting around.",
+  "unlock_level": 1,
+  "items": [
+    {
+      "id": "starter/say-again",
+      "kind": "sentence",
+      "korean": "다시 한번 말해 주세요.",
+      "english": "Please say that again.",
+      "context": "understanding",
+      "register": "polite",
+      "lexemes": [
+        "다시",
+        "한번",
+        "말하다",
+        "주다"
+      ],
+      "distractors": [
+        "Please speak more slowly.",
+        "Please write it down.",
+        "Please say it in English."
+      ]
+    },
+    {
+      "id": "starter/speak-slowly",
+      "kind": "sentence",
+      "korean": "천천히 말해 주세요.",
+      "english": "Please speak slowly.",
+      "context": "understanding",
+      "register": "polite",
+      "lexemes": [
+        "천천히",
+        "말하다",
+        "주다"
+      ],
+      "distractors": [
+        "Please speak louder.",
+        "Please speak quickly.",
+        "Please don't speak."
+      ]
+    },
+    {
+      "id": "starter/did-not-understand",
+      "kind": "sentence",
+      "korean": "이해 못 했어요.",
+      "english": "I didn't understand.",
+      "context": "understanding",
+      "register": "polite",
+      "lexemes": [
+        "이해",
+        "못",
+        "하다"
+      ],
+      "distractors": [
+        "I understood.",
+        "I didn't hear you.",
+        "I don't know him."
+      ]
+    },
+    {
+      "id": "starter/not-sure",
+      "kind": "sentence",
+      "korean": "잘 모르겠어요.",
+      "english": "I'm not sure.",
+      "context": "understanding",
+      "register": "polite",
+      "note": "Softer than 몰라요; the natural way to say you don't really know.",
+      "lexemes": [
+        "잘",
+        "모르다"
+      ],
+      "distractors": [
+        "I know it well.",
+        "I forgot.",
+        "I don't like it much."
+      ]
+    },
+    {
+      "id": "starter/little-korean",
+      "kind": "sentence",
+      "korean": "한국어 조금 해요.",
+      "english": "I speak a little Korean.",
+      "context": "understanding",
+      "register": "polite",
+      "lexemes": [
+        "한국어",
+        "조금",
+        "하다"
+      ],
+      "distractors": [
+        "I don't speak Korean.",
+        "I'm learning Korean.",
+        "I speak Korean well."
+      ]
+    },
+    {
+      "id": "starter/speak-english",
+      "kind": "sentence",
+      "korean": "영어 할 줄 아세요?",
+      "english": "Can you speak English?",
+      "context": "understanding",
+      "register": "polite",
+      "note": "-(으)ㄹ 줄 알다: to know how to do something.",
+      "lexemes": [
+        "영어",
+        "하다",
+        "알다"
+      ],
+      "distractors": [
+        "Do you speak Korean?",
+        "Are you English?",
+        "Do you like English?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 조금 해요.",
+            "english": "Yes, a little."
+          },
+          {
+            "korean": "아니요, 못 해요.",
+            "english": "No, I can't."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          },
+          {
+            "korean": "화장실은 저쪽이에요.",
+            "english": "The restroom is over there."
+          },
+          {
+            "korean": "오늘은 바빠요.",
+            "english": "I'm busy today."
+          }
+        ]
+      }
+    },
+    {
+      "id": "starter/what-in-korean",
+      "kind": "sentence",
+      "korean": "이거 한국어로 뭐예요?",
+      "english": "What is this called in Korean?",
+      "context": "understanding",
+      "register": "polite",
+      "lexemes": [
+        "이거",
+        "한국어",
+        "뭐"
+      ],
+      "distractors": [
+        "What does this mean in English?",
+        "Is this Korean?",
+        "How do you write this in Korean?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "사과라고 해요.",
+            "english": "It's called 사과."
+          },
+          {
+            "korean": "그건 사과예요.",
+            "english": "That's an apple."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 한국 사람이에요.",
+            "english": "Yes, I'm Korean."
+          },
+          {
+            "korean": "두 개 주세요.",
+            "english": "Two, please."
+          },
+          {
+            "korean": "아니요, 안 매워요.",
+            "english": "No, it's not spicy."
+          }
+        ]
+      }
+    },
+    {
+      "id": "starter/write-it-here",
+      "kind": "sentence",
+      "korean": "여기에 써 주세요.",
+      "english": "Please write it here.",
+      "context": "understanding",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "쓰다",
+        "주다"
+      ],
+      "distractors": [
+        "Please read it here.",
+        "Please sign here.",
+        "Please wait here."
+      ]
+    },
+    {
+      "id": "starter/what-is-this",
+      "kind": "sentence",
+      "korean": "이거 뭐예요?",
+      "english": "What is this?",
+      "context": "asking",
+      "register": "polite",
+      "lexemes": [
+        "이거",
+        "뭐"
+      ],
+      "distractors": [
+        "Where is this?",
+        "How much is this?",
+        "Whose is this?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그거 김치예요.",
+            "english": "That's kimchi."
+          },
+          {
+            "korean": "떡이에요.",
+            "english": "It's rice cake."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 좋아요.",
+            "english": "Yes, sounds good."
+          },
+          {
+            "korean": "세 시예요.",
+            "english": "It's three o'clock."
+          },
+          {
+            "korean": "저는 프랑스 사람이에요.",
+            "english": "I'm French."
+          }
+        ]
+      }
+    },
+    {
+      "id": "starter/how-much-is-this",
+      "kind": "sentence",
+      "korean": "이거 얼마예요?",
+      "english": "How much is this?",
+      "context": "shopping",
+      "register": "polite",
+      "lexemes": [
+        "이거",
+        "얼마"
+      ],
+      "distractors": [
+        "What is this?",
+        "Where is this from?",
+        "How many are there?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "만 원이에요.",
+            "english": "It's ten thousand won."
+          },
+          {
+            "korean": "오천 원이에요.",
+            "english": "It's five thousand won."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저기 있어요.",
+            "english": "It's over there."
+          },
+          {
+            "korean": "네, 맞아요.",
+            "english": "Yes, that's right."
+          },
+          {
+            "korean": "내일 와요.",
+            "english": "I'm coming tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "starter/this-one-please",
+      "kind": "sentence",
+      "korean": "이거 주세요.",
+      "english": "I'll take this one, please.",
+      "context": "shopping",
+      "register": "polite",
+      "lexemes": [
+        "이거",
+        "주다"
+      ],
+      "distractors": [
+        "Please show me this one.",
+        "I don't want this one.",
+        "Is this one yours?"
+      ]
+    },
+    {
+      "id": "starter/where-restroom",
+      "kind": "sentence",
+      "korean": "화장실이 어디예요?",
+      "english": "Where is the restroom?",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "화장실",
+        "어디"
+      ],
+      "distractors": [
+        "Where is the exit?",
+        "Where is the station?",
+        "When does the restroom open?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저쪽이에요.",
+            "english": "It's over there."
+          },
+          {
+            "korean": "이 층에 있어요.",
+            "english": "It's on the second floor."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 괜찮아요.",
+            "english": "Yes, it's fine."
+          },
+          {
+            "korean": "삼천 원이에요.",
+            "english": "It's three thousand won."
+          },
+          {
+            "korean": "저는 커피를 좋아해요.",
+            "english": "I like coffee."
+          }
+        ]
+      }
+    },
+    {
+      "id": "starter/where-subway",
+      "kind": "sentence",
+      "korean": "지하철역이 어디예요?",
+      "english": "Where is the subway station?",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "지하철역",
+        "어디"
+      ],
+      "distractors": [
+        "Where is the bus stop?",
+        "Is the subway station far?",
+        "Where is the train station?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저기 있어요.",
+            "english": "It's over there."
+          },
+          {
+            "korean": "쭉 가세요.",
+            "english": "Go straight ahead."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 시예요.",
+            "english": "It's three o'clock."
+          },
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          },
+          {
+            "korean": "친구를 만났어요.",
+            "english": "I met a friend."
+          }
+        ]
+      },
+      "image": "seoul subway station"
+    },
+    {
+      "id": "starter/where-am-i",
+      "kind": "sentence",
+      "korean": "여기가 어디예요?",
+      "english": "Where am I?",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "어디"
+      ],
+      "distractors": [
+        "Where are you?",
+        "Is it far from here?",
+        "Where are you going?"
+      ]
+    },
+    {
+      "id": "starter/i-am-lost",
+      "kind": "sentence",
+      "korean": "길을 잃었어요.",
+      "english": "I'm lost.",
+      "context": "help",
+      "register": "polite",
+      "lexemes": [
+        "길",
+        "잃다"
+      ],
+      "distractors": [
+        "I lost my phone.",
+        "I found the way.",
+        "I'm late."
+      ]
+    },
+    {
+      "id": "starter/help-me",
+      "kind": "sentence",
+      "korean": "도와주세요!",
+      "english": "Help me, please!",
+      "context": "help",
+      "register": "polite",
+      "lexemes": [
+        "돕다",
+        "주다"
+      ],
+      "distractors": [
+        "Wait for me, please!",
+        "Call the police, please!",
+        "Leave me alone, please!"
+      ]
+    },
+    {
+      "id": "starter/how-long",
+      "kind": "sentence",
+      "korean": "얼마나 걸려요?",
+      "english": "How long does it take?",
+      "context": "transport",
+      "register": "polite",
+      "lexemes": [
+        "얼마나",
+        "걸리다"
+      ],
+      "distractors": [
+        "How much does it cost?",
+        "How far is it?",
+        "When does it leave?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "십 분쯤 걸려요.",
+            "english": "About ten minutes."
+          },
+          {
+            "korean": "한 시간 걸려요.",
+            "english": "It takes an hour."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "만 원이에요.",
+            "english": "It's ten thousand won."
+          },
+          {
+            "korean": "저기 있어요.",
+            "english": "It's over there."
+          },
+          {
+            "korean": "네, 좋아요.",
+            "english": "Yes, sounds good."
+          }
+        ]
+      }
+    },
+    {
+      "id": "starter/take-me-here",
+      "kind": "sentence",
+      "korean": "여기로 가 주세요.",
+      "english": "Please take me here.",
+      "context": "transport",
+      "register": "polite",
+      "note": "Said to a taxi driver while showing an address.",
+      "lexemes": [
+        "여기",
+        "가다",
+        "주다"
+      ],
+      "distractors": [
+        "Please stop here.",
+        "Please come here.",
+        "Is it far from here?"
+      ],
+      "image": "seoul taxi"
+    },
+    {
+      "id": "starter/stop-here",
+      "kind": "sentence",
+      "korean": "여기서 세워 주세요.",
+      "english": "Please stop here.",
+      "context": "transport",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "세우다",
+        "주다"
+      ],
+      "distractors": [
+        "Please turn left here.",
+        "Please wait here.",
+        "Please don't stop here."
+      ]
+    },
+    {
+      "id": "starter/may-i-sit",
+      "kind": "sentence",
+      "korean": "여기 앉아도 돼요?",
+      "english": "May I sit here?",
+      "context": "permission",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "앉다",
+        "되다"
+      ],
+      "distractors": [
+        "Is someone sitting here?",
+        "Can I stand here?",
+        "Please sit here."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 앉으세요.",
+            "english": "Yes, have a seat."
+          },
+          {
+            "korean": "죄송해요, 자리 있어요.",
+            "english": "Sorry, this seat is taken."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          },
+          {
+            "korean": "지하철로 가요.",
+            "english": "I go by subway."
+          },
+          {
+            "korean": "세 시에 만나요.",
+            "english": "Let's meet at three."
+          }
+        ]
+      }
+    },
+    {
+      "id": "starter/may-i-take-photo",
+      "kind": "sentence",
+      "korean": "사진 찍어도 돼요?",
+      "english": "May I take a picture?",
+      "context": "permission",
+      "register": "polite",
+      "lexemes": [
+        "사진",
+        "찍다",
+        "되다"
+      ],
+      "distractors": [
+        "Could you take a picture of me?",
+        "Did you take a picture?",
+        "May I sit here for a picture?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 찍으세요.",
+            "english": "Yes, go ahead."
+          },
+          {
+            "korean": "아니요, 안 돼요.",
+            "english": "No, you can't."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "삼천 원이에요.",
+            "english": "It's three thousand won."
+          },
+          {
+            "korean": "저쪽이에요.",
+            "english": "It's over there."
+          },
+          {
+            "korean": "잘 먹겠습니다.",
+            "english": "Thank you for the meal."
+          }
+        ]
+      }
+    },
+    {
+      "id": "starter/take-photo-for-me",
+      "kind": "sentence",
+      "korean": "사진 좀 찍어 주세요.",
+      "english": "Please take a picture of me.",
+      "context": "permission",
+      "register": "polite",
+      "lexemes": [
+        "사진",
+        "좀",
+        "찍다",
+        "주다"
+      ],
+      "distractors": [
+        "May I take a picture?",
+        "Please don't take pictures.",
+        "Please send me the picture."
+      ]
+    }
+  ]
+}

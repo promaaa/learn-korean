@@ -22,8 +22,19 @@ fn open_database(app: &AppHandle) -> Result<Database, String> {
     let dir = app.path().app_data_dir().map_err(|e| e.to_string())?;
     let path = dir.join("korean.db");
     let version = app.package_info().version.to_string();
-    let db = tauri::async_runtime::block_on(Database::open(&path, &version))
-        .map_err(|e| e.to_string())?;
+    let db = tauri::async_runtime::block_on(async {
+        let db = Database::open(&path, &version).await?;
+        let packs = korean_core::content::bundled_packs();
+        let report = korean_db::content::seed(db.pool(), &packs).await?;
+        log::info!(
+            "content: {} packs updated, {} unchanged, {} removed",
+            report.packs_updated,
+            report.packs_unchanged,
+            report.packs_removed
+        );
+        Ok::<_, Box<dyn std::error::Error>>(db)
+    })
+    .map_err(|e| e.to_string())?;
     log::info!(
         "database {} at schema {}",
         db.path().display(),

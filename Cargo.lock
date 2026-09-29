@@ -2143,9 +2143,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "korean-core"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "thiserror 2.0.21",
+]
+
+[[package]]
 name = "korean-db"
 version = "0.1.0"
 dependencies = [
+ "korean-core",
+ "serde_json",
  "sha2",
  "sqlx",
  "tempfile",
@@ -2167,6 +2178,7 @@ dependencies = [
 name = "learn-korean"
 version = "0.1.0"
 dependencies = [
+ "korean-core",
  "korean-db",
  "log",
  "serde",

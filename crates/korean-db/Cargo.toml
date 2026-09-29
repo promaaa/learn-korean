@@ -8,6 +8,8 @@ license.workspace = true
 repository.workspace = true
 
 [dependencies]
+korean-core = { path = "../korean-core" }
+serde_json.workspace = true
 sqlx = { workspace = true }
 thiserror.workspace = true
 tracing.workspace = true
