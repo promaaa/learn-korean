@@ -1,14 +1,18 @@
 <script lang="ts">
   import FatalError from "./components/FatalError.svelte";
   import KeyHints from "./components/KeyHints.svelte";
+  import Session from "./routes/Session.svelte";
   import { appStatus, type AppStatus } from "./lib/api";
   import { actionFor } from "./lib/keys";
-  import { hideWindow } from "./lib/shell";
+  import { hideWindow, onShown } from "./lib/shell";
 
   let status = $state<AppStatus | null>(null);
+  let session = $state<Session | null>(null);
 
   $effect(() => {
     appStatus().then((s) => (status = s));
+    const unlisten = onShown(() => session?.resume());
+    return () => void unlisten.then((stop) => stop());
   });
 
   function onKeydown(event: KeyboardEvent) {
@@ -16,6 +20,7 @@
     if (!action) return;
     event.preventDefault();
     if (action.type === "hide") void hideWindow();
+    else session?.handle(action);
   }
 </script>
 
@@ -30,12 +35,12 @@
   <main class="stage">
     {#if status?.error}
       <FatalError message={status.error} />
-    {:else}
-      <p class="hangul">안녕하세요</p>
+    {:else if status}
+      <Session bind:this={session} />
     {/if}
   </main>
 
-  <KeyHints hints={[{ keys: "Esc", label: "hide" }]} />
+  <KeyHints hints={session?.hints() ?? [{ keys: "Esc", label: "hide" }]} />
 </div>
 
 <style>

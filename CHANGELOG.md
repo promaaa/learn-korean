@@ -5,7 +5,11 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+## [0.2.0]
+
 ### Added
+- Listening game: Korean line, four meanings, answer with `1-4` or `J`/`K` + `Enter`, `Space` for the next card; correct/incorrect feedback with the meaning and usage note, streak counter and session progress bar.
+- Session summary (answered, accuracy, best streak); summoning the window after a finished session starts a new one, and time spent hidden is not counted as answer time.
 - Review scheduler (interval ladder: 10 min → 1 d → 3 d → … → 180 d; lapses reset) per (item, skill) card.
 - Answer grading: wrong → Again, correct → Easy/Good/Hard by response time (skill-specific bands).
 - Session planning: due cards first (most overdue first), new material round-robin across packs, other skills unlocked after listening; missed cards retried later in the session.
