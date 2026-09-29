@@ -8,7 +8,7 @@ use super::exercise::{self, Exercise, ExerciseView, Expected, Prompt};
 use super::plan::{Card, Plan};
 use crate::content::{Glossary, Item};
 use crate::rng::Rng;
-use crate::scheduler::{self, MemoryState, Rating};
+use crate::scheduler::{MemoryState, Rating, Scheduler};
 use crate::{progression, scoring};
 
 /// A missed card comes back after this many other cards.
@@ -87,6 +87,7 @@ pub struct Session {
     items: HashMap<String, Item>,
     glossary: Glossary,
     states: HashMap<Card, MemoryState>,
+    scheduler: Scheduler,
     retries: HashMap<Card, u8>,
     current: Option<Exercise>,
     rng: Rng,
@@ -99,6 +100,7 @@ impl Session {
         plan: Plan,
         items: Vec<Item>,
         states: HashMap<Card, MemoryState>,
+        scheduler: Scheduler,
         glossary: Glossary,
         seed: u64,
     ) -> Self {
@@ -117,6 +119,7 @@ impl Session {
             items,
             glossary,
             states,
+            scheduler,
             retries: HashMap::new(),
             current: None,
             rng: Rng::new(seed),
@@ -161,7 +164,10 @@ impl Session {
         let rating = scoring::grade(card.skill, correct, elapsed_ms, chunks);
         let previous = self.states.get(&card);
         let first_review = previous.is_none();
-        let state = scheduler::review(previous, rating, now_ms);
+        let reps = previous.map_or(0, |s| s.reps);
+        let state = self
+            .scheduler
+            .review(previous, rating, now_ms, fuzz_factor(&card, reps));
         self.states.insert(card.clone(), state);
 
         let p = &mut self.progress;
@@ -214,6 +220,22 @@ impl Session {
             elapsed_ms,
         })
     }
+}
+
+/// Anki's fuzz factor: uniform in [0, 1), the same for a card and its number of reviews, so
+/// replaying an answer (or answering on another device) picks the same day.
+fn fuzz_factor(card: &Card, reps: u32) -> f64 {
+    // FNV-1a: stable across builds and platforms, unlike `DefaultHasher`.
+    let mut hash: u64 = 0xcbf2_9ce4_8422_2325;
+    let bytes = card
+        .item_id
+        .bytes()
+        .chain([0])
+        .chain(card.skill.as_str().bytes());
+    for byte in bytes.chain(reps.to_le_bytes()) {
+        hash = (hash ^ u64::from(byte)).wrapping_mul(0x0100_0000_01b3);
+    }
+    (Rng::new(hash).next_u64() >> 11) as f64 / (1u64 << 53) as f64
 }
 
 /// Whether `answer` solves the exercise; `InvalidAnswer` if it does not even fit it.
@@ -282,7 +304,14 @@ mod tests {
             due: 0,
             new: n,
         };
-        Session::new(plan, items, HashMap::new(), Glossary::default(), 7)
+        Session::new(
+            plan,
+            items,
+            HashMap::new(),
+            Scheduler::with_defaults(0),
+            Glossary::default(),
+            7,
+        )
     }
 
     fn correct_index(s: &mut Session) -> usize {
@@ -305,7 +334,7 @@ mod tests {
             assert_eq!(out.feedback.streak, expected_streak);
             assert_eq!(out.state.reps, 1);
             assert!(
-                out.feedback.due_in_ms >= scheduler::DAY_MS,
+                out.feedback.due_in_ms >= crate::scheduler::DAY_MS,
                 "easy graduates to days"
             );
         }
@@ -405,7 +434,9 @@ mod tests {
             due: 0,
             new: 1,
         };
-        let mut s = Session::new(plan, vec![item], HashMap::new(), glossary, 7);
+        let states = HashMap::new();
+        let scheduler = Scheduler::with_defaults(0);
+        let mut s = Session::new(plan, vec![item], states, scheduler, glossary, 7);
         s.current();
         let out = s.answer(&Answer::Choice { index: 0 }, 1_000, NOW).unwrap();
         let words: Vec<&str> = out.feedback.glosses.keys().map(String::as_str).collect();

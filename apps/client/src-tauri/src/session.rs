@@ -49,14 +49,35 @@ pub async fn session_start(
     let focus = korean_db::settings::focus(pool)
         .await
         .map_err(|e| e.to_string())?;
-    let plan = plan_session(&items, &states, PLAYABLE, focus, now, Limits::default());
+    let scheduler = crate::memory::scheduler(pool).await?;
+    let today = scheduler.day_start(scheduler.day(now));
+    let introduced_today = korean_db::reviews::introduced_since(pool, today)
+        .await
+        .map_err(|e| e.to_string())?;
+    let plan = plan_session(
+        &items,
+        &states,
+        PLAYABLE,
+        focus,
+        now,
+        Limits::default(),
+        &scheduler,
+        introduced_today,
+    );
     let started = SessionStarted {
         total: plan.cards.len(),
         due: plan.due,
         new: plan.new,
         focus,
     };
-    let session = Session::new(plan, items, states, bundled_glossary(), now as u64);
+    let session = Session::new(
+        plan,
+        items,
+        states,
+        scheduler,
+        bundled_glossary(),
+        now as u64,
+    );
     *active.0.lock().map_err(|e| e.to_string())? = Some(session);
     Ok(started)
 }

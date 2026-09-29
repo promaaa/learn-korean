@@ -1,4 +1,5 @@
 mod images;
+mod memory;
 mod progress;
 mod session;
 mod shell;
@@ -60,12 +61,16 @@ pub fn run() {
             let progress_sync = sync::ProgressSync::load(app.handle());
             // Before the UI starts a session, so it plans from the merged progress.
             if let Ok(db) = &state.db {
-                tauri::async_runtime::block_on(progress_sync.pull(db));
+                tauri::async_runtime::block_on(async {
+                    progress_sync.pull(db).await;
+                    memory::replay_logged(db.pool()).await;
+                });
             }
             app.manage(state);
             app.manage(progress_sync);
             app.manage(speech::Speech::new());
             app.manage(images::Images::new());
+            memory::optimize_later(app.handle());
             #[cfg(desktop)]
             shell::register_global_shortcut(app.handle());
             shell::apply(

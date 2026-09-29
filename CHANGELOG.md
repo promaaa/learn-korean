@@ -7,6 +7,11 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ### Added
 - Progress sync between computers through a shared folder (MEGA, Syncthing...): each device writes `<device>.db` (reviews, XP, settings) when the window hides or loses focus, and merges the others' at start and on every Super+Z. Enabled by `sync.json` in the app config directory, written by `LEARN_KOREAN_SYNC_DIR=... scripts/install-omarchy.sh` (ADR-006, migration 0008: `settings.updated_at`, `sync_peers`).
+- FSRS parameters optimized from your own review log, as in Anki: refitted at most daily in the background when the log grew, kept only if they predict your answers better, synced between devices (`fsrs` setting). Memory states are replayed from the log whenever the parameters or the merged log change.
+- Anki's session rules: at most 20 new cards per day (across sessions and devices), learning cards first (learned ahead up to 20 minutes), then review cards least likely to be recalled first, and one card per item per session so siblings don't prime each other.
+
+### Changed
+- Scheduling follows Anki's FSRS implementation: FSRS-6 through `fsrs` (the library Anki uses) instead of `rs-fsrs` (FSRS-5); learning steps 1 min / 10 min and a 10 min relearning step; review intervals in whole days starting at 4 a.m. local time, fuzzed with Anki's ranges and ordered Hard < Good < Easy (ADR-003).
 
 ### Fixed
 - macOS: the global shortcut is **Ctrl+Option+Z**; Super+Z was Command+Z and took Undo from every app.

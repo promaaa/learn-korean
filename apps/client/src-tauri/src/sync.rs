@@ -139,15 +139,20 @@ pub fn push_later(app: &AppHandle) {
 }
 
 /// Pulls, then reports whether progress changed. False before setup finished or without a DB.
+/// Merged answers change memory states, so they are replayed before a session plans from them.
 pub async fn pull_now(app: &AppHandle) -> bool {
     let (Some(sync), Some(state)) = (app.try_state::<ProgressSync>(), app.try_state::<AppState>())
     else {
         return false;
     };
-    match state.db() {
-        Ok(db) => sync.pull(db).await,
-        Err(_) => false,
+    let Ok(db) = state.db() else {
+        return false;
+    };
+    let changed = sync.pull(db).await;
+    if changed {
+        crate::memory::replay_logged(db.pool()).await;
     }
+    changed
 }
 
 fn load_target(app: &AppHandle) -> Result<Option<Target>, String> {
