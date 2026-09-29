@@ -1,0 +1,12 @@
+{
+  "name": "learn-korean",
+  "private": true,
+  "packageManager": "pnpm@12.6.0",
+  "scripts": {
+    "dev": "pnpm --filter client tauri dev",
+    "build": "pnpm --filter client tauri build",
+    "check": "pnpm --filter client check",
+    "lint": "pnpm --filter client lint",
+    "test": "pnpm --filter client test"
+  }
+}
