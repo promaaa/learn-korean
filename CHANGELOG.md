@@ -5,6 +5,8 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+## [0.6.0]
+
 ### Added
 - Focus (`F`): sessions draw from **words only**, **words, then sentences** (default) or **everything**; the choice is saved (migration 0007, `settings` table). Outside "everything", a sentence is served only once every word of it is known (its word card graduated to FSRS review); its words not seen yet are taught first, in its place.
 - 190 word cards so every word of every sentence can be learned on its own first: new words in starter, small-talk and restaurants (placed just before the first sentence using them) and a new **Everyday words** pack for the legacy sentences. Sentence `lexemes` now list every content word (legacy: new curation `usage.lexemes` field); a test requires a word card for each, grammar (이다, 에 있다, 하고, 만) excepted.
