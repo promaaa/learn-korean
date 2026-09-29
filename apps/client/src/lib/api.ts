@@ -40,6 +40,8 @@ export interface Feedback {
   correctIndex: number | null;
   /** English of each option in the reply game (empty otherwise). */
   translations: string[];
+  /** English of each Korean word on screen, keyed by the word as displayed (`괜찮아요?`). */
+  glosses: Record<string, string>;
   rating: Rating;
   korean: string;
   english: string;

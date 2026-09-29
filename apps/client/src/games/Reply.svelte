@@ -1,5 +1,6 @@
 <script lang="ts">
   import ChoiceList from "../components/ChoiceList.svelte";
+  import Glossed from "../components/Glossed.svelte";
   import Photo from "../components/Photo.svelte";
   import SpeakerButton from "../components/SpeakerButton.svelte";
   import type { Feedback } from "../lib/api";
@@ -25,7 +26,7 @@
   {#if image}<Photo {itemId} />{/if}
   <div class="line">
     <SpeakerButton status={audio} onclick={onreplay} />
-    <p class="bubble" lang="ko">{korean}</p>
+    <p class="bubble" lang="ko"><Glossed text={korean} glosses={feedback?.glosses ?? null} /></p>
     {#if feedback}<p class="line-english">{feedback.english}</p>{/if}
   </div>
   <p class="question">How do you answer?</p>

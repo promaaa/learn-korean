@@ -5,9 +5,10 @@
   import Reply from "../games/Reply.svelte";
   import { formatInterval } from "../lib/format";
   import type { Profile } from "../lib/api";
-  import type { Action } from "../lib/keys";
+  import type { Action, Direction } from "../lib/keys";
   import { SessionController } from "../lib/session.svelte";
   import { Speaker } from "../lib/speaker.svelte";
+  import { ACTIVE_ATTRIBUTE, nextWord, WORD_SELECTOR } from "../lib/words";
 
   type Hint = { keys: string; label: string };
 
@@ -20,6 +21,10 @@
   /** Build game: indices of the chunks placed so far. */
   let picked = $state<number[]>([]);
   let spokenKey = 0;
+  /** The card on screen, remounted per exercise. */
+  let card = $state<HTMLElement>();
+  /** Word whose gloss the arrow keys show after answering (stale once its card is gone). */
+  let activeWord: HTMLElement | null = null;
 
   $effect(() => {
     void session.start();
@@ -72,8 +77,15 @@
           { keys: "R", label: "replay" },
           hide,
         ];
-      case "feedback":
-        return [{ keys: "Space", label: "next" }, { keys: "R", label: "replay" }, hide];
+      case "feedback": {
+        const words = Object.keys(session.feedback?.glosses ?? {}).length > 0;
+        return [
+          { keys: "Space", label: "next" },
+          ...(words ? [{ keys: "← ↑ ↓ →", label: "words" }] : []),
+          { keys: "R", label: "replay" },
+          hide,
+        ];
+      }
       default:
         return [{ keys: "Enter", label: "new session" }, { keys: "Tab", label: "typing gym" }, hide];
     }
@@ -147,6 +159,17 @@
     } else if (action.type === "confirm") void choose(cursor);
   }
 
+  /** Shows the gloss of the next word in `direction`, as if it were hovered. */
+  function browseWords(direction: Direction): void {
+    const words = [...(card?.querySelectorAll<HTMLElement>(WORD_SELECTOR) ?? [])];
+    const current = activeWord ? words.indexOf(activeWord) : -1;
+    const boxes = words.map((word) => word.getBoundingClientRect());
+    const next = nextWord(boxes, current < 0 ? null : current, direction);
+    activeWord?.removeAttribute(ACTIVE_ATTRIBUTE);
+    activeWord = next === null ? null : (words[next] ?? null);
+    activeWord?.setAttribute(ACTIVE_ATTRIBUTE, "");
+  }
+
   export function handle(action: Action): void {
     if (action.type === "replay") {
       replay();
@@ -159,6 +182,7 @@
         break;
       case "feedback":
         if (action.type === "continue" || action.type === "confirm") void session.next();
+        else if (action.type === "move") browseWords(action.direction);
         break;
       case "done":
       case "empty":
@@ -186,7 +210,7 @@
 
   {#if (session.phase === "exercise" || session.phase === "feedback") && session.exercise}
     {#key session.serial}
-      <div class="card" in:fly={{ y: 14, duration: 160 }}>
+      <div class="card" bind:this={card} in:fly={{ y: 14, duration: 160 }}>
         {#if prompt?.type === "build"}
           <Build
             itemId={session.exercise.card.itemId}

@@ -1,4 +1,4 @@
-/** "in 5 min", "in 3 h", "in 4 days", "in 2 mo" — for the next-review hint. */
+/** "in 5 min", "in 3 h", "in 4 days", "in 2 mo", for the next-review hint. */
 export function formatInterval(ms: number): string {
   const minutes = Math.round(ms / 60_000);
   if (minutes < 1) return "in a moment";

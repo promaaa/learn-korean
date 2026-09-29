@@ -113,6 +113,7 @@ mod tests {
                 correct: rating != Rating::Again,
                 correct_index: Some(0),
                 translations: vec![],
+                glosses: Default::default(),
                 rating,
                 korean: String::new(),
                 english: String::new(),

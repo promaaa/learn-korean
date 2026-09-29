@@ -1,5 +1,5 @@
-//! `anki-import import <deck.csv> <raw.json>` — CSV → immutable raw rows.
-//! `anki-import build <legacy-dir>` — `raw.json` + `curation.json` → `lexemes.json` + `pack.json`.
+//! `anki-import import <deck.csv> <raw.json>`: CSV → immutable raw rows.
+//! `anki-import build <legacy-dir>`: `raw.json` + `curation.json` → `lexemes.json` + `pack.json`.
 
 use std::path::Path;
 use std::process::ExitCode;

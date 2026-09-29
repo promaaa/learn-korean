@@ -2,7 +2,7 @@
 
 Bundled content lives in `content/<pack-id>/pack.json`, is embedded in the binary
 (`korean_core::content::bundled_packs`) and re-seeded into the `content_*` tables whenever a pack
-changes. User progress references items by id only, so editing a pack never loses progress —
+changes. User progress references items by id only, so editing a pack never loses progress,
 **but item ids are permanent once released**.
 
 `cargo test -p korean-core` validates every bundled pack (CI: "starter content validation").
@@ -65,12 +65,26 @@ changes. User progress references items by id only, so editing a pack never lose
 
 Derived from the data, never authored:
 
-- `listening` — every item.
-- `response` — items with `replies`.
-- `build` — sentences with at least 3 chunks.
+- `listening`: every item.
+- `response`: items with `replies`.
+- `build`: sentences with at least 3 chunks.
 
 Two further rules span all packs: item ids are globally unique, and the same Korean line may not
 appear twice (a trailing `.` does not make a new line; `?` does: 괜찮아요 vs 괜찮아요?).
+
+## Glossary
+
+`content/glossary.json` maps every word form used by any pack (item Korean and replies, split on
+spaces, `? . , ! ~` stripped) to the English shown when the learner hovers it after answering:
+
+```json
+{ "주말에": "on the weekend", "했어요": "did (하다)", "친구를": "friend (object)" }
+```
+
+Glosses are at most 40 characters: meaning of that form, particle role in parentheses when it adds
+information, and the dictionary form after conjugated verbs and adjectives. A form with different
+meanings across lines joins them with ` / ` (`이`: "two / this"). Validation fails when a word has
+no gloss or a gloss is used by no line, so adding a pack line means adding its new words here.
 
 ## Legacy Anki deck
 

@@ -9,7 +9,7 @@ pub struct ValidationError {
     pub message: String,
 }
 
-const PUNCTUATION: [char; 5] = ['?', '.', ',', '!', '~'];
+pub(super) const PUNCTUATION: [char; 5] = ['?', '.', ',', '!', '~'];
 const MAX_NOTE: usize = 120;
 
 /// Hangul syllables separated by single spaces, with `? . , ! ~` punctuation. Must start with a

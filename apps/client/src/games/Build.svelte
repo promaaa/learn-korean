@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Glossed from "../components/Glossed.svelte";
   import Photo from "../components/Photo.svelte";
   import SpeakerButton from "../components/SpeakerButton.svelte";
   import type { Feedback } from "../lib/api";
@@ -45,7 +46,7 @@
     lang="ko"
   >
     {#each picked as index, position (position)}
-      <span class="placed">{chunks[index]}</span>
+      <span class="placed"><Glossed text={chunks[index] ?? ""} glosses={feedback?.glosses ?? null} /></span>
     {/each}
     {#if !feedback}<span class="caret" class:done={complete}></span>{/if}
   </div>
@@ -57,7 +58,9 @@
       </p>
       <div class="solution">
         <SpeakerButton status={audio} onclick={onreplay} />
-        {#if !feedback.correct}<p class="korean" lang="ko">{feedback.korean}</p>{/if}
+        {#if !feedback.correct}
+          <p class="korean" lang="ko"><Glossed text={feedback.korean} glosses={feedback.glosses} /></p>
+        {/if}
       </div>
       {#if feedback.note}<p class="note">{feedback.note}</p>{/if}
     </div>

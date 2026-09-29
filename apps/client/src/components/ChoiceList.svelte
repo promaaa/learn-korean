@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Feedback } from "../lib/api";
+  import Glossed from "./Glossed.svelte";
 
   interface Props {
     options: string[];
@@ -32,7 +33,9 @@
       >
         <kbd>{index + 1}</kbd>
         <span class="text">
-          <span class:ko={korean} lang={korean ? "ko" : undefined}>{option}</span>
+          <span class:ko={korean} lang={korean ? "ko" : undefined}>
+            {#if korean}<Glossed text={option} glosses={feedback?.glosses ?? null} />{:else}{option}{/if}
+          </span>
           {#if feedback && feedback.translations[index]}
             <span class="translation">{feedback.translations[index]}</span>
           {/if}
@@ -127,6 +130,12 @@
 
   .option.dim {
     opacity: 0.45;
+  }
+
+  /* A dimmed Korean option stays readable while one of its words shows its gloss. */
+  .option.dim:hover:has(:global(.word)),
+  .option.dim:has(:global([data-active])) {
+    opacity: 1;
   }
 
   @keyframes shake {

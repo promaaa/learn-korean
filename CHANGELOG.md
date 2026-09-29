@@ -5,10 +5,13 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+### Added
+- Word glosses: after answering, hover any Korean word on the card (the line, Reply options, the Build answer) to see its English, or browse the words with the arrow keys (← → word by word, ↑ ↓ row by row). `content/glossary.json` glosses all 998 word forms of the bundled packs; validation requires every word to have a gloss and every gloss to be used.
+
 ## [0.5.2]
 
 ### Fixed
-- The WebView talks to Rust over Tauri's `ipc:` protocol again (the CSP blocked it, forcing the slower postMessage fallback — noticeable per keystroke in the Typing Gym).
+- The WebView talks to Rust over Tauri's `ipc:` protocol again (the CSP blocked it, forcing the slower postMessage fallback, noticeable per keystroke in the Typing Gym).
 
 ### Added
 - README: install instructions and key reference.
@@ -38,8 +41,8 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 - Scheduling now uses FSRS (`rs-fsrs`, FSRS-5 default weights, 90 % retention, 1/5/10-minute learning steps) instead of the interval ladder.
 
 ### Added
-- `restaurants` pack (unlocked at level 3): 60 sentences for a Korean restaurant or café visit — seating, ordering, spice level, allergies, refills, paying, takeout, café orders — with honorific staff lines and 30 reply exercises, plus 14 dish/utensil word cards with photos.
-- `small-talk` pack (level 1): 81 everyday conversation lines — greetings, introductions, weather, weekend, hobbies, work, family, feelings, plans, compliments, leaving — 59 with replies for the reply game.
+- `restaurants` pack (unlocked at level 3): 60 sentences for a Korean restaurant or café visit (seating, ordering, spice level, allergies, refills, paying, takeout, café orders) with honorific staff lines and 30 reply exercises, plus 14 dish/utensil word cards with photos.
+- `small-talk` pack (level 1): 81 everyday conversation lines (greetings, introductions, weather, weekend, hobbies, work, family, feelings, plans, compliments, leaving), 59 with replies for the reply game.
 - XP and levels: 10 XP per correct answer (+5 easy, +5 first review, combo up to ×2), progressively longer levels, daily streak; level, XP bar and streak in the title bar, `+XP` after each answer, level-up banner listing unlocked packs.
 - Packs unlock by level: sessions draw only from packs whose `unlock_level` is reached.
 - Schema 6: append-only `xp_events` ledger, written in the same transaction as the review.

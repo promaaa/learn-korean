@@ -4,6 +4,7 @@
 use std::sync::Mutex;
 use std::time::{SystemTime, UNIX_EPOCH};
 
+use korean_core::content::bundled_glossary;
 use korean_core::learning::{
     Answer, ExerciseView, Feedback, Limits, PLAYABLE, Progress, Session, plan_session,
 };
@@ -50,7 +51,7 @@ pub async fn session_start(
         due: plan.due,
         new: plan.new,
     };
-    let session = Session::new(plan, items, states, now as u64);
+    let session = Session::new(plan, items, states, bundled_glossary(), now as u64);
     *active.0.lock().map_err(|e| e.to_string())? = Some(session);
     Ok(started)
 }

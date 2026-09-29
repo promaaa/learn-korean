@@ -19,6 +19,7 @@ Tauri 2 · Rust · Svelte 5 · TypeScript · SQLite · FSRS.
 | `1`–`4` | answer (physical digit row, also on AZERTY) |
 | `J` / `K`, `Enter` | move between options, choose |
 | `H` / `L`, `Space`, `Backspace`, `Enter` | build game: move, place a chunk, undo, check |
+| arrows or `H` `J` `K` `L` | after answering: show the English of each Korean word |
 | `Space` | next card |
 | `R` | replay audio |
 | `Tab` | switch between review and Typing Gym |

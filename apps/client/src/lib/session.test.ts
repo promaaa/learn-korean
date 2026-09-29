@@ -40,6 +40,7 @@ function backend({ total = 1, queue = [exercise, null], fail }: Backend = {}) {
             correct: true,
             correctIndex: 2,
             translations: [],
+            glosses: { "이거": "this", "뭐예요?": "what is it?" },
             rating: "good",
             korean: "이거 뭐예요?",
             english: "What is this?",

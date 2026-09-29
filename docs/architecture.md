@@ -29,9 +29,9 @@ learn-korean/
 
 Three levels of content (see ADR-002):
 
-1. **Raw** — imported source rows, immutable.
-2. **Lexeme** — normalized dictionary entry (lemma, surface, gloss, part of speech, register).
-3. **Learning item** — what the games teach: a sentence or word with context and skills.
+1. **Raw**: imported source rows, immutable.
+2. **Lexeme**: normalized dictionary entry (lemma, surface, gloss, part of speech, register).
+3. **Learning item**: what the games teach: a sentence or word with context and skills.
 
 User data (memory states, review log, XP) is stored separately from bundled content and keyed by
 stable item ids, so content packs can be re-seeded without touching progress. Pack format and

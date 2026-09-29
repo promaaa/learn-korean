@@ -1,5 +1,6 @@
 <script lang="ts">
   import ChoiceList from "../components/ChoiceList.svelte";
+  import Glossed from "../components/Glossed.svelte";
   import Photo from "../components/Photo.svelte";
   import SpeakerButton from "../components/SpeakerButton.svelte";
   import type { Feedback } from "../lib/api";
@@ -24,7 +25,7 @@
 <section class="game">
   {#if image}<Photo {itemId} />{/if}
   <SpeakerButton status={audio} onclick={onreplay} />
-  <p class="korean" lang="ko">{korean}</p>
+  <p class="korean" lang="ko"><Glossed text={korean} glosses={feedback?.glosses ?? null} /></p>
   <p class="question">What does this mean?</p>
 
   <ChoiceList {options} {feedback} {chosen} {cursor} {onchoose} />
@@ -32,7 +33,7 @@
   <div class="reveal" class:visible={feedback !== null}>
     {#if feedback}
       <p class="verdict" class:good={feedback.correct} class:bad={!feedback.correct}>
-        {feedback.correct ? "Correct" : "Not quite"} — <span>{feedback.english}</span>
+        {feedback.correct ? "Correct" : "Not quite"}: <span>{feedback.english}</span>
       </p>
       {#if feedback.note}<p class="note">{feedback.note}</p>{/if}
     {/if}

@@ -23,6 +23,11 @@ out of the way (Esc).
 | Build | production | assemble the sentence from shuffled chunks |
 | Typing Gym (`Tab`) | typing | type Korean on a dubeolsik keyboard with live hints |
 
+After answering, every Korean word on the card (the line, Reply options, the placed Build chunks)
+is dotted underlined; hovering it shows its English, e.g. 했어요? → "did (하다)". The arrow keys
+(or `H J K L`) show them without the mouse: ← → word by word in reading order, ↑ ↓ to the nearest
+word on the row above or below.
+
 ### Typing Gym
 
 Rounds of 8 lines from unlocked packs, items already met first, short to long. Keys are read by

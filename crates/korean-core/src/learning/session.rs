@@ -1,12 +1,12 @@
 //! A running review session: serves exercises, checks answers, updates memory.
 
-use std::collections::{HashMap, VecDeque};
+use std::collections::{BTreeMap, HashMap, VecDeque};
 
 use serde::{Deserialize, Serialize};
 
 use super::exercise::{self, Exercise, ExerciseView, Expected, Prompt};
 use super::plan::{Card, Plan};
-use crate::content::Item;
+use crate::content::{Glossary, Item};
 use crate::rng::Rng;
 use crate::scheduler::{self, MemoryState, Rating};
 use crate::{progression, scoring};
@@ -36,6 +36,9 @@ pub struct Feedback {
     pub correct_index: Option<usize>,
     /// English of each option (reply game), empty when the options already are English.
     pub translations: Vec<String>,
+    /// English of each Korean word on screen after answering (the item and, in the reply game,
+    /// the options), keyed by the word as displayed, punctuation included.
+    pub glosses: BTreeMap<String, String>,
     pub rating: Rating,
     pub korean: String,
     pub english: String,
@@ -82,6 +85,7 @@ pub enum SessionError {
 pub struct Session {
     queue: VecDeque<Card>,
     items: HashMap<String, Item>,
+    glossary: Glossary,
     states: HashMap<Card, MemoryState>,
     retries: HashMap<Card, u8>,
     current: Option<Exercise>,
@@ -95,6 +99,7 @@ impl Session {
         plan: Plan,
         items: Vec<Item>,
         states: HashMap<Card, MemoryState>,
+        glossary: Glossary,
         seed: u64,
     ) -> Self {
         let items: HashMap<String, Item> = items.into_iter().map(|i| (i.id.clone(), i)).collect();
@@ -110,6 +115,7 @@ impl Session {
         Session {
             queue,
             items,
+            glossary,
             states,
             retries: HashMap::new(),
             current: None,
@@ -178,7 +184,13 @@ impl Session {
         p.remaining = self.queue.len();
         let xp = progression::xp_for_answer(correct, rating, p.streak, first_review);
         p.xp += u64::from(xp);
-
+        let options: &[String] = match &exercise.view.prompt {
+            Prompt::Response { options, .. } => options,
+            Prompt::Listening { .. } | Prompt::Build { .. } => &[],
+        };
+        let glosses = self.glossary.glosses(
+            std::iter::once(item.korean.as_str()).chain(options.iter().map(String::as_str)),
+        );
         Ok(Outcome {
             feedback: Feedback {
                 correct,
@@ -187,6 +199,7 @@ impl Session {
                     Expected::Order(_) => None,
                 },
                 translations: exercise.translations,
+                glosses,
                 rating,
                 korean: item.korean.clone(),
                 english: item.english.clone(),
@@ -269,7 +282,7 @@ mod tests {
             due: 0,
             new: n,
         };
-        Session::new(plan, items, HashMap::new(), 7)
+        Session::new(plan, items, HashMap::new(), Glossary::default(), 7)
     }
 
     fn correct_index(s: &mut Session) -> usize {
@@ -360,6 +373,55 @@ mod tests {
             check(&prompt, &expected, &Answer::Choice { index: 0 }),
             Err(SessionError::InvalidAnswer)
         );
+    }
+
+    #[test]
+    fn reply_feedback_glosses_the_line_and_every_option() {
+        let line = |korean: &str| crate::content::Line {
+            korean: korean.into(),
+            english: "x".into(),
+        };
+        let mut item = sentence("a/0", "밥 먹었어요?", "Did you eat?");
+        item.replies = Some(crate::content::Replies {
+            good: vec![line("네, 먹었어요.")],
+            bad: vec![line("아니요."), line("괜찮아요."), line("몰라요.")],
+        });
+        let glossary = Glossary::new(
+            [
+                ("밥", "rice, meal"),
+                ("먹었어요", "ate (먹다)"),
+                ("네", "yes"),
+                ("아니요", "no"),
+                ("괜찮아요", "is fine (괜찮다)"),
+                ("몰라요", "don't know (모르다)"),
+                ("사과", "apple"),
+            ]
+            .into_iter()
+            .map(|(k, v)| (k.to_string(), v.to_string()))
+            .collect(),
+        );
+        let plan = Plan {
+            cards: vec![Card::new("a/0", Skill::Response)],
+            due: 0,
+            new: 1,
+        };
+        let mut s = Session::new(plan, vec![item], HashMap::new(), glossary, 7);
+        s.current();
+        let out = s.answer(&Answer::Choice { index: 0 }, 1_000, NOW).unwrap();
+        let words: Vec<&str> = out.feedback.glosses.keys().map(String::as_str).collect();
+        assert_eq!(
+            words,
+            [
+                "괜찮아요.",
+                "네,",
+                "먹었어요.",
+                "먹었어요?",
+                "몰라요.",
+                "밥",
+                "아니요."
+            ]
+        );
+        assert_eq!(out.feedback.glosses["먹었어요?"], "ate (먹다)");
     }
 
     #[test]
