@@ -3,6 +3,7 @@
   import KeyHints from "./components/KeyHints.svelte";
   import XpBar from "./components/XpBar.svelte";
   import Session from "./routes/Session.svelte";
+  import TypingGym from "./routes/TypingGym.svelte";
   import { appStatus, profile as loadProfile, type AppStatus, type Profile } from "./lib/api";
   import { actionFor } from "./lib/keys";
   import { hideWindow, onShown } from "./lib/shell";
@@ -10,6 +11,9 @@
   let status = $state<AppStatus | null>(null);
   let session = $state<Session | null>(null);
   let profile = $state<Profile | null>(null);
+  let gym = $state<TypingGym | null>(null);
+  /** Review session or Typing Gym; `Tab` switches. */
+  let mode = $state<"review" | "typing">("review");
 
   function refreshProfile(): void {
     loadProfile()
@@ -31,10 +35,18 @@
 
   function onKeydown(event: KeyboardEvent) {
     const action = actionFor(event);
-    if (!action) return;
-    event.preventDefault();
-    if (action.type === "hide") void hideWindow();
-    else session?.handle(action);
+    if (action?.type === "hide") {
+      event.preventDefault();
+      void hideWindow();
+    } else if (action?.type === "mode") {
+      event.preventDefault();
+      mode = mode === "review" ? "typing" : "review";
+    } else if (mode === "typing") {
+      gym?.key(event);
+    } else if (action) {
+      event.preventDefault();
+      session?.handle(action);
+    }
   }
 </script>
 
@@ -50,9 +62,30 @@
     {#if status?.error}
       <FatalError message={status.error} />
     {:else if status}
-      <Session bind:this={session} onprofile={(p) => (profile = p)} />
+      <!-- Both stay mounted so switching keeps the session where it was. -->
+      <div class="screen" class:hidden={mode !== "review"}>
+        <Session bind:this={session} onprofile={(p) => (profile = p)} />
+      </div>
+      {#if mode === "typing"}
+        <div class="screen"><TypingGym bind:this={gym} /></div>
+      {/if}
     {/if}
   </main>
 
-  <KeyHints hints={session?.hints() ?? [{ keys: "Esc", label: "hide" }]} />
+  <KeyHints
+    hints={(mode === "typing" ? gym?.hints() : session?.hints()) ?? [{ keys: "Esc", label: "hide" }]}
+  />
 </div>
+
+<style>
+  .screen {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>

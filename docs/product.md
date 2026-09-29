@@ -6,7 +6,8 @@ out of the way (Esc).
 ## Principles
 
 - **Speed of a TUI, richness of a GUI.** Everything is playable with `1 2 3 4`, `Space`, `Enter`,
-  `H J K L`, `R` (replay audio) and `Esc`. Mouse is optional.
+  `H J K L`, `R` (replay audio), `Tab` (Typing Gym) and `Esc`. Shortcuts use physical key
+  positions, so they work the same on AZERTY. Mouse is optional.
 - **Conversation over vocabulary.** The unit of learning is a sentence used in a context
   (small talk, restaurants…). Single words feed sentences, images and typing drills.
 - **Hangul only.** No romanization anywhere in the UI (ADR-004).
@@ -20,7 +21,16 @@ out of the way (Esc).
 | Listening | comprehension | hear/read Korean, pick the meaning (1–4) |
 | Reply | response | pick the natural answer to a Korean line |
 | Build | production | assemble the sentence from shuffled chunks |
-| Typing Gym | typing | type Korean on a dubeolsik keyboard with live hints |
+| Typing Gym (`Tab`) | typing | type Korean on a dubeolsik keyboard with live hints |
+
+### Typing Gym
+
+Rounds of 8 lines from unlocked packs, items already met first, short to long. Keys are read by
+physical position (`KeyboardEvent.code`), so the standard 2-set (dubeolsik) layout works on any
+hardware layout (QWERTY, AZERTY…) without an OS Korean IME. The on-screen keyboard highlights the
+next key and Shift, names the finger, and flashes wrong keys; the line composes live like an IME
+(ㅎ → 하 → 한). Strict mode: a wrong key counts as an error and does not advance. Speed (words and
+keystrokes per minute), accuracy and streak update on every key.
 
 ## Progression
 

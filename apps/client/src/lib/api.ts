@@ -135,3 +135,80 @@ export interface LevelUp {
 export function profile(): Promise<Profile> {
   return invoke("profile");
 }
+
+export type Finger =
+  | "leftPinky"
+  | "leftRing"
+  | "leftMiddle"
+  | "leftIndex"
+  | "rightIndex"
+  | "rightMiddle"
+  | "rightRing"
+  | "rightPinky"
+  | "thumb";
+
+export interface KeyCap {
+  code: string;
+  row: number;
+  base: string;
+  shifted: string | null;
+  finger: Finger;
+}
+
+export interface NextKey {
+  code: string;
+  shift: boolean;
+  jamo: string;
+  finger: Finger;
+  shiftFinger: Finger | null;
+}
+
+export interface DrillSnapshot {
+  target: string;
+  typed: string;
+  doneChars: number;
+  next: NextKey | null;
+  keystrokes: number;
+  errors: number;
+  streak: number;
+  bestStreak: number;
+  accuracy: number;
+  cpm: number;
+  wpm: number;
+  finished: boolean;
+  elapsedMs: number;
+}
+
+export interface TypingTarget {
+  itemId: string;
+  korean: string;
+  english: string;
+}
+
+export interface DrillView {
+  target: TypingTarget;
+  snapshot: DrillSnapshot;
+  position: number;
+  total: number;
+}
+
+export interface Pressed {
+  outcome: { correct: boolean; finished: boolean; ignored: boolean };
+  view: DrillView;
+}
+
+export function typingLayout(): Promise<KeyCap[]> {
+  return invoke("typing_layout");
+}
+
+export function typingStart(): Promise<DrillView> {
+  return invoke("typing_start");
+}
+
+export function typingPress(code: string, shift: boolean, atMs: number): Promise<Pressed> {
+  return invoke("typing_press", { code, shift, atMs });
+}
+
+export function typingNext(): Promise<DrillView | null> {
+  return invoke("typing_next");
+}

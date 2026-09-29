@@ -4,6 +4,7 @@ mod session;
 mod shell;
 mod speech;
 mod state;
+mod typing;
 
 use tauri::Manager;
 
@@ -24,6 +25,7 @@ pub fn run() {
                 .build(),
         )
         .manage(session::ActiveSession::default())
+        .manage(typing::TypingGym::default())
         .register_asynchronous_uri_scheme_protocol(images::SCHEME, |ctx, request, responder| {
             let app = ctx.app_handle().clone();
             tauri::async_runtime::spawn(async move {
@@ -39,6 +41,10 @@ pub fn run() {
             speech::speak,
             images::item_image,
             progress::profile,
+            typing::typing_layout,
+            typing::typing_start,
+            typing::typing_press,
+            typing::typing_next,
         ])
         .setup(|app| {
             // Created here, not on the builder: a second instance exits before setup runs, so it
