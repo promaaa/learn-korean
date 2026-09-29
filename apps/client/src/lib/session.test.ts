@@ -92,6 +92,17 @@ describe("SessionController", () => {
     expect(s.progress.bestStreak).toBe(1);
   });
 
+  it("counts every card put on screen, even the same card again", async () => {
+    backend({ queue: [exercise, exercise, null] });
+    const s = new SessionController(clock().now);
+    await s.start();
+    const first = s.serial;
+    await s.answer({ type: "choice", index: 0 });
+    expect(s.serial).toBe(first);
+    await s.next();
+    expect(s.serial).toBe(first + 1);
+  });
+
   it("does not count time spent hidden", async () => {
     const calls = backend();
     const time = clock();

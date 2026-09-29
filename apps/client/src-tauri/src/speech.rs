@@ -3,6 +3,7 @@
 
 use std::io::Cursor;
 use std::sync::Arc;
+use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::mpsc::{self, Sender};
 
 use korean_providers::tts::{self, Audio, Cached, Fallback};
@@ -10,6 +11,8 @@ use korean_providers::tts::{self, Audio, Cached, Fallback};
 pub struct Speech {
     tts: Cached<Fallback>,
     player: Sender<Arc<Audio>>,
+    /// Latest request: a slower, older synthesis must not cut off the newer line.
+    latest: AtomicU64,
 }
 
 impl Speech {
@@ -17,6 +20,7 @@ impl Speech {
         Speech {
             tts: tts::default_provider(),
             player: spawn_player(),
+            latest: AtomicU64::new(0),
         }
     }
 }
@@ -54,10 +58,15 @@ fn spawn_player() -> Sender<Arc<Audio>> {
     tx
 }
 
-/// Synthesizes (or reuses) speech for `text` and plays it.
+/// Synthesizes (or reuses) speech for `text` and plays it, unless a newer request came in while
+/// it was being synthesized.
 #[tauri::command]
 pub async fn speak(text: String, speech: tauri::State<'_, Speech>) -> Result<(), String> {
+    let request = speech.latest.fetch_add(1, Ordering::SeqCst) + 1;
     let audio = speech.tts.get(&text).await.map_err(|e| e.to_string())?;
+    if speech.latest.load(Ordering::SeqCst) != request {
+        return Ok(());
+    }
     speech
         .player
         .send(audio)

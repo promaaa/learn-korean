@@ -19,7 +19,7 @@
   let cursor = $state(0);
   /** Build game: indices of the chunks placed so far. */
   let picked = $state<number[]>([]);
-  let spokenKey = "";
+  let spokenKey = 0;
 
   $effect(() => {
     void session.start();
@@ -30,9 +30,7 @@
   });
 
   const prompt = $derived(session.exercise?.prompt ?? null);
-  const exerciseKey = $derived(
-    session.exercise ? `${session.exercise.card.itemId}:${session.progress.done}` : "",
-  );
+  const exerciseKey = $derived(session.exercise ? session.serial : 0);
   const choices = $derived(
     prompt && prompt.type !== "build" ? prompt.options.length : (prompt?.chunks.length ?? 0),
   );
@@ -187,7 +185,7 @@
   </div>
 
   {#if (session.phase === "exercise" || session.phase === "feedback") && session.exercise}
-    {#key `${session.exercise.card.itemId}:${session.progress.done}`}
+    {#key session.serial}
       <div class="card" in:fly={{ y: 14, duration: 160 }}>
         {#if prompt?.type === "build"}
           <Build

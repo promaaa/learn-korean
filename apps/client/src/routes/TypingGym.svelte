@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import HangulKeyboard from "../components/HangulKeyboard.svelte";
   import {
     typingLayout,
@@ -20,6 +21,8 @@
   /** Stats of finished lines in this round, for the summary. */
   let finished = $state<{ wpm: number; accuracy: number }[]>([]);
   let wrongTimer: ReturnType<typeof setTimeout> | undefined;
+  /** A round or line change is in flight; Enter presses meanwhile are ignored. */
+  let busy = false;
 
   const MODIFIERS = new Set([
     "ShiftLeft",
@@ -33,27 +36,36 @@
     "CapsLock",
   ]);
 
-  async function start(): Promise<void> {
+  async function guarded(action: () => Promise<void>): Promise<void> {
+    if (busy) return;
+    busy = true;
     try {
+      await action();
+      error = null;
+    } catch (err) {
+      error = String(err);
+    } finally {
+      busy = false;
+    }
+  }
+
+  const start = () =>
+    guarded(async () => {
       if (layout.length === 0) layout = await typingLayout();
       view = await typingStart();
       roundOver = false;
       finished = [];
-      error = null;
-    } catch (err) {
-      error = String(err);
-    }
-  }
+    });
 
-  $effect(() => {
-    void start();
-  });
+  const next = () =>
+    guarded(async () => {
+      const upcoming = await typingNext();
+      if (upcoming) view = upcoming;
+      else roundOver = true;
+    });
 
-  async function next(): Promise<void> {
-    const upcoming = await typingNext();
-    if (upcoming) view = upcoming;
-    else roundOver = true;
-  }
+  // Not an $effect: `start` reads `layout`, which would make the effect start a second round.
+  onMount(() => void start());
 
   export function hints(): Hint[] {
     const common = [

@@ -36,6 +36,8 @@ export class SessionController {
   profile = $state<Profile | null>(null);
   /** Set when the last answer crossed a level; cleared on the next card. */
   levelUp = $state<LevelUp | null>(null);
+  /** Increments every time a card is put on screen (a retried card counts again). */
+  serial = $state(0);
 
   #shownAt = 0;
   #busy = false;
@@ -86,6 +88,7 @@ export class SessionController {
     this.levelUp = null;
     this.chosen = null;
     this.exercise = current.exercise;
+    this.serial += 1;
     this.phase = current.exercise ? "exercise" : "done";
     this.#shownAt = this.now();
   }

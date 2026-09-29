@@ -75,6 +75,15 @@ pub async fn put(
     Ok(())
 }
 
+/// Drops a lookup so the next display searches again (e.g. the photo was deleted upstream).
+pub async fn forget(pool: &SqlitePool, query: &str) -> sqlx::Result<()> {
+    sqlx::query("DELETE FROM image_refs WHERE query = ?")
+        .bind(query)
+        .execute(pool)
+        .await?;
+    Ok(())
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -103,5 +112,8 @@ mod tests {
         };
         put(pool, "cat", Some(&image), 20).await.unwrap();
         assert_eq!(get(pool, "cat").await.unwrap().unwrap().found, Some(image));
+
+        forget(pool, "cat").await.unwrap();
+        assert_eq!(get(pool, "cat").await.unwrap(), None);
     }
 }

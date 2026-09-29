@@ -5,7 +5,7 @@ use std::collections::VecDeque;
 use std::sync::{Arc, Mutex};
 
 use korean_db::images::StoredImage;
-use korean_providers::images::{self, FirstMatch, Image, ImageProvider};
+use korean_providers::images::{self, FirstMatch, Image, ImageError, ImageProvider};
 use serde::Serialize;
 use tauri::http::{Response, StatusCode};
 use tauri::{AppHandle, Manager, Runtime, State};
@@ -32,20 +32,17 @@ impl Images {
         }
     }
 
-    async fn bytes(&self, url: &str) -> Result<Arc<Image>, String> {
+    async fn bytes(&self, url: &str) -> Result<Arc<Image>, ImageError> {
         if let Some((_, image)) = self.cached(url) {
             return Ok(image);
         }
-        let image = Arc::new(
-            images::fetch(&self.client, url)
-                .await
-                .map_err(|e| e.to_string())?,
-        );
-        let mut cache = self.bytes.lock().map_err(|e| e.to_string())?;
-        if cache.len() == BYTES_CACHE {
-            cache.pop_front();
+        let image = Arc::new(images::fetch(&self.client, url).await?);
+        if let Ok(mut cache) = self.bytes.lock() {
+            if cache.len() == BYTES_CACHE {
+                cache.pop_front();
+            }
+            cache.push_back((url.to_string(), image.clone()));
         }
-        cache.push_back((url.to_string(), image.clone()));
         Ok(image)
     }
 
@@ -59,21 +56,14 @@ impl Images {
     }
 }
 
-/// Photo reference for an item, searching the providers the first time.
+/// Photo reference for a query, searching the providers the first time.
 async fn resolve(
-    app: &AppState,
+    pool: &sqlx::SqlitePool,
     images: &Images,
-    item_id: &str,
+    query: &str,
 ) -> Result<Option<StoredImage>, String> {
-    let pool = app.db()?.pool();
-    let item = korean_db::content::item(pool, item_id)
-        .await
-        .map_err(|e| e.to_string())?;
-    let Some(query) = item.and_then(|i| i.image) else {
-        return Ok(None);
-    };
     let now = crate::session::now_ms();
-    let cached = korean_db::images::get(pool, &query)
+    let cached = korean_db::images::get(pool, query)
         .await
         .map_err(|e| e.to_string())?;
     if let Some(lookup) = cached
@@ -83,7 +73,7 @@ async fn resolve(
     }
     let found = images
         .search
-        .search(&query)
+        .search(query)
         .await
         .map_err(|e| e.to_string())?
         .map(|r| StoredImage {
@@ -92,7 +82,7 @@ async fn resolve(
             source_url: r.source_url,
             attribution: r.attribution,
         });
-    korean_db::images::put(pool, &query, found.as_ref(), now)
+    korean_db::images::put(pool, query, found.as_ref(), now)
         .await
         .map_err(|e| e.to_string())?;
     Ok(found)
@@ -105,23 +95,52 @@ pub struct ItemImage {
     attribution: String,
 }
 
+/// An item's photo and its credit, `None` if the item has no photo. A reference whose image was
+/// deleted upstream is forgotten and searched again once.
+async fn photo(
+    app: &AppState,
+    images: &Images,
+    item_id: &str,
+) -> Result<Option<(StoredImage, Arc<Image>)>, String> {
+    let pool = app.db()?.pool();
+    let item = korean_db::content::item(pool, item_id)
+        .await
+        .map_err(|e| e.to_string())?;
+    let Some(query) = item.and_then(|i| i.image) else {
+        return Ok(None);
+    };
+    for attempt in 0..2 {
+        let Some(found) = resolve(pool, images, &query).await? else {
+            return Ok(None);
+        };
+        match images.bytes(&found.image_url).await {
+            Ok(image) => return Ok(Some((found, image))),
+            Err(err) if err.is_gone() && attempt == 0 => {
+                log::info!("image for {query:?} is gone ({err}); searching again");
+                korean_db::images::forget(pool, &query)
+                    .await
+                    .map_err(|e| e.to_string())?;
+            }
+            Err(err) => return Err(err.to_string()),
+        }
+    }
+    Ok(None)
+}
+
 /// Credit for an item's photo, or `None` if it has none. The picture itself is loaded from
-/// `kimg://localhost/<item id>`.
+/// `kimg://localhost/<item id>` (already in the byte cache by then).
 #[tauri::command]
 pub async fn item_image(
     item_id: String,
     app: State<'_, AppState>,
     images: State<'_, Images>,
 ) -> Result<Option<ItemImage>, String> {
-    let found = resolve(&app, &images, &item_id).await?;
-    if let Some(found) = &found {
-        // Warm the byte cache so the <img> request is served from memory.
-        images.bytes(&found.image_url).await?;
-    }
-    Ok(found.map(|f| ItemImage {
-        source_url: f.source_url,
-        attribution: f.attribution,
-    }))
+    Ok(photo(&app, &images, &item_id)
+        .await?
+        .map(|(f, _)| ItemImage {
+            source_url: f.source_url,
+            attribution: f.attribution,
+        }))
 }
 
 fn respond(status: StatusCode, mime: &str, body: Vec<u8>) -> Response<Vec<u8>> {
@@ -139,15 +158,9 @@ pub async fn serve<R: Runtime>(app: &AppHandle<R>, path: &str) -> Response<Vec<u
         .decode_utf8_lossy()
         .into_owned();
     let (state, images) = (app.state::<AppState>(), app.state::<Images>());
-    let result = async {
-        let found = resolve(&state, &images, &item_id)
-            .await?
-            .ok_or_else(|| "no image".to_string())?;
-        images.bytes(&found.image_url).await
-    }
-    .await;
-    match result {
-        Ok(image) => respond(StatusCode::OK, &image.mime, image.bytes.clone()),
+    match photo(&state, &images, &item_id).await {
+        Ok(Some((_, image))) => respond(StatusCode::OK, &image.mime, image.bytes.clone()),
+        Ok(None) => respond(StatusCode::NOT_FOUND, "text/plain", b"no image".to_vec()),
         Err(err) => {
             log::warn!("image for {item_id}: {err}");
             respond(StatusCode::NOT_FOUND, "text/plain", err.into_bytes())
