@@ -5,6 +5,15 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+## [0.5.1]
+
+### Fixed
+- Time spent in the Typing Gym no longer counts as answer time for the waiting review card (it was graded Hard), and summoning the window while the gym is open no longer plays the hidden card.
+- A slow speech synthesis can no longer play an older line over the current card.
+- The card no longer re-mounts when answering (photo flicker, repeated fly-in); a card retried immediately animates in again.
+- The Typing Gym starts one round per visit (it started two), and a double `Enter` no longer skips a line.
+- A photo deleted upstream (403/404/410) is forgotten and searched again instead of failing forever.
+
 ## [0.5.0]
 
 ### Added

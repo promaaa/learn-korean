@@ -44,6 +44,19 @@ pub enum ImageError {
     },
 }
 
+impl ImageError {
+    /// The server says the image no longer exists (404, 410) or is refused (403): the stored
+    /// reference is dead and a new search is needed.
+    pub fn is_gone(&self) -> bool {
+        match self {
+            ImageError::Network { source, .. } => source
+                .status()
+                .is_some_and(|s| matches!(s.as_u16(), 403 | 404 | 410)),
+            ImageError::Protocol { .. } => false,
+        }
+    }
+}
+
 pub trait ImageProvider: Send + Sync {
     fn name(&self) -> &'static str;
     /// Best photo for an English query, `None` when nothing suitable exists.

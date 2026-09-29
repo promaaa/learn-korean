@@ -27,7 +27,7 @@
       if (!s.error) refreshProfile();
     });
     const unlisten = onShown(() => {
-      session?.resume();
+      if (mode === "review") session?.resume();
       refreshProfile();
     });
     return () => void unlisten.then((stop) => stop());
@@ -41,6 +41,8 @@
     } else if (action?.type === "mode") {
       event.preventDefault();
       mode = mode === "review" ? "typing" : "review";
+      // Time spent in the gym is not thinking time for the waiting card.
+      if (mode === "review") session?.resume();
     } else if (mode === "typing") {
       gym?.key(event);
     } else if (action) {
