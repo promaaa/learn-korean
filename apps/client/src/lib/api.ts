@@ -17,7 +17,8 @@ export interface Card {
 
 export type Prompt =
   | { type: "listening"; korean: string; options: string[] }
-  | { type: "response"; korean: string; options: string[] };
+  | { type: "response"; korean: string; options: string[] }
+  | { type: "build"; english: string; chunks: string[] };
 
 export interface ExerciseView {
   card: Card;
@@ -31,11 +32,12 @@ export interface ItemImage {
   attribution: string;
 }
 
-export type Answer = { type: "choice"; index: number };
+export type Answer = { type: "choice"; index: number } | { type: "order"; order: number[] };
 
 export interface Feedback {
   correct: boolean;
-  correctIndex: number;
+  /** Right option of a choice game, `null` in the build game. */
+  correctIndex: number | null;
   /** English of each option in the reply game (empty otherwise). */
   translations: string[];
   rating: Rating;

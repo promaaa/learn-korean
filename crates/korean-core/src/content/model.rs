@@ -103,8 +103,8 @@ impl Skill {
     }
 }
 
-/// Minimum number of chunks for a sentence to be playable in the build game.
-pub const MIN_BUILD_CHUNKS: usize = 3;
+/// Chunk counts playable in the build game (chunks are picked with the digit keys 1-9).
+pub const BUILD_CHUNKS: std::ops::RangeInclusive<usize> = 3..=9;
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -145,7 +145,7 @@ impl Item {
         if self.replies.is_some() {
             skills.push(Skill::Response);
         }
-        if self.kind == ItemKind::Sentence && self.build_chunks().len() >= MIN_BUILD_CHUNKS {
+        if self.kind == ItemKind::Sentence && BUILD_CHUNKS.contains(&self.build_chunks().len()) {
             skills.push(Skill::Build);
         }
         skills
@@ -199,6 +199,12 @@ mod tests {
         assert_eq!(
             with_replies.skills(),
             vec![Skill::Listening, Skill::Response, Skill::Build]
+        );
+        let ten = sentence("가 나 다 라 마 바 사 아 자 차.");
+        assert_eq!(
+            ten.skills(),
+            vec![Skill::Listening],
+            "too many chunks for digit keys"
         );
         let mut word = sentence("자전거 타요 매일");
         word.kind = ItemKind::Word;

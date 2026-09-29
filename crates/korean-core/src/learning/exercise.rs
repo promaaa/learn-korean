@@ -25,15 +25,21 @@ pub enum Prompt {
         korean: String,
         options: Vec<String>,
     },
+    /// Assemble the Korean for `english` from shuffled `chunks`.
+    #[serde(rename_all = "camelCase")]
+    Build {
+        english: String,
+        chunks: Vec<String>,
+    },
 }
 
-impl Prompt {
-    /// Options of a multiple-choice prompt.
-    pub fn options(&self) -> &[String] {
-        match self {
-            Prompt::Listening { options, .. } | Prompt::Response { options, .. } => options,
-        }
-    }
+/// The hidden answer of an exercise.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum Expected {
+    /// Index of the right option.
+    Choice(usize),
+    /// Chunks in the right order (compared by text: repeated chunks are interchangeable).
+    Order(Vec<String>),
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
@@ -50,7 +56,7 @@ pub struct ExerciseView {
 #[derive(Debug, Clone, PartialEq)]
 pub struct Exercise {
     pub view: ExerciseView,
-    pub correct: usize,
+    pub expected: Expected,
     /// English for each option, revealed after answering (empty when options are English).
     pub translations: Vec<String>,
 }
@@ -100,7 +106,7 @@ pub fn build(card: &Card, item: &Item, pool: &[&Item], rng: &mut Rng) -> Exercis
                     korean: item.korean.clone(),
                     options,
                 }),
-                correct,
+                expected: Expected::Choice(correct),
                 translations: Vec::new(),
             }
         }
@@ -122,11 +128,29 @@ pub fn build(card: &Card, item: &Item, pool: &[&Item], rng: &mut Rng) -> Exercis
                     korean: item.korean.clone(),
                     options: lines.iter().map(|l| l.korean.clone()).collect(),
                 }),
-                correct,
+                expected: Expected::Choice(correct),
                 translations: lines.iter().map(|l| l.english.clone()).collect(),
             }
         }
-        Skill::Build => unreachable!("build exercises are not playable yet"),
+        Skill::Build => {
+            let answer: Vec<String> = item.build_chunks().into_iter().map(String::from).collect();
+            let mut chunks = answer.clone();
+            // Never hand out the solution already in order.
+            for _ in 0..8 {
+                rng.shuffle(&mut chunks);
+                if chunks != answer {
+                    break;
+                }
+            }
+            Exercise {
+                view: view(Prompt::Build {
+                    english: item.english.clone(),
+                    chunks,
+                }),
+                expected: Expected::Order(answer),
+                translations: Vec::new(),
+            }
+        }
     }
 }
 
@@ -153,7 +177,17 @@ mod tests {
     }
 
     fn options(ex: &Exercise) -> &[String] {
-        ex.view.prompt.options()
+        match &ex.view.prompt {
+            Prompt::Listening { options, .. } | Prompt::Response { options, .. } => options,
+            Prompt::Build { .. } => panic!("not a choice prompt"),
+        }
+    }
+
+    fn correct(ex: &Exercise) -> usize {
+        match ex.expected {
+            Expected::Choice(i) => i,
+            Expected::Order(_) => panic!("not a choice exercise"),
+        }
     }
 
     #[test]
@@ -169,7 +203,7 @@ mod tests {
         );
         let opts = options(&ex);
         assert_eq!(opts.len(), CHOICES);
-        assert_eq!(opts[ex.correct], "cat");
+        assert_eq!(opts[correct(&ex)], "cat");
         let mut sorted = opts.to_vec();
         sorted.sort();
         assert_eq!(sorted, ["bird", "cat", "dog", "fish"]);
@@ -196,7 +230,7 @@ mod tests {
             );
             let opts = options(&ex);
             assert_eq!(opts.len(), CHOICES);
-            assert_eq!(opts[ex.correct], "cat");
+            assert_eq!(opts[correct(&ex)], "cat");
             assert_eq!(opts.iter().filter(|o| *o == "cat").count(), 1);
             assert!(opts.iter().all(|o| !o.starts_with("to ")), "{opts:?}");
         }
@@ -236,7 +270,7 @@ mod tests {
             };
             assert_eq!(korean, "뭐 했어요?");
             assert_eq!(options.len(), CHOICES);
-            let answer = &options[ex.correct];
+            let answer = &options[correct(&ex)];
             assert!(answer == "쉬었어요." || answer == "일했어요.");
             seen_good.insert(answer.clone());
             let good_count = options
@@ -249,5 +283,35 @@ mod tests {
             assert_eq!(ex.translations[i], "It's three.");
         }
         assert_eq!(seen_good.len(), 2, "every good reply gets its turn");
+    }
+
+    #[test]
+    fn build_shuffles_the_chunks_and_expects_the_sentence_order() {
+        let mut item = word("a/1", "I ride my bike to school.");
+        item.kind = ItemKind::Sentence;
+        item.korean = "자전거를 타고 학교에 가요.".into();
+        for seed in 0..30 {
+            let ex = build(
+                &Card::new("a/1", Skill::Build),
+                &item,
+                &[],
+                &mut Rng::new(seed),
+            );
+            let Prompt::Build { english, chunks } = &ex.view.prompt else {
+                panic!("not a build prompt");
+            };
+            assert_eq!(english, "I ride my bike to school.");
+            let expected = ["자전거를", "타고", "학교에", "가요."];
+            assert_eq!(
+                ex.expected,
+                Expected::Order(expected.map(String::from).to_vec())
+            );
+            assert_ne!(chunks, &expected, "never already solved");
+            let mut sorted = chunks.clone();
+            sorted.sort();
+            let mut want = expected.map(String::from).to_vec();
+            want.sort();
+            assert_eq!(sorted, want);
+        }
     }
 }

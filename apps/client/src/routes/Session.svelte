@@ -1,37 +1,62 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
+  import Build from "../games/Build.svelte";
   import Listening from "../games/Listening.svelte";
   import Reply from "../games/Reply.svelte";
   import type { Action } from "../lib/keys";
   import { SessionController } from "../lib/session.svelte";
   import { Speaker } from "../lib/speaker.svelte";
 
+  type Hint = { keys: string; label: string };
+
   const session = new SessionController();
   const speaker = new Speaker();
+  /** Highlighted option (choice games) or chunk (build game). */
   let cursor = $state(0);
+  /** Build game: indices of the chunks placed so far. */
+  let picked = $state<number[]>([]);
   let spokenKey = "";
 
   $effect(() => {
     void session.start();
   });
 
-  // Every new card is spoken once when it appears.
+  const prompt = $derived(session.exercise?.prompt ?? null);
+  const exerciseKey = $derived(
+    session.exercise ? `${session.exercise.card.itemId}:${session.progress.done}` : "",
+  );
+  const choices = $derived(
+    prompt && prompt.type !== "build" ? prompt.options.length : (prompt?.chunks.length ?? 0),
+  );
+
+  // A new card: reset the controls and speak it (the build game would give the answer away,
+  // so it speaks only after answering).
   $effect(() => {
-    if (session.phase !== "exercise" || !session.exercise) return;
-    const key = `${session.exercise.card.itemId}:${session.progress.done}`;
-    if (key === spokenKey) return;
-    spokenKey = key;
-    void speaker.say(session.exercise.prompt.korean);
+    if (session.phase !== "exercise" || !prompt || exerciseKey === spokenKey) return;
+    spokenKey = exerciseKey;
+    cursor = 0;
+    picked = [];
+    if (prompt.type !== "build") void speaker.say(prompt.korean);
   });
 
   function replay(): void {
-    if (session.exercise) void speaker.say(session.exercise.prompt.korean);
+    if (!prompt) return;
+    if (prompt.type !== "build") void speaker.say(prompt.korean);
+    else if (session.feedback) void speaker.say(session.feedback.korean);
   }
 
-  const optionCount = $derived(session.exercise?.prompt.options.length ?? 0);
-  const Game = $derived(session.exercise?.prompt.type === "response" ? Reply : Listening);
-
-  export function hints(): { keys: string; label: string }[] {
+  export function hints(): Hint[] {
+    const hide = { keys: "Esc", label: "hide" };
+    if (session.phase === "exercise" && prompt?.type === "build") {
+      return [
+        { keys: "1-9", label: "place" },
+        { keys: "H L", label: "move" },
+        { keys: "Space", label: "place" },
+        { keys: "⌫", label: "undo" },
+        { keys: "Enter", label: "check" },
+        hide,
+      ];
+    }
     switch (session.phase) {
       case "exercise":
         return [
@@ -39,19 +64,12 @@
           { keys: "J K", label: "move" },
           { keys: "Enter", label: "choose" },
           { keys: "R", label: "replay" },
-          { keys: "Esc", label: "hide" },
+          hide,
         ];
       case "feedback":
-        return [
-          { keys: "Space", label: "next" },
-          { keys: "R", label: "replay" },
-          { keys: "Esc", label: "hide" },
-        ];
+        return [{ keys: "Space", label: "next" }, { keys: "R", label: "replay" }, hide];
       default:
-        return [
-          { keys: "Enter", label: "new session" },
-          { keys: "Esc", label: "hide" },
-        ];
+        return [{ keys: "Enter", label: "new session" }, hide];
     }
   }
 
@@ -65,14 +83,62 @@
   }
 
   async function choose(index: number): Promise<void> {
-    if (index >= optionCount) return;
+    if (index >= choices) return;
     await session.answer({ type: "choice", index });
     // In the reply game, hear the natural answer spoken back.
-    const prompt = session.exercise?.prompt;
-    if (session.feedback && prompt?.type === "response") {
-      const answer = prompt.options[session.feedback.correctIndex];
+    const correct = session.feedback?.correctIndex;
+    if (prompt?.type === "response" && correct != null) {
+      const answer = prompt.options[correct];
       if (answer) void speaker.say(answer);
     }
+  }
+
+  function place(index: number): void {
+    if (index >= choices || picked.includes(index)) return;
+    picked = [...picked, index];
+    const next = [...Array(choices).keys()].find((i) => !picked.includes(i));
+    if (next !== undefined) cursor = next;
+  }
+
+  async function check(): Promise<void> {
+    if (picked.length !== choices) return;
+    await session.answer({ type: "order", order: picked });
+    if (session.feedback) void speaker.say(session.feedback.korean);
+  }
+
+  function buildAction(action: Action): void {
+    switch (action.type) {
+      case "choose":
+        place(action.index);
+        break;
+      case "move":
+        if (action.direction === "left" || action.direction === "right") {
+          const step = action.direction === "right" ? 1 : -1;
+          cursor = (cursor + step + choices) % choices;
+        }
+        break;
+      case "continue":
+        place(cursor);
+        break;
+      case "erase": {
+        const last = picked.at(-1);
+        if (last === undefined) break;
+        picked = picked.slice(0, -1);
+        cursor = last;
+        break;
+      }
+      case "confirm":
+        void check();
+        break;
+    }
+  }
+
+  function choiceAction(action: Action): void {
+    if (action.type === "choose") void choose(action.index);
+    else if (action.type === "move" && (action.direction === "down" || action.direction === "up")) {
+      const step = action.direction === "down" ? 1 : -1;
+      cursor = (cursor + step + choices) % choices;
+    } else if (action.type === "confirm") void choose(cursor);
   }
 
   export function handle(action: Action): void {
@@ -82,17 +148,11 @@
     }
     switch (session.phase) {
       case "exercise":
-        if (action.type === "choose") choose(action.index);
-        else if (action.type === "move" && (action.direction === "down" || action.direction === "up")) {
-          const step = action.direction === "down" ? 1 : -1;
-          cursor = (cursor + step + optionCount) % optionCount;
-        } else if (action.type === "confirm") choose(cursor);
+        if (prompt?.type === "build") buildAction(action);
+        else choiceAction(action);
         break;
       case "feedback":
-        if (action.type === "continue" || action.type === "confirm") {
-          cursor = 0;
-          void session.next();
-        }
+        if (action.type === "continue" || action.type === "confirm") void session.next();
         break;
       case "done":
       case "empty":
@@ -121,18 +181,34 @@
   {#if (session.phase === "exercise" || session.phase === "feedback") && session.exercise}
     {#key `${session.exercise.card.itemId}:${session.progress.done}`}
       <div class="card" in:fly={{ y: 14, duration: 160 }}>
-        <Game
-          itemId={session.exercise.card.itemId}
-          image={session.exercise.image}
-          korean={session.exercise.prompt.korean}
-          options={session.exercise.prompt.options}
-          feedback={session.feedback}
-          chosen={session.chosen}
-          {cursor}
-          audio={speaker.status}
-          onchoose={choose}
-          onreplay={replay}
-        />
+        {#if prompt?.type === "build"}
+          <Build
+            itemId={session.exercise.card.itemId}
+            image={session.exercise.image}
+            english={prompt.english}
+            chunks={prompt.chunks}
+            {picked}
+            feedback={session.feedback}
+            {cursor}
+            audio={speaker.status}
+            onpick={place}
+            onreplay={replay}
+          />
+        {:else if prompt}
+          {@const Game = prompt.type === "response" ? Reply : Listening}
+          <Game
+            itemId={session.exercise.card.itemId}
+            image={session.exercise.image}
+            korean={prompt.korean}
+            options={prompt.options}
+            feedback={session.feedback}
+            chosen={session.chosen}
+            {cursor}
+            audio={speaker.status}
+            onchoose={choose}
+            onreplay={replay}
+          />
+        {/if}
       </div>
     {/key}
   {:else if session.phase === "done"}
