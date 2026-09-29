@@ -4,11 +4,14 @@
   import Listening from "../games/Listening.svelte";
   import Reply from "../games/Reply.svelte";
   import { formatInterval } from "../lib/format";
+  import type { Profile } from "../lib/api";
   import type { Action } from "../lib/keys";
   import { SessionController } from "../lib/session.svelte";
   import { Speaker } from "../lib/speaker.svelte";
 
   type Hint = { keys: string; label: string };
+
+  let { onprofile }: { onprofile: (profile: Profile) => void } = $props();
 
   const session = new SessionController();
   const speaker = new Speaker();
@@ -20,6 +23,10 @@
 
   $effect(() => {
     void session.start();
+  });
+
+  $effect(() => {
+    if (session.profile) onprofile(session.profile);
   });
 
   const prompt = $derived(session.exercise?.prompt ?? null);
@@ -219,6 +226,7 @@
         <div><dt>answered</dt><dd>{session.progress.done}</dd></div>
         <div><dt>accuracy</dt><dd>{accuracy}%</dd></div>
         <div><dt>best streak</dt><dd>×{session.progress.bestStreak}</dd></div>
+        <div><dt>earned</dt><dd>{session.progress.xp} XP</dd></div>
       </dl>
     </div>
   {:else if session.phase === "empty"}
@@ -233,7 +241,17 @@
     </div>
   {/if}
 
+  {#if session.levelUp}
+    <div class="level-up" in:fly={{ y: -16, duration: 220 }}>
+      <strong>Level {session.levelUp.level}</strong>
+      {#each session.levelUp.unlocked as pack (pack)}<span>{pack} unlocked</span>{/each}
+    </div>
+  {/if}
+
   {#if session.phase === "feedback" && session.feedback}
+    {#key session.progress.done}
+      <p class="gain" in:fly={{ y: 8, duration: 200 }}>+{session.feedback.xp} XP</p>
+    {/key}
     <p class="due">
       {session.feedback.retry ? "again later in this session" : "next review"}
       {session.feedback.retry ? "" : formatInterval(session.feedback.dueInMs)}
@@ -324,6 +342,34 @@
   .streak.on {
     opacity: 1;
     transform: none;
+  }
+
+  .gain {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--good);
+  }
+
+  .level-up {
+    position: absolute;
+    top: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--warn) 18%, var(--panel));
+    border: 1px solid var(--warn);
+    font-size: 14px;
+    z-index: 2;
+  }
+
+  .level-up strong {
+    color: var(--warn);
   }
 
   .due {

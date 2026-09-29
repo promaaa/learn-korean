@@ -9,6 +9,9 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 - Scheduling now uses FSRS (`rs-fsrs`, FSRS-5 default weights, 90 % retention, 1/5/10-minute learning steps) instead of the interval ladder.
 
 ### Added
+- XP and levels: 10 XP per correct answer (+5 easy, +5 first review, combo up to ×2), progressively longer levels, daily streak; level, XP bar and streak in the title bar, `+XP` after each answer, level-up banner listing unlocked packs.
+- Packs unlock by level: sessions draw only from packs whose `unlock_level` is reached.
+- Schema 6: append-only `xp_events` ledger, written in the same transaction as the review.
 - Schema 5: FSRS columns on `review_states` (phase, stability, difficulty, scheduled days); ladder progress is converted in place (backup first).
 - Feedback shows when the card comes back ("next review in 3 days").
 

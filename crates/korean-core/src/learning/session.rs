@@ -9,7 +9,7 @@ use super::plan::{Card, Plan};
 use crate::content::Item;
 use crate::rng::Rng;
 use crate::scheduler::{self, MemoryState, Rating};
-use crate::scoring;
+use crate::{progression, scoring};
 
 /// A missed card comes back after this many other cards.
 const RETRY_GAP: usize = 3;
@@ -46,6 +46,8 @@ pub struct Feedback {
     pub retry: bool,
     /// When the scheduler will show this card again, from now.
     pub due_in_ms: i64,
+    /// Experience earned by this answer.
+    pub xp: u32,
 }
 
 /// Everything the caller must persist after an answer.
@@ -65,6 +67,8 @@ pub struct Progress {
     pub correct: usize,
     pub streak: u32,
     pub best_streak: u32,
+    /// Experience earned in this session.
+    pub xp: u64,
 }
 
 #[derive(Debug, thiserror::Error, PartialEq, Eq)]
@@ -149,7 +153,9 @@ impl Session {
         let item = &self.items[&card.item_id];
         let chunks = item.build_chunks().len();
         let rating = scoring::grade(card.skill, correct, elapsed_ms, chunks);
-        let state = scheduler::review(self.states.get(&card), rating, now_ms);
+        let previous = self.states.get(&card);
+        let first_review = previous.is_none();
+        let state = scheduler::review(previous, rating, now_ms);
         self.states.insert(card.clone(), state);
 
         let p = &mut self.progress;
@@ -170,6 +176,8 @@ impl Session {
             }
         }
         p.remaining = self.queue.len();
+        let xp = progression::xp_for_answer(correct, rating, p.streak, first_review);
+        p.xp += u64::from(xp);
 
         Ok(Outcome {
             feedback: Feedback {
@@ -186,6 +194,7 @@ impl Session {
                 streak: p.streak,
                 retry,
                 due_in_ms: state.due_at - now_ms,
+                xp,
             },
             card,
             state,
