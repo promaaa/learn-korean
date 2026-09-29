@@ -6,9 +6,11 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 ## [Unreleased]
 
 ### Changed
+- Legacy usage sentences that duplicated small-talk lines were moved to the small-talk pack (validator: one card per Korean line).
 - Scheduling now uses FSRS (`rs-fsrs`, FSRS-5 default weights, 90 % retention, 1/5/10-minute learning steps) instead of the interval ladder.
 
 ### Added
+- `small-talk` pack (level 1): 81 everyday conversation lines — greetings, introductions, weather, weekend, hobbies, work, family, feelings, plans, compliments, leaving — 59 with replies for the reply game.
 - XP and levels: 10 XP per correct answer (+5 easy, +5 first review, combo up to ×2), progressively longer levels, daily streak; level, XP bar and streak in the title bar, `+XP` after each answer, level-up banner listing unlocked packs.
 - Packs unlock by level: sessions draw only from packs whose `unlock_level` is reached.
 - Schema 6: append-only `xp_events` ledger, written in the same transaction as the review.

@@ -44,48 +44,6 @@
       ]
     },
     {
-      "id": "legacy/what-is-your-name",
-      "kind": "sentence",
-      "korean": "이름이 뭐예요?",
-      "english": "What's your name?",
-      "context": "introductions",
-      "register": "polite",
-      "lexemes": [
-        "이름"
-      ],
-      "distractors": [
-        "Where are you from?",
-        "What's his name?",
-        "How old are you?"
-      ],
-      "replies": {
-        "good": [
-          {
-            "korean": "제 이름은 민수예요.",
-            "english": "My name is Minsu."
-          },
-          {
-            "korean": "저는 사라예요.",
-            "english": "I'm Sarah."
-          }
-        ],
-        "bad": [
-          {
-            "korean": "네, 괜찮아요.",
-            "english": "Yes, I'm fine."
-          },
-          {
-            "korean": "프랑스에서 왔어요.",
-            "english": "I'm from France."
-          },
-          {
-            "korean": "커피 주세요.",
-            "english": "Coffee, please."
-          }
-        ]
-      }
-    },
-    {
       "id": "legacy/4",
       "kind": "word",
       "korean": "네",
@@ -576,22 +534,6 @@
       "register": "polite",
       "lexemes": [
         "저"
-      ]
-    },
-    {
-      "id": "legacy/im-french",
-      "kind": "sentence",
-      "korean": "저는 프랑스 사람이에요.",
-      "english": "I'm French.",
-      "context": "introductions",
-      "register": "polite",
-      "lexemes": [
-        "저"
-      ],
-      "distractors": [
-        "I'm Korean.",
-        "Are you French?",
-        "He's French."
       ]
     },
     {
@@ -2065,48 +2007,6 @@
       "lexemes": [
         "지금"
       ]
-    },
-    {
-      "id": "legacy/what-time-is-it-now",
-      "kind": "sentence",
-      "korean": "지금 몇 시예요?",
-      "english": "What time is it now?",
-      "context": "time",
-      "register": "polite",
-      "lexemes": [
-        "지금"
-      ],
-      "distractors": [
-        "What time did it start?",
-        "What day is it today?",
-        "Do you have time now?"
-      ],
-      "replies": {
-        "good": [
-          {
-            "korean": "세 시예요.",
-            "english": "It's three o'clock."
-          },
-          {
-            "korean": "두 시 반이에요.",
-            "english": "It's half past two."
-          }
-        ],
-        "bad": [
-          {
-            "korean": "세 시간 걸려요.",
-            "english": "It takes three hours."
-          },
-          {
-            "korean": "어제 왔어요.",
-            "english": "I came yesterday."
-          },
-          {
-            "korean": "네, 시간 있어요.",
-            "english": "Yes, I have time."
-          }
-        ]
-      }
     },
     {
       "id": "legacy/69",
@@ -3851,48 +3751,6 @@
       "lexemes": [
         "바쁘다"
       ]
-    },
-    {
-      "id": "legacy/busy-these-days",
-      "kind": "sentence",
-      "korean": "요즘 바빠요?",
-      "english": "Are you busy these days?",
-      "context": "small-talk",
-      "register": "polite",
-      "lexemes": [
-        "바쁘다"
-      ],
-      "distractors": [
-        "Were you busy yesterday?",
-        "Are you tired these days?",
-        "Are you busy today?"
-      ],
-      "replies": {
-        "good": [
-          {
-            "korean": "네, 좀 바빠요.",
-            "english": "Yes, a bit busy."
-          },
-          {
-            "korean": "아니요, 괜찮아요.",
-            "english": "No, I'm okay."
-          }
-        ],
-        "bad": [
-          {
-            "korean": "커피를 마셔요.",
-            "english": "I'm drinking coffee."
-          },
-          {
-            "korean": "어제 샀어요.",
-            "english": "I bought it yesterday."
-          },
-          {
-            "korean": "네, 맛있어요.",
-            "english": "Yes, it's delicious."
-          }
-        ]
-      }
     },
     {
       "id": "legacy/128",
@@ -5690,48 +5548,6 @@
       ]
     },
     {
-      "id": "legacy/what-music-do-you-like",
-      "kind": "sentence",
-      "korean": "어떤 음악을 좋아해요?",
-      "english": "What kind of music do you like?",
-      "context": "hobbies",
-      "register": "polite",
-      "lexemes": [
-        "음악"
-      ],
-      "distractors": [
-        "What kind of food do you like?",
-        "Do you like music?",
-        "What music are you listening to?"
-      ],
-      "replies": {
-        "good": [
-          {
-            "korean": "케이팝을 좋아해요.",
-            "english": "I like K-pop."
-          },
-          {
-            "korean": "클래식 음악을 좋아해요.",
-            "english": "I like classical music."
-          }
-        ],
-        "bad": [
-          {
-            "korean": "피아노가 비싸요.",
-            "english": "Pianos are expensive."
-          },
-          {
-            "korean": "여덟 시에 시작해요.",
-            "english": "It starts at eight."
-          },
-          {
-            "korean": "네, 들었어요.",
-            "english": "Yes, I heard it."
-          }
-        ]
-      }
-    },
-    {
       "id": "legacy/189",
       "kind": "word",
       "korean": "노래",
@@ -6076,48 +5892,6 @@
       "lexemes": [
         "나라"
       ]
-    },
-    {
-      "id": "legacy/which-country-are-you-from",
-      "kind": "sentence",
-      "korean": "어느 나라 사람이에요?",
-      "english": "What country are you from?",
-      "context": "introductions",
-      "register": "polite",
-      "lexemes": [
-        "나라"
-      ],
-      "distractors": [
-        "What do you do for work?",
-        "Which country did you visit?",
-        "Which city are you from?"
-      ],
-      "replies": {
-        "good": [
-          {
-            "korean": "프랑스 사람이에요.",
-            "english": "I'm French."
-          },
-          {
-            "korean": "저는 프랑스에서 왔어요.",
-            "english": "I'm from France."
-          }
-        ],
-        "bad": [
-          {
-            "korean": "저는 학생이에요.",
-            "english": "I'm a student."
-          },
-          {
-            "korean": "나라가 커요.",
-            "english": "The country is big."
-          },
-          {
-            "korean": "서른 살이에요.",
-            "english": "I'm thirty."
-          }
-        ]
-      }
     },
     {
       "id": "legacy/202",
@@ -7000,22 +6774,6 @@
       "register": "polite",
       "lexemes": [
         "행복하다"
-      ]
-    },
-    {
-      "id": "legacy/really-happy-these-days",
-      "kind": "sentence",
-      "korean": "요즘 정말 행복해요.",
-      "english": "I'm really happy these days.",
-      "context": "feelings",
-      "register": "polite",
-      "lexemes": [
-        "행복하다"
-      ],
-      "distractors": [
-        "I'm really sad these days.",
-        "I was really happy back then.",
-        "Are you happy these days?"
       ]
     },
     {
@@ -8029,48 +7787,6 @@
       "lexemes": [
         "살다"
       ]
-    },
-    {
-      "id": "legacy/where-do-you-live",
-      "kind": "sentence",
-      "korean": "어디에 살아요?",
-      "english": "Where do you live?",
-      "context": "introductions",
-      "register": "polite",
-      "lexemes": [
-        "살다"
-      ],
-      "distractors": [
-        "Where do you work?",
-        "Who do you live with?",
-        "Where did you live before?"
-      ],
-      "replies": {
-        "good": [
-          {
-            "korean": "파리에 살아요.",
-            "english": "I live in Paris."
-          },
-          {
-            "korean": "학교 근처에 살아요.",
-            "english": "I live near the school."
-          }
-        ],
-        "bad": [
-          {
-            "korean": "혼자 살아요.",
-            "english": "I live alone."
-          },
-          {
-            "korean": "삼 년 살았어요.",
-            "english": "I've lived there for three years."
-          },
-          {
-            "korean": "네, 살아요.",
-            "english": "Yes, I live there."
-          }
-        ]
-      }
     },
     {
       "id": "legacy/277",
