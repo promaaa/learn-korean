@@ -10,6 +10,10 @@ const BUNDLED: &[(&str, &str)] = &[
         "legacy",
         include_str!("../../../../content/legacy/pack.json"),
     ),
+    (
+        "small-talk",
+        include_str!("../../../../content/small-talk/pack.json"),
+    ),
 ];
 
 /// Parses the bundled packs. They are validated in CI, so a parse failure is a build defect.

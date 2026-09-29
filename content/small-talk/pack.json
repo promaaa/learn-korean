@@ -1,0 +1,3025 @@
+{
+  "id": "small-talk",
+  "version": 1,
+  "title": "Small talk",
+  "description": "Everyday conversation openers and answers.",
+  "unlock_level": 1,
+  "items": [
+    {
+      "id": "small-talk/how-do-you-do",
+      "kind": "sentence",
+      "korean": "처음 뵙겠습니다.",
+      "english": "How do you do? (first meeting)",
+      "context": "greetings",
+      "register": "formal",
+      "note": "Formal set phrase for a very first meeting; often followed by your name.",
+      "lexemes": [
+        "처음",
+        "뵙다"
+      ],
+      "distractors": [
+        "Nice to see you again.",
+        "Long time no see.",
+        "See you next time."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "처음 뵙겠습니다.",
+            "english": "How do you do?"
+          },
+          {
+            "korean": "반갑습니다.",
+            "english": "Pleased to meet you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 괜찮아요.",
+            "english": "Yes, it's fine."
+          },
+          {
+            "korean": "저는 커피를 좋아해요.",
+            "english": "I like coffee."
+          },
+          {
+            "korean": "내일 갈 거예요.",
+            "english": "I'll go tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/nice-to-meet-you",
+      "kind": "sentence",
+      "korean": "만나서 반가워요.",
+      "english": "Nice to meet you.",
+      "context": "greetings",
+      "register": "polite",
+      "lexemes": [
+        "만나다",
+        "반갑다"
+      ],
+      "distractors": [
+        "Nice to see you again.",
+        "Thanks for waiting.",
+        "See you later."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저도 반가워요.",
+            "english": "Nice to meet you too."
+          },
+          {
+            "korean": "네, 반가워요.",
+            "english": "Yes, nice to meet you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니요, 안 추워요.",
+            "english": "No, I'm not cold."
+          },
+          {
+            "korean": "주말에 쉬었어요.",
+            "english": "I rested on the weekend."
+          },
+          {
+            "korean": "비빔밥 주세요.",
+            "english": "Bibimbap, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/long-time-no-see",
+      "kind": "sentence",
+      "korean": "오랜만이에요.",
+      "english": "Long time no see.",
+      "context": "greetings",
+      "register": "polite",
+      "lexemes": [
+        "오랜만"
+      ],
+      "distractors": [
+        "See you soon.",
+        "Nice to meet you.",
+        "It's getting late."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 정말 오랜만이에요.",
+            "english": "Yes, it's really been a long time."
+          },
+          {
+            "korean": "오랜만이에요! 잘 지냈어요?",
+            "english": "Long time no see! Have you been well?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 프랑스 사람이에요.",
+            "english": "I'm French."
+          },
+          {
+            "korean": "두 개 주세요.",
+            "english": "Two, please."
+          },
+          {
+            "korean": "아니요, 비가 와요.",
+            "english": "No, it's raining."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/sorry-im-late",
+      "kind": "sentence",
+      "korean": "늦어서 미안해요.",
+      "english": "Sorry I'm late.",
+      "context": "apologies",
+      "register": "polite",
+      "lexemes": [
+        "늦다",
+        "미안하다"
+      ],
+      "distractors": [
+        "Sorry, I'll be late.",
+        "Thanks for waiting.",
+        "Sorry I left early."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "괜찮아요.",
+            "english": "It's okay."
+          },
+          {
+            "korean": "괜찮아요. 저도 방금 왔어요.",
+            "english": "It's fine. I just got here too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여섯 시에 퇴근해요.",
+            "english": "I get off work at six."
+          },
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          },
+          {
+            "korean": "파리에서 왔어요.",
+            "english": "I'm from Paris."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/thanks-for-helping",
+      "kind": "sentence",
+      "korean": "도와줘서 고마워요.",
+      "english": "Thanks for helping me.",
+      "context": "thanks",
+      "register": "polite",
+      "lexemes": [
+        "돕다",
+        "고맙다"
+      ],
+      "distractors": [
+        "Thanks for coming.",
+        "Sorry I couldn't help.",
+        "Can you help me?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아니에요, 별거 아니에요.",
+            "english": "No problem, it was nothing."
+          },
+          {
+            "korean": "천만에요.",
+            "english": "You're welcome."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저도 반가워요.",
+            "english": "Nice to meet you too."
+          },
+          {
+            "korean": "네, 도와줄 거예요.",
+            "english": "Yes, I'll help."
+          },
+          {
+            "korean": "오늘은 월요일이에요.",
+            "english": "Today is Monday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/see-you-next-time",
+      "kind": "sentence",
+      "korean": "다음에 또 봐요.",
+      "english": "See you again next time.",
+      "context": "leaving",
+      "register": "polite",
+      "lexemes": [
+        "다음",
+        "또",
+        "보다"
+      ],
+      "distractors": [
+        "See you again tomorrow.",
+        "Nice to see you again.",
+        "Let's not meet again."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 또 봐요!",
+            "english": "Yes, see you!"
+          },
+          {
+            "korean": "네, 연락할게요.",
+            "english": "Sure, I'll be in touch."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 봤어요.",
+            "english": "Yes, I saw it."
+          },
+          {
+            "korean": "아니요, 안 매워요.",
+            "english": "No, it's not spicy."
+          },
+          {
+            "korean": "스물다섯 살이에요.",
+            "english": "I'm twenty-five."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/see-you-tomorrow-casual",
+      "kind": "sentence",
+      "korean": "내일 봐!",
+      "english": "See you tomorrow!",
+      "context": "leaving",
+      "register": "casual",
+      "note": "Casual: only with close friends or people younger than you.",
+      "lexemes": [
+        "내일",
+        "보다"
+      ],
+      "distractors": [
+        "See you next week!",
+        "I saw you yesterday!",
+        "Call me tomorrow!"
+      ]
+    },
+    {
+      "id": "small-talk/have-you-been-well",
+      "kind": "sentence",
+      "korean": "잘 지냈어요?",
+      "english": "Have you been well?",
+      "context": "how-are-you",
+      "register": "polite",
+      "note": "Used when you haven't seen someone for a while.",
+      "lexemes": [
+        "잘",
+        "지내다"
+      ],
+      "distractors": [
+        "Did you sleep well?",
+        "Did you eat well?",
+        "Will you be all right?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 잘 지냈어요.",
+            "english": "Yes, I've been well."
+          },
+          {
+            "korean": "네, 덕분에 잘 지냈어요.",
+            "english": "Yes, I've been well, thanks."
+          },
+          {
+            "korean": "그냥 그랬어요.",
+            "english": "So-so."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 김민지예요.",
+            "english": "I'm Kim Minji."
+          },
+          {
+            "korean": "내일 비가 올 거예요.",
+            "english": "It will rain tomorrow."
+          },
+          {
+            "korean": "한국 음식을 좋아해요.",
+            "english": "I like Korean food."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/doing-well",
+      "kind": "sentence",
+      "korean": "네, 잘 지내요.",
+      "english": "Yes, I'm doing well.",
+      "context": "how-are-you",
+      "register": "polite",
+      "lexemes": [
+        "잘",
+        "지내다"
+      ],
+      "distractors": [
+        "No, I'm not doing well.",
+        "Yes, I did it well.",
+        "Yes, I'm leaving now."
+      ]
+    },
+    {
+      "id": "small-talk/busy-these-days",
+      "kind": "sentence",
+      "korean": "요즘 바빠요?",
+      "english": "Are you busy these days?",
+      "context": "how-are-you",
+      "register": "polite",
+      "lexemes": [
+        "요즘",
+        "바쁘다"
+      ],
+      "distractors": [
+        "Were you busy yesterday?",
+        "Are you tired these days?",
+        "Are you free today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 좀 바빠요.",
+            "english": "Yes, I'm a bit busy."
+          },
+          {
+            "korean": "아니요, 요즘은 안 바빠요.",
+            "english": "No, I'm not busy these days."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "학교 앞에 있어요.",
+            "english": "It's in front of the school."
+          },
+          {
+            "korean": "세 시에 만나요.",
+            "english": "Let's meet at three."
+          },
+          {
+            "korean": "네, 맛있었어요.",
+            "english": "Yes, it was delicious."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/how-have-you-been-lately",
+      "kind": "sentence",
+      "korean": "요즘 어떻게 지내요?",
+      "english": "How are you doing these days?",
+      "context": "how-are-you",
+      "register": "polite",
+      "lexemes": [
+        "요즘",
+        "어떻게",
+        "지내다"
+      ],
+      "distractors": [
+        "Where are you living these days?",
+        "What are you doing today?",
+        "How did you get here?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "요즘 좀 바빠요.",
+            "english": "I've been a bit busy lately."
+          },
+          {
+            "korean": "잘 지내요. 민수 씨는요?",
+            "english": "I'm good. And you, Minsu?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "커피 두 잔 주세요.",
+            "english": "Two coffees, please."
+          },
+          {
+            "korean": "지난주에 갔어요.",
+            "english": "I went last week."
+          },
+          {
+            "korean": "버스로 와요.",
+            "english": "I come by bus."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/have-you-been-well-casual",
+      "kind": "sentence",
+      "korean": "잘 지냈어?",
+      "english": "How've you been? (casual)",
+      "context": "how-are-you",
+      "register": "casual",
+      "note": "Casual: only with close friends or people younger than you.",
+      "lexemes": [
+        "잘",
+        "지내다"
+      ],
+      "distractors": [
+        "Where have you been? (casual)",
+        "Did you eat well? (casual)",
+        "Are you okay? (casual)"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 잘 지냈어. 너는?",
+            "english": "Yeah, I've been good. You?"
+          },
+          {
+            "korean": "그럭저럭 지냈어.",
+            "english": "I've been so-so."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 맛있어.",
+            "english": "Yeah, it's tasty."
+          },
+          {
+            "korean": "나는 학생이야.",
+            "english": "I'm a student."
+          },
+          {
+            "korean": "내일 갈 거야.",
+            "english": "I'll go tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/whats-your-name",
+      "kind": "sentence",
+      "korean": "이름이 뭐예요?",
+      "english": "What's your name?",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "이름",
+        "뭐"
+      ],
+      "distractors": [
+        "Where are you from?",
+        "What's his name?",
+        "What's this called?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저는 레아예요.",
+            "english": "I'm Léa."
+          },
+          {
+            "korean": "제 이름은 토마예요.",
+            "english": "My name is Thomas."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 서울에 살아요.",
+            "english": "I live in Seoul."
+          },
+          {
+            "korean": "네, 좋아요.",
+            "english": "Yes, sounds good."
+          },
+          {
+            "korean": "스물다섯 살이에요.",
+            "english": "I'm twenty-five."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/may-i-ask-your-name",
+      "kind": "sentence",
+      "korean": "성함이 어떻게 되세요?",
+      "english": "May I ask your name?",
+      "context": "introductions",
+      "register": "polite",
+      "note": "성함 is the honorific word for 이름 (name); you'll hear it from staff and elders.",
+      "lexemes": [
+        "성함",
+        "어떻게",
+        "되다"
+      ],
+      "distractors": [
+        "May I ask your age?",
+        "How do you spell your name?",
+        "May I ask where you live?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저는 레아라고 합니다.",
+            "english": "My name is Léa."
+          },
+          {
+            "korean": "레아예요.",
+            "english": "It's Léa."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "잘 지내요.",
+            "english": "I'm doing well."
+          },
+          {
+            "korean": "프랑스 음식이에요.",
+            "english": "It's French food."
+          },
+          {
+            "korean": "아니요, 괜찮아요.",
+            "english": "No, it's okay."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/what-country-are-you-from",
+      "kind": "sentence",
+      "korean": "어느 나라 사람이에요?",
+      "english": "What country are you from?",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "어느",
+        "나라",
+        "사람"
+      ],
+      "distractors": [
+        "What city do you live in?",
+        "What language do you speak?",
+        "Which country have you been to?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "프랑스 사람이에요.",
+            "english": "I'm French."
+          },
+          {
+            "korean": "저는 프랑스에서 왔어요.",
+            "english": "I'm from France."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "어제 왔어요.",
+            "english": "I came yesterday."
+          },
+          {
+            "korean": "네, 좋아해요.",
+            "english": "Yes, I like it."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/where-are-you-from",
+      "kind": "sentence",
+      "korean": "어디에서 왔어요?",
+      "english": "Where are you from?",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "어디",
+        "오다"
+      ],
+      "distractors": [
+        "Where are you going?",
+        "When did you arrive?",
+        "Where do you live?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "프랑스에서 왔어요.",
+            "english": "I'm from France."
+          },
+          {
+            "korean": "파리에서 왔어요.",
+            "english": "I'm from Paris."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "스물다섯 살이에요.",
+            "english": "I'm twenty-five."
+          },
+          {
+            "korean": "저는 학생이에요.",
+            "english": "I'm a student."
+          },
+          {
+            "korean": "커피를 좋아해요.",
+            "english": "I like coffee."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/i-am-french",
+      "kind": "sentence",
+      "korean": "저는 프랑스 사람이에요.",
+      "english": "I'm French.",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "프랑스",
+        "사람"
+      ],
+      "distractors": [
+        "I'm not French.",
+        "My friend is French.",
+        "I'm in France."
+      ]
+    },
+    {
+      "id": "small-talk/i-am-from-paris",
+      "kind": "sentence",
+      "korean": "파리에서 왔어요.",
+      "english": "I'm from Paris.",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "파리",
+        "오다"
+      ],
+      "distractors": [
+        "I'm going to Paris.",
+        "I live in Paris.",
+        "I came back from Paris yesterday."
+      ]
+    },
+    {
+      "id": "small-talk/how-old-are-you",
+      "kind": "sentence",
+      "korean": "나이가 어떻게 되세요?",
+      "english": "How old are you?",
+      "context": "introductions",
+      "register": "polite",
+      "note": "Polite way to ask someone's age; ages use native numbers + 살.",
+      "lexemes": [
+        "나이",
+        "어떻게",
+        "되다"
+      ],
+      "distractors": [
+        "When is your birthday?",
+        "How tall are you?",
+        "How old is your brother?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "서른 살이에요.",
+            "english": "I'm thirty."
+          },
+          {
+            "korean": "스물다섯 살이에요.",
+            "english": "I'm twenty-five."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "프랑스 사람이에요.",
+            "english": "I'm French."
+          },
+          {
+            "korean": "여섯 시예요.",
+            "english": "It's six o'clock."
+          },
+          {
+            "korean": "네, 괜찮아요.",
+            "english": "Yes, I'm fine."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/where-do-you-live",
+      "kind": "sentence",
+      "korean": "어디에 살아요?",
+      "english": "Where do you live?",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "어디",
+        "살다"
+      ],
+      "distractors": [
+        "Where do you work?",
+        "Where did you live before?",
+        "Who do you live with?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "서울에 살아요.",
+            "english": "I live in Seoul."
+          },
+          {
+            "korean": "학교 근처에 살아요.",
+            "english": "I live near the school."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "혼자 살아요.",
+            "english": "I live alone."
+          },
+          {
+            "korean": "네, 좋아해요.",
+            "english": "Yes, I like it."
+          },
+          {
+            "korean": "회사원이에요.",
+            "english": "I'm an office worker."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/i-speak-a-little-korean",
+      "kind": "sentence",
+      "korean": "한국어를 조금 해요.",
+      "english": "I speak a little Korean.",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "한국어",
+        "조금",
+        "하다"
+      ],
+      "distractors": [
+        "I don't speak Korean.",
+        "I speak a little French.",
+        "I speak Korean well."
+      ]
+    },
+    {
+      "id": "small-talk/how-long-studying-korean",
+      "kind": "sentence",
+      "korean": "한국어는 얼마나 배웠어요?",
+      "english": "How long have you studied Korean?",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "한국어",
+        "얼마나",
+        "배우다"
+      ],
+      "distractors": [
+        "Why are you studying Korean?",
+        "Where did you learn Korean?",
+        "How long have you lived in Korea?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "일 년 정도 배웠어요.",
+            "english": "I've studied for about a year."
+          },
+          {
+            "korean": "육 개월쯤 배웠어요.",
+            "english": "About six months."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "한국 음식을 좋아해요.",
+            "english": "I like Korean food."
+          },
+          {
+            "korean": "네, 잘 지내요.",
+            "english": "Yes, I'm doing well."
+          },
+          {
+            "korean": "친구하고 갔어요.",
+            "english": "I went with a friend."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/why-learning-korean",
+      "kind": "sentence",
+      "korean": "왜 한국어를 배워요?",
+      "english": "Why are you learning Korean?",
+      "context": "introductions",
+      "register": "polite",
+      "lexemes": [
+        "왜",
+        "한국어",
+        "배우다"
+      ],
+      "distractors": [
+        "When did you start learning Korean?",
+        "Why are you learning French?",
+        "Where are you learning Korean?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "한국 드라마를 좋아해요.",
+            "english": "I like Korean dramas."
+          },
+          {
+            "korean": "한국에서 일하고 싶어요.",
+            "english": "I want to work in Korea."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "지난달에 시작했어요.",
+            "english": "I started last month."
+          },
+          {
+            "korean": "네, 맞아요.",
+            "english": "Yes, that's right."
+          },
+          {
+            "korean": "저는 서울에 살아요.",
+            "english": "I live in Seoul."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/what-time-is-it",
+      "kind": "sentence",
+      "korean": "지금 몇 시예요?",
+      "english": "What time is it now?",
+      "context": "time",
+      "register": "polite",
+      "note": "Hours use native numbers (세 시), minutes use Sino numbers (십 분).",
+      "lexemes": [
+        "지금",
+        "몇",
+        "시"
+      ],
+      "distractors": [
+        "What time is it in France?",
+        "What time does it start?",
+        "What day is it today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "세 시 반이에요.",
+            "english": "It's half past three."
+          },
+          {
+            "korean": "두 시 십 분이에요.",
+            "english": "It's ten past two."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "금요일이에요.",
+            "english": "It's Friday."
+          },
+          {
+            "korean": "지하철로 가요.",
+            "english": "I go by subway."
+          },
+          {
+            "korean": "네, 시간 있어요.",
+            "english": "Yes, I have time."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/what-day-is-it",
+      "kind": "sentence",
+      "korean": "오늘 무슨 요일이에요?",
+      "english": "What day of the week is it today?",
+      "context": "time",
+      "register": "polite",
+      "lexemes": [
+        "오늘",
+        "무슨",
+        "요일"
+      ],
+      "distractors": [
+        "What's today's date?",
+        "What day was it yesterday?",
+        "What time is it now?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "금요일이에요.",
+            "english": "It's Friday."
+          },
+          {
+            "korean": "오늘은 수요일이에요.",
+            "english": "Today is Wednesday."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 시예요.",
+            "english": "It's three o'clock."
+          },
+          {
+            "korean": "네, 오늘이에요.",
+            "english": "Yes, it's today."
+          },
+          {
+            "korean": "날씨가 좋아요.",
+            "english": "The weather is nice."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/how-long-in-korea",
+      "kind": "sentence",
+      "korean": "한국에 온 지 얼마나 됐어요?",
+      "english": "How long have you been in Korea?",
+      "context": "time",
+      "register": "polite",
+      "note": "-(으)ㄴ 지 얼마나 됐어요? asks how much time has passed since something happened.",
+      "lexemes": [
+        "한국",
+        "오다",
+        "얼마나",
+        "되다"
+      ],
+      "distractors": [
+        "When are you going back to France?",
+        "How long will you stay in Korea?",
+        "How many times have you been to Korea?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "삼 개월 됐어요.",
+            "english": "It's been three months."
+          },
+          {
+            "korean": "이제 일 년쯤 됐어요.",
+            "english": "It's been about a year now."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다음 달에 가요.",
+            "english": "I'm leaving next month."
+          },
+          {
+            "korean": "서울에 살아요.",
+            "english": "I live in Seoul."
+          },
+          {
+            "korean": "한국 음식을 좋아해요.",
+            "english": "I like Korean food."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/nice-weather-today",
+      "kind": "sentence",
+      "korean": "오늘 날씨가 좋네요.",
+      "english": "The weather is nice today.",
+      "context": "weather",
+      "register": "polite",
+      "note": "-네요 shares a fresh observation and invites the other person to agree.",
+      "lexemes": [
+        "오늘",
+        "날씨",
+        "좋다"
+      ],
+      "distractors": [
+        "The weather was nice yesterday.",
+        "The weather is bad today.",
+        "Will the weather be nice tomorrow?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 정말 좋네요.",
+            "english": "Yes, it really is."
+          },
+          {
+            "korean": "네, 산책하기 좋은 날씨예요.",
+            "english": "Yes, it's perfect weather for a walk."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 학생이에요.",
+            "english": "I'm a student."
+          },
+          {
+            "korean": "세 시에 만나요.",
+            "english": "Let's meet at three."
+          },
+          {
+            "korean": "네, 두 명이에요.",
+            "english": "Yes, two people."
+          }
+        ]
+      },
+      "image": "sunny blue sky"
+    },
+    {
+      "id": "small-talk/a-bit-cold-today",
+      "kind": "sentence",
+      "korean": "오늘 좀 춥네요.",
+      "english": "It's a bit cold today.",
+      "context": "weather",
+      "register": "polite",
+      "lexemes": [
+        "오늘",
+        "좀",
+        "춥다"
+      ],
+      "distractors": [
+        "It's a bit hot today.",
+        "It was very cold yesterday.",
+        "Are you cold today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 정말 추워요.",
+            "english": "Yes, it's really cold."
+          },
+          {
+            "korean": "네, 따뜻하게 입으세요.",
+            "english": "Yes, dress warmly."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니요, 안 매워요.",
+            "english": "No, it's not spicy."
+          },
+          {
+            "korean": "친구를 만났어요.",
+            "english": "I met a friend."
+          },
+          {
+            "korean": "여기 있어요.",
+            "english": "Here it is."
+          }
+        ]
+      },
+      "image": "winter street coat"
+    },
+    {
+      "id": "small-talk/too-hot",
+      "kind": "sentence",
+      "korean": "날씨가 너무 더워요.",
+      "english": "It's way too hot.",
+      "context": "weather",
+      "register": "polite",
+      "lexemes": [
+        "날씨",
+        "너무",
+        "덥다"
+      ],
+      "distractors": [
+        "It's way too cold.",
+        "It's not hot at all.",
+        "It was way too hot last week."
+      ],
+      "image": "hot summer sun"
+    },
+    {
+      "id": "small-talk/rain-tomorrow",
+      "kind": "sentence",
+      "korean": "내일 비가 온대요.",
+      "english": "They say it'll rain tomorrow.",
+      "context": "weather",
+      "register": "polite",
+      "note": "-대요 reports what someone else said, e.g. the weather forecast.",
+      "lexemes": [
+        "내일",
+        "비",
+        "오다"
+      ],
+      "distractors": [
+        "It rained yesterday.",
+        "They say it'll snow tomorrow.",
+        "Will it rain tomorrow?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "정말요? 우산을 챙겨야겠네요.",
+            "english": "Really? I'd better bring an umbrella."
+          },
+          {
+            "korean": "아, 그래요?",
+            "english": "Oh, really?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 비빔밥을 좋아해요.",
+            "english": "I like bibimbap."
+          },
+          {
+            "korean": "네, 여동생이 있어요.",
+            "english": "Yes, I have a younger sister."
+          },
+          {
+            "korean": "일곱 시에 끝나요.",
+            "english": "It ends at seven."
+          }
+        ]
+      },
+      "image": "rain umbrella"
+    },
+    {
+      "id": "small-talk/weather-there",
+      "kind": "sentence",
+      "korean": "거기 날씨는 어때요?",
+      "english": "How's the weather there?",
+      "context": "weather",
+      "register": "polite",
+      "lexemes": [
+        "거기",
+        "날씨",
+        "어떻다"
+      ],
+      "distractors": [
+        "How was the weather there?",
+        "How's the food there?",
+        "What's the weather like here?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "파리는 지금 비가 와요.",
+            "english": "It's raining in Paris right now."
+          },
+          {
+            "korean": "여기는 좀 추워요.",
+            "english": "It's a bit cold here."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "음식이 맛있어요.",
+            "english": "The food is delicious."
+          },
+          {
+            "korean": "기차로 왔어요.",
+            "english": "I came by train."
+          },
+          {
+            "korean": "저는 회사원이에요.",
+            "english": "I'm an office worker."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/its-snowing",
+      "kind": "sentence",
+      "korean": "눈이 와요!",
+      "english": "It's snowing!",
+      "context": "weather",
+      "register": "polite",
+      "lexemes": [
+        "눈",
+        "오다"
+      ],
+      "distractors": [
+        "It's raining!",
+        "It snowed!",
+        "Is it snowing?"
+      ],
+      "image": "snowfall"
+    },
+    {
+      "id": "small-talk/favorite-season",
+      "kind": "sentence",
+      "korean": "어떤 계절을 제일 좋아해요?",
+      "english": "Which season do you like best?",
+      "context": "weather",
+      "register": "polite",
+      "lexemes": [
+        "어떤",
+        "계절",
+        "제일",
+        "좋아하다"
+      ],
+      "distractors": [
+        "Which season do you like least?",
+        "Which country do you like best?",
+        "What's the weather like in spring?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "가을을 제일 좋아해요.",
+            "english": "I like autumn best."
+          },
+          {
+            "korean": "봄이요. 따뜻해서 좋아요.",
+            "english": "Spring. I like it because it's warm."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "파리에서 왔어요.",
+            "english": "I'm from Paris."
+          },
+          {
+            "korean": "어제 추웠어요.",
+            "english": "It was cold yesterday."
+          },
+          {
+            "korean": "커피 주세요.",
+            "english": "Coffee, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/did-you-have-lunch",
+      "kind": "sentence",
+      "korean": "점심 먹었어요?",
+      "english": "Did you have lunch?",
+      "context": "food",
+      "register": "polite",
+      "note": "A friendly check-in, often used almost like 'how are you'.",
+      "lexemes": [
+        "점심",
+        "먹다"
+      ],
+      "distractors": [
+        "Do you want to have lunch?",
+        "Did you have dinner?",
+        "What did you have for lunch?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 먹었어요.",
+            "english": "Yes, I did."
+          },
+          {
+            "korean": "아니요, 아직 안 먹었어요.",
+            "english": "No, not yet."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 먹을 거예요.",
+            "english": "Yes, I'm going to eat."
+          },
+          {
+            "korean": "파리에서 왔어요.",
+            "english": "I'm from Paris."
+          },
+          {
+            "korean": "세 명이에요.",
+            "english": "There are three of us."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/did-you-eat-casual",
+      "kind": "sentence",
+      "korean": "밥 먹었어?",
+      "english": "Did you eat? (casual)",
+      "context": "food",
+      "register": "casual",
+      "note": "Casual: only with close friends or people younger than you.",
+      "lexemes": [
+        "밥",
+        "먹다"
+      ],
+      "distractors": [
+        "Are you hungry? (casual)",
+        "What did you eat? (casual)",
+        "Do you want to eat together? (casual)"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 먹었어.",
+            "english": "Yeah, I ate."
+          },
+          {
+            "korean": "아니, 아직 안 먹었어.",
+            "english": "No, not yet."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 맛있어.",
+            "english": "Yeah, it's tasty."
+          },
+          {
+            "korean": "나는 학생이야.",
+            "english": "I'm a student."
+          },
+          {
+            "korean": "내일 갈 거야.",
+            "english": "I'll go tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/like-korean-food",
+      "kind": "sentence",
+      "korean": "한국 음식 좋아해요?",
+      "english": "Do you like Korean food?",
+      "context": "food",
+      "register": "polite",
+      "lexemes": [
+        "한국",
+        "음식",
+        "좋아하다"
+      ],
+      "distractors": [
+        "Do you like French food?",
+        "Can you cook Korean food?",
+        "Have you ever eaten Korean food?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 정말 좋아해요.",
+            "english": "Yes, I really like it."
+          },
+          {
+            "korean": "네, 특히 김치찌개를 좋아해요.",
+            "english": "Yes, I especially like kimchi stew."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 한국 사람이에요.",
+            "english": "Yes, I'm Korean."
+          },
+          {
+            "korean": "아니요, 안 바빠요.",
+            "english": "No, I'm not busy."
+          },
+          {
+            "korean": "어제 만났어요.",
+            "english": "We met yesterday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/can-you-eat-spicy",
+      "kind": "sentence",
+      "korean": "매운 음식 잘 먹어요?",
+      "english": "Can you handle spicy food?",
+      "context": "food",
+      "register": "polite",
+      "lexemes": [
+        "맵다",
+        "음식",
+        "잘",
+        "먹다"
+      ],
+      "distractors": [
+        "Do you cook spicy food?",
+        "Is this food spicy?",
+        "Did you eat spicy food?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 잘 먹어요.",
+            "english": "Yes, I can."
+          },
+          {
+            "korean": "아니요, 매운 건 잘 못 먹어요.",
+            "english": "No, I can't really handle spicy food."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맵네요.",
+            "english": "Yes, it's spicy."
+          },
+          {
+            "korean": "저는 프랑스에서 왔어요.",
+            "english": "I'm from France."
+          },
+          {
+            "korean": "일곱 시예요.",
+            "english": "It's seven o'clock."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/favorite-food",
+      "kind": "sentence",
+      "korean": "제일 좋아하는 음식이 뭐예요?",
+      "english": "What's your favorite food?",
+      "context": "food",
+      "register": "polite",
+      "lexemes": [
+        "제일",
+        "좋아하다",
+        "음식",
+        "뭐"
+      ],
+      "distractors": [
+        "What food don't you like?",
+        "What did you eat today?",
+        "What's your favorite drink?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "비빔밥이에요.",
+            "english": "Bibimbap."
+          },
+          {
+            "korean": "떡볶이를 제일 좋아해요.",
+            "english": "I like tteokbokki the most."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 좋아해요.",
+            "english": "Yes, I like it."
+          },
+          {
+            "korean": "식당에서 먹었어요.",
+            "english": "I ate at a restaurant."
+          },
+          {
+            "korean": "파리에 살아요.",
+            "english": "I live in Paris."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/how-many-in-family",
+      "kind": "sentence",
+      "korean": "가족이 몇 명이에요?",
+      "english": "How many people are in your family?",
+      "context": "family",
+      "register": "polite",
+      "lexemes": [
+        "가족",
+        "몇",
+        "명"
+      ],
+      "distractors": [
+        "How many friends do you have?",
+        "Where does your family live?",
+        "How many children do you have?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네 명이에요.",
+            "english": "There are four of us."
+          },
+          {
+            "korean": "부모님하고 저, 세 명이에요.",
+            "english": "Three: my parents and me."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "파리에 살아요.",
+            "english": "They live in Paris."
+          },
+          {
+            "korean": "서른 살이에요.",
+            "english": "I'm thirty."
+          },
+          {
+            "korean": "네, 잘 지내요.",
+            "english": "Yes, they're doing well."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/do-you-have-siblings",
+      "kind": "sentence",
+      "korean": "형제가 있어요?",
+      "english": "Do you have any siblings?",
+      "context": "family",
+      "register": "polite",
+      "lexemes": [
+        "형제",
+        "있다"
+      ],
+      "distractors": [
+        "Do you have any children?",
+        "Do you have any friends in Korea?",
+        "Are your siblings married?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 여동생이 한 명 있어요.",
+            "english": "Yes, I have one younger sister."
+          },
+          {
+            "korean": "아니요, 외동이에요.",
+            "english": "No, I'm an only child."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니요, 안 매워요.",
+            "english": "No, it's not spicy."
+          },
+          {
+            "korean": "저는 회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "주말에 만났어요.",
+            "english": "We met on the weekend."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/one-younger-sister",
+      "kind": "sentence",
+      "korean": "여동생이 한 명 있어요.",
+      "english": "I have one younger sister.",
+      "context": "family",
+      "register": "polite",
+      "lexemes": [
+        "여동생",
+        "한",
+        "명",
+        "있다"
+      ],
+      "distractors": [
+        "I have one older sister.",
+        "I have two younger sisters.",
+        "I have one younger brother."
+      ]
+    },
+    {
+      "id": "small-talk/what-do-you-do",
+      "kind": "sentence",
+      "korean": "무슨 일 하세요?",
+      "english": "What do you do for a living?",
+      "context": "work-study",
+      "register": "polite",
+      "lexemes": [
+        "무슨",
+        "일",
+        "하다"
+      ],
+      "distractors": [
+        "What are you doing right now?",
+        "Where do you work?",
+        "What did you do today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "학생이에요.",
+            "english": "I'm a student."
+          },
+          {
+            "korean": "디자이너로 일해요.",
+            "english": "I work as a designer."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "서울에 살아요.",
+            "english": "I live in Seoul."
+          },
+          {
+            "korean": "지금 밥 먹어요.",
+            "english": "I'm eating right now."
+          },
+          {
+            "korean": "잘 지내요.",
+            "english": "I'm doing well."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/i-am-a-university-student",
+      "kind": "sentence",
+      "korean": "저는 대학생이에요.",
+      "english": "I'm a university student.",
+      "context": "work-study",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "대학생"
+      ],
+      "distractors": [
+        "I'm a teacher.",
+        "I was a university student.",
+        "My sister is a university student."
+      ]
+    },
+    {
+      "id": "small-talk/lots-of-work-today",
+      "kind": "sentence",
+      "korean": "오늘 일이 많아요.",
+      "english": "I have a lot of work today.",
+      "context": "work-study",
+      "register": "polite",
+      "lexemes": [
+        "오늘",
+        "일",
+        "많다"
+      ],
+      "distractors": [
+        "I had a lot of work yesterday.",
+        "I don't have much work today.",
+        "I have a lot of homework today."
+      ]
+    },
+    {
+      "id": "small-talk/what-time-off-work",
+      "kind": "sentence",
+      "korean": "몇 시에 퇴근해요?",
+      "english": "What time do you get off work?",
+      "context": "work-study",
+      "register": "polite",
+      "lexemes": [
+        "몇",
+        "시",
+        "퇴근하다"
+      ],
+      "distractors": [
+        "What time do you go to work?",
+        "What time did you get home?",
+        "What time do you have lunch?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "여섯 시에 퇴근해요.",
+            "english": "I get off at six."
+          },
+          {
+            "korean": "보통 일곱 시쯤 퇴근해요.",
+            "english": "Usually around seven."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "지하철로 가요.",
+            "english": "I go by subway."
+          },
+          {
+            "korean": "네, 맛있었어요.",
+            "english": "Yes, it was delicious."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/is-your-work-fun",
+      "kind": "sentence",
+      "korean": "일은 재미있어요?",
+      "english": "Do you enjoy your work?",
+      "context": "work-study",
+      "register": "polite",
+      "lexemes": [
+        "일",
+        "재미있다"
+      ],
+      "distractors": [
+        "Is your work hard?",
+        "Did you enjoy the movie?",
+        "Is your office far?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 재미있어요.",
+            "english": "Yes, I do."
+          },
+          {
+            "korean": "좀 힘들지만 재미있어요.",
+            "english": "It's a bit hard, but I enjoy it."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여섯 시에 끝나요.",
+            "english": "It ends at six."
+          },
+          {
+            "korean": "프랑스에서 왔어요.",
+            "english": "I'm from France."
+          },
+          {
+            "korean": "아니요, 안 추워요.",
+            "english": "No, I'm not cold."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/whats-your-hobby",
+      "kind": "sentence",
+      "korean": "취미가 뭐예요?",
+      "english": "What's your hobby?",
+      "context": "hobbies",
+      "register": "polite",
+      "lexemes": [
+        "취미",
+        "뭐"
+      ],
+      "distractors": [
+        "What's your job?",
+        "What's your favorite food?",
+        "What's your friend's hobby?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "제 취미는 요리예요.",
+            "english": "My hobby is cooking."
+          },
+          {
+            "korean": "책 읽는 걸 좋아해요.",
+            "english": "I like reading books."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "서울에 살아요.",
+            "english": "I live in Seoul."
+          },
+          {
+            "korean": "내일 할 거예요.",
+            "english": "I'll do it tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/my-hobby-is-reading",
+      "kind": "sentence",
+      "korean": "제 취미는 독서예요.",
+      "english": "My hobby is reading.",
+      "context": "hobbies",
+      "register": "polite",
+      "lexemes": [
+        "취미",
+        "독서"
+      ],
+      "distractors": [
+        "My hobby is writing.",
+        "My friend's hobby is reading.",
+        "I don't like reading."
+      ],
+      "image": "reading book"
+    },
+    {
+      "id": "small-talk/do-you-like-exercise",
+      "kind": "sentence",
+      "korean": "운동 좋아해요?",
+      "english": "Do you like exercising?",
+      "context": "hobbies",
+      "register": "polite",
+      "lexemes": [
+        "운동",
+        "좋아하다"
+      ],
+      "distractors": [
+        "Do you exercise every day?",
+        "Did you exercise today?",
+        "Do you like watching sports?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 자주 수영해요.",
+            "english": "Yes, I swim often."
+          },
+          {
+            "korean": "아니요, 별로 안 좋아해요.",
+            "english": "No, not really."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          },
+          {
+            "korean": "저는 대학생이에요.",
+            "english": "I'm a university student."
+          },
+          {
+            "korean": "세 명이에요.",
+            "english": "There are three of us."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/how-often-exercise",
+      "kind": "sentence",
+      "korean": "얼마나 자주 운동해요?",
+      "english": "How often do you exercise?",
+      "context": "hobbies",
+      "register": "polite",
+      "lexemes": [
+        "얼마나",
+        "자주",
+        "운동하다"
+      ],
+      "distractors": [
+        "How long do you exercise for?",
+        "Where do you exercise?",
+        "When did you start exercising?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "일주일에 세 번 해요.",
+            "english": "Three times a week."
+          },
+          {
+            "korean": "거의 매일 해요.",
+            "english": "Almost every day."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "헬스장에서 해요.",
+            "english": "I do it at the gym."
+          },
+          {
+            "korean": "한 시간 해요.",
+            "english": "I do it for an hour."
+          },
+          {
+            "korean": "네, 좋아해요.",
+            "english": "Yes, I like it."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/what-music-do-you-like",
+      "kind": "sentence",
+      "korean": "어떤 음악을 좋아해요?",
+      "english": "What kind of music do you like?",
+      "context": "hobbies",
+      "register": "polite",
+      "lexemes": [
+        "어떤",
+        "음악",
+        "좋아하다"
+      ],
+      "distractors": [
+        "What kind of movies do you like?",
+        "Do you play any instruments?",
+        "What music are you listening to?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "케이팝을 좋아해요.",
+            "english": "I like K-pop."
+          },
+          {
+            "korean": "재즈를 자주 들어요.",
+            "english": "I often listen to jazz."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 좋아해요.",
+            "english": "Yes, I like it."
+          },
+          {
+            "korean": "매일 들어요.",
+            "english": "I listen every day."
+          },
+          {
+            "korean": "제 친구예요.",
+            "english": "It's my friend."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/can-play-guitar",
+      "kind": "sentence",
+      "korean": "기타를 칠 줄 알아요.",
+      "english": "I can play the guitar.",
+      "context": "hobbies",
+      "register": "polite",
+      "note": "-(으)ㄹ 줄 알다 means knowing how to do something.",
+      "lexemes": [
+        "기타",
+        "치다",
+        "알다"
+      ],
+      "distractors": [
+        "I can't play the guitar.",
+        "I can play the piano.",
+        "I want to play the guitar."
+      ],
+      "image": "acoustic guitar"
+    },
+    {
+      "id": "small-talk/like-korean-dramas",
+      "kind": "sentence",
+      "korean": "한국 드라마를 자주 봐요.",
+      "english": "I often watch Korean dramas.",
+      "context": "hobbies",
+      "register": "polite",
+      "lexemes": [
+        "한국",
+        "드라마",
+        "자주",
+        "보다"
+      ],
+      "distractors": [
+        "I rarely watch Korean dramas.",
+        "I often watch Korean movies.",
+        "I watched a Korean drama yesterday."
+      ]
+    },
+    {
+      "id": "small-talk/what-did-you-do-weekend",
+      "kind": "sentence",
+      "korean": "주말에 뭐 했어요?",
+      "english": "What did you do on the weekend?",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "주말",
+        "뭐",
+        "하다"
+      ],
+      "distractors": [
+        "What are you doing this weekend?",
+        "Where did you go on the weekend?",
+        "Who did you meet on the weekend?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "친구를 만났어요.",
+            "english": "I met a friend."
+          },
+          {
+            "korean": "집에서 쉬었어요.",
+            "english": "I rested at home."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          },
+          {
+            "korean": "저는 학생이에요.",
+            "english": "I'm a student."
+          },
+          {
+            "korean": "다음 주에 갈 거예요.",
+            "english": "I'll go next week."
+          }
+        ]
+      },
+      "image": "weekend picnic park"
+    },
+    {
+      "id": "small-talk/what-doing-this-weekend",
+      "kind": "sentence",
+      "korean": "이번 주말에 뭐 해요?",
+      "english": "What are you doing this weekend?",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "이번",
+        "주말",
+        "뭐",
+        "하다"
+      ],
+      "distractors": [
+        "What did you do last weekend?",
+        "Where are you going this weekend?",
+        "What do you usually do on weekends?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "친구하고 영화 볼 거예요.",
+            "english": "I'm going to see a movie with a friend."
+          },
+          {
+            "korean": "그냥 집에서 쉴 거예요.",
+            "english": "I'm just going to rest at home."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "친구를 만났어요.",
+            "english": "I met a friend."
+          },
+          {
+            "korean": "여섯 시에 퇴근해요.",
+            "english": "I get off work at six."
+          },
+          {
+            "korean": "네, 반가워요.",
+            "english": "Yes, nice to meet you."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/where-did-you-go-weekend",
+      "kind": "sentence",
+      "korean": "주말에 어디 갔어요?",
+      "english": "Where did you go on the weekend?",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "주말",
+        "어디",
+        "가다"
+      ],
+      "distractors": [
+        "Where are you going this weekend?",
+        "Who did you go with on the weekend?",
+        "When did you go there?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "부산에 갔어요.",
+            "english": "I went to Busan."
+          },
+          {
+            "korean": "한강 공원에 갔어요.",
+            "english": "I went to Hangang Park."
+          },
+          {
+            "korean": "아무 데도 안 갔어요.",
+            "english": "I didn't go anywhere."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "친구하고 갈 거예요.",
+            "english": "I'll go with a friend."
+          },
+          {
+            "korean": "네, 좋았어요.",
+            "english": "Yes, it was good."
+          },
+          {
+            "korean": "저는 서른 살이에요.",
+            "english": "I'm thirty."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/rested-at-home",
+      "kind": "sentence",
+      "korean": "집에서 푹 쉬었어요.",
+      "english": "I had a good rest at home.",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "집",
+        "푹",
+        "쉬다"
+      ],
+      "distractors": [
+        "I'll have a good rest at home.",
+        "I cleaned the whole house.",
+        "I couldn't rest at all."
+      ],
+      "image": "relaxing on sofa"
+    },
+    {
+      "id": "small-talk/watched-movie-with-friend",
+      "kind": "sentence",
+      "korean": "친구하고 영화를 봤어요.",
+      "english": "I watched a movie with a friend.",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "친구",
+        "영화",
+        "보다"
+      ],
+      "distractors": [
+        "I'll watch a movie with a friend.",
+        "I watched a movie alone.",
+        "I watched a drama with my sister."
+      ],
+      "image": "movie theater"
+    },
+    {
+      "id": "small-talk/went-hiking-saturday",
+      "kind": "sentence",
+      "korean": "토요일에 등산을 했어요.",
+      "english": "I went hiking on Saturday.",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "토요일",
+        "등산",
+        "하다"
+      ],
+      "distractors": [
+        "I'm going hiking on Saturday.",
+        "I went hiking on Sunday.",
+        "I went swimming on Saturday."
+      ],
+      "image": "mountain hiking"
+    },
+    {
+      "id": "small-talk/did-you-have-good-weekend",
+      "kind": "sentence",
+      "korean": "주말 잘 보냈어요?",
+      "english": "Did you have a good weekend?",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "주말",
+        "잘",
+        "보내다"
+      ],
+      "distractors": [
+        "Are you going to have a good weekend?",
+        "Did you have a good trip?",
+        "Was your weekend long?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 잘 보냈어요.",
+            "english": "Yes, I did."
+          },
+          {
+            "korean": "네, 친구들하고 재미있게 놀았어요.",
+            "english": "Yes, I had fun with my friends."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘 먹겠습니다.",
+            "english": "Yes, thank you for the meal."
+          },
+          {
+            "korean": "다음 주말에 갈 거예요.",
+            "english": "I'll go next weekend."
+          },
+          {
+            "korean": "여동생이 있어요.",
+            "english": "I have a younger sister."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/have-a-good-weekend",
+      "kind": "sentence",
+      "korean": "주말 잘 보내세요!",
+      "english": "Have a good weekend!",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "주말",
+        "잘",
+        "보내다"
+      ],
+      "distractors": [
+        "Did you have a good weekend?",
+        "Have a good trip!",
+        "See you this weekend!"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 주말 잘 보내세요!",
+            "english": "You too, have a good weekend!"
+          },
+          {
+            "korean": "고마워요. 다음 주에 봐요!",
+            "english": "Thanks. See you next week!"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘 보냈어요.",
+            "english": "Yes, I had a good one."
+          },
+          {
+            "korean": "저는 학생이에요.",
+            "english": "I'm a student."
+          },
+          {
+            "korean": "아니요, 안 추워요.",
+            "english": "No, I'm not cold."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/what-usually-do-weekends",
+      "kind": "sentence",
+      "korean": "주말에는 보통 뭐 해요?",
+      "english": "What do you usually do on weekends?",
+      "context": "weekend",
+      "register": "polite",
+      "lexemes": [
+        "주말",
+        "보통",
+        "뭐",
+        "하다"
+      ],
+      "distractors": [
+        "What did you do last weekend?",
+        "What do you usually do after work?",
+        "Where do you usually go on weekends?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "보통 집에서 쉬어요.",
+            "english": "I usually rest at home."
+          },
+          {
+            "korean": "친구를 만나거나 운동해요.",
+            "english": "I meet friends or exercise."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "어제 친구를 만났어요.",
+            "english": "I met a friend yesterday."
+          },
+          {
+            "korean": "여섯 명이에요.",
+            "english": "There are six of us."
+          },
+          {
+            "korean": "네, 좋아요.",
+            "english": "Yes, sounds good."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/how-are-you-feeling-today",
+      "kind": "sentence",
+      "korean": "오늘 기분 어때요?",
+      "english": "How are you feeling today?",
+      "context": "feelings",
+      "register": "polite",
+      "lexemes": [
+        "오늘",
+        "기분",
+        "어떻다"
+      ],
+      "distractors": [
+        "How was your day?",
+        "How's the weather today?",
+        "Are you sick today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "기분이 좋아요.",
+            "english": "I'm in a good mood."
+          },
+          {
+            "korean": "좀 우울해요.",
+            "english": "I'm a bit down."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "날씨가 좋아요.",
+            "english": "The weather is nice."
+          },
+          {
+            "korean": "회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "세 시예요.",
+            "english": "It's three o'clock."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/tired-couldnt-sleep",
+      "kind": "sentence",
+      "korean": "어젯밤에 잠을 못 자서 너무 피곤해요.",
+      "english": "I'm so tired because I couldn't sleep last night.",
+      "context": "feelings",
+      "register": "polite",
+      "lexemes": [
+        "어젯밤",
+        "잠",
+        "못",
+        "자다",
+        "너무",
+        "피곤하다"
+      ],
+      "distractors": [
+        "I'm so tired because I worked late last night.",
+        "I slept well last night, so I feel great.",
+        "I couldn't sleep last night because I was nervous."
+      ]
+    },
+    {
+      "id": "small-talk/happy-these-days",
+      "kind": "sentence",
+      "korean": "요즘 정말 행복해요.",
+      "english": "I'm really happy these days.",
+      "context": "feelings",
+      "register": "polite",
+      "lexemes": [
+        "요즘",
+        "정말",
+        "행복하다"
+      ],
+      "distractors": [
+        "I was really happy back then.",
+        "I'm really busy these days.",
+        "Are you happy these days?"
+      ]
+    },
+    {
+      "id": "small-talk/is-something-wrong",
+      "kind": "sentence",
+      "korean": "무슨 일 있어요?",
+      "english": "Is something wrong?",
+      "context": "feelings",
+      "register": "polite",
+      "note": "Don't confuse with 무슨 일 하세요? (What do you do for a living?).",
+      "lexemes": [
+        "무슨",
+        "일",
+        "있다"
+      ],
+      "distractors": [
+        "What do you do for a living?",
+        "What happened yesterday?",
+        "Are you busy right now?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아니요, 그냥 좀 피곤해요.",
+            "english": "No, I'm just a little tired."
+          },
+          {
+            "korean": "사실 오늘 좀 힘들었어요.",
+            "english": "Actually, today was a bit hard."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          },
+          {
+            "korean": "여섯 시에 만나요.",
+            "english": "Let's meet at six."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/thats-a-relief",
+      "kind": "sentence",
+      "korean": "다행이에요.",
+      "english": "That's a relief.",
+      "context": "feelings",
+      "register": "polite",
+      "lexemes": [
+        "다행"
+      ],
+      "distractors": [
+        "That's a shame.",
+        "That's strange.",
+        "That's a surprise."
+      ]
+    },
+    {
+      "id": "small-talk/want-to-get-coffee",
+      "kind": "sentence",
+      "korean": "같이 커피 마실래요?",
+      "english": "Do you want to get coffee together?",
+      "context": "plans",
+      "register": "polite",
+      "note": "-(으)ㄹ래요? is a friendly way to suggest doing something together.",
+      "lexemes": [
+        "같이",
+        "커피",
+        "마시다"
+      ],
+      "distractors": [
+        "Did you have coffee together?",
+        "Do you want to have dinner together?",
+        "Do you drink coffee?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "좋아요! 언제요?",
+            "english": "Sure! When?"
+          },
+          {
+            "korean": "미안해요, 오늘은 좀 바빠요.",
+            "english": "Sorry, I'm a bit busy today."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 커피를 마셨어요.",
+            "english": "Yes, I drank coffee."
+          },
+          {
+            "korean": "저는 대학생이에요.",
+            "english": "I'm a university student."
+          },
+          {
+            "korean": "여동생이 있어요.",
+            "english": "I have a younger sister."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/when-are-you-free",
+      "kind": "sentence",
+      "korean": "언제 시간 있어요?",
+      "english": "When are you free?",
+      "context": "plans",
+      "register": "polite",
+      "lexemes": [
+        "언제",
+        "시간",
+        "있다"
+      ],
+      "distractors": [
+        "What time is it now?",
+        "How much time do you have?",
+        "Are you free today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "토요일 오후에 시간 있어요.",
+            "english": "I'm free Saturday afternoon."
+          },
+          {
+            "korean": "수요일 저녁은 괜찮아요.",
+            "english": "Wednesday evening works for me."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "지금 세 시예요.",
+            "english": "It's three o'clock now."
+          },
+          {
+            "korean": "네, 있어요.",
+            "english": "Yes, I am."
+          },
+          {
+            "korean": "커피를 좋아해요.",
+            "english": "I like coffee."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/plans-tomorrow",
+      "kind": "sentence",
+      "korean": "내일 뭐 할 거예요?",
+      "english": "What are you going to do tomorrow?",
+      "context": "plans",
+      "register": "polite",
+      "lexemes": [
+        "내일",
+        "뭐",
+        "하다"
+      ],
+      "distractors": [
+        "What did you do yesterday?",
+        "Where are you going tomorrow?",
+        "What are you doing today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "친구를 만날 거예요.",
+            "english": "I'm going to meet a friend."
+          },
+          {
+            "korean": "도서관에서 공부할 거예요.",
+            "english": "I'm going to study at the library."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "어제 영화를 봤어요.",
+            "english": "I watched a movie yesterday."
+          },
+          {
+            "korean": "네, 좋아요.",
+            "english": "Yes, sounds good."
+          },
+          {
+            "korean": "스물다섯 살이에요.",
+            "english": "I'm twenty-five."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/movie-this-saturday",
+      "kind": "sentence",
+      "korean": "이번 주 토요일에 영화 보러 갈래요?",
+      "english": "Do you want to go see a movie this Saturday?",
+      "context": "plans",
+      "register": "polite",
+      "lexemes": [
+        "이번",
+        "주",
+        "토요일",
+        "영화",
+        "보다",
+        "가다"
+      ],
+      "distractors": [
+        "Did you see a movie last Saturday?",
+        "Do you want to go see a movie this Sunday?",
+        "Do you want to watch a drama this Saturday?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 좋아요. 몇 시에 만날까요?",
+            "english": "Sure. What time shall we meet?"
+          },
+          {
+            "korean": "토요일은 안 돼요. 일요일은 어때요?",
+            "english": "Saturday doesn't work. How about Sunday?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 봤어요.",
+            "english": "Yes, I saw it."
+          },
+          {
+            "korean": "저는 프랑스 사람이에요.",
+            "english": "I'm French."
+          },
+          {
+            "korean": "비빔밥을 좋아해요.",
+            "english": "I like bibimbap."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/where-shall-we-meet",
+      "kind": "sentence",
+      "korean": "어디에서 만날까요?",
+      "english": "Where shall we meet?",
+      "context": "plans",
+      "register": "polite",
+      "lexemes": [
+        "어디",
+        "만나다"
+      ],
+      "distractors": [
+        "When shall we meet?",
+        "Where did we meet?",
+        "Who shall we meet?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "강남역에서 만나요.",
+            "english": "Let's meet at Gangnam Station."
+          },
+          {
+            "korean": "학교 앞에서 만나요.",
+            "english": "Let's meet in front of the school."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 시에 만나요.",
+            "english": "Let's meet at three."
+          },
+          {
+            "korean": "친구를 만났어요.",
+            "english": "I met a friend."
+          },
+          {
+            "korean": "네, 좋아요.",
+            "english": "Yes, sounds good."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/what-time-shall-we-meet",
+      "kind": "sentence",
+      "korean": "몇 시에 만날까요?",
+      "english": "What time shall we meet?",
+      "context": "plans",
+      "register": "polite",
+      "lexemes": [
+        "몇",
+        "시",
+        "만나다"
+      ],
+      "distractors": [
+        "What time did we meet?",
+        "What time is it now?",
+        "What time do you finish?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "일곱 시 어때요?",
+            "english": "How about seven?"
+          },
+          {
+            "korean": "세 시에 만나요.",
+            "english": "Let's meet at three."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "강남역에서 만나요.",
+            "english": "Let's meet at Gangnam Station."
+          },
+          {
+            "korean": "어제 만났어요.",
+            "english": "We met yesterday."
+          },
+          {
+            "korean": "네, 친구예요.",
+            "english": "Yes, it's a friend."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/sounds-good-see-you-then",
+      "kind": "sentence",
+      "korean": "좋아요, 그때 봐요.",
+      "english": "Sounds good, see you then.",
+      "context": "plans",
+      "register": "polite",
+      "lexemes": [
+        "좋다",
+        "그때",
+        "보다"
+      ],
+      "distractors": [
+        "No thanks, maybe next time.",
+        "Sounds good, see you tomorrow.",
+        "Okay, I'll call you then."
+      ]
+    },
+    {
+      "id": "small-talk/sorry-next-time",
+      "kind": "sentence",
+      "korean": "미안해요, 다음에 같이 가요.",
+      "english": "Sorry, let's go together next time.",
+      "context": "plans",
+      "register": "polite",
+      "lexemes": [
+        "미안하다",
+        "다음",
+        "같이",
+        "가다"
+      ],
+      "distractors": [
+        "Sorry, I went there last time.",
+        "Great, let's go together now.",
+        "Sorry, I can't go next time."
+      ]
+    },
+    {
+      "id": "small-talk/your-korean-is-good",
+      "kind": "sentence",
+      "korean": "한국어를 잘하시네요!",
+      "english": "Your Korean is really good!",
+      "context": "compliments",
+      "register": "polite",
+      "note": "Koreans often answer compliments modestly with 아니에요.",
+      "lexemes": [
+        "한국어",
+        "잘하다"
+      ],
+      "distractors": [
+        "Your English is really good!",
+        "You're learning Korean!",
+        "Do you speak Korean?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아니에요, 아직 많이 부족해요.",
+            "english": "Not at all, I still have a long way to go."
+          },
+          {
+            "korean": "감사합니다. 열심히 배우고 있어요.",
+            "english": "Thank you. I'm studying hard."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 비가 와요.",
+            "english": "Yes, it's raining."
+          },
+          {
+            "korean": "저는 서른 살이에요.",
+            "english": "I'm thirty."
+          },
+          {
+            "korean": "지하철로 가요.",
+            "english": "I go by subway."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/your-clothes-are-pretty",
+      "kind": "sentence",
+      "korean": "옷이 정말 예쁘네요.",
+      "english": "Your outfit is really nice.",
+      "context": "compliments",
+      "register": "polite",
+      "lexemes": [
+        "옷",
+        "정말",
+        "예쁘다"
+      ],
+      "distractors": [
+        "Your bag is really nice.",
+        "Your outfit is really expensive.",
+        "Did you buy new clothes?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "고마워요. 어제 샀어요.",
+            "english": "Thanks. I bought it yesterday."
+          },
+          {
+            "korean": "정말요? 감사합니다.",
+            "english": "Really? Thank you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 추워요.",
+            "english": "Yes, it's cold."
+          },
+          {
+            "korean": "여섯 시에 만나요.",
+            "english": "Let's meet at six."
+          },
+          {
+            "korean": "아니요, 형제가 없어요.",
+            "english": "No, I don't have siblings."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/you-are-a-good-cook",
+      "kind": "sentence",
+      "korean": "요리를 정말 잘하시네요.",
+      "english": "You're a really good cook.",
+      "context": "compliments",
+      "register": "polite",
+      "lexemes": [
+        "요리",
+        "정말",
+        "잘하다"
+      ],
+      "distractors": [
+        "You really like cooking.",
+        "You cook really often.",
+        "The food is really spicy."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "고마워요. 많이 드세요.",
+            "english": "Thank you. Please have plenty."
+          },
+          {
+            "korean": "입에 맞아서 다행이에요.",
+            "english": "I'm glad you like it."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 배고파요.",
+            "english": "Yes, I'm hungry."
+          },
+          {
+            "korean": "금요일이에요.",
+            "english": "It's Friday."
+          },
+          {
+            "korean": "회사에 다녀요.",
+            "english": "I work at a company."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/had-fun-today",
+      "kind": "sentence",
+      "korean": "오늘 정말 즐거웠어요.",
+      "english": "I really had fun today.",
+      "context": "leaving",
+      "register": "polite",
+      "lexemes": [
+        "오늘",
+        "정말",
+        "즐겁다"
+      ],
+      "distractors": [
+        "I'm going to have fun today.",
+        "Today was really tiring.",
+        "Did you have fun today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저도요. 또 만나요!",
+            "english": "Me too. Let's meet again!"
+          },
+          {
+            "korean": "저도 정말 즐거웠어요.",
+            "english": "I really had fun too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 오늘 금요일이에요.",
+            "english": "Yes, it's Friday today."
+          },
+          {
+            "korean": "아니요, 안 매워요.",
+            "english": "No, it's not spicy."
+          },
+          {
+            "korean": "저는 서울에 살아요.",
+            "english": "I live in Seoul."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/get-home-safe",
+      "kind": "sentence",
+      "korean": "조심히 가세요.",
+      "english": "Get home safe.",
+      "context": "leaving",
+      "register": "polite",
+      "lexemes": [
+        "조심히",
+        "가다"
+      ],
+      "distractors": [
+        "Be careful, it's slippery.",
+        "Come back soon.",
+        "Did you get home safely?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 조심히 갈게요.",
+            "english": "Yes, I will."
+          },
+          {
+            "korean": "고마워요. 들어가세요.",
+            "english": "Thanks. Take care."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘 도착했어요.",
+            "english": "Yes, I arrived safely."
+          },
+          {
+            "korean": "저는 회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "두 시예요.",
+            "english": "It's two o'clock."
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-talk/ill-be-in-touch",
+      "kind": "sentence",
+      "korean": "나중에 연락할게요.",
+      "english": "I'll get in touch later.",
+      "context": "leaving",
+      "register": "polite",
+      "lexemes": [
+        "나중",
+        "연락하다"
+      ],
+      "distractors": [
+        "Please get in touch later.",
+        "I got in touch yesterday.",
+        "I'll call you right now."
+      ]
+    }
+  ]
+}
