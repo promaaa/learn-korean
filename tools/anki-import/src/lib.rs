@@ -285,7 +285,7 @@ pub fn build(raw: &[RawEntry], curation: &Curation) -> Result<Built, ImportError
                 row,
             });
         }
-        usages.extend(entry.usage.iter().map(|u| (u, lemma.clone())));
+        usages.extend(entry.usage.iter().map(|u| (row, u, lemma.clone())));
     }
 
     for n in &normalized {
@@ -311,10 +311,8 @@ pub fn build(raw: &[RawEntry], curation: &Curation) -> Result<Built, ImportError
         })
         .collect();
 
-    let mut items: Vec<Item> = normalized
-        .iter()
-        .filter(|n| has_word_card(n.pos))
-        .map(|n| Item {
+    let words = normalized.iter().filter(|n| has_word_card(n.pos)).map(|n| {
+        let item = Item {
             id: n.item_id.clone(),
             kind: ItemKind::Word,
             korean: n.surface.clone(),
@@ -327,22 +325,30 @@ pub fn build(raw: &[RawEntry], curation: &Curation) -> Result<Built, ImportError
             replies: None,
             chunks: None,
             image: n.image.clone(),
-        })
-        .collect();
-    items.extend(usages.into_iter().map(|(u, lemma)| Item {
-        id: u.id.clone(),
-        kind: ItemKind::Sentence,
-        korean: u.korean.clone(),
-        english: u.english.clone(),
-        context: u.context.clone(),
-        register: u.register,
-        note: u.note.clone(),
-        lexemes: lemma_list(&lemma),
-        distractors: u.distractors.clone(),
-        replies: u.replies.clone(),
-        chunks: u.chunks.clone(),
-        image: u.image.clone(),
-    }));
+        };
+        (n.row, item)
+    });
+    let sentences = usages.into_iter().map(|(row, u, lemma)| {
+        let item = Item {
+            id: u.id.clone(),
+            kind: ItemKind::Sentence,
+            korean: u.korean.clone(),
+            english: u.english.clone(),
+            context: u.context.clone(),
+            register: u.register,
+            note: u.note.clone(),
+            lexemes: lemma_list(&lemma),
+            distractors: u.distractors.clone(),
+            replies: u.replies.clone(),
+            chunks: u.chunks.clone(),
+            image: u.image.clone(),
+        };
+        (row, item)
+    });
+    // Deck order, each word followed by the sentences that use it (stable sort keeps words first).
+    let mut ordered: Vec<(u32, Item)> = words.chain(sentences).collect();
+    ordered.sort_by_key(|(row, _)| *row);
+    let items: Vec<Item> = ordered.into_iter().map(|(_, item)| item).collect();
 
     let pack = Pack {
         id: "legacy".into(),

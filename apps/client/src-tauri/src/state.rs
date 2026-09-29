@@ -10,6 +10,12 @@ pub struct AppState {
     pub db: Result<Database, String>,
 }
 
+impl AppState {
+    pub fn db(&self) -> Result<&Database, String> {
+        self.db.as_ref().map_err(Clone::clone)
+    }
+}
+
 pub fn init(app: &AppHandle) -> AppState {
     let db = open_database(app);
     if let Err(err) = &db {

@@ -7,6 +7,7 @@
 
 pub mod content;
 mod open;
+pub mod reviews;
 
 pub use open::{Database, OpenError};
 pub use sqlx::SqlitePool;
