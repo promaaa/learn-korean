@@ -1,0 +1,2671 @@
+{
+  "source": "anki-important-words",
+  "lexemes": [
+    {
+      "id": "anki-important-words/1",
+      "lemma": "사람",
+      "surface": "사람",
+      "english": "person",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 1
+    },
+    {
+      "id": "anki-important-words/2",
+      "lemma": "이름",
+      "surface": "이름",
+      "english": "name",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 2
+    },
+    {
+      "id": "anki-important-words/4",
+      "lemma": "네",
+      "surface": "네",
+      "english": "yes",
+      "pos": "interjection",
+      "register": "polite",
+      "raw_row": 4
+    },
+    {
+      "id": "anki-important-words/5",
+      "lemma": "아니요",
+      "surface": "아니요",
+      "english": "no",
+      "pos": "interjection",
+      "register": "polite",
+      "raw_row": 5
+    },
+    {
+      "id": "anki-important-words/6",
+      "lemma": "감사합니다",
+      "surface": "감사합니다",
+      "english": "thank you (formal)",
+      "pos": "expression",
+      "register": "formal",
+      "raw_row": 6
+    },
+    {
+      "id": "anki-important-words/7",
+      "lemma": "고맙습니다",
+      "surface": "고맙습니다",
+      "english": "thank you (warm, native word)",
+      "pos": "expression",
+      "register": "formal",
+      "raw_row": 7
+    },
+    {
+      "id": "anki-important-words/8",
+      "lemma": "안녕하세요",
+      "surface": "안녕하세요",
+      "english": "hello",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 8
+    },
+    {
+      "id": "anki-important-words/9",
+      "lemma": "안녕히 계세요",
+      "surface": "안녕히 계세요",
+      "english": "goodbye (said when you leave)",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 9
+    },
+    {
+      "id": "anki-important-words/10",
+      "lemma": "안녕히 가세요",
+      "surface": "안녕히 가세요",
+      "english": "goodbye (said to someone leaving)",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 10
+    },
+    {
+      "id": "anki-important-words/11",
+      "lemma": "저기요",
+      "surface": "저기요",
+      "english": "excuse me (to get attention)",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 11
+    },
+    {
+      "id": "anki-important-words/12",
+      "lemma": "죄송합니다",
+      "surface": "죄송합니다",
+      "english": "I'm sorry (formal apology)",
+      "pos": "expression",
+      "register": "formal",
+      "raw_row": 12
+    },
+    {
+      "id": "anki-important-words/13",
+      "lemma": "미안합니다",
+      "surface": "미안합니다",
+      "english": "I'm sorry",
+      "pos": "expression",
+      "register": "formal",
+      "raw_row": 13
+    },
+    {
+      "id": "anki-important-words/14",
+      "lemma": "주세요",
+      "surface": "주세요",
+      "english": "please give me (… please)",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 14,
+      "fix": "Deck had the template '...주세요'; cleaned to 주세요 (noun + 주세요 = 'X, please')."
+    },
+    {
+      "id": "anki-important-words/15",
+      "lemma": "괜찮다",
+      "surface": "괜찮아요",
+      "english": "it's okay, I'm fine",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 15
+    },
+    {
+      "id": "anki-important-words/16",
+      "lemma": "반갑습니다",
+      "surface": "반갑습니다",
+      "english": "pleased to meet you (formal)",
+      "pos": "expression",
+      "register": "formal",
+      "raw_row": 16
+    },
+    {
+      "id": "anki-important-words/17",
+      "lemma": "저",
+      "surface": "저",
+      "english": "I, me (humble)",
+      "pos": "pronoun",
+      "register": "polite",
+      "raw_row": 17
+    },
+    {
+      "id": "anki-important-words/18",
+      "lemma": "나",
+      "surface": "나",
+      "english": "I, me (casual)",
+      "pos": "pronoun",
+      "register": "casual",
+      "raw_row": 18
+    },
+    {
+      "id": "anki-important-words/19",
+      "lemma": "너",
+      "surface": "너",
+      "english": "you (casual, to close friends or younger people)",
+      "pos": "pronoun",
+      "register": "casual",
+      "raw_row": 19
+    },
+    {
+      "id": "anki-important-words/20",
+      "lemma": "그 사람",
+      "surface": "그 사람",
+      "english": "he, she (that person)",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 20
+    },
+    {
+      "id": "anki-important-words/21",
+      "lemma": "우리",
+      "surface": "우리",
+      "english": "we, us, our",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 21
+    },
+    {
+      "id": "anki-important-words/22",
+      "lemma": "친구",
+      "surface": "친구",
+      "english": "friend",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 22
+    },
+    {
+      "id": "anki-important-words/23",
+      "lemma": "가족",
+      "surface": "가족",
+      "english": "family",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 23
+    },
+    {
+      "id": "anki-important-words/24",
+      "lemma": "어머니",
+      "surface": "어머니",
+      "english": "mother",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 24
+    },
+    {
+      "id": "anki-important-words/25",
+      "lemma": "아버지",
+      "surface": "아버지",
+      "english": "father",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 25
+    },
+    {
+      "id": "anki-important-words/26",
+      "lemma": "남자",
+      "surface": "남자",
+      "english": "man",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 26
+    },
+    {
+      "id": "anki-important-words/27",
+      "lemma": "여자",
+      "surface": "여자",
+      "english": "woman",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 27
+    },
+    {
+      "id": "anki-important-words/28",
+      "lemma": "뭐",
+      "surface": "뭐",
+      "english": "what",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 28
+    },
+    {
+      "id": "anki-important-words/29",
+      "lemma": "어디",
+      "surface": "어디",
+      "english": "where",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 29
+    },
+    {
+      "id": "anki-important-words/30",
+      "lemma": "언제",
+      "surface": "언제",
+      "english": "when",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 30
+    },
+    {
+      "id": "anki-important-words/31",
+      "lemma": "누구",
+      "surface": "누구",
+      "english": "who",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 31
+    },
+    {
+      "id": "anki-important-words/32",
+      "lemma": "왜",
+      "surface": "왜",
+      "english": "why",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 32
+    },
+    {
+      "id": "anki-important-words/33",
+      "lemma": "어떻게",
+      "surface": "어떻게",
+      "english": "how",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 33
+    },
+    {
+      "id": "anki-important-words/34",
+      "lemma": "얼마",
+      "surface": "얼마",
+      "english": "how much (price)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 34
+    },
+    {
+      "id": "anki-important-words/35",
+      "lemma": "얼마나",
+      "surface": "얼마나",
+      "english": "how much, how long (degree)",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 35,
+      "fix": "Deck gave 얼마나 for 'how many'; 얼마나 asks about degree (how long, how far). Counting things uses 몇 개 (extra)."
+    },
+    {
+      "id": "anki-important-words/35-2",
+      "lemma": "몇 개",
+      "surface": "몇 개",
+      "english": "how many (things)",
+      "pos": "expression",
+      "register": "neutral",
+      "raw_row": 35
+    },
+    {
+      "id": "anki-important-words/36",
+      "lemma": "이거",
+      "surface": "이거",
+      "english": "this (thing near me)",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 36
+    },
+    {
+      "id": "anki-important-words/37",
+      "lemma": "그거",
+      "surface": "그거",
+      "english": "that (thing near you)",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 37
+    },
+    {
+      "id": "anki-important-words/38",
+      "lemma": "저거",
+      "surface": "저거",
+      "english": "that (thing over there)",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 38
+    },
+    {
+      "id": "anki-important-words/39",
+      "lemma": "여기",
+      "surface": "여기",
+      "english": "here",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 39
+    },
+    {
+      "id": "anki-important-words/40",
+      "lemma": "거기",
+      "surface": "거기",
+      "english": "there (near you)",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 40
+    },
+    {
+      "id": "anki-important-words/41",
+      "lemma": "저기",
+      "surface": "저기",
+      "english": "over there",
+      "pos": "pronoun",
+      "register": "neutral",
+      "raw_row": 41
+    },
+    {
+      "id": "anki-important-words/42",
+      "lemma": "집",
+      "surface": "집",
+      "english": "house, home",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 42
+    },
+    {
+      "id": "anki-important-words/43",
+      "lemma": "화장실",
+      "surface": "화장실",
+      "english": "restroom, toilet",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 43
+    },
+    {
+      "id": "anki-important-words/44",
+      "lemma": "학교",
+      "surface": "학교",
+      "english": "school",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 44,
+      "fix": "학교 is 'school'; the deck's 'université' is 대학교."
+    },
+    {
+      "id": "anki-important-words/45",
+      "lemma": "회사",
+      "surface": "회사",
+      "english": "company, office (workplace)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 45
+    },
+    {
+      "id": "anki-important-words/46",
+      "lemma": "병원",
+      "surface": "병원",
+      "english": "hospital",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 46
+    },
+    {
+      "id": "anki-important-words/47",
+      "lemma": "약국",
+      "surface": "약국",
+      "english": "pharmacy",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 47
+    },
+    {
+      "id": "anki-important-words/48",
+      "lemma": "식당",
+      "surface": "식당",
+      "english": "restaurant",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 48
+    },
+    {
+      "id": "anki-important-words/49",
+      "lemma": "카페",
+      "surface": "카페",
+      "english": "cafe (place)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 49
+    },
+    {
+      "id": "anki-important-words/50",
+      "lemma": "가게",
+      "surface": "가게",
+      "english": "shop, store",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 50
+    },
+    {
+      "id": "anki-important-words/51",
+      "lemma": "백화점",
+      "surface": "백화점",
+      "english": "department store",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 51
+    },
+    {
+      "id": "anki-important-words/52",
+      "lemma": "시장",
+      "surface": "시장",
+      "english": "market",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 52
+    },
+    {
+      "id": "anki-important-words/53",
+      "lemma": "은행",
+      "surface": "은행",
+      "english": "bank",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 53
+    },
+    {
+      "id": "anki-important-words/54",
+      "lemma": "지하철",
+      "surface": "지하철",
+      "english": "subway",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 54
+    },
+    {
+      "id": "anki-important-words/55",
+      "lemma": "기차역",
+      "surface": "기차역",
+      "english": "train station",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 55
+    },
+    {
+      "id": "anki-important-words/56",
+      "lemma": "공항",
+      "surface": "공항",
+      "english": "airport",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 56
+    },
+    {
+      "id": "anki-important-words/57",
+      "lemma": "한국",
+      "surface": "한국",
+      "english": "Korea (South Korea)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 57
+    },
+    {
+      "id": "anki-important-words/58",
+      "lemma": "물",
+      "surface": "물",
+      "english": "water",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 58
+    },
+    {
+      "id": "anki-important-words/59",
+      "lemma": "밥",
+      "surface": "밥",
+      "english": "cooked rice, meal",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 59
+    },
+    {
+      "id": "anki-important-words/60",
+      "lemma": "빵",
+      "surface": "빵",
+      "english": "bread",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 60
+    },
+    {
+      "id": "anki-important-words/61",
+      "lemma": "커피",
+      "surface": "커피",
+      "english": "coffee",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 61
+    },
+    {
+      "id": "anki-important-words/62",
+      "lemma": "맥주",
+      "surface": "맥주",
+      "english": "beer",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 62
+    },
+    {
+      "id": "anki-important-words/63",
+      "lemma": "우유",
+      "surface": "우유",
+      "english": "milk",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 63
+    },
+    {
+      "id": "anki-important-words/64",
+      "lemma": "고기",
+      "surface": "고기",
+      "english": "meat",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 64
+    },
+    {
+      "id": "anki-important-words/65",
+      "lemma": "야채",
+      "surface": "야채",
+      "english": "vegetables",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 65
+    },
+    {
+      "id": "anki-important-words/66",
+      "lemma": "과일",
+      "surface": "과일",
+      "english": "fruit",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 66
+    },
+    {
+      "id": "anki-important-words/67",
+      "lemma": "계산서",
+      "surface": "계산서",
+      "english": "bill, check (restaurant)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 67
+    },
+    {
+      "id": "anki-important-words/68",
+      "lemma": "지금",
+      "surface": "지금",
+      "english": "now (at this moment)",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 68
+    },
+    {
+      "id": "anki-important-words/69",
+      "lemma": "오늘",
+      "surface": "오늘",
+      "english": "today",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 69
+    },
+    {
+      "id": "anki-important-words/70",
+      "lemma": "내일",
+      "surface": "내일",
+      "english": "tomorrow",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 70
+    },
+    {
+      "id": "anki-important-words/71",
+      "lemma": "어제",
+      "surface": "어제",
+      "english": "yesterday",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 71
+    },
+    {
+      "id": "anki-important-words/72",
+      "lemma": "아침",
+      "surface": "아침",
+      "english": "morning (also breakfast)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 72
+    },
+    {
+      "id": "anki-important-words/73",
+      "lemma": "낮",
+      "surface": "낮",
+      "english": "daytime",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 73,
+      "fix": "Deck mixed two words: 낮 is 'daytime', 오후 is 'afternoon (p.m.)'; split into entry + extra."
+    },
+    {
+      "id": "anki-important-words/73-2",
+      "lemma": "오후",
+      "surface": "오후",
+      "english": "afternoon (p.m.)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 73
+    },
+    {
+      "id": "anki-important-words/74",
+      "lemma": "저녁",
+      "surface": "저녁",
+      "english": "evening (also dinner)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 74
+    },
+    {
+      "id": "anki-important-words/75",
+      "lemma": "밤",
+      "surface": "밤",
+      "english": "night",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 75
+    },
+    {
+      "id": "anki-important-words/76",
+      "lemma": "항상",
+      "surface": "항상",
+      "english": "always",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 76
+    },
+    {
+      "id": "anki-important-words/77",
+      "lemma": "자주",
+      "surface": "자주",
+      "english": "often",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 77
+    },
+    {
+      "id": "anki-important-words/78",
+      "lemma": "가끔",
+      "surface": "가끔",
+      "english": "sometimes",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 78
+    },
+    {
+      "id": "anki-important-words/79",
+      "lemma": "시간",
+      "surface": "시간",
+      "english": "time; hour (duration)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 79,
+      "fix": "시간 is 'time' or 'hours' of duration; the clock hour ('three o'clock') uses 시."
+    },
+    {
+      "id": "anki-important-words/80",
+      "lemma": "분",
+      "surface": "분",
+      "english": "minute",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 80
+    },
+    {
+      "id": "anki-important-words/81",
+      "lemma": "하다",
+      "surface": "해요",
+      "english": "to do",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 81
+    },
+    {
+      "id": "anki-important-words/82",
+      "lemma": "가다",
+      "surface": "가요",
+      "english": "to go",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 82
+    },
+    {
+      "id": "anki-important-words/83",
+      "lemma": "오다",
+      "surface": "와요",
+      "english": "to come",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 83
+    },
+    {
+      "id": "anki-important-words/84",
+      "lemma": "먹다",
+      "surface": "먹어요",
+      "english": "to eat",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 84
+    },
+    {
+      "id": "anki-important-words/85",
+      "lemma": "마시다",
+      "surface": "마셔요",
+      "english": "to drink",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 85
+    },
+    {
+      "id": "anki-important-words/86",
+      "lemma": "자다",
+      "surface": "자요",
+      "english": "to sleep",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 86
+    },
+    {
+      "id": "anki-important-words/87",
+      "lemma": "보다",
+      "surface": "봐요",
+      "english": "to see, to watch",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 87
+    },
+    {
+      "id": "anki-important-words/88",
+      "lemma": "듣다",
+      "surface": "들어요",
+      "english": "to listen, to hear",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 88
+    },
+    {
+      "id": "anki-important-words/89",
+      "lemma": "말하다",
+      "surface": "말해요",
+      "english": "to speak, to say",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 89
+    },
+    {
+      "id": "anki-important-words/90",
+      "lemma": "읽다",
+      "surface": "읽어요",
+      "english": "to read",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 90
+    },
+    {
+      "id": "anki-important-words/91",
+      "lemma": "쓰다",
+      "surface": "써요",
+      "english": "to write",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 91
+    },
+    {
+      "id": "anki-important-words/92",
+      "lemma": "사다",
+      "surface": "사요",
+      "english": "to buy",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 92
+    },
+    {
+      "id": "anki-important-words/93",
+      "lemma": "팔다",
+      "surface": "팔아요",
+      "english": "to sell",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 93
+    },
+    {
+      "id": "anki-important-words/94",
+      "lemma": "공부하다",
+      "surface": "공부해요",
+      "english": "to study",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 94,
+      "fix": "공부하다 is 'to study'; 'to learn' (apprendre) is 배우다."
+    },
+    {
+      "id": "anki-important-words/95",
+      "lemma": "일하다",
+      "surface": "일해요",
+      "english": "to work",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 95
+    },
+    {
+      "id": "anki-important-words/96",
+      "lemma": "만나다",
+      "surface": "만나요",
+      "english": "to meet",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 96
+    },
+    {
+      "id": "anki-important-words/97",
+      "lemma": "기다리다",
+      "surface": "기다려요",
+      "english": "to wait",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 97
+    },
+    {
+      "id": "anki-important-words/98",
+      "lemma": "주다",
+      "surface": "줘요",
+      "english": "to give",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 98
+    },
+    {
+      "id": "anki-important-words/99",
+      "lemma": "받다",
+      "surface": "받아요",
+      "english": "to receive, to get",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 99
+    },
+    {
+      "id": "anki-important-words/100",
+      "lemma": "사랑하다",
+      "surface": "사랑해요",
+      "english": "to love",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 100
+    },
+    {
+      "id": "anki-important-words/101",
+      "lemma": "좋아하다",
+      "surface": "좋아해요",
+      "english": "to like",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 101
+    },
+    {
+      "id": "anki-important-words/102",
+      "lemma": "싫어하다",
+      "surface": "싫어해요",
+      "english": "to dislike",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 102
+    },
+    {
+      "id": "anki-important-words/103",
+      "lemma": "알다",
+      "surface": "알아요",
+      "english": "to know",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 103
+    },
+    {
+      "id": "anki-important-words/104",
+      "lemma": "모르다",
+      "surface": "몰라요",
+      "english": "to not know",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 104
+    },
+    {
+      "id": "anki-important-words/105",
+      "lemma": "열다",
+      "surface": "열어요",
+      "english": "to open",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 105
+    },
+    {
+      "id": "anki-important-words/106",
+      "lemma": "닫다",
+      "surface": "닫아요",
+      "english": "to close",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 106
+    },
+    {
+      "id": "anki-important-words/107",
+      "lemma": "타다",
+      "surface": "타요",
+      "english": "to get on, to ride (a vehicle)",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 107
+    },
+    {
+      "id": "anki-important-words/108",
+      "lemma": "내리다",
+      "surface": "내려요",
+      "english": "to get off (a vehicle)",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 108
+    },
+    {
+      "id": "anki-important-words/109",
+      "lemma": "이다",
+      "surface": "이에요",
+      "english": "to be (it is …, identifying)",
+      "pos": "grammar",
+      "register": "polite",
+      "raw_row": 109,
+      "fix": "Deck had the templates '...이에요 / ...예요'; cleaned to 이에요 (after a consonant); 예요 is the same ending after a vowel."
+    },
+    {
+      "id": "anki-important-words/110",
+      "lemma": "에 있다",
+      "surface": "에 있어요",
+      "english": "to be (located) at",
+      "pos": "grammar",
+      "register": "polite",
+      "raw_row": 110,
+      "fix": "Deck had the template '...에 있어요'; cleaned to 에 있어요 (place + 에 있어요)."
+    },
+    {
+      "id": "anki-important-words/111",
+      "lemma": "있다",
+      "surface": "있어요",
+      "english": "to have, there is",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 111
+    },
+    {
+      "id": "anki-important-words/112",
+      "lemma": "없다",
+      "surface": "없어요",
+      "english": "to not have, there isn't",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 112
+    },
+    {
+      "id": "anki-important-words/113",
+      "lemma": "좋다",
+      "surface": "좋아요",
+      "english": "to be good",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 113
+    },
+    {
+      "id": "anki-important-words/114",
+      "lemma": "나쁘다",
+      "surface": "나빠요",
+      "english": "to be bad",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 114
+    },
+    {
+      "id": "anki-important-words/115",
+      "lemma": "크다",
+      "surface": "커요",
+      "english": "to be big",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 115
+    },
+    {
+      "id": "anki-important-words/116",
+      "lemma": "작다",
+      "surface": "작아요",
+      "english": "to be small",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 116
+    },
+    {
+      "id": "anki-important-words/117",
+      "lemma": "많다",
+      "surface": "많아요",
+      "english": "to be many, to be a lot",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 117
+    },
+    {
+      "id": "anki-important-words/118",
+      "lemma": "적다",
+      "surface": "적어요",
+      "english": "to be few, to be little",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 118
+    },
+    {
+      "id": "anki-important-words/119",
+      "lemma": "맛있다",
+      "surface": "맛있어요",
+      "english": "to be delicious",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 119
+    },
+    {
+      "id": "anki-important-words/120",
+      "lemma": "맛없다",
+      "surface": "맛없어요",
+      "english": "to taste bad",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 120
+    },
+    {
+      "id": "anki-important-words/121",
+      "lemma": "재미있다",
+      "surface": "재미있어요",
+      "english": "to be fun, to be interesting",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 121
+    },
+    {
+      "id": "anki-important-words/122",
+      "lemma": "재미없다",
+      "surface": "재미없어요",
+      "english": "to be no fun, to be dull",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 122
+    },
+    {
+      "id": "anki-important-words/123",
+      "lemma": "어렵다",
+      "surface": "어려워요",
+      "english": "to be difficult",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 123
+    },
+    {
+      "id": "anki-important-words/124",
+      "lemma": "쉽다",
+      "surface": "쉬워요",
+      "english": "to be easy",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 124
+    },
+    {
+      "id": "anki-important-words/125",
+      "lemma": "아프다",
+      "surface": "아파요",
+      "english": "to hurt, to be sick",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 125
+    },
+    {
+      "id": "anki-important-words/126",
+      "lemma": "피곤하다",
+      "surface": "피곤해요",
+      "english": "to be tired",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 126
+    },
+    {
+      "id": "anki-important-words/127",
+      "lemma": "바쁘다",
+      "surface": "바빠요",
+      "english": "to be busy",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 127
+    },
+    {
+      "id": "anki-important-words/128",
+      "lemma": "덥다",
+      "surface": "더워요",
+      "english": "to be hot (weather)",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 128
+    },
+    {
+      "id": "anki-important-words/129",
+      "lemma": "춥다",
+      "surface": "추워요",
+      "english": "to be cold (weather)",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 129
+    },
+    {
+      "id": "anki-important-words/130",
+      "lemma": "뜨겁다",
+      "surface": "뜨거워요",
+      "english": "to be hot (to the touch)",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 130
+    },
+    {
+      "id": "anki-important-words/131",
+      "lemma": "차갑다",
+      "surface": "차가워요",
+      "english": "to be cold (to the touch)",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 131
+    },
+    {
+      "id": "anki-important-words/132",
+      "lemma": "예쁘다",
+      "surface": "예뻐요",
+      "english": "to be pretty",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 132
+    },
+    {
+      "id": "anki-important-words/133",
+      "lemma": "멋있다",
+      "surface": "멋있어요",
+      "english": "to be cool, to be stylish",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 133
+    },
+    {
+      "id": "anki-important-words/134",
+      "lemma": "아주",
+      "surface": "아주",
+      "english": "very",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 134
+    },
+    {
+      "id": "anki-important-words/134-2",
+      "lemma": "너무",
+      "surface": "너무",
+      "english": "too, so (excessively)",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 134
+    },
+    {
+      "id": "anki-important-words/135",
+      "lemma": "조금",
+      "surface": "조금",
+      "english": "a little",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 135
+    },
+    {
+      "id": "anki-important-words/136",
+      "lemma": "진짜",
+      "surface": "진짜",
+      "english": "really, truly",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 136
+    },
+    {
+      "id": "anki-important-words/137",
+      "lemma": "하고",
+      "surface": "하고",
+      "english": "and (joining nouns, spoken)",
+      "pos": "particle",
+      "register": "neutral",
+      "raw_row": 137,
+      "fix": "Deck had the templates '...하고 / ...와/과'; cleaned to 하고, with 와 (과 after a consonant) as the written-style extra."
+    },
+    {
+      "id": "anki-important-words/137-2",
+      "lemma": "와",
+      "surface": "와",
+      "english": "and (joining nouns, written style)",
+      "pos": "particle",
+      "register": "neutral",
+      "raw_row": 137
+    },
+    {
+      "id": "anki-important-words/138",
+      "lemma": "그리고",
+      "surface": "그리고",
+      "english": "and, and then (joining sentences)",
+      "pos": "conjunction",
+      "register": "neutral",
+      "raw_row": 138
+    },
+    {
+      "id": "anki-important-words/139",
+      "lemma": "하지만",
+      "surface": "하지만",
+      "english": "but, however",
+      "pos": "conjunction",
+      "register": "neutral",
+      "raw_row": 139
+    },
+    {
+      "id": "anki-important-words/140",
+      "lemma": "그래서",
+      "surface": "그래서",
+      "english": "so, therefore",
+      "pos": "conjunction",
+      "register": "neutral",
+      "raw_row": 140
+    },
+    {
+      "id": "anki-important-words/141",
+      "lemma": "-고 싶다",
+      "surface": "고 싶어요",
+      "english": "to want to (do)",
+      "pos": "grammar",
+      "register": "polite",
+      "raw_row": 141,
+      "fix": "Deck had the template '...고 싶어요'; cleaned to 고 싶어요 (verb stem + 고 싶어요)."
+    },
+    {
+      "id": "anki-important-words/142",
+      "lemma": "-(으)ㄹ 수 있다",
+      "surface": "수 있어요",
+      "english": "can, to be able to (do)",
+      "pos": "grammar",
+      "register": "polite",
+      "raw_row": 142,
+      "fix": "Deck had the template '...(으)ㄹ 수 있어요'; cleaned to 수 있어요 (stem + ㄹ/을 수 있어요, e.g. 먹을 수 있어요)."
+    },
+    {
+      "id": "anki-important-words/143",
+      "lemma": "못",
+      "surface": "못",
+      "english": "cannot (placed before the verb)",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 143,
+      "fix": "Deck's '...못 해요' was misleading: 못 goes right before the verb (못 가요, 못 먹어요); 못 해요 alone means 'I can't do it'."
+    },
+    {
+      "id": "anki-important-words/144",
+      "lemma": "이해 못 해요",
+      "surface": "이해 못 해요",
+      "english": "I don't understand",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 144
+    },
+    {
+      "id": "anki-important-words/145",
+      "lemma": "천천히 말해 주세요",
+      "surface": "천천히 말해 주세요",
+      "english": "please speak slowly",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 145,
+      "fix": "Spacing normalized from 말해주세요 to the standard 말해 주세요 (the attached form is also tolerated)."
+    },
+    {
+      "id": "anki-important-words/146",
+      "lemma": "한국말로 뭐예요?",
+      "surface": "한국말로 뭐예요",
+      "english": "how do you say it in Korean?",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 146,
+      "fix": "Deck had the template 'X 한국말로 뭐예요?' with a Latin X; cleaned to 한국말로 뭐예요 (thing + 한국말로 뭐예요?)."
+    },
+    {
+      "id": "anki-important-words/147",
+      "lemma": "잘 자요",
+      "surface": "잘 자요",
+      "english": "good night (sleep well)",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 147
+    },
+    {
+      "id": "anki-important-words/148",
+      "lemma": "잘 먹겠습니다",
+      "surface": "잘 먹겠습니다",
+      "english": "thank you for the meal (said before eating)",
+      "pos": "expression",
+      "register": "formal",
+      "raw_row": 148
+    },
+    {
+      "id": "anki-important-words/149",
+      "lemma": "잘 먹었습니다",
+      "surface": "잘 먹었습니다",
+      "english": "thank you for the meal (said after eating)",
+      "pos": "expression",
+      "register": "formal",
+      "raw_row": 149
+    },
+    {
+      "id": "anki-important-words/150",
+      "lemma": "축하해요",
+      "surface": "축하해요",
+      "english": "congratulations",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 150
+    },
+    {
+      "id": "anki-important-words/151",
+      "lemma": "어서 오세요",
+      "surface": "어서 오세요",
+      "english": "welcome (to a shop or home)",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 151
+    },
+    {
+      "id": "anki-important-words/152",
+      "lemma": "화이팅",
+      "surface": "화이팅",
+      "english": "you can do it! (cheer)",
+      "pos": "interjection",
+      "register": "neutral",
+      "raw_row": 152,
+      "fix": "Means 'you can do it! / go for it!' (a cheer), not a wish of luck; the dictionary spelling is 파이팅."
+    },
+    {
+      "id": "anki-important-words/153",
+      "lemma": "제발",
+      "surface": "제발",
+      "english": "please, I beg you (pleading)",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 153,
+      "fix": "제발 is pleading ('please, I beg you'), not the everyday polite 'please'; requests use 주세요 or -아/어 주세요."
+    },
+    {
+      "id": "anki-important-words/154",
+      "lemma": "알겠어요",
+      "surface": "알겠어요",
+      "english": "okay, got it",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 154
+    },
+    {
+      "id": "anki-important-words/155",
+      "lemma": "그럼요",
+      "surface": "그럼요",
+      "english": "of course, certainly",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 155
+    },
+    {
+      "id": "anki-important-words/156",
+      "lemma": "잠시만요",
+      "surface": "잠시만요",
+      "english": "just a moment",
+      "pos": "expression",
+      "register": "polite",
+      "raw_row": 156
+    },
+    {
+      "id": "anki-important-words/157",
+      "lemma": "빨리",
+      "surface": "빨리",
+      "english": "quickly, fast",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 157
+    },
+    {
+      "id": "anki-important-words/158",
+      "lemma": "그다음",
+      "surface": "그다음",
+      "english": "next, after that",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 158,
+      "fix": "Spacing: 그다음 is a single dictionary word, so the deck's 그 다음 is written 그다음."
+    },
+    {
+      "id": "anki-important-words/159",
+      "lemma": "전",
+      "surface": "전에",
+      "english": "before (earlier)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 159
+    },
+    {
+      "id": "anki-important-words/160",
+      "lemma": "후",
+      "surface": "후에",
+      "english": "after (later)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 160
+    },
+    {
+      "id": "anki-important-words/161",
+      "lemma": "이제",
+      "surface": "이제",
+      "english": "now (from now on, at last)",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 161
+    },
+    {
+      "id": "anki-important-words/162",
+      "lemma": "또",
+      "surface": "또",
+      "english": "again, another time",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 162
+    },
+    {
+      "id": "anki-important-words/163",
+      "lemma": "다시",
+      "surface": "다시",
+      "english": "again, once more (anew)",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 163
+    },
+    {
+      "id": "anki-important-words/164",
+      "lemma": "만",
+      "surface": "만",
+      "english": "only",
+      "pos": "particle",
+      "register": "neutral",
+      "raw_row": 164,
+      "fix": "Deck had Arabic فقط with 'bak-kke'; replaced by the particle 만 ('only'); 밖에 (extra) also means 'only' but needs a negative verb."
+    },
+    {
+      "id": "anki-important-words/164-2",
+      "lemma": "밖에",
+      "surface": "밖에",
+      "english": "nothing but (with a negative verb)",
+      "pos": "particle",
+      "register": "neutral",
+      "raw_row": 164
+    },
+    {
+      "id": "anki-important-words/165",
+      "lemma": "갑자기",
+      "surface": "갑자기",
+      "english": "suddenly",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 165
+    },
+    {
+      "id": "anki-important-words/166",
+      "lemma": "언니",
+      "surface": "언니",
+      "english": "older sister (of a woman)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 166
+    },
+    {
+      "id": "anki-important-words/167",
+      "lemma": "형",
+      "surface": "형",
+      "english": "older brother (of a man)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 167
+    },
+    {
+      "id": "anki-important-words/168",
+      "lemma": "여동생",
+      "surface": "여동생",
+      "english": "younger sister",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 168
+    },
+    {
+      "id": "anki-important-words/169",
+      "lemma": "남동생",
+      "surface": "남동생",
+      "english": "younger brother",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 169
+    },
+    {
+      "id": "anki-important-words/170",
+      "lemma": "아이",
+      "surface": "아이",
+      "english": "child",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 170
+    },
+    {
+      "id": "anki-important-words/170-2",
+      "lemma": "어린이",
+      "surface": "어린이",
+      "english": "child (formal; children as a group)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 170
+    },
+    {
+      "id": "anki-important-words/171",
+      "lemma": "동물",
+      "surface": "동물",
+      "english": "animal",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 171
+    },
+    {
+      "id": "anki-important-words/172",
+      "lemma": "개",
+      "surface": "개",
+      "english": "dog",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 172
+    },
+    {
+      "id": "anki-important-words/173",
+      "lemma": "고양이",
+      "surface": "고양이",
+      "english": "cat",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 173
+    },
+    {
+      "id": "anki-important-words/174",
+      "lemma": "비",
+      "surface": "비",
+      "english": "rain",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 174
+    },
+    {
+      "id": "anki-important-words/175",
+      "lemma": "눈",
+      "surface": "눈",
+      "english": "snow",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 175
+    },
+    {
+      "id": "anki-important-words/176",
+      "lemma": "해",
+      "surface": "해",
+      "english": "sun",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 176
+    },
+    {
+      "id": "anki-important-words/176-2",
+      "lemma": "태양",
+      "surface": "태양",
+      "english": "the sun (formal, scientific)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 176
+    },
+    {
+      "id": "anki-important-words/177",
+      "lemma": "바람",
+      "surface": "바람",
+      "english": "wind",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 177
+    },
+    {
+      "id": "anki-important-words/178",
+      "lemma": "흐림",
+      "surface": "흐림",
+      "english": "cloudy (forecast label)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 178,
+      "fix": "흐림 is the weather-forecast noun ('cloudy'); in speech use the adjective 흐리다 → 흐려요 (extra)."
+    },
+    {
+      "id": "anki-important-words/178-2",
+      "lemma": "흐리다",
+      "surface": "흐려요",
+      "english": "to be cloudy",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 178
+    },
+    {
+      "id": "anki-important-words/179",
+      "lemma": "산",
+      "surface": "산",
+      "english": "mountain",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 179
+    },
+    {
+      "id": "anki-important-words/180",
+      "lemma": "바다",
+      "surface": "바다",
+      "english": "sea",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 180
+    },
+    {
+      "id": "anki-important-words/181",
+      "lemma": "강",
+      "surface": "강",
+      "english": "river",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 181
+    },
+    {
+      "id": "anki-important-words/182",
+      "lemma": "공원",
+      "surface": "공원",
+      "english": "park",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 182
+    },
+    {
+      "id": "anki-important-words/183",
+      "lemma": "책",
+      "surface": "책",
+      "english": "book",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 183
+    },
+    {
+      "id": "anki-important-words/184",
+      "lemma": "펜",
+      "surface": "펜",
+      "english": "pen",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 184
+    },
+    {
+      "id": "anki-important-words/184-2",
+      "lemma": "연필",
+      "surface": "연필",
+      "english": "pencil",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 184
+    },
+    {
+      "id": "anki-important-words/185",
+      "lemma": "전화기",
+      "surface": "전화기",
+      "english": "telephone (the device)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 185
+    },
+    {
+      "id": "anki-important-words/186",
+      "lemma": "컴퓨터",
+      "surface": "컴퓨터",
+      "english": "computer",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 186
+    },
+    {
+      "id": "anki-important-words/187",
+      "lemma": "인터넷",
+      "surface": "인터넷",
+      "english": "internet",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 187
+    },
+    {
+      "id": "anki-important-words/188",
+      "lemma": "음악",
+      "surface": "음악",
+      "english": "music",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 188
+    },
+    {
+      "id": "anki-important-words/189",
+      "lemma": "노래",
+      "surface": "노래",
+      "english": "song",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 189
+    },
+    {
+      "id": "anki-important-words/190",
+      "lemma": "영화",
+      "surface": "영화",
+      "english": "movie",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 190
+    },
+    {
+      "id": "anki-important-words/191",
+      "lemma": "사진",
+      "surface": "사진",
+      "english": "photo",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 191
+    },
+    {
+      "id": "anki-important-words/192",
+      "lemma": "선물",
+      "surface": "선물",
+      "english": "gift, present",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 192
+    },
+    {
+      "id": "anki-important-words/193",
+      "lemma": "돈",
+      "surface": "돈",
+      "english": "money",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 193
+    },
+    {
+      "id": "anki-important-words/194",
+      "lemma": "날씨",
+      "surface": "날씨",
+      "english": "weather",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 194
+    },
+    {
+      "id": "anki-important-words/195",
+      "lemma": "문제",
+      "surface": "문제",
+      "english": "problem; question (on a test)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 195
+    },
+    {
+      "id": "anki-important-words/196",
+      "lemma": "아이디어",
+      "surface": "아이디어",
+      "english": "idea",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 196
+    },
+    {
+      "id": "anki-important-words/197",
+      "lemma": "이야기",
+      "surface": "이야기",
+      "english": "story, talk",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 197
+    },
+    {
+      "id": "anki-important-words/198",
+      "lemma": "꿈",
+      "surface": "꿈",
+      "english": "dream",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 198
+    },
+    {
+      "id": "anki-important-words/199",
+      "lemma": "휴가",
+      "surface": "휴가",
+      "english": "vacation, time off",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 199
+    },
+    {
+      "id": "anki-important-words/200",
+      "lemma": "여행",
+      "surface": "여행",
+      "english": "trip, travel",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 200
+    },
+    {
+      "id": "anki-important-words/201",
+      "lemma": "나라",
+      "surface": "나라",
+      "english": "country",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 201
+    },
+    {
+      "id": "anki-important-words/202",
+      "lemma": "도시",
+      "surface": "도시",
+      "english": "city",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 202
+    },
+    {
+      "id": "anki-important-words/203",
+      "lemma": "거리",
+      "surface": "거리",
+      "english": "street",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 203
+    },
+    {
+      "id": "anki-important-words/204",
+      "lemma": "다리",
+      "surface": "다리",
+      "english": "bridge",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 204
+    },
+    {
+      "id": "anki-important-words/205",
+      "lemma": "차",
+      "surface": "차",
+      "english": "car",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 205
+    },
+    {
+      "id": "anki-important-words/206",
+      "lemma": "자전거",
+      "surface": "자전거",
+      "english": "bicycle",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 206
+    },
+    {
+      "id": "anki-important-words/207",
+      "lemma": "비행기",
+      "surface": "비행기",
+      "english": "airplane",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 207
+    },
+    {
+      "id": "anki-important-words/208",
+      "lemma": "들어가다",
+      "surface": "들어가요",
+      "english": "to go in, to enter",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 208
+    },
+    {
+      "id": "anki-important-words/209",
+      "lemma": "나가다",
+      "surface": "나가요",
+      "english": "to go out",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 209
+    },
+    {
+      "id": "anki-important-words/210",
+      "lemma": "머무르다",
+      "surface": "머물러요",
+      "english": "to stay",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 210
+    },
+    {
+      "id": "anki-important-words/211",
+      "lemma": "떠나다",
+      "surface": "떠나요",
+      "english": "to leave, to depart",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 211
+    },
+    {
+      "id": "anki-important-words/212",
+      "lemma": "달리다",
+      "surface": "달려요",
+      "english": "to run",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 212
+    },
+    {
+      "id": "anki-important-words/213",
+      "lemma": "걷다",
+      "surface": "걸어요",
+      "english": "to walk",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 213
+    },
+    {
+      "id": "anki-important-words/214",
+      "lemma": "앉다",
+      "surface": "앉아요",
+      "english": "to sit",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 214
+    },
+    {
+      "id": "anki-important-words/215",
+      "lemma": "일어나다",
+      "surface": "일어나요",
+      "english": "to get up (from bed or a seat)",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 215
+    },
+    {
+      "id": "anki-important-words/216",
+      "lemma": "잡다",
+      "surface": "잡아요",
+      "english": "to hold, to grab",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 216
+    },
+    {
+      "id": "anki-important-words/217",
+      "lemma": "입다",
+      "surface": "입어요",
+      "english": "to put on, to wear (clothes)",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 217
+    },
+    {
+      "id": "anki-important-words/218",
+      "lemma": "벗다",
+      "surface": "벗어요",
+      "english": "to take off (clothes, shoes)",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 218
+    },
+    {
+      "id": "anki-important-words/219",
+      "lemma": "씻다",
+      "surface": "씻어요",
+      "english": "to wash (hands, face, body, dishes)",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 219,
+      "fix": "씻다 is for washing the body, hands, food or dishes; washing clothes is 빨래하다."
+    },
+    {
+      "id": "anki-important-words/220",
+      "lemma": "청소하다",
+      "surface": "청소해요",
+      "english": "to clean (tidy up)",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 220
+    },
+    {
+      "id": "anki-important-words/221",
+      "lemma": "요리하다",
+      "surface": "요리해요",
+      "english": "to cook",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 221
+    },
+    {
+      "id": "anki-important-words/222",
+      "lemma": "사 드리다",
+      "surface": "사 드리다",
+      "english": "to buy (for an elder, honorific)",
+      "pos": "verb",
+      "register": "neutral",
+      "raw_row": 222,
+      "fix": "사 드리다 is the honorific 'buy for someone older or senior', not just 'buy as a gift'."
+    },
+    {
+      "id": "anki-important-words/223",
+      "lemma": "-아/어 보다",
+      "surface": "해 봐요",
+      "english": "to try (doing something)",
+      "pos": "grammar",
+      "register": "polite",
+      "raw_row": 223,
+      "fix": "시도해요 is stiff and written; everyday 'try' is -아/어 보다 (해 봐요, 먹어 봐요, 입어 봐요)."
+    },
+    {
+      "id": "anki-important-words/224",
+      "lemma": "바꾸다",
+      "surface": "바꿔요",
+      "english": "to change, to exchange",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 224,
+      "fix": "변경해요 is stiff and administrative; the everyday verb for 'to change' is 바꾸다 (바꿔요)."
+    },
+    {
+      "id": "anki-important-words/225",
+      "lemma": "사용하다",
+      "surface": "사용해요",
+      "english": "to use",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 225
+    },
+    {
+      "id": "anki-important-words/226",
+      "lemma": "냄새 맡다",
+      "surface": "냄새 맡아요",
+      "english": "to smell (something)",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 226
+    },
+    {
+      "id": "anki-important-words/227",
+      "lemma": "웃다",
+      "surface": "웃어요",
+      "english": "to laugh, to smile",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 227
+    },
+    {
+      "id": "anki-important-words/228",
+      "lemma": "울다",
+      "surface": "울어요",
+      "english": "to cry",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 228
+    },
+    {
+      "id": "anki-important-words/229",
+      "lemma": "생각하다",
+      "surface": "생각해요",
+      "english": "to think",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 229
+    },
+    {
+      "id": "anki-important-words/230",
+      "lemma": "바라다",
+      "surface": "바라요",
+      "english": "to hope, to wish",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 230
+    },
+    {
+      "id": "anki-important-words/231",
+      "lemma": "걱정하다",
+      "surface": "걱정해요",
+      "english": "to worry",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 231
+    },
+    {
+      "id": "anki-important-words/232",
+      "lemma": "행복하다",
+      "surface": "행복해요",
+      "english": "to be happy",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 232
+    },
+    {
+      "id": "anki-important-words/233",
+      "lemma": "슬프다",
+      "surface": "슬퍼요",
+      "english": "to be sad",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 233
+    },
+    {
+      "id": "anki-important-words/234",
+      "lemma": "화나다",
+      "surface": "화나요",
+      "english": "to be angry",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 234
+    },
+    {
+      "id": "anki-important-words/235",
+      "lemma": "놀라다",
+      "surface": "놀랐어요",
+      "english": "to be surprised",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 235
+    },
+    {
+      "id": "anki-important-words/236",
+      "lemma": "무섭다",
+      "surface": "무서워요",
+      "english": "to be scary, to be afraid",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 236
+    },
+    {
+      "id": "anki-important-words/237",
+      "lemma": "지루하다",
+      "surface": "지루해요",
+      "english": "to be boring, to be tedious",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 237
+    },
+    {
+      "id": "anki-important-words/238",
+      "lemma": "조용하다",
+      "surface": "조용해요",
+      "english": "to be quiet",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 238
+    },
+    {
+      "id": "anki-important-words/239",
+      "lemma": "시끄럽다",
+      "surface": "시끄러워요",
+      "english": "to be noisy",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 239
+    },
+    {
+      "id": "anki-important-words/240",
+      "lemma": "깨끗하다",
+      "surface": "깨끗해요",
+      "english": "to be clean",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 240
+    },
+    {
+      "id": "anki-important-words/241",
+      "lemma": "더럽다",
+      "surface": "더러워요",
+      "english": "to be dirty",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 241
+    },
+    {
+      "id": "anki-important-words/242",
+      "lemma": "새롭다",
+      "surface": "새롭다",
+      "english": "to be new, to be fresh (novel)",
+      "pos": "adjective",
+      "register": "neutral",
+      "raw_row": 242,
+      "fix": "새롭다 means 'new, fresh, novel'; for a new object use the determiner 새 before the noun (extra): 새 차."
+    },
+    {
+      "id": "anki-important-words/242-2",
+      "lemma": "새",
+      "surface": "새",
+      "english": "new (before a noun)",
+      "pos": "determiner",
+      "register": "neutral",
+      "raw_row": 242
+    },
+    {
+      "id": "anki-important-words/243",
+      "lemma": "오래되다",
+      "surface": "오래됐다",
+      "english": "to be old (things)",
+      "pos": "adjective",
+      "register": "neutral",
+      "raw_row": 243
+    },
+    {
+      "id": "anki-important-words/244",
+      "lemma": "젊다",
+      "surface": "젊다",
+      "english": "to be young",
+      "pos": "adjective",
+      "register": "neutral",
+      "raw_row": 244
+    },
+    {
+      "id": "anki-important-words/245",
+      "lemma": "늙다",
+      "surface": "늙다",
+      "english": "to grow old, to be old (age)",
+      "pos": "verb",
+      "register": "neutral",
+      "raw_row": 245,
+      "fix": "늙다 is blunt about people; politely say 나이가 많으세요 ('he/she is older')."
+    },
+    {
+      "id": "anki-important-words/246",
+      "lemma": "강하다",
+      "surface": "강해요",
+      "english": "to be strong",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 246
+    },
+    {
+      "id": "anki-important-words/247",
+      "lemma": "약하다",
+      "surface": "약해요",
+      "english": "to be weak",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 247
+    },
+    {
+      "id": "anki-important-words/248",
+      "lemma": "무겁다",
+      "surface": "무거워요",
+      "english": "to be heavy",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 248
+    },
+    {
+      "id": "anki-important-words/249",
+      "lemma": "가볍다",
+      "surface": "가벼워요",
+      "english": "to be light (weight)",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 249
+    },
+    {
+      "id": "anki-important-words/250",
+      "lemma": "딱딱하다",
+      "surface": "딱딱하다",
+      "english": "hard, rigid (physically)",
+      "pos": "adjective",
+      "register": "neutral",
+      "raw_row": 250,
+      "fix": "Deck glossed 딱딱하다 as 'difficult'; it means physically hard or rigid. 'Difficult' is 어렵다 (row 123, 어려워요)."
+    },
+    {
+      "id": "anki-important-words/251",
+      "lemma": "부드럽다",
+      "surface": "부드럽다",
+      "english": "to be soft",
+      "pos": "adjective",
+      "register": "neutral",
+      "raw_row": 251
+    },
+    {
+      "id": "anki-important-words/252",
+      "lemma": "비어 있다",
+      "surface": "비어 있어요",
+      "english": "to be empty",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 252
+    },
+    {
+      "id": "anki-important-words/253",
+      "lemma": "가득하다",
+      "surface": "가득해요",
+      "english": "to be full",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 253,
+      "fix": "가득하다 is one word, so 가득 해요 is written 가득해요; in speech 가득 차 있어요 is more common."
+    },
+    {
+      "id": "anki-important-words/254",
+      "lemma": "비싸다",
+      "surface": "비싸요",
+      "english": "to be expensive",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 254
+    },
+    {
+      "id": "anki-important-words/255",
+      "lemma": "싸다",
+      "surface": "싸요",
+      "english": "to be cheap",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 255
+    },
+    {
+      "id": "anki-important-words/256",
+      "lemma": "길다",
+      "surface": "길어요",
+      "english": "to be long",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 256
+    },
+    {
+      "id": "anki-important-words/257",
+      "lemma": "짧다",
+      "surface": "짧아요",
+      "english": "to be short (length)",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 257
+    },
+    {
+      "id": "anki-important-words/258",
+      "lemma": "넓다",
+      "surface": "넓어요",
+      "english": "to be wide, to be spacious",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 258
+    },
+    {
+      "id": "anki-important-words/259",
+      "lemma": "좁다",
+      "surface": "좁아요",
+      "english": "to be narrow, to be cramped",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 259
+    },
+    {
+      "id": "anki-important-words/260",
+      "lemma": "편안하다",
+      "surface": "편안해요",
+      "english": "to be comfortable, to be at ease",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 260
+    },
+    {
+      "id": "anki-important-words/261",
+      "lemma": "불편하다",
+      "surface": "불편해요",
+      "english": "to be uncomfortable, to be inconvenient",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 261
+    },
+    {
+      "id": "anki-important-words/262",
+      "lemma": "진실",
+      "surface": "진실",
+      "english": "truth",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 262,
+      "fix": "Deck glossed 진실 as the adjective 'true'; it is the noun 'truth'. 'That's true' is 맞아요 or 사실이에요."
+    },
+    {
+      "id": "anki-important-words/263",
+      "lemma": "거짓말",
+      "surface": "거짓말",
+      "english": "a lie",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 263,
+      "fix": "Deck glossed 거짓말 as 'false'; it is the noun 'a lie' (거짓말하다 'to lie'). 'Wrong, false' is 틀리다."
+    },
+    {
+      "id": "anki-important-words/264",
+      "lemma": "가능하다",
+      "surface": "가능해요",
+      "english": "to be possible",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 264
+    },
+    {
+      "id": "anki-important-words/265",
+      "lemma": "불가능하다",
+      "surface": "불가능해요",
+      "english": "to be impossible",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 265
+    },
+    {
+      "id": "anki-important-words/266",
+      "lemma": "필요하다",
+      "surface": "필요해요",
+      "english": "to be necessary, to need",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 266
+    },
+    {
+      "id": "anki-important-words/267",
+      "lemma": "중요하다",
+      "surface": "중요해요",
+      "english": "to be important",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 267
+    },
+    {
+      "id": "anki-important-words/268",
+      "lemma": "확실하다",
+      "surface": "확실해요",
+      "english": "to be certain, to be sure",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 268
+    },
+    {
+      "id": "anki-important-words/270",
+      "lemma": "의사",
+      "surface": "의사",
+      "english": "doctor",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 270
+    },
+    {
+      "id": "anki-important-words/271",
+      "lemma": "공무원",
+      "surface": "공무원",
+      "english": "civil servant",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 271
+    },
+    {
+      "id": "anki-important-words/272",
+      "lemma": "고등학생",
+      "surface": "고등학생",
+      "english": "high school student",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 272
+    },
+    {
+      "id": "anki-important-words/273",
+      "lemma": "시청",
+      "surface": "시청",
+      "english": "city hall",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 273
+    },
+    {
+      "id": "anki-important-words/274",
+      "lemma": "소파",
+      "surface": "소파",
+      "english": "sofa, couch",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 274
+    },
+    {
+      "id": "anki-important-words/275",
+      "lemma": "게임",
+      "surface": "게임",
+      "english": "game (especially video game)",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 275
+    },
+    {
+      "id": "anki-important-words/276",
+      "lemma": "살다",
+      "surface": "살아요",
+      "english": "to live",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 276
+    },
+    {
+      "id": "anki-important-words/277",
+      "lemma": "놀다",
+      "surface": "놀아요",
+      "english": "to play, to hang out",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 277
+    },
+    {
+      "id": "anki-important-words/278",
+      "lemma": "산책하다",
+      "surface": "산책해요",
+      "english": "to take a walk",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 278
+    },
+    {
+      "id": "anki-important-words/279",
+      "lemma": "쉬다",
+      "surface": "쉬어요",
+      "english": "to rest",
+      "pos": "verb",
+      "register": "polite",
+      "raw_row": 279
+    },
+    {
+      "id": "anki-important-words/280",
+      "lemma": "같이",
+      "surface": "같이",
+      "english": "together",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 280
+    },
+    {
+      "id": "anki-important-words/281",
+      "lemma": "심심하다",
+      "surface": "심심해요",
+      "english": "to be bored (with nothing to do)",
+      "pos": "adjective",
+      "register": "polite",
+      "raw_row": 281
+    },
+    {
+      "id": "anki-important-words/282",
+      "lemma": "일찍",
+      "surface": "일찍",
+      "english": "early",
+      "pos": "adverb",
+      "register": "neutral",
+      "raw_row": 282
+    },
+    {
+      "id": "anki-important-words/283",
+      "lemma": "다녀왔습니다",
+      "surface": "다녀왔습니다",
+      "english": "I'm home (said when you come back)",
+      "pos": "expression",
+      "register": "formal",
+      "raw_row": 283
+    },
+    {
+      "id": "anki-important-words/284",
+      "lemma": "김밥",
+      "surface": "김밥",
+      "english": "seaweed rice roll",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 284
+    },
+    {
+      "id": "anki-important-words/285",
+      "lemma": "라면",
+      "surface": "라면",
+      "english": "instant noodles",
+      "pos": "noun",
+      "register": "neutral",
+      "raw_row": 285
+    }
+  ]
+}

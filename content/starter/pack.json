@@ -25,24 +25,6 @@
       ]
     },
     {
-      "id": "starter/speak-slowly",
-      "kind": "sentence",
-      "korean": "천천히 말해 주세요.",
-      "english": "Please speak slowly.",
-      "context": "understanding",
-      "register": "polite",
-      "lexemes": [
-        "천천히",
-        "말하다",
-        "주다"
-      ],
-      "distractors": [
-        "Please speak louder.",
-        "Please speak quickly.",
-        "Please don't speak."
-      ]
-    },
-    {
       "id": "starter/did-not-understand",
       "kind": "sentence",
       "korean": "이해 못 했어요.",

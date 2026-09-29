@@ -68,3 +68,29 @@ Derived from the data, never authored:
 - `listening` — every item.
 - `response` — items with `replies`.
 - `build` — sentences with at least 3 chunks.
+
+Two further rules span all packs: item ids are globally unique, and the same Korean line may not
+appear twice (a trailing `.` does not make a new line; `?` does: 괜찮아요 vs 괜찮아요?).
+
+## Legacy Anki deck
+
+`content/legacy/` holds the three data levels for the original deck:
+
+| File | Level | Produced by |
+| --- | --- | --- |
+| `source/anki-important-words.csv` | source export | Anki |
+| `raw.json` | raw rows, immutable | `anki-import import` |
+| `curation.json` | hand-written normalization, one entry per row | editor |
+| `lexemes.json` | normalized lexemes | `anki-import build` |
+| `pack.json` | `legacy` pack: word cards + usage sentences | `anki-import build` |
+
+```sh
+cargo run -p anki-import -- import content/legacy/source/anki-important-words.csv content/legacy/raw.json
+cargo run -p anki-import -- build content/legacy
+```
+
+The importer refuses to build unless every raw row is curated, and rows with detected problems
+(no Hangul, foreign script such as the Arabic `فقط`, `...`/`X` templates, empty rows) carry an
+explicit `fix` or `skip`. Grammar patterns and particles get no word card; they are taught through
+their usage sentences. A test checks that the committed `raw.json`, `lexemes.json` and `pack.json`
+are exactly what the importer produces, so generated files cannot drift from their sources.
