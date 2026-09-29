@@ -1,26 +1,12 @@
-//! Review scheduling: when should a card come back?
-//!
-//! First scheduler: a fixed interval ladder. Each successful review climbs one step (two on
-//! Easy), a lapse drops back to the first step.
+//! Review scheduling with FSRS (Free Spaced Repetition Scheduler, ADR-003) through the reference
+//! implementation `rs-fsrs`: default FSRS-5 weights, 90 % target retention, short-term learning
+//! steps (1 / 5 / 10 minutes) before the first day-scale interval.
 
+use rs_fsrs::{Card as FsrsCard, FSRS, Parameters, State as FsrsState};
 use serde::{Deserialize, Serialize};
 
 pub const MINUTE_MS: i64 = 60_000;
 pub const DAY_MS: i64 = 24 * 60 * MINUTE_MS;
-
-/// Intervals after a successful review, by step.
-const LADDER_MS: [i64; 8] = [
-    10 * MINUTE_MS,
-    DAY_MS,
-    3 * DAY_MS,
-    7 * DAY_MS,
-    16 * DAY_MS,
-    35 * DAY_MS,
-    80 * DAY_MS,
-    180 * DAY_MS,
-];
-/// Wait before a lapsed card comes back.
-const RELEARN_MS: i64 = MINUTE_MS;
 
 /// How well an answer went, as in Anki/FSRS.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
@@ -36,51 +22,123 @@ impl Rating {
     pub fn value(self) -> i64 {
         self as i64
     }
+
+    fn fsrs(self) -> rs_fsrs::Rating {
+        match self {
+            Rating::Again => rs_fsrs::Rating::Again,
+            Rating::Hard => rs_fsrs::Rating::Hard,
+            Rating::Good => rs_fsrs::Rating::Good,
+            Rating::Easy => rs_fsrs::Rating::Easy,
+        }
+    }
+}
+
+/// FSRS card phase.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Phase {
+    New = 0,
+    Learning = 1,
+    Review = 2,
+    Relearning = 3,
+}
+
+impl Phase {
+    pub fn from_code(code: i64) -> Phase {
+        match code {
+            1 => Phase::Learning,
+            2 => Phase::Review,
+            3 => Phase::Relearning,
+            _ => Phase::New,
+        }
+    }
+
+    pub fn code(self) -> i64 {
+        self as i64
+    }
 }
 
 /// Memory state of one (item, skill) card.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
 pub struct MemoryState {
-    /// Rung of the ladder the card sits on.
-    pub step: u32,
+    pub phase: Phase,
+    /// Days for retrievability to fall to 90 %.
+    pub stability: f64,
+    /// 1 (easy) to 10 (hard).
+    pub difficulty: f64,
     pub due_at: i64,
+    pub last_review_at: i64,
+    pub scheduled_days: i64,
     pub reps: u32,
     pub lapses: u32,
-    pub last_review_at: i64,
 }
 
 impl MemoryState {
     pub fn is_due(&self, now_ms: i64) -> bool {
         self.due_at <= now_ms
     }
+
+    /// Probability of recalling the card at `now_ms`.
+    pub fn retrievability(&self, now_ms: i64) -> f64 {
+        if self.phase == Phase::New || self.stability <= 0.0 {
+            return 0.0;
+        }
+        let elapsed_days = (now_ms - self.last_review_at).max(0) as f64 / DAY_MS as f64;
+        Parameters::forgetting_curve(elapsed_days, self.stability)
+    }
+}
+
+fn to_datetime(ms: i64) -> chrono::DateTime<chrono::Utc> {
+    chrono::DateTime::from_timestamp_millis(ms).unwrap_or_default()
+}
+
+fn to_fsrs(state: &MemoryState, now_ms: i64) -> FsrsCard {
+    FsrsCard {
+        due: to_datetime(state.due_at),
+        stability: state.stability,
+        difficulty: state.difficulty,
+        elapsed_days: (now_ms - state.last_review_at).max(0) / DAY_MS,
+        scheduled_days: state.scheduled_days,
+        reps: state.reps as i32,
+        lapses: state.lapses as i32,
+        state: match state.phase {
+            Phase::New => FsrsState::New,
+            Phase::Learning => FsrsState::Learning,
+            Phase::Review => FsrsState::Review,
+            Phase::Relearning => FsrsState::Relearning,
+        },
+        last_review: to_datetime(state.last_review_at),
+    }
 }
 
 /// New state after answering `rating` at `now_ms`. `None` means the card was never reviewed.
 pub fn review(previous: Option<&MemoryState>, rating: Rating, now_ms: i64) -> MemoryState {
-    let (step, reps, lapses) = previous.map_or((0, 0, 0), |s| (s.step, s.reps, s.lapses));
-    let top = LADDER_MS.len() as u32 - 1;
-    let (next_step, interval, lapses) = match (previous, rating) {
-        (_, Rating::Again) => (0, RELEARN_MS, lapses + u32::from(previous.is_some())),
-        // A first-time card rated Hard stays on the first rung.
-        (None, Rating::Hard) => (0, LADDER_MS[0], lapses),
-        (Some(_), Rating::Hard) => (step, LADDER_MS[step as usize] / 2, lapses),
-        (None, Rating::Good) => (0, LADDER_MS[0], lapses),
-        (Some(_), Rating::Good) => {
-            let s = (step + 1).min(top);
-            (s, LADDER_MS[s as usize], lapses)
-        }
-        (None, Rating::Easy) => (1, LADDER_MS[1], lapses),
-        (Some(_), Rating::Easy) => {
-            let s = (step + 2).min(top);
-            (s, LADDER_MS[s as usize], lapses)
-        }
+    let now = to_datetime(now_ms);
+    let card = match previous {
+        Some(state) => to_fsrs(state, now_ms),
+        None => FsrsCard {
+            due: now,
+            last_review: now,
+            ..FsrsCard::default()
+        },
     };
+    let next = FSRS::new(Parameters::default())
+        .next(card, now, rating.fsrs())
+        .card;
     MemoryState {
-        step: next_step,
-        due_at: now_ms + interval.max(MINUTE_MS),
-        reps: reps + 1,
-        lapses,
+        phase: match next.state {
+            FsrsState::New => Phase::New,
+            FsrsState::Learning => Phase::Learning,
+            FsrsState::Review => Phase::Review,
+            FsrsState::Relearning => Phase::Relearning,
+        },
+        stability: next.stability,
+        difficulty: next.difficulty,
+        due_at: next.due.timestamp_millis(),
         last_review_at: now_ms,
+        scheduled_days: next.scheduled_days,
+        reps: next.reps.max(0) as u32,
+        lapses: next.lapses.max(0) as u32,
     }
 }
 
@@ -91,44 +149,67 @@ mod tests {
     const NOW: i64 = 1_000 * DAY_MS;
 
     #[test]
-    fn a_new_card_comes_back_soon_then_climbs_the_ladder() {
-        let s1 = review(None, Rating::Good, NOW);
-        assert_eq!((s1.step, s1.due_at - NOW), (0, 10 * MINUTE_MS));
-        let s2 = review(Some(&s1), Rating::Good, s1.due_at);
-        assert_eq!((s2.step, s2.due_at - s1.due_at), (1, DAY_MS));
-        let s3 = review(Some(&s2), Rating::Good, s2.due_at);
-        assert_eq!((s3.step, s3.due_at - s2.due_at), (2, 3 * DAY_MS));
-        assert_eq!(s3.reps, 3);
+    fn new_cards_go_through_short_learning_steps() {
+        let again = review(None, Rating::Again, NOW);
+        assert_eq!(
+            (again.phase, again.due_at - NOW),
+            (Phase::Learning, MINUTE_MS)
+        );
+        let hard = review(None, Rating::Hard, NOW);
+        assert_eq!(hard.due_at - NOW, 5 * MINUTE_MS);
+        let good = review(None, Rating::Good, NOW);
+        assert_eq!(
+            (good.phase, good.due_at - NOW),
+            (Phase::Learning, 10 * MINUTE_MS)
+        );
+        let easy = review(None, Rating::Easy, NOW);
+        assert_eq!(easy.phase, Phase::Review);
+        assert!(
+            easy.due_at - NOW >= DAY_MS,
+            "easy graduates straight to days"
+        );
     }
 
     #[test]
-    fn easy_skips_a_rung_and_hard_repeats_it_with_half_the_wait() {
-        let s = review(None, Rating::Easy, NOW);
-        assert_eq!(s.step, 1);
-        let easy = review(Some(&s), Rating::Easy, NOW);
-        assert_eq!(easy.step, 3);
-        let hard = review(Some(&easy), Rating::Hard, NOW);
-        assert_eq!((hard.step, hard.due_at - NOW), (3, 7 * DAY_MS / 2));
-    }
-
-    #[test]
-    fn a_lapse_resets_the_card_and_counts() {
-        let mut s = review(None, Rating::Easy, NOW);
-        s = review(Some(&s), Rating::Good, NOW);
-        let lapsed = review(Some(&s), Rating::Again, NOW);
-        assert_eq!((lapsed.step, lapsed.lapses), (0, 1));
-        assert_eq!(lapsed.due_at - NOW, MINUTE_MS);
-        // Failing a never-seen card is not a lapse.
-        assert_eq!(review(None, Rating::Again, NOW).lapses, 0);
-    }
-
-    #[test]
-    fn the_ladder_tops_out() {
-        let mut s = review(None, Rating::Easy, NOW);
-        for _ in 0..20 {
-            s = review(Some(&s), Rating::Easy, NOW);
+    fn successful_reviews_grow_the_interval_and_stability() {
+        let mut state = review(None, Rating::Good, NOW);
+        state = review(Some(&state), Rating::Good, state.due_at);
+        assert_eq!(state.phase, Phase::Review);
+        let mut interval = state.due_at - state.last_review_at;
+        assert!(interval >= DAY_MS);
+        for _ in 0..4 {
+            let next = review(Some(&state), Rating::Good, state.due_at);
+            let next_interval = next.due_at - next.last_review_at;
+            assert!(next_interval > interval, "{next_interval} <= {interval}");
+            assert!(next.stability > state.stability);
+            (state, interval) = (next, next_interval);
         }
-        assert_eq!(s.step as usize, LADDER_MS.len() - 1);
-        assert_eq!(s.due_at - NOW, 180 * DAY_MS);
+        assert_eq!(state.reps, 6);
+        assert_eq!(state.lapses, 0);
+    }
+
+    #[test]
+    fn forgetting_a_review_card_is_a_lapse_and_relearns_within_minutes() {
+        let mut state = review(None, Rating::Easy, NOW);
+        state = review(Some(&state), Rating::Good, state.due_at);
+        let before = state.stability;
+        let lapsed = review(Some(&state), Rating::Again, state.due_at);
+        assert_eq!(lapsed.phase, Phase::Relearning);
+        assert_eq!(lapsed.lapses, 1);
+        assert!(lapsed.due_at - state.due_at <= 10 * MINUTE_MS);
+        assert!(lapsed.stability < before);
+        assert!(lapsed.difficulty > state.difficulty);
+    }
+
+    #[test]
+    fn retrievability_decays_from_one_to_ninety_percent_at_stability() {
+        let state = review(None, Rating::Easy, NOW);
+        assert!((state.retrievability(NOW) - 1.0).abs() < 1e-9);
+        let at_stability = NOW + (state.stability * DAY_MS as f64) as i64;
+        assert!((state.retrievability(at_stability) - 0.9).abs() < 0.01);
+        assert_eq!(
+            Phase::from_code(Phase::Relearning.code()),
+            Phase::Relearning
+        );
     }
 }

@@ -44,6 +44,8 @@ pub struct Feedback {
     pub streak: u32,
     /// The card will come back later in this session.
     pub retry: bool,
+    /// When the scheduler will show this card again, from now.
+    pub due_in_ms: i64,
 }
 
 /// Everything the caller must persist after an answer.
@@ -183,6 +185,7 @@ impl Session {
                 note: item.note.clone(),
                 streak: p.streak,
                 retry,
+                due_in_ms: state.due_at - now_ms,
             },
             card,
             state,
@@ -279,6 +282,10 @@ mod tests {
             assert_eq!(out.feedback.rating, Rating::Easy);
             assert_eq!(out.feedback.streak, expected_streak);
             assert_eq!(out.state.reps, 1);
+            assert!(
+                out.feedback.due_in_ms >= scheduler::DAY_MS,
+                "easy graduates to days"
+            );
         }
         assert!(s.current().is_none());
         let p = s.progress();

@@ -41,6 +41,7 @@ function backend({ total = 1, queue = [exercise, null], fail }: Backend = {}) {
             note: null,
             streak: 1,
             retry: false,
+            dueInMs: 600_000,
           },
           progress: latest,
         } satisfies Answered;

@@ -569,8 +569,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1aa79e62e7697b8e29b513a68abacf485adcd1fe8284a4316c5ae868e6633327"
 dependencies = [
  "iana-time-zone",
+ "js-sys",
  "num-traits",
  "serde",
+ "wasm-bindgen",
  "windows-link 0.2.1",
 ]
 
@@ -2393,6 +2395,8 @@ dependencies = [
 name = "korean-core"
 version = "0.3.0"
 dependencies = [
+ "chrono",
+ "rs-fsrs",
  "serde",
  "serde_json",
  "thiserror 2.0.21",
@@ -3750,6 +3754,15 @@ dependencies = [
  "num-rational",
  "symphonia",
  "thiserror 2.0.21",
+]
+
+[[package]]
+name = "rs-fsrs"
+version = "1.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "65a7e7d53c16e720833aa109509f46d4d6cc0c4c820f95b865df72c6118e9124"
+dependencies = [
+ "chrono",
 ]
 
 [[package]]

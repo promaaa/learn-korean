@@ -46,6 +46,8 @@ export interface Feedback {
   note: string | null;
   streak: number;
   retry: boolean;
+  /** Next scheduled review of this card, from now. */
+  dueInMs: number;
 }
 
 export interface Progress {

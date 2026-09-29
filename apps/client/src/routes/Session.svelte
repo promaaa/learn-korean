@@ -3,6 +3,7 @@
   import Build from "../games/Build.svelte";
   import Listening from "../games/Listening.svelte";
   import Reply from "../games/Reply.svelte";
+  import { formatInterval } from "../lib/format";
   import type { Action } from "../lib/keys";
   import { SessionController } from "../lib/session.svelte";
   import { Speaker } from "../lib/speaker.svelte";
@@ -232,6 +233,13 @@
     </div>
   {/if}
 
+  {#if session.phase === "feedback" && session.feedback}
+    <p class="due">
+      {session.feedback.retry ? "again later in this session" : "next review"}
+      {session.feedback.retry ? "" : formatInterval(session.feedback.dueInMs)}
+    </p>
+  {/if}
+
   <div class="streak" class:on={session.progress.streak >= 2}>
     streak <strong>×{session.progress.streak}</strong>
   </div>
@@ -316,6 +324,15 @@
   .streak.on {
     opacity: 1;
     transform: none;
+  }
+
+  .due {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    font-size: 12px;
+    color: var(--muted);
   }
 
   .streak strong {
