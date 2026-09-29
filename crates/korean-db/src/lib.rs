@@ -8,6 +8,7 @@
 pub mod content;
 pub mod images;
 mod open;
+pub mod progress;
 pub mod reviews;
 
 pub use open::{Database, OpenError};

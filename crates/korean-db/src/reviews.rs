@@ -48,7 +48,7 @@ pub async fn states(pool: &SqlitePool) -> sqlx::Result<HashMap<Card, MemoryState
         .collect())
 }
 
-/// Persists one answer: the new memory state and a review-log row, atomically.
+/// Persists one answer atomically: the new memory state, a review-log row and the XP earned.
 pub async fn record(pool: &SqlitePool, outcome: &Outcome) -> sqlx::Result<()> {
     let Outcome {
         card,
@@ -90,6 +90,13 @@ pub async fn record(pool: &SqlitePool, outcome: &Outcome) -> sqlx::Result<()> {
     .bind(state.last_review_at)
     .execute(&mut *tx)
     .await?;
+    sqlx::query("INSERT INTO xp_events (earned_at, amount, item_id, skill) VALUES (?, ?, ?, ?)")
+        .bind(state.last_review_at)
+        .bind(feedback.xp)
+        .bind(&card.item_id)
+        .bind(card.skill.as_str())
+        .execute(&mut *tx)
+        .await?;
     tx.commit().await
 }
 
@@ -113,6 +120,7 @@ mod tests {
                 streak: 0,
                 retry: false,
                 due_in_ms: 0,
+                xp: 10,
             },
             card: Card::new(item, Skill::Listening),
             state: review(previous, rating, now),
@@ -139,6 +147,7 @@ mod tests {
                 .await
                 .unwrap();
         assert_eq!(log, [(1, 3, 1_000), (0, 1, 2_000)]);
+        assert_eq!(crate::progress::total_xp(pool).await.unwrap(), 20);
     }
 
     #[tokio::test]

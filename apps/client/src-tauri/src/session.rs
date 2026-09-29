@@ -10,15 +10,13 @@ use korean_core::learning::{
 use serde::Serialize;
 use tauri::State;
 
+use crate::progress::{self, LevelUp, Profile};
 use crate::state::AppState;
-
-/// Until progression lands every learner is level 1.
-const LEVEL: u32 = 1;
 
 #[derive(Default)]
 pub struct ActiveSession(Mutex<Option<Session>>);
 
-fn now_ms() -> i64 {
+pub fn now_ms() -> i64 {
     SystemTime::now()
         .duration_since(UNIX_EPOCH)
         .map_or(0, |d| d.as_millis() as i64)
@@ -38,13 +36,14 @@ pub async fn session_start(
     active: State<'_, ActiveSession>,
 ) -> Result<SessionStarted, String> {
     let pool = app.db()?.pool();
-    let items = korean_db::content::unlocked_items(pool, LEVEL)
+    let now = now_ms();
+    let level = progress::load(pool, now).await?.level.level;
+    let items = korean_db::content::unlocked_items(pool, level)
         .await
         .map_err(|e| e.to_string())?;
     let states = korean_db::reviews::states(pool)
         .await
         .map_err(|e| e.to_string())?;
-    let now = now_ms();
     let plan = plan_session(&items, &states, PLAYABLE, now, Limits::default());
     let started = SessionStarted {
         total: plan.cards.len(),
@@ -79,6 +78,8 @@ pub fn session_current(active: State<'_, ActiveSession>) -> Result<Current, Stri
 pub struct Answered {
     feedback: Feedback,
     progress: Progress,
+    profile: Profile,
+    level_up: Option<LevelUp>,
 }
 
 #[tauri::command]
@@ -88,19 +89,25 @@ pub async fn session_answer(
     app: State<'_, AppState>,
     active: State<'_, ActiveSession>,
 ) -> Result<Answered, String> {
+    let pool = app.db()?.pool();
+    let now = now_ms();
+    let before = progress::load(pool, now).await?;
     let (outcome, progress) = {
         let mut guard = active.0.lock().map_err(|e| e.to_string())?;
         let session = guard.as_mut().ok_or("no session")?;
         let outcome = session
-            .answer(&answer, elapsed_ms, now_ms())
+            .answer(&answer, elapsed_ms, now)
             .map_err(|e| e.to_string())?;
         (outcome, session.progress())
     };
-    korean_db::reviews::record(app.db()?.pool(), &outcome)
+    korean_db::reviews::record(pool, &outcome)
         .await
         .map_err(|e| e.to_string())?;
+    let profile = progress::load(pool, now).await?;
     Ok(Answered {
         feedback: outcome.feedback,
         progress,
+        level_up: progress::level_up(&before, &profile),
+        profile,
     })
 }

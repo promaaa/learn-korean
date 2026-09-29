@@ -48,6 +48,8 @@ export interface Feedback {
   retry: boolean;
   /** Next scheduled review of this card, from now. */
   dueInMs: number;
+  /** Experience earned by this answer. */
+  xp: number;
 }
 
 export interface Progress {
@@ -56,6 +58,8 @@ export interface Progress {
   correct: number;
   streak: number;
   bestStreak: number;
+  /** Experience earned in this session. */
+  xp: number;
 }
 
 export interface SessionStarted {
@@ -72,6 +76,8 @@ export interface Current {
 export interface Answered {
   feedback: Feedback;
   progress: Progress;
+  profile: Profile;
+  levelUp: LevelUp | null;
 }
 
 export function appStatus(): Promise<AppStatus> {
@@ -98,4 +104,34 @@ export function speak(text: string): Promise<void> {
 /** Credit for an item's photo (the picture itself is served at `kimg://localhost/<item id>`). */
 export function itemImage(itemId: string): Promise<ItemImage | null> {
   return invoke("item_image", { itemId });
+}
+
+export interface Level {
+  level: number;
+  totalXp: number;
+  xpInLevel: number;
+  xpForNext: number;
+}
+
+export interface PackStatus {
+  id: string;
+  title: string;
+  unlockLevel: number;
+  unlocked: boolean;
+  items: number;
+}
+
+export interface Profile {
+  level: Level;
+  dayStreak: number;
+  packs: PackStatus[];
+}
+
+export interface LevelUp {
+  level: number;
+  unlocked: string[];
+}
+
+export function profile(): Promise<Profile> {
+  return invoke("profile");
 }

@@ -3,7 +3,6 @@
 
 use std::collections::VecDeque;
 use std::sync::{Arc, Mutex};
-use std::time::{SystemTime, UNIX_EPOCH};
 
 use korean_db::images::StoredImage;
 use korean_providers::images::{self, FirstMatch, Image, ImageProvider};
@@ -60,12 +59,6 @@ impl Images {
     }
 }
 
-fn now_ms() -> i64 {
-    SystemTime::now()
-        .duration_since(UNIX_EPOCH)
-        .map_or(0, |d| d.as_millis() as i64)
-}
-
 /// Photo reference for an item, searching the providers the first time.
 async fn resolve(
     app: &AppState,
@@ -79,7 +72,7 @@ async fn resolve(
     let Some(query) = item.and_then(|i| i.image) else {
         return Ok(None);
     };
-    let now = now_ms();
+    let now = crate::session::now_ms();
     let cached = korean_db::images::get(pool, &query)
         .await
         .map_err(|e| e.to_string())?;

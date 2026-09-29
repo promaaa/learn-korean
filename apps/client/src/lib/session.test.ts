@@ -9,7 +9,12 @@ const exercise: ExerciseView = {
   image: false,
   prompt: { type: "listening", korean: "이거 뭐예요?", options: ["a", "b", "c", "d"] },
 };
-const progress = { done: 0, remaining: 1, correct: 0, streak: 0, bestStreak: 0 };
+const progress = { done: 0, remaining: 1, correct: 0, streak: 0, bestStreak: 0, xp: 0 };
+const profile = {
+  level: { level: 2, totalXp: 120, xpInLevel: 20, xpForNext: 150 },
+  dayStreak: 1,
+  packs: [],
+};
 
 interface Backend {
   total?: number;
@@ -29,7 +34,7 @@ function backend({ total = 1, queue = [exercise, null], fail }: Backend = {}) {
       case "session_current":
         return { exercise: queue.shift() ?? null, progress: latest } satisfies Current;
       case "session_answer":
-        latest = { ...progress, done: 1, remaining: 0, correct: 1, streak: 1, bestStreak: 1 };
+        latest = { ...progress, done: 1, remaining: 0, correct: 1, streak: 1, bestStreak: 1, xp: 20 };
         return {
           feedback: {
             correct: true,
@@ -42,8 +47,11 @@ function backend({ total = 1, queue = [exercise, null], fail }: Backend = {}) {
             streak: 1,
             retry: false,
             dueInMs: 600_000,
+            xp: 20,
           },
           progress: latest,
+          profile,
+          levelUp: { level: 2, unlocked: ["Restaurants"] },
         } satisfies Answered;
     }
   });
@@ -71,6 +79,8 @@ describe("SessionController", () => {
     expect(s.phase).toBe("feedback");
     expect(s.chosen).toBe(2);
     expect(s.feedback?.correctIndex).toBe(2);
+    expect(s.profile?.level.level).toBe(2);
+    expect(s.levelUp?.unlocked).toEqual(["Restaurants"]);
     expect(calls.find((c) => c.cmd === "session_answer")?.args).toEqual({
       answer: { type: "choice", index: 2 },
       elapsedMs: 4_200,
@@ -78,6 +88,7 @@ describe("SessionController", () => {
 
     await s.next();
     expect(s.phase).toBe("done");
+    expect(s.levelUp).toBeNull();
     expect(s.progress.bestStreak).toBe(1);
   });
 

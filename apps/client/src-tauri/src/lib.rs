@@ -1,4 +1,5 @@
 mod images;
+mod progress;
 mod session;
 mod shell;
 mod speech;
@@ -37,6 +38,7 @@ pub fn run() {
             session::session_answer,
             speech::speak,
             images::item_image,
+            progress::profile,
         ])
         .setup(|app| {
             // Created here, not on the builder: a second instance exits before setup runs, so it

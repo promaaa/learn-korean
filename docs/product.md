@@ -24,4 +24,7 @@ out of the way (Esc).
 
 ## Progression
 
-XP per correct answer with combo multiplier, levels, daily streak, packs unlocked by level.
+- **XP**: 10 per correct answer, +5 when easy, +5 the first time a card is answered, multiplied by
+  the combo (+10 % per consecutive correct answer, up to ×2). A miss still earns 2.
+- **Levels**: level *n* → *n + 1* costs 100 + 50 (*n* − 1) XP. Packs declare an `unlock_level`.
+- **Daily streak**: consecutive days with at least one correct answer (local time).

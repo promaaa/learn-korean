@@ -2,6 +2,7 @@
 
 pub mod content;
 pub mod learning;
+pub mod progression;
 mod rng;
 pub mod scheduler;
 pub mod scoring;
