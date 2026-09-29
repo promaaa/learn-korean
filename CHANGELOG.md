@@ -6,6 +6,12 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 ## [Unreleased]
 
 ### Added
+- Review scheduler (interval ladder: 10 min → 1 d → 3 d → … → 180 d; lapses reset) per (item, skill) card.
+- Answer grading: wrong → Again, correct → Easy/Good/Hard by response time (skill-specific bands).
+- Session planning: due cards first (most overdue first), new material round-robin across packs, other skills unlocked after listening; missed cards retried later in the session.
+- Schema 3: `review_states`; every answer is written atomically to `review_states` and `review_log`.
+- Session commands `session_start`, `session_current`, `session_answer` (answers are checked in Rust, never in the UI).
+- Legacy pack ordered as the deck: each word followed by the sentences that use it.
 - `anki-import` tool: legacy CSV → immutable raw rows → curated lexemes → `legacy` pack (284 word cards, 213 usage sentences).
 - Curation of the 284-word deck with 29 explicit fixes (e.g. Arabic `فقط` → `만`/`밖에`, `딱딱하다` is "hard, rigid", not "difficult"); romanization dropped.
 - Validator rule: the same Korean line may not appear in two items.

@@ -1,3 +1,4 @@
+mod session;
 mod shell;
 mod state;
 
@@ -19,9 +20,13 @@ pub fn run() {
                 .level(log::LevelFilter::Info)
                 .build(),
         )
+        .manage(session::ActiveSession::default())
         .invoke_handler(tauri::generate_handler![
             shell::hide_window,
-            state::app_status
+            state::app_status,
+            session::session_start,
+            session::session_current,
+            session::session_answer,
         ])
         .setup(|app| {
             let state = state::init(app.handle());
