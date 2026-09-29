@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
   import Listening from "../games/Listening.svelte";
+  import Reply from "../games/Reply.svelte";
   import type { Action } from "../lib/keys";
   import { SessionController } from "../lib/session.svelte";
   import { Speaker } from "../lib/speaker.svelte";
@@ -28,6 +29,7 @@
   }
 
   const optionCount = $derived(session.exercise?.prompt.options.length ?? 0);
+  const Game = $derived(session.exercise?.prompt.type === "response" ? Reply : Listening);
 
   export function hints(): { keys: string; label: string }[] {
     switch (session.phase) {
@@ -62,9 +64,15 @@
     }
   }
 
-  function choose(index: number): void {
+  async function choose(index: number): Promise<void> {
     if (index >= optionCount) return;
-    void session.answer({ type: "choice", index });
+    await session.answer({ type: "choice", index });
+    // In the reply game, hear the natural answer spoken back.
+    const prompt = session.exercise?.prompt;
+    if (session.feedback && prompt?.type === "response") {
+      const answer = prompt.options[session.feedback.correctIndex];
+      if (answer) void speaker.say(answer);
+    }
   }
 
   export function handle(action: Action): void {
@@ -113,7 +121,7 @@
   {#if (session.phase === "exercise" || session.phase === "feedback") && session.exercise}
     {#key `${session.exercise.card.itemId}:${session.progress.done}`}
       <div class="card" in:fly={{ y: 14, duration: 160 }}>
-        <Listening
+        <Game
           itemId={session.exercise.card.itemId}
           image={session.exercise.image}
           korean={session.exercise.prompt.korean}

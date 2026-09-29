@@ -84,6 +84,7 @@ mod tests {
             feedback: Feedback {
                 correct: rating != Rating::Again,
                 correct_index: 0,
+                translations: vec![],
                 rating,
                 korean: String::new(),
                 english: String::new(),

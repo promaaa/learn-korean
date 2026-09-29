@@ -15,7 +15,9 @@ export interface Card {
   skill: Skill;
 }
 
-export type Prompt = { type: "listening"; korean: string; options: string[] };
+export type Prompt =
+  | { type: "listening"; korean: string; options: string[] }
+  | { type: "response"; korean: string; options: string[] };
 
 export interface ExerciseView {
   card: Card;
@@ -34,6 +36,8 @@ export type Answer = { type: "choice"; index: number };
 export interface Feedback {
   correct: boolean;
   correctIndex: number;
+  /** English of each option in the reply game (empty otherwise). */
+  translations: string[];
   rating: Rating;
   korean: string;
   english: string;

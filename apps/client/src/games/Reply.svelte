@@ -23,18 +23,48 @@
 
 <section class="game">
   {#if image}<Photo {itemId} />{/if}
-  <SpeakerButton status={audio} onclick={onreplay} />
-  <p class="korean" lang="ko">{korean}</p>
-  <p class="question">What does this mean?</p>
+  <div class="line">
+    <SpeakerButton status={audio} onclick={onreplay} />
+    <p class="bubble" lang="ko">{korean}</p>
+    {#if feedback}<p class="line-english">{feedback.english}</p>{/if}
+  </div>
+  <p class="question">How do you answer?</p>
 
-  <ChoiceList {options} {feedback} {chosen} {cursor} {onchoose} />
+  <ChoiceList {options} {feedback} {chosen} {cursor} korean {onchoose} />
 
   <div class="reveal" class:visible={feedback !== null}>
     {#if feedback}
       <p class="verdict" class:good={feedback.correct} class:bad={!feedback.correct}>
-        {feedback.correct ? "Correct" : "Not quite"} — <span>{feedback.english}</span>
+        {feedback.correct ? "Natural answer" : "That doesn't fit"}
       </p>
       {#if feedback.note}<p class="note">{feedback.note}</p>{/if}
     {/if}
   </div>
 </section>
+
+<style>
+  .line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bubble {
+    font-family: var(--font-ko);
+    font-size: 34px;
+    font-weight: 500;
+    margin: 0;
+    padding: 10px 22px;
+    border-radius: 18px 18px 18px 4px;
+    background: color-mix(in srgb, var(--accent) 12%, var(--panel));
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+    word-break: keep-all;
+    text-align: center;
+  }
+
+  .line-english {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: var(--fg-dim);
+  }
+</style>

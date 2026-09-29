@@ -66,3 +66,70 @@ body {
   font-family: var(--font-ko);
   font-size: 48px;
 }
+
+/* Shared layout of every game card. */
+.game {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game .korean {
+  font-family: var(--font-ko);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0 0 6px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+}
+
+.game .question {
+  align-self: flex-start;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 18px 0 10px;
+}
+
+.game .reveal {
+  min-height: 56px;
+  margin-top: 14px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.game .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.game .verdict {
+  margin: 0;
+  font-weight: 600;
+}
+
+.game .verdict span {
+  font-weight: 400;
+  color: var(--fg);
+}
+
+.game .good {
+  color: var(--good);
+}
+
+.game .bad {
+  color: var(--bad);
+}
+
+.game .note {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--fg-dim);
+}

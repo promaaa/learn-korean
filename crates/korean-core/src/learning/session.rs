@@ -27,6 +27,8 @@ pub enum Answer {
 pub struct Feedback {
     pub correct: bool,
     pub correct_index: usize,
+    /// English of each option (reply game), empty when the options already are English.
+    pub translations: Vec<String>,
     pub rating: Rating,
     pub korean: String,
     pub english: String,
@@ -133,8 +135,7 @@ impl Session {
             .as_ref()
             .ok_or(SessionError::NoCurrentExercise)?;
         let Answer::Choice { index } = answer;
-        let crate::learning::Prompt::Listening { options, .. } = &exercise.view.prompt;
-        if *index >= options.len() {
+        if *index >= exercise.view.prompt.options().len() {
             return Err(SessionError::InvalidAnswer);
         }
         let exercise = self.current.take().expect("checked above");
@@ -169,6 +170,7 @@ impl Session {
             feedback: Feedback {
                 correct,
                 correct_index: exercise.correct,
+                translations: exercise.translations,
                 rating,
                 korean: item.korean.clone(),
                 english: item.english.clone(),
@@ -187,7 +189,6 @@ impl Session {
 mod tests {
     use super::*;
     use crate::content::{ItemKind, Register, Skill};
-    use crate::learning::Prompt;
 
     const NOW: i64 = 1_000_000_000;
 
@@ -232,9 +233,12 @@ mod tests {
 
     fn correct_index(s: &mut Session) -> usize {
         let view = s.current().unwrap().clone();
-        let Prompt::Listening { options, .. } = &view.prompt;
         let english = &s.items[&view.card.item_id].english;
-        options.iter().position(|o| o == english).unwrap()
+        view.prompt
+            .options()
+            .iter()
+            .position(|o| o == english)
+            .unwrap()
     }
 
     #[test]
