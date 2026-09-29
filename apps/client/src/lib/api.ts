@@ -20,7 +20,13 @@ export type Prompt = { type: "listening"; korean: string; options: string[] };
 export interface ExerciseView {
   card: Card;
   kind: "sentence" | "word";
+  image: boolean;
   prompt: Prompt;
+}
+
+export interface ItemImage {
+  sourceUrl: string;
+  attribution: string;
 }
 
 export type Answer = { type: "choice"; index: number };
@@ -79,4 +85,9 @@ export function sessionAnswer(answer: Answer, elapsedMs: number): Promise<Answer
 /** Speaks Korean text (synthesized in Rust, played natively). */
 export function speak(text: string): Promise<void> {
   return invoke("speak", { text });
+}
+
+/** Credit for an item's photo (the picture itself is served at `kimg://localhost/<item id>`). */
+export function itemImage(itemId: string): Promise<ItemImage | null> {
+  return invoke("item_image", { itemId });
 }

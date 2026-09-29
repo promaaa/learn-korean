@@ -1,3 +1,4 @@
+mod images;
 mod session;
 mod shell;
 mod speech;
@@ -22,6 +23,12 @@ pub fn run() {
                 .build(),
         )
         .manage(session::ActiveSession::default())
+        .register_asynchronous_uri_scheme_protocol(images::SCHEME, |ctx, request, responder| {
+            let app = ctx.app_handle().clone();
+            tauri::async_runtime::spawn(async move {
+                responder.respond(images::serve(&app, request.uri().path()).await);
+            });
+        })
         .invoke_handler(tauri::generate_handler![
             shell::hide_window,
             state::app_status,
@@ -29,12 +36,14 @@ pub fn run() {
             session::session_current,
             session::session_answer,
             speech::speak,
+            images::item_image,
         ])
         .setup(|app| {
             // Created here, not on the builder: a second instance exits before setup runs, so it
             // never opens the database or the audio device.
             app.manage(state::init(app.handle()));
             app.manage(speech::Speech::new());
+            app.manage(images::Images::new());
             #[cfg(desktop)]
             shell::register_global_shortcut(app.handle());
             shell::apply(

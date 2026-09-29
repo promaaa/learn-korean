@@ -1,9 +1,12 @@
 <script lang="ts">
+  import Photo from "../components/Photo.svelte";
   import SpeakerButton from "../components/SpeakerButton.svelte";
   import type { Feedback } from "../lib/api";
   import type { SpeakerStatus } from "../lib/speaker.svelte";
 
   interface Props {
+    itemId: string;
+    image: boolean;
     korean: string;
     options: string[];
     feedback: Feedback | null;
@@ -13,7 +16,8 @@
     onchoose: (index: number) => void;
     onreplay: () => void;
   }
-  let { korean, options, feedback, chosen, cursor, audio, onchoose, onreplay }: Props = $props();
+  let { itemId, image, korean, options, feedback, chosen, cursor, audio, onchoose, onreplay }: Props =
+    $props();
 
   function optionState(index: number): "correct" | "wrong" | "dim" | "idle" {
     if (!feedback) return "idle";
@@ -24,6 +28,7 @@
 </script>
 
 <section class="listening">
+  {#if image}<Photo {itemId} />{/if}
   <SpeakerButton status={audio} onclick={onreplay} />
   <p class="korean" lang="ko">{korean}</p>
   <p class="question">What does this mean?</p>

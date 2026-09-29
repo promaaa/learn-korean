@@ -6,6 +6,7 @@
 //! restoring that file is always possible.
 
 pub mod content;
+pub mod images;
 mod open;
 pub mod reviews;
 

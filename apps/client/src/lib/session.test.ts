@@ -6,6 +6,7 @@ import { SessionController } from "./session.svelte";
 const exercise: ExerciseView = {
   card: { itemId: "starter/what-is-this", skill: "listening" },
   kind: "sentence",
+  image: false,
   prompt: { type: "listening", korean: "이거 뭐예요?", options: ["a", "b", "c", "d"] },
 };
 const progress = { done: 0, remaining: 1, correct: 0, streak: 0, bestStreak: 0 };

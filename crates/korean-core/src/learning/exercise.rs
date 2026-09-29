@@ -26,6 +26,8 @@ pub enum Prompt {
 pub struct ExerciseView {
     pub card: Card,
     pub kind: ItemKind,
+    /// The item has a photo (fetched separately by id).
+    pub image: bool,
     pub prompt: Prompt,
 }
 
@@ -74,6 +76,7 @@ pub fn build(card: &Card, item: &Item, pool: &[&Item], rng: &mut Rng) -> Exercis
                 view: ExerciseView {
                     card: card.clone(),
                     kind: item.kind,
+                    image: item.image.is_some(),
                     prompt: Prompt::Listening {
                         korean: item.korean.clone(),
                         options,
