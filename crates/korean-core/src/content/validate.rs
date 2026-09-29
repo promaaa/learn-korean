@@ -37,11 +37,14 @@ fn is_kebab(s: &str) -> bool {
             .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || c == '-')
 }
 
-/// Checks every rule of the content contract across all packs (ids are global).
+/// Checks every rule of the content contract across all packs (ids and Korean are global).
 pub fn validate_packs(packs: &[Pack]) -> Result<(), Vec<ValidationError>> {
     let mut errors = Vec::new();
     let mut ids: HashMap<&str, &str> = HashMap::new();
     let mut pack_ids = HashSet::new();
+    // The same Korean in two items would be the same card twice. A trailing full stop does not
+    // make a different line; `?` does (괜찮아요 "I'm fine" vs 괜찮아요? "Are you okay?").
+    let mut korean: HashMap<&str, &str> = HashMap::new();
 
     for pack in packs {
         let mut err =
@@ -71,6 +74,9 @@ pub fn validate_packs(packs: &[Pack]) -> Result<(), Vec<ValidationError>> {
                     item.id.clone(),
                     format!("english {:?} is used twice in the pack", item.english),
                 );
+            }
+            if let Some(other) = korean.insert(item.korean.trim_end_matches('.'), &item.id) {
+                err(item.id.clone(), format!("same Korean as {other}"));
             }
             for message in item_errors(&pack.id, item) {
                 err(item.id.clone(), message);
@@ -174,11 +180,13 @@ mod tests {
     use super::*;
     use crate::content::{Line, Register, Replies};
 
+    /// Sentence item whose Korean is unique per id.
     fn item(id: &str, english: &str) -> Item {
+        let syllable = char::from_u32(0xAC00 + id.bytes().map(u32::from).sum::<u32>() % 11172);
         Item {
             id: id.into(),
             kind: ItemKind::Sentence,
-            korean: "주말에 뭐 했어요?".into(),
+            korean: format!("주말에 {} 했어요?", syllable.unwrap()),
             english: english.into(),
             context: "weekend".into(),
             register: Register::Polite,
@@ -247,6 +255,20 @@ mod tests {
         let msgs = messages(&[pack(vec![item("p/a", "Same"), item("p/b", "Same")])]);
         assert_eq!(msgs.len(), 1, "{msgs:?}");
         assert!(msgs[0].contains("used twice"));
+    }
+
+    #[test]
+    fn the_same_korean_cannot_appear_twice_across_packs() {
+        let mut a = item("p/a", "A");
+        a.korean = "감사합니다".into();
+        let mut b = item("q/b", "B");
+        b.korean = "감사합니다.".into();
+        let mut question = item("q/c", "C");
+        question.korean = "감사합니다?".into();
+        let mut q = pack(vec![b, question]);
+        q.id = "q".into();
+        let msgs = messages(&[pack(vec![a]), q]);
+        assert_eq!(msgs, ["q/b: same Korean as p/a"]);
     }
 
     #[test]

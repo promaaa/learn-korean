@@ -1,0 +1,1712 @@
+[
+  {
+    "source": "anki-important-words",
+    "row": 1,
+    "front_raw": "Personne",
+    "back_raw": "사람 (sa ram)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 2,
+    "front_raw": "Nom",
+    "back_raw": "이름 (i reum)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 3,
+    "front_raw": "Traduction Française",
+    "back_raw": "Coréen (Phonétique)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 4,
+    "front_raw": "Oui",
+    "back_raw": "네 (ne)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 5,
+    "front_raw": "Non",
+    "back_raw": "아니요 (a ni yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 6,
+    "front_raw": "Merci (Formel)",
+    "back_raw": "감사합니다 (gam sa ham ni da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 7,
+    "front_raw": "Merci (Poli)",
+    "back_raw": "고맙습니다 (go map seum ni da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 8,
+    "front_raw": "Bonjour (Formel)",
+    "back_raw": "안녕하세요 (an nyeong ha se yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 9,
+    "front_raw": "Au revoir (Si vous partez)",
+    "back_raw": "안녕히 계세요 (an nyeong hi gye se yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 10,
+    "front_raw": "Au revoir (Si l'autre part)",
+    "back_raw": "안녕히 가세요 (an nyeong hi ga se yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 11,
+    "front_raw": "Excusez-moi (Pour attirer l'attention)",
+    "back_raw": "저기요 (jeo gi yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 12,
+    "front_raw": "Excusez-moi / Pardon (Pour s'excuser)",
+    "back_raw": "죄송합니다 (joe song ham ni da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 13,
+    "front_raw": "Excusez-moi (Moins formel)",
+    "back_raw": "미안합니다 (mi an ham ni da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 14,
+    "front_raw": "S'il vous plaît (Donnez-moi...)",
+    "back_raw": "...주세요 (...ju se yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 15,
+    "front_raw": "Ça va / C'est bon / Je vais bien",
+    "back_raw": "괜찮아요 (gwaen chan a yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 16,
+    "front_raw": "Enchanté(e)",
+    "back_raw": "반갑습니다 (ban gap seum ni da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 17,
+    "front_raw": "Je / Moi (Poli)",
+    "back_raw": "저 (jeo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 18,
+    "front_raw": "Je / Moi (Informel)",
+    "back_raw": "나 (na)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 19,
+    "front_raw": "Tu (Rare, souvent évité)",
+    "back_raw": "너 (neo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 20,
+    "front_raw": "Il / Elle / Cette personne",
+    "back_raw": "그 사람 (geu sa ram)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 21,
+    "front_raw": "Nous",
+    "back_raw": "우리 (u ri)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 22,
+    "front_raw": "Ami",
+    "back_raw": "친구 (chin gu)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 23,
+    "front_raw": "Famille",
+    "back_raw": "가족 (ga jok)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 24,
+    "front_raw": "Mère",
+    "back_raw": "어머니 (eo meo ni)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 25,
+    "front_raw": "Père",
+    "back_raw": "아버지 (a beo ji)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 26,
+    "front_raw": "Homme",
+    "back_raw": "남자 (nam ja)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 27,
+    "front_raw": "Femme",
+    "back_raw": "여자 (yeo ja)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 28,
+    "front_raw": "Quoi",
+    "back_raw": "뭐 (mwo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 29,
+    "front_raw": "Où",
+    "back_raw": "어디 (eo di)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 30,
+    "front_raw": "Quand",
+    "back_raw": "언제 (eon je)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 31,
+    "front_raw": "Qui",
+    "back_raw": "누구 (nu gu)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 32,
+    "front_raw": "Pourquoi",
+    "back_raw": "왜 (wae)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 33,
+    "front_raw": "Comment",
+    "back_raw": "어떻게 (eo tteo ke)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 34,
+    "front_raw": "Combien (Prix)",
+    "back_raw": "얼마 (eol ma)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 35,
+    "front_raw": "Combien (Quantité)",
+    "back_raw": "얼마나 (eol ma na) / 몇 개 (myeot gae)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 36,
+    "front_raw": "Ceci / Ça (Proche de moi)",
+    "back_raw": "이거 (i geo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 37,
+    "front_raw": "Cela (Proche de vous)",
+    "back_raw": "그거 (geu geo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 38,
+    "front_raw": "Cela (Loin de nous deux)",
+    "back_raw": "저거 (jeo geo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 39,
+    "front_raw": "Ici",
+    "back_raw": "여기 (yeo gi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 40,
+    "front_raw": "Là (Proche de vous)",
+    "back_raw": "거기 (geo gi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 41,
+    "front_raw": "Là-bas (Loin)",
+    "back_raw": "저기 (jeo gi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 42,
+    "front_raw": "Maison / Chez soi",
+    "back_raw": "집 (jip)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 43,
+    "front_raw": "Toilettes",
+    "back_raw": "화장실 (hwa jang sil)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 44,
+    "front_raw": "École / Université",
+    "back_raw": "학교 (hak gyo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 45,
+    "front_raw": "Entreprise / Travail",
+    "back_raw": "회사 (hoe sa)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 46,
+    "front_raw": "Hôpital",
+    "back_raw": "병원 (byeong won)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 47,
+    "front_raw": "Pharmacie",
+    "back_raw": "약국 (yak guk)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 48,
+    "front_raw": "Restaurant",
+    "back_raw": "식당 (sik dang)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 49,
+    "front_raw": "Café (lieu)",
+    "back_raw": "카페 (ka pe)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 50,
+    "front_raw": "Magasin",
+    "back_raw": "가게 (ga ge)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 51,
+    "front_raw": "Grand magasin",
+    "back_raw": "백화점 (baek hwa jeom)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 52,
+    "front_raw": "Marché",
+    "back_raw": "시장 (si jang)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 53,
+    "front_raw": "Banque",
+    "back_raw": "은행 (eun haeng)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 54,
+    "front_raw": "Métro",
+    "back_raw": "지하철 (ji ha cheol)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 55,
+    "front_raw": "Gare (Train)",
+    "back_raw": "기차역 (gi cha yeok)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 56,
+    "front_raw": "Aéroport",
+    "back_raw": "공항 (gong hang)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 57,
+    "front_raw": "Corée (du Sud)",
+    "back_raw": "한국 (han guk)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 58,
+    "front_raw": "Eau",
+    "back_raw": "물 (mul)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 59,
+    "front_raw": "Nourriture / Riz cuit",
+    "back_raw": "밥 (bap)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 60,
+    "front_raw": "Pain",
+    "back_raw": "빵 (ppang)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 61,
+    "front_raw": "Café (boisson)",
+    "back_raw": "커피 (keo pi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 62,
+    "front_raw": "Bière",
+    "back_raw": "맥주 (maek ju)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 63,
+    "front_raw": "Lait",
+    "back_raw": "우유 (u yu)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 64,
+    "front_raw": "Viande",
+    "back_raw": "고기 (go gi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 65,
+    "front_raw": "Légumes",
+    "back_raw": "야채 (ya chae)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 66,
+    "front_raw": "Fruits",
+    "back_raw": "과일 (gwa il)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 67,
+    "front_raw": "Addition / Facture",
+    "back_raw": "계산서 (gye san seo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 68,
+    "front_raw": "Maintenant",
+    "back_raw": "지금 (ji geum)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 69,
+    "front_raw": "Aujourd'hui",
+    "back_raw": "오늘 (o neul)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 70,
+    "front_raw": "Demain",
+    "back_raw": "내일 (nae il)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 71,
+    "front_raw": "Hier",
+    "back_raw": "어제 (eo je)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 72,
+    "front_raw": "Matin",
+    "back_raw": "아침 (a chim)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 73,
+    "front_raw": "Après-midi / Journée",
+    "back_raw": "낮 (nat) / 오후 (o hu)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 74,
+    "front_raw": "Soir",
+    "back_raw": "저녁 (jeo nyeok)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 75,
+    "front_raw": "Nuit",
+    "back_raw": "밤 (bam)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 76,
+    "front_raw": "Toujours",
+    "back_raw": "항상 (hang sang)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 77,
+    "front_raw": "Souvent",
+    "back_raw": "자주 (ja ju)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 78,
+    "front_raw": "Parfois",
+    "back_raw": "가끔 (ga kkeum)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 79,
+    "front_raw": "Heure",
+    "back_raw": "시간 (si gan)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 80,
+    "front_raw": "Minute",
+    "back_raw": "분 (bun)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 81,
+    "front_raw": "Faire",
+    "back_raw": "해요 (hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 82,
+    "front_raw": "Aller",
+    "back_raw": "가요 (ga yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 83,
+    "front_raw": "Venir",
+    "back_raw": "와요 (wa yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 84,
+    "front_raw": "Manger",
+    "back_raw": "먹어요 (meo geo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 85,
+    "front_raw": "Boire",
+    "back_raw": "마셔요 (ma syeo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 86,
+    "front_raw": "Dormir",
+    "back_raw": "자요 (ja yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 87,
+    "front_raw": "Voir / Regarder",
+    "back_raw": "봐요 (bwa yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 88,
+    "front_raw": "Écouter / Entendre",
+    "back_raw": "들어요 (deu reo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 89,
+    "front_raw": "Parler",
+    "back_raw": "말해요 (mal hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 90,
+    "front_raw": "Lire",
+    "back_raw": "읽어요 (il geo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 91,
+    "front_raw": "Écrire",
+    "back_raw": "써요 (sseo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 92,
+    "front_raw": "Acheter",
+    "back_raw": "사요 (sa yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 93,
+    "front_raw": "Vendre",
+    "back_raw": "팔아요 (pa ra yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 94,
+    "front_raw": "Apprendre / Étudier",
+    "back_raw": "공부해요 (gong bu hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 95,
+    "front_raw": "Travailler",
+    "back_raw": "일해요 (il hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 96,
+    "front_raw": "Rencontrer",
+    "back_raw": "만나요 (man na yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 97,
+    "front_raw": "Attendre",
+    "back_raw": "기다려요 (gi da ryeo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 98,
+    "front_raw": "Donner",
+    "back_raw": "줘요 (jwo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 99,
+    "front_raw": "Recevoir",
+    "back_raw": "받아요 (ba da yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 100,
+    "front_raw": "Aimer (romantique)",
+    "back_raw": "사랑해요 (sa rang hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 101,
+    "front_raw": "Aimer (apprécier)",
+    "back_raw": "좋아해요 (jo a hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 102,
+    "front_raw": "Détester / Ne pas aimer",
+    "back_raw": "싫어해요 (si reo hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 103,
+    "front_raw": "Savoir / Comprendre",
+    "back_raw": "알아요 (a ra yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 104,
+    "front_raw": "Ne pas savoir / Pas comprendre",
+    "back_raw": "몰라요 (mol la yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 105,
+    "front_raw": "Ouvrir",
+    "back_raw": "열어요 (yeo reo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 106,
+    "front_raw": "Fermer",
+    "back_raw": "닫아요 (da da yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 107,
+    "front_raw": "Monter (dans un transport)",
+    "back_raw": "타요 (ta yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 108,
+    "front_raw": "Descendre",
+    "back_raw": "내려요 (nae ryeo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 109,
+    "front_raw": "Être (Identification : C'est...)",
+    "back_raw": "...이에요 / ...예요 (...i e yo / ...ye yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 110,
+    "front_raw": "Être (Localisation : Être à...)",
+    "back_raw": "...에 있어요 (...e i sseo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 111,
+    "front_raw": "Avoir / Exister (Il y a...)",
+    "back_raw": "있어요 (i sseo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 112,
+    "front_raw": "Ne pas avoir / Ne pas exister",
+    "back_raw": "없어요 (eop seo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 113,
+    "front_raw": "Être bon / Bien",
+    "back_raw": "좋아요 (jo a yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 114,
+    "front_raw": "Être mauvais",
+    "back_raw": "나빠요 (na ppa yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 115,
+    "front_raw": "Être grand",
+    "back_raw": "커요 (keo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 116,
+    "front_raw": "Être petit",
+    "back_raw": "작아요 (ja ga yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 117,
+    "front_raw": "Être beaucoup / nombreux",
+    "back_raw": "많아요 (ma na yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 118,
+    "front_raw": "Être peu",
+    "back_raw": "적어요 (jeo geo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 119,
+    "front_raw": "Être délicieux",
+    "back_raw": "맛있어요 (ma shi sseo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 120,
+    "front_raw": "Ne pas être délicieux",
+    "back_raw": "맛없어요 (ma deop seo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 121,
+    "front_raw": "Être amusant / Intéressant",
+    "back_raw": "재미있어요 (jae mi i sseo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 122,
+    "front_raw": "Être ennuyeux",
+    "back_raw": "재미없어요 (jae mi eop seo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 123,
+    "front_raw": "Être difficile",
+    "back_raw": "어려워요 (eo ryeo wo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 124,
+    "front_raw": "Être facile",
+    "back_raw": "쉬워요 (swi wo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 125,
+    "front_raw": "Avoir mal / Être malade",
+    "back_raw": "아파요 (a pa yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 126,
+    "front_raw": "Être fatigué",
+    "back_raw": "피곤해요 (pi gon hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 127,
+    "front_raw": "Être occupé",
+    "back_raw": "바빠요 (ba ppa yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 128,
+    "front_raw": "Être chaud (météo)",
+    "back_raw": "더워요 (deo wo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 129,
+    "front_raw": "Être froid (météo)",
+    "back_raw": "추워요 (chu wo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 130,
+    "front_raw": "Être chaud (objet)",
+    "back_raw": "뜨거워요 (tteu geo wo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 131,
+    "front_raw": "Être froid (objet)",
+    "back_raw": "차가워요 (cha ga wo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 132,
+    "front_raw": "Être joli / Beau",
+    "back_raw": "예뻐요 (ye ppeo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 133,
+    "front_raw": "Être cool / Impressionnant",
+    "back_raw": "멋있어요 (meo shi sseo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 134,
+    "front_raw": "Très / Beaucoup",
+    "back_raw": "아주 (a ju) / 너무 (neo mu)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 135,
+    "front_raw": "Un peu",
+    "back_raw": "조금 (jo geum)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 136,
+    "front_raw": "Vraiment / Réellement",
+    "back_raw": "진짜 (jin jja)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 137,
+    "front_raw": "Et (connecte les noms)",
+    "back_raw": "...하고 (ha go) / ...와/과 (wa/gwa)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 138,
+    "front_raw": "Et / Et puis (connecte les phrases)",
+    "back_raw": "그리고 (geu ri go)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 139,
+    "front_raw": "Mais / Cependant",
+    "back_raw": "하지만 (ha ji man)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 140,
+    "front_raw": "Donc / Alors",
+    "back_raw": "그래서 (geu rae seo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 141,
+    "front_raw": "Vouloir faire...",
+    "back_raw": "...고 싶어요 (...go shi peo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 142,
+    "front_raw": "Pouvoir (faire...)",
+    "back_raw": "...(으)ㄹ 수 있어요 (...(eu)l su i sseo yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 143,
+    "front_raw": "Ne pas pouvoir (faire...)",
+    "back_raw": "...못 해요 (...mot hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 144,
+    "front_raw": "Je ne comprends pas",
+    "back_raw": "이해 못 해요 (i hae mot hae yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 145,
+    "front_raw": "Parlez plus lentement, svp",
+    "back_raw": "천천히 말해주세요 (cheon cheon hi mal hae ju se yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 146,
+    "front_raw": "Comment dit-on X en coréen ?",
+    "back_raw": "X 한국말로 뭐예요? (X han guk mal lo mwo ye yo?)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 147,
+    "front_raw": "Bonne nuit",
+    "back_raw": "잘 자요 (jal ja-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 148,
+    "front_raw": "Bon appétit (avant de manger)",
+    "back_raw": "잘 먹겠습니다 (jal meok-get-seum-ni-da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 149,
+    "front_raw": "Merci pour le repas (après avoir mangé)",
+    "back_raw": "잘 먹었습니다 (jal meo-geot-seum-ni-da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 150,
+    "front_raw": "Félicitations",
+    "back_raw": "축하해요 (chu-ka-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 151,
+    "front_raw": "Bienvenue",
+    "back_raw": "어서 오세요 (eo-seo o-se-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 152,
+    "front_raw": "Bonne chance",
+    "back_raw": "화이팅 (hwa-i-ting)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 153,
+    "front_raw": "S'il vous plaît (en demandant un service)",
+    "back_raw": "제발 (je-bal)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 154,
+    "front_raw": "D'accord",
+    "back_raw": "알겠어요 (al-ge-sseo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 155,
+    "front_raw": "Bien sûr / Certainement",
+    "back_raw": "그럼요 (geu-reom-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 156,
+    "front_raw": "Un instant / Attendez",
+    "back_raw": "잠시만요 (jam-si-man-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 157,
+    "front_raw": "Vite / Dépêchons-nous",
+    "back_raw": "빨리 (ppal-li)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 158,
+    "front_raw": "Ensuite / Puis",
+    "back_raw": "그 다음 (geu da-eum)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 159,
+    "front_raw": "Avant",
+    "back_raw": "전에 (jeon-e)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 160,
+    "front_raw": "Après",
+    "back_raw": "후에 (hu-e)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 161,
+    "front_raw": "Maintenant",
+    "back_raw": "이제 (i-je)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 162,
+    "front_raw": "Encore / De nouveau",
+    "back_raw": "또 (tto)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 163,
+    "front_raw": "Encore (dans le sens \"à nouveau\")",
+    "back_raw": "다시 (da-si)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 164,
+    "front_raw": "Seulement",
+    "back_raw": "فقط (bak-kke)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 165,
+    "front_raw": "Soudainement",
+    "back_raw": "갑자기 (gap-ja-gi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 166,
+    "front_raw": "Sœur (aînée, pour une fille)",
+    "back_raw": "언니 (eon-ni)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 167,
+    "front_raw": "Frère (aîné, pour un garçon)",
+    "back_raw": "형 (hyeong)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 168,
+    "front_raw": "Sœur (cadette)",
+    "back_raw": "여동생 (yeo-dong-saeng)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 169,
+    "front_raw": "Frère (cadet)",
+    "back_raw": "남동생 (nam-dong-saeng)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 170,
+    "front_raw": "Enfant",
+    "back_raw": "아이 (a-i) / 어린이 (eo-ri-ni)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 171,
+    "front_raw": "Animal",
+    "back_raw": "동물 (dong-mul)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 172,
+    "front_raw": "Chien",
+    "back_raw": "개 (gae)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 173,
+    "front_raw": "Chat",
+    "back_raw": "고양이 (go-yang-i)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 174,
+    "front_raw": "Pluie",
+    "back_raw": "비 (bi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 175,
+    "front_raw": "Neige",
+    "back_raw": "눈 (nun)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 176,
+    "front_raw": "Soleil",
+    "back_raw": "해 (hae) / 태양 (tae-yang)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 177,
+    "front_raw": "Vent",
+    "back_raw": "바람 (ba-ram)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 178,
+    "front_raw": "Nuageux",
+    "back_raw": "흐림 (heu-rim)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 179,
+    "front_raw": "Montagne",
+    "back_raw": "산 (san)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 180,
+    "front_raw": "Mer",
+    "back_raw": "바다 (ba-da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 181,
+    "front_raw": "Rivière",
+    "back_raw": "강 (gang)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 182,
+    "front_raw": "Parc",
+    "back_raw": "공원 (gong-won)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 183,
+    "front_raw": "Livre",
+    "back_raw": "책 (chaek)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 184,
+    "front_raw": "Stylo / Crayon",
+    "back_raw": "펜 (pen) / 연필 (yeon-pil)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 185,
+    "front_raw": "Téléphone",
+    "back_raw": "전화기 (jeon-hwa-gi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 186,
+    "front_raw": "Ordinateur",
+    "back_raw": "컴퓨터 (keom-pyu-teo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 187,
+    "front_raw": "Internet",
+    "back_raw": "인터넷 (in-teo-net)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 188,
+    "front_raw": "Musique",
+    "back_raw": "음악 (eu-mak)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 189,
+    "front_raw": "Chanson",
+    "back_raw": "노래 (no-rae)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 190,
+    "front_raw": "Film",
+    "back_raw": "영화 (yeong-hwa)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 191,
+    "front_raw": "Photo",
+    "back_raw": "사진 (sa-jin)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 192,
+    "front_raw": "Cadeau",
+    "back_raw": "선물 (seon-mul)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 193,
+    "front_raw": "Argent",
+    "back_raw": "돈 (don)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 194,
+    "front_raw": "Temps (météo)",
+    "back_raw": "날씨 (nal-ssi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 195,
+    "front_raw": "Problème",
+    "back_raw": "문제 (mun-je)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 196,
+    "front_raw": "Idée",
+    "back_raw": "아이디어 (a-i-di-eo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 197,
+    "front_raw": "Histoire",
+    "back_raw": "이야기 (i-ya-gi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 198,
+    "front_raw": "Rêve",
+    "back_raw": "꿈 (kkum)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 199,
+    "front_raw": "Vacances",
+    "back_raw": "휴가 (hyu-ga)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 200,
+    "front_raw": "Voyage",
+    "back_raw": "여행 (yeo-haeng)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 201,
+    "front_raw": "Pays",
+    "back_raw": "나라 (na-ra)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 202,
+    "front_raw": "Ville",
+    "back_raw": "도시 (do-si)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 203,
+    "front_raw": "Rue",
+    "back_raw": "거리 (geo-ri)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 204,
+    "front_raw": "Pont",
+    "back_raw": "다리 (da-ri)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 205,
+    "front_raw": "Voiture",
+    "back_raw": "차 (cha)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 206,
+    "front_raw": "Vélo",
+    "back_raw": "자전거 (ja-jeon-geo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 207,
+    "front_raw": "Avion",
+    "back_raw": "비행기 (bi-haeng-gi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 208,
+    "front_raw": "Entrer / Rentrer",
+    "back_raw": "들어가요 (deu-reo-ga-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 209,
+    "front_raw": "Sortir",
+    "back_raw": "나가요 (na-ga-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 210,
+    "front_raw": "Rester",
+    "back_raw": "머물러요 (meo-mul-leo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 211,
+    "front_raw": "Partir / Quitter",
+    "back_raw": "떠나요 (tteo-na-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 212,
+    "front_raw": "Courir",
+    "back_raw": "달려요 (dal-ryeo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 213,
+    "front_raw": "Marcher",
+    "back_raw": "걸어요 (geo-reo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 214,
+    "front_raw": "S'asseoir",
+    "back_raw": "앉아요 (an-ja-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 215,
+    "front_raw": "Se lever (debout)",
+    "back_raw": "일어나요 (i-reo-na-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 216,
+    "front_raw": "Tenir / Prendre",
+    "back_raw": "잡아요 (ja-ba-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 217,
+    "front_raw": "Mettre (des vêtements)",
+    "back_raw": "입어요 (i-beo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 218,
+    "front_raw": "Enlever (des vêtements)",
+    "back_raw": "벗어요 (beo-seo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 219,
+    "front_raw": "Laver",
+    "back_raw": "씻어요 (ssi-seo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 220,
+    "front_raw": "Nettoyer",
+    "back_raw": "청소해요 (cheong-so-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 221,
+    "front_raw": "Cuisiner",
+    "back_raw": "요리해요 (yo-ri-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 222,
+    "front_raw": "Acheter (pour offrir)",
+    "back_raw": "사 드리다 (sa deu-ri-da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 223,
+    "front_raw": "Essayer",
+    "back_raw": "시도해요 (si-do-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 224,
+    "front_raw": "Changer",
+    "back_raw": "변경해요 (byeon-gyeong-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 225,
+    "front_raw": "Utiliser",
+    "back_raw": "사용해요 (sa-yong-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 226,
+    "front_raw": "Sentir (odorat)",
+    "back_raw": "냄새 맡아요 (naem-sae mat-a-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 227,
+    "front_raw": "Rire",
+    "back_raw": "웃어요 (u-seo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 228,
+    "front_raw": "Pleurer",
+    "back_raw": "울어요 (u-reo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 229,
+    "front_raw": "Penser",
+    "back_raw": "생각해요 (saeng-ga-kae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 230,
+    "front_raw": "Espérer",
+    "back_raw": "바라요 (ba-ra-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 231,
+    "front_raw": "S'inquiéter",
+    "back_raw": "걱정해요 (geok-jjeong-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 232,
+    "front_raw": "Heureux",
+    "back_raw": "행복해요 (haeng-bo-kae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 233,
+    "front_raw": "Triste",
+    "back_raw": "슬퍼요 (seul-peo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 234,
+    "front_raw": "En colère",
+    "back_raw": "화나요 (hwa-na-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 235,
+    "front_raw": "Surpris",
+    "back_raw": "놀랐어요 (nol-la-sseo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 236,
+    "front_raw": "Effrayé",
+    "back_raw": "무서워요 (mu-seo-wo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 237,
+    "front_raw": "Ennuyé",
+    "back_raw": "지루해요 (ji-ru-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 238,
+    "front_raw": "Calme",
+    "back_raw": "조용해요 (jo-yong-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 239,
+    "front_raw": "Bruyant",
+    "back_raw": "시끄러워요 (si-kkeu-reo-wo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 240,
+    "front_raw": "Propre",
+    "back_raw": "깨끗해요 (kkae-kkeu-tae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 241,
+    "front_raw": "Sale",
+    "back_raw": "더러워요 (deo-reo-wo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 242,
+    "front_raw": "Nouveau",
+    "back_raw": "새롭다 (sae-rop-tta)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 243,
+    "front_raw": "Vieux (objet)",
+    "back_raw": "오래됐다 (o-rae-dwaet-tta)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 244,
+    "front_raw": "Jeune (âge)",
+    "back_raw": "젊다 (jeom-tta)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 245,
+    "front_raw": "Vieux (âge)",
+    "back_raw": "늙다 (neuk-tta)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 246,
+    "front_raw": "Fort",
+    "back_raw": "강해요 (gang-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 247,
+    "front_raw": "Faible",
+    "back_raw": "약해요 (ya-kae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 248,
+    "front_raw": "Lourd",
+    "back_raw": "무거워요 (mu-geo-wo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 249,
+    "front_raw": "Léger",
+    "back_raw": "가벼워요 (ga-byeo-wo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 250,
+    "front_raw": "Dur (difficile)",
+    "back_raw": "딱딱하다 (ttak-tta-ka-da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 251,
+    "front_raw": "Mou",
+    "back_raw": "부드럽다 (bu-deu-reop-tta)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 252,
+    "front_raw": "Vide",
+    "back_raw": "비어 있어요 (bi-eo i-sseo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 253,
+    "front_raw": "Plein",
+    "back_raw": "가득 해요 (ga-deuk hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 254,
+    "front_raw": "Cher (prix)",
+    "back_raw": "비싸요 (bi-ssa-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 255,
+    "front_raw": "Bon marché",
+    "back_raw": "싸요 (ssa-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 256,
+    "front_raw": "Long",
+    "back_raw": "길어요 (gi-reo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 257,
+    "front_raw": "Court",
+    "back_raw": "짧아요 (jjal-ba-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 258,
+    "front_raw": "Large",
+    "back_raw": "넓어요 (neol-beo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 259,
+    "front_raw": "Étroit",
+    "back_raw": "좁아요 (jo-ba-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 260,
+    "front_raw": "Confortable",
+    "back_raw": "편안해요 (pyeo-na-nae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 261,
+    "front_raw": "Inconfortable",
+    "back_raw": "불편해요 (bul-pyeo-nae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 262,
+    "front_raw": "Vrai",
+    "back_raw": "진실 (jin-sil)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 263,
+    "front_raw": "Faux",
+    "back_raw": "거짓말 (geo-jin-mal)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 264,
+    "front_raw": "Possible",
+    "back_raw": "가능해요 (ga-neung-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 265,
+    "front_raw": "Impossible",
+    "back_raw": "불가능해요 (bul-ga-neung-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 266,
+    "front_raw": "Nécessaire",
+    "back_raw": "필요해요 (pi-ryo-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 267,
+    "front_raw": "Important",
+    "back_raw": "중요해요 (jung-yo-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 268,
+    "front_raw": "Sûr / Certain",
+    "back_raw": "확실해요 (hwak-ssi-rae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 269,
+    "front_raw": "",
+    "back_raw": ""
+  },
+  {
+    "source": "anki-important-words",
+    "row": 270,
+    "front_raw": "Médecin",
+    "back_raw": "의사 (ui-sa)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 271,
+    "front_raw": "Fonctionnaire",
+    "back_raw": "공무원 (gong-mu-won)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 272,
+    "front_raw": "Lycéen",
+    "back_raw": "고등학생 (go-deung-hak-saeng)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 273,
+    "front_raw": "Mairie",
+    "back_raw": "시청 (si-cheong)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 274,
+    "front_raw": "Canapé",
+    "back_raw": "소파 (so-pa)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 275,
+    "front_raw": "Jeu",
+    "back_raw": "게임 (ge-im)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 276,
+    "front_raw": "Habiter / Vivre",
+    "back_raw": "살아요 (sa-ra-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 277,
+    "front_raw": "Jouer / S'amuser",
+    "back_raw": "놀아요 (no-ra-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 278,
+    "front_raw": "Se promener",
+    "back_raw": "산책해요 (san-chaek-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 279,
+    "front_raw": "Se reposer",
+    "back_raw": "쉬어요 (swi-eo-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 280,
+    "front_raw": "Ensemble",
+    "back_raw": "같이 (ga-chi)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 281,
+    "front_raw": "S'ennuyer",
+    "back_raw": "심심해요 (sim-sim-hae-yo)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 282,
+    "front_raw": "Tôt",
+    "back_raw": "일찍 (il-jjik)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 283,
+    "front_raw": "Je suis de retour",
+    "back_raw": "다녀왔습니다 (da-nyeo-wat-seum-ni-da)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 284,
+    "front_raw": "Kimbap",
+    "back_raw": "김밥 (gim-bap)"
+  },
+  {
+    "source": "anki-important-words",
+    "row": 285,
+    "front_raw": "Ramyeon",
+    "back_raw": "라면 (ra-myeon)"
+  }
+]

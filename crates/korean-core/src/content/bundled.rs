@@ -1,10 +1,16 @@
 use super::model::Pack;
 
 /// Packs shipped inside the binary, in unlock order.
-const BUNDLED: &[(&str, &str)] = &[(
-    "starter",
-    include_str!("../../../../content/starter/pack.json"),
-)];
+const BUNDLED: &[(&str, &str)] = &[
+    (
+        "starter",
+        include_str!("../../../../content/starter/pack.json"),
+    ),
+    (
+        "legacy",
+        include_str!("../../../../content/legacy/pack.json"),
+    ),
+];
 
 /// Parses the bundled packs. They are validated in CI, so a parse failure is a build defect.
 pub fn bundled_packs() -> Vec<Pack> {

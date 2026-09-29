@@ -6,6 +6,9 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 ## [Unreleased]
 
 ### Added
+- `anki-import` tool: legacy CSV → immutable raw rows → curated lexemes → `legacy` pack (284 word cards, 213 usage sentences).
+- Curation of the 284-word deck with 29 explicit fixes (e.g. Arabic `فقط` → `만`/`밖에`, `딱딱하다` is "hard, rigid", not "difficult"); romanization dropped.
+- Validator rule: the same Korean line may not appear in two items.
 - `korean-core` crate with the normalized content model (raw entry, lexeme, learning item, pack) and derived skills (listening, response, build).
 - Content validator enforcing the pack contract (Hangul-only Korean, 3 distinct distractors, reply counts, chunk integrity, unique ids); bundled packs validated in CI.
 - `content/starter` pack: 22 survival phrases.

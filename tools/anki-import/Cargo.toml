@@ -1,0 +1,19 @@
+[package]
+name = "anki-import"
+description = "Imports the legacy Anki CSV into raw entries, lexemes and the legacy pack"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+csv = "1"
+korean-core = { path = "../../crates/korean-core" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true
