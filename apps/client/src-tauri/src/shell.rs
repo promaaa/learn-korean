@@ -97,8 +97,9 @@ pub fn hide_window(window: WebviewWindow) -> Result<(), String> {
     Ok(())
 }
 
-/// Registers Super+Z where the platform allows applications to grab global keys (macOS, X11,
-/// Windows). Wayland compositors do not; there the compositor binds the key to
+/// Registers the global shortcut where the platform allows applications to grab global keys:
+/// Ctrl+Option+Z on macOS, where Super is Command and Command+Z is Undo in every app; Super+Z on
+/// X11 and Windows. Wayland compositors do not; there the compositor binds the key to
 /// `learn-korean --toggle` (see `docs/omarchy.md`).
 #[cfg(desktop)]
 pub fn register_global_shortcut(app: &AppHandle) {
@@ -110,7 +111,12 @@ pub fn register_global_shortcut(app: &AppHandle) {
         log::info!("Wayland session: global shortcut is provided by the compositor");
         return;
     }
-    let shortcut = Shortcut::new(Some(Modifiers::SUPER), Code::KeyZ);
+    let (modifiers, label) = if cfg!(target_os = "macos") {
+        (Modifiers::CONTROL | Modifiers::ALT, "Ctrl+Option+Z")
+    } else {
+        (Modifiers::SUPER, "Super+Z")
+    };
+    let shortcut = Shortcut::new(Some(modifiers), Code::KeyZ);
     let plugin = tauri_plugin_global_shortcut::Builder::new()
         .with_handler(move |app, pressed, event| {
             if pressed == &shortcut && event.state() == ShortcutState::Pressed {
@@ -123,7 +129,7 @@ pub fn register_global_shortcut(app: &AppHandle) {
         return;
     }
     if let Err(err) = app.global_shortcut().register(shortcut) {
-        log::warn!("could not register Super+Z: {err}");
+        log::warn!("could not register {label}: {err}");
     }
 }
 

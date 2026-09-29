@@ -17,7 +17,7 @@ Tauri 2 · Rust · Svelte 5 · TypeScript · SQLite · FSRS.
 
 | Key | Action |
 | --- | --- |
-| `Super + Z` | show / hide the window |
+| `Super + Z` (macOS: `Ctrl + Option + Z`) | show / hide the window |
 | `1`–`4` | answer (physical digit row, also on AZERTY) |
 | `J` / `K`, `Enter` | move between options, choose |
 | `H` / `L`, `Space`, `Backspace`, `Enter` | build game: move, place a chunk, undo, check |

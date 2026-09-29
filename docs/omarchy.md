@@ -7,7 +7,8 @@ and forwards it to the running instance:
 Super+Z ─▶ hyprland bind ─▶ learn-korean --toggle ─▶ single-instance ─▶ running app toggles
 ```
 
-On macOS, X11 and Windows the app registers Super+Z itself (`tauri-plugin-global-shortcut`).
+On X11 and Windows the app registers Super+Z itself (`tauri-plugin-global-shortcut`); on macOS it
+registers Ctrl+Option+Z, since Super there is Command and Command+Z is Undo.
 
 ## Install
 
