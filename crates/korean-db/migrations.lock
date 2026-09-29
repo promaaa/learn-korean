@@ -1,0 +1,3 @@
+# Released migrations are immutable. `cargo test -p korean-db` fails if one changes.
+# Append a line for every new migration: <version> <sha256 of the .sql file>
+0001 39fcdec34779909d34d9481e3e04412cb9ce7e9f9ac5f6c0524af982281eea4a
