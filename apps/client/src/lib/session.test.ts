@@ -34,6 +34,7 @@ function backend({ total = 1, queue = [exercise, null], fail }: Backend = {}) {
           feedback: {
             correct: true,
             correctIndex: 2,
+            translations: [],
             rating: "good",
             korean: "이거 뭐예요?",
             english: "What is this?",
