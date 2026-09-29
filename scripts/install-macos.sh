@@ -48,8 +48,10 @@ cat >"$agent" <<EOF
 </plist>
 EOF
 
-# (Re)start the background instance so the new build is used.
+# Restart the background instance so the new build is used. An instance launched by hand is not
+# launchd's: stop it too, or the new one hands its arguments to it and exits (single instance).
 domain="gui/$(id -u)"
 launchctl bootout "$domain/$label" 2>/dev/null || true
+pkill -x learn-korean || true
 launchctl bootstrap "$domain" "$agent"
 echo "Installed. Press Ctrl+Option+Z."
