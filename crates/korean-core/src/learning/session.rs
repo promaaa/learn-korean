@@ -4,7 +4,7 @@ use std::collections::{HashMap, VecDeque};
 
 use serde::{Deserialize, Serialize};
 
-use super::exercise::{self, Exercise, ExerciseView};
+use super::exercise::{self, Exercise, ExerciseView, Expected, Prompt};
 use super::plan::{Card, Plan};
 use crate::content::Item;
 use crate::rng::Rng;
@@ -19,14 +19,21 @@ const MAX_RETRIES: u8 = 2;
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(tag = "type", rename_all = "camelCase")]
 pub enum Answer {
-    Choice { index: usize },
+    Choice {
+        index: usize,
+    },
+    /// Indices into the displayed chunks, in the order the learner placed them.
+    Order {
+        order: Vec<usize>,
+    },
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Feedback {
     pub correct: bool,
-    pub correct_index: usize,
+    /// Right option of a multiple-choice exercise.
+    pub correct_index: Option<usize>,
     /// English of each option (reply game), empty when the options already are English.
     pub translations: Vec<String>,
     pub rating: Rating,
@@ -134,14 +141,10 @@ impl Session {
             .current
             .as_ref()
             .ok_or(SessionError::NoCurrentExercise)?;
-        let Answer::Choice { index } = answer;
-        if *index >= exercise.view.prompt.options().len() {
-            return Err(SessionError::InvalidAnswer);
-        }
+        let correct = check(&exercise.view.prompt, &exercise.expected, answer)?;
         let exercise = self.current.take().expect("checked above");
         let card = exercise.view.card;
         let item = &self.items[&card.item_id];
-        let correct = *index == exercise.correct;
         let chunks = item.build_chunks().len();
         let rating = scoring::grade(card.skill, correct, elapsed_ms, chunks);
         let state = scheduler::review(self.states.get(&card), rating, now_ms);
@@ -169,7 +172,10 @@ impl Session {
         Ok(Outcome {
             feedback: Feedback {
                 correct,
-                correct_index: exercise.correct,
+                correct_index: match exercise.expected {
+                    Expected::Choice(index) => Some(index),
+                    Expected::Order(_) => None,
+                },
                 translations: exercise.translations,
                 rating,
                 korean: item.korean.clone(),
@@ -182,6 +188,29 @@ impl Session {
             state,
             elapsed_ms,
         })
+    }
+}
+
+/// Whether `answer` solves the exercise; `InvalidAnswer` if it does not even fit it.
+fn check(prompt: &Prompt, expected: &Expected, answer: &Answer) -> Result<bool, SessionError> {
+    match (prompt, expected, answer) {
+        (
+            Prompt::Listening { options, .. } | Prompt::Response { options, .. },
+            Expected::Choice(correct),
+            Answer::Choice { index },
+        ) if *index < options.len() => Ok(index == correct),
+        (Prompt::Build { chunks, .. }, Expected::Order(solution), Answer::Order { order }) => {
+            let mut seen = vec![false; chunks.len()];
+            let is_permutation = order.len() == chunks.len()
+                && order
+                    .iter()
+                    .all(|&i| i < seen.len() && !std::mem::replace(&mut seen[i], true));
+            if !is_permutation {
+                return Err(SessionError::InvalidAnswer);
+            }
+            Ok(order.iter().map(|&i| &chunks[i]).eq(solution.iter()))
+        }
+        _ => Err(SessionError::InvalidAnswer),
     }
 }
 
@@ -234,11 +263,10 @@ mod tests {
     fn correct_index(s: &mut Session) -> usize {
         let view = s.current().unwrap().clone();
         let english = &s.items[&view.card.item_id].english;
-        view.prompt
-            .options()
-            .iter()
-            .position(|o| o == english)
-            .unwrap()
+        let Prompt::Listening { options, .. } = &view.prompt else {
+            panic!("listening expected");
+        };
+        options.iter().position(|o| o == english).unwrap()
     }
 
     #[test]
@@ -292,6 +320,30 @@ mod tests {
             answers += 1;
         }
         assert_eq!(answers, 1 + MAX_RETRIES as usize);
+    }
+
+    #[test]
+    fn build_answers_are_checked_by_chunk_text_and_must_be_permutations() {
+        let prompt = Prompt::Build {
+            english: "x".into(),
+            chunks: vec!["좀".into(), "천천히".into(), "좀".into()],
+        };
+        let expected = Expected::Order(vec!["좀".into(), "좀".into(), "천천히".into()]);
+        let order = |o: &[usize]| Answer::Order { order: o.to_vec() };
+        // Either 좀 can go first.
+        assert_eq!(check(&prompt, &expected, &order(&[0, 2, 1])), Ok(true));
+        assert_eq!(check(&prompt, &expected, &order(&[2, 0, 1])), Ok(true));
+        assert_eq!(check(&prompt, &expected, &order(&[1, 0, 2])), Ok(false));
+        for bad in [&[0, 0, 1][..], &[0, 1], &[0, 1, 3]] {
+            assert_eq!(
+                check(&prompt, &expected, &order(bad)),
+                Err(SessionError::InvalidAnswer)
+            );
+        }
+        assert_eq!(
+            check(&prompt, &expected, &Answer::Choice { index: 0 }),
+            Err(SessionError::InvalidAnswer)
+        );
     }
 
     #[test]

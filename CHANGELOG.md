@@ -5,7 +5,11 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ## [Unreleased]
 
+## [0.3.0]
+
 ### Added
+- Build game: the English meaning is shown, assemble the Korean sentence from shuffled chunks (`1-9` or `H`/`L` + `Space` to place, `Backspace` to undo, `Enter` to check); the sentence is spoken after answering.
+- Every skill (listening, response, build) is now scheduled; sentences with 3 to 9 chunks can be built.
 - Reply game: someone says a Korean line to you (spoken), pick the natural Korean answer among four; after answering, every option is translated and the right answer is spoken back.
 - Photos on cards with an `image` query: Openverse, then Wikimedia Commons; attribution shown under every photo.
 - Schema 4: `image_refs` (provider, image URL, source URL, attribution per query). Image bytes are kept in memory and served through the `kimg://` protocol, never written to disk.

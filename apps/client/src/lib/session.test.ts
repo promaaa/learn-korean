@@ -63,7 +63,7 @@ describe("SessionController", () => {
     const s = new SessionController(time.now);
     await s.start();
     expect(s.phase).toBe("exercise");
-    expect(s.exercise?.prompt.korean).toBe("이거 뭐예요?");
+    expect(s.exercise?.prompt).toMatchObject({ korean: "이거 뭐예요?" });
 
     time.t += 4_200;
     await s.answer({ type: "choice", index: 2 });

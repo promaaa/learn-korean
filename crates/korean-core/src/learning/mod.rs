@@ -11,4 +11,4 @@ pub use plan::{Card, Limits, Plan, plan_session};
 pub use session::{Answer, Feedback, Outcome, Progress, Session, SessionError};
 
 /// Skills that have a game. Planning only schedules these.
-pub const PLAYABLE: &[Skill] = &[Skill::Listening, Skill::Response];
+pub const PLAYABLE: &[Skill] = &Skill::ALL;
