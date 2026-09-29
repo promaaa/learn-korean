@@ -60,6 +60,22 @@ changes. User progress references items by id only, so editing a pack never lose
 | `replies` | sentences only; `good` 1–3, `bad` exactly 3, all Hangul text with English |
 | `chunks` | optional; `chunks.join(" ") == korean`; default is splitting on spaces |
 | `image` | optional 1–3 word English photo query |
+| `lexemes` | dictionary forms in Hangul; sentences list every content word (see below), words their own lemma |
+
+### Lexemes and word cards
+
+A sentence's `lexemes` list every content word of the line as a dictionary form (`매운` → `맵다`,
+`제` → `저`): nouns, pronouns, verbs, adjectives, adverbs, numerals, counters, determiners and
+interjections. The session planner only serves a sentence once each of its lexemes that has a word
+card is known, pulling missing word cards in just before it. So every such lexeme must have a word
+card (an item of kind `word` whose `lexemes` contain it) in some bundled pack, placed in the earliest
+pack that uses it, before its first sentence. Grammar — particles, the copula `이다`, patterns such as
+`에 있다` — is exempt: those lemmas may appear in `lexemes` but get no card and are listed in the
+`GRAMMAR` const of the `every_sentence_lexeme_has_a_word_card` test in
+`crates/korean-core/src/content/bundled.rs`, which fails with the offending lemma and sentence id.
+
+Words needed only by legacy sentences live in the `everyday-words` pack, bundled right after
+`legacy`, ordered by first use in the legacy deck.
 
 ## Skills
 
@@ -108,3 +124,7 @@ The importer refuses to build unless every raw row is curated, and rows with det
 explicit `fix` or `skip`. Grammar patterns and particles get no word card; they are taught through
 their usage sentences. A test checks that the committed `raw.json`, `lexemes.json` and `pack.json`
 are exactly what the importer produces, so generated files cannot drift from their sources.
+
+Each `usage` sentence of a curation entry may carry `lexemes`: the other content words of that
+sentence (dictionary forms). The built sentence's lexemes are the entry's head lemma (when it is
+Hangul) followed by these, deduplicated.

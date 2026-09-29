@@ -64,10 +64,14 @@ export interface Progress {
   xp: number;
 }
 
+/** Which cards sessions draw from: word cards only, words before the sentences using them, or all. */
+export type Focus = "words" | "guided" | "all";
+
 export interface SessionStarted {
   total: number;
   due: number;
   new: number;
+  focus: Focus;
 }
 
 export interface Current {
@@ -88,6 +92,11 @@ export function appStatus(): Promise<AppStatus> {
 
 export function sessionStart(): Promise<SessionStarted> {
   return invoke("session_start");
+}
+
+/** Persists the focus; it applies from the next `sessionStart`. */
+export function setFocus(focus: Focus): Promise<void> {
+  return invoke("set_focus", { focus });
 }
 
 export function sessionCurrent(): Promise<Current> {

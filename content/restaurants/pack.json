@@ -1,6 +1,6 @@
 {
   "id": "restaurants",
-  "version": 1,
+  "version": 2,
   "title": "Restaurants",
   "description": "Eating out in Korea: getting a table, ordering, spice and allergies, paying, takeout and cafés.",
   "unlock_level": 3,
@@ -55,6 +55,17 @@
       }
     },
     {
+      "id": "restaurants/two-before-a-counter",
+      "kind": "word",
+      "korean": "두",
+      "english": "two (before a counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "두"
+      ]
+    },
+    {
       "id": "restaurants/two-people",
       "kind": "sentence",
       "korean": "두 명이요.",
@@ -69,6 +80,17 @@
         "Two bowls, please.",
         "Three people.",
         "Just one person."
+      ]
+    },
+    {
+      "id": "restaurants/to-reserve",
+      "kind": "word",
+      "korean": "예약하다",
+      "english": "to reserve",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "예약하다"
       ]
     },
     {
@@ -114,6 +136,17 @@
       }
     },
     {
+      "id": "restaurants/this-way",
+      "kind": "word",
+      "korean": "이쪽",
+      "english": "this way",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "이쪽"
+      ]
+    },
+    {
       "id": "restaurants/sit-over-here",
       "kind": "sentence",
       "korean": "이쪽으로 앉으세요.",
@@ -157,6 +190,17 @@
       }
     },
     {
+      "id": "restaurants/a-moment",
+      "kind": "word",
+      "korean": "잠시",
+      "english": "a moment",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잠시"
+      ]
+    },
+    {
       "id": "restaurants/please-wait-moment",
       "kind": "sentence",
       "korean": "잠시만 기다려 주세요.",
@@ -165,7 +209,8 @@
       "register": "polite",
       "lexemes": [
         "잠시",
-        "기다리다"
+        "기다리다",
+        "주다"
       ],
       "distractors": [
         "Please come in.",
@@ -198,6 +243,28 @@
           }
         ]
       }
+    },
+    {
+      "id": "restaurants/window-side",
+      "kind": "word",
+      "korean": "창가",
+      "english": "window side",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "창가"
+      ]
+    },
+    {
+      "id": "restaurants/seat",
+      "kind": "word",
+      "korean": "자리",
+      "english": "seat",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "자리"
+      ]
     },
     {
       "id": "restaurants/window-seat",
@@ -270,6 +337,28 @@
       ]
     },
     {
+      "id": "restaurants/recommendation",
+      "kind": "word",
+      "korean": "추천",
+      "english": "recommendation",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "추천"
+      ]
+    },
+    {
+      "id": "restaurants/menu-item",
+      "kind": "word",
+      "korean": "메뉴",
+      "english": "menu item",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "메뉴"
+      ]
+    },
+    {
       "id": "restaurants/what-do-you-recommend",
       "kind": "sentence",
       "korean": "추천 메뉴가 뭐예요?",
@@ -303,6 +392,17 @@
         "Is this salty?",
         "Is this sweet?",
         "Was this spicy?"
+      ]
+    },
+    {
+      "id": "restaurants/to-eat-honorific",
+      "kind": "word",
+      "korean": "드시다",
+      "english": "to eat (honorific)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "드시다"
       ]
     },
     {
@@ -397,6 +497,17 @@
       }
     },
     {
+      "id": "restaurants/to-order",
+      "kind": "word",
+      "korean": "주문하다",
+      "english": "to order",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "주문하다"
+      ]
+    },
+    {
       "id": "restaurants/ready-to-order",
       "kind": "sentence",
       "korean": "주문하시겠어요?",
@@ -439,6 +550,17 @@
       }
     },
     {
+      "id": "restaurants/one",
+      "kind": "word",
+      "korean": "하나",
+      "english": "one",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "하나"
+      ]
+    },
+    {
       "id": "restaurants/one-bibimbap",
       "kind": "sentence",
       "korean": "비빔밥 하나 주세요.",
@@ -478,6 +600,28 @@
       "image": "kimchi stew"
     },
     {
+      "id": "restaurants/two-this",
+      "kind": "word",
+      "korean": "이",
+      "english": "two / this",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "이"
+      ]
+    },
+    {
+      "id": "restaurants/serving-counter",
+      "kind": "word",
+      "korean": "인분",
+      "english": "serving (counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "인분"
+      ]
+    },
+    {
       "id": "restaurants/pork-belly-two-servings",
       "kind": "sentence",
       "korean": "삼겹살 이 인분 주세요.",
@@ -499,6 +643,17 @@
       "image": "samgyeopsal"
     },
     {
+      "id": "restaurants/to-add",
+      "kind": "word",
+      "korean": "추가하다",
+      "english": "to add",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "추가하다"
+      ]
+    },
+    {
       "id": "restaurants/add-bowl-of-rice",
       "kind": "sentence",
       "korean": "공깃밥 하나 추가해 주세요.",
@@ -508,12 +663,24 @@
       "lexemes": [
         "공깃밥",
         "하나",
-        "추가하다"
+        "추가하다",
+        "주다"
       ],
       "distractors": [
         "Please add one more stew.",
         "Please cancel the rice.",
         "Please add a bottle of soju."
+      ]
+    },
+    {
+      "id": "restaurants/not",
+      "kind": "word",
+      "korean": "안",
+      "english": "not",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "안"
       ]
     },
     {
@@ -526,12 +693,24 @@
       "lexemes": [
         "안",
         "맵다",
-        "하다"
+        "하다",
+        "주다"
       ],
       "distractors": [
         "Please make it extra spicy.",
         "Please make it less salty.",
         "Is it very spicy?"
+      ]
+    },
+    {
+      "id": "restaurants/thing",
+      "kind": "word",
+      "korean": "것",
+      "english": "thing",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "것"
       ]
     },
     {
@@ -580,6 +759,28 @@
       }
     },
     {
+      "id": "restaurants/spiciness",
+      "kind": "word",
+      "korean": "맵기",
+      "english": "spiciness",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "맵기"
+      ]
+    },
+    {
+      "id": "restaurants/to-give-humble",
+      "kind": "word",
+      "korean": "드리다",
+      "english": "to give (humble)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "드리다"
+      ]
+    },
+    {
       "id": "restaurants/how-spicy",
       "kind": "sentence",
       "korean": "맵기는 어떻게 해 드릴까요?",
@@ -623,6 +824,28 @@
           }
         ]
       }
+    },
+    {
+      "id": "restaurants/by-any-chance",
+      "kind": "word",
+      "korean": "혹시",
+      "english": "by any chance",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "혹시"
+      ]
+    },
+    {
+      "id": "restaurants/allergy",
+      "kind": "word",
+      "korean": "알레르기",
+      "english": "allergy",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "알레르기"
+      ]
     },
     {
       "id": "restaurants/any-allergies",
@@ -669,6 +892,18 @@
       }
     },
     {
+      "id": "restaurants/peanut",
+      "kind": "word",
+      "korean": "땅콩",
+      "english": "peanut",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "땅콩"
+      ],
+      "image": "peanuts"
+    },
+    {
       "id": "restaurants/peanut-allergy",
       "kind": "sentence",
       "korean": "저는 땅콩 알레르기가 있어요.",
@@ -706,6 +941,17 @@
       ]
     },
     {
+      "id": "restaurants/to-leave-out",
+      "kind": "word",
+      "korean": "빼다",
+      "english": "to leave out",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "빼다"
+      ]
+    },
+    {
       "id": "restaurants/no-meat-please",
       "kind": "sentence",
       "korean": "고기 빼 주세요.",
@@ -714,7 +960,8 @@
       "register": "polite",
       "lexemes": [
         "고기",
-        "빼다"
+        "빼다",
+        "주다"
       ],
       "distractors": [
         "Please add more meat.",
@@ -757,6 +1004,17 @@
         "Some tea, please.",
         "No water, thanks.",
         "Where is the water?"
+      ]
+    },
+    {
+      "id": "restaurants/self-service",
+      "kind": "word",
+      "korean": "셀프",
+      "english": "self-service",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "셀프"
       ]
     },
     {
@@ -803,6 +1061,17 @@
       }
     },
     {
+      "id": "restaurants/more",
+      "kind": "word",
+      "korean": "더",
+      "english": "more",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "더"
+      ]
+    },
+    {
       "id": "restaurants/more-side-dishes",
       "kind": "sentence",
       "korean": "반찬 더 주세요.",
@@ -820,6 +1089,18 @@
         "No side dishes, please.",
         "More rice, please."
       ]
+    },
+    {
+      "id": "restaurants/small-plate",
+      "kind": "word",
+      "korean": "앞접시",
+      "english": "small plate",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "앞접시"
+      ],
+      "image": "small plate"
     },
     {
       "id": "restaurants/small-plates",
@@ -857,6 +1138,17 @@
         "One more pair of chopsticks, please.",
         "One more cup, please.",
         "I dropped my spoon."
+      ]
+    },
+    {
+      "id": "restaurants/drink",
+      "kind": "word",
+      "korean": "음료",
+      "english": "drink",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "음료"
       ]
     },
     {
@@ -908,6 +1200,17 @@
       }
     },
     {
+      "id": "restaurants/bottle-counter",
+      "kind": "word",
+      "korean": "병",
+      "english": "bottle (counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "병"
+      ]
+    },
+    {
       "id": "restaurants/bottle-of-soju",
       "kind": "sentence",
       "korean": "소주 한 병 주세요.",
@@ -926,6 +1229,17 @@
         "A glass of soju, please."
       ],
       "image": "soju bottle"
+    },
+    {
+      "id": "restaurants/to-come-out",
+      "kind": "word",
+      "korean": "나오다",
+      "english": "to come out",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "나오다"
+      ]
     },
     {
       "id": "restaurants/here-is-your-food",
@@ -1032,6 +1346,28 @@
       ]
     },
     {
+      "id": "restaurants/mouth",
+      "kind": "word",
+      "korean": "입",
+      "english": "mouth",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "입"
+      ]
+    },
+    {
+      "id": "restaurants/to-suit",
+      "kind": "word",
+      "korean": "맞다",
+      "english": "to suit",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "맞다"
+      ]
+    },
+    {
       "id": "restaurants/food-to-your-liking",
       "kind": "sentence",
       "korean": "음식 입에 맞으세요?",
@@ -1121,6 +1457,17 @@
       }
     },
     {
+      "id": "restaurants/on-the-house",
+      "kind": "word",
+      "korean": "서비스",
+      "english": "on the house",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "서비스"
+      ]
+    },
+    {
       "id": "restaurants/this-is-on-the-house",
       "kind": "sentence",
       "korean": "이건 서비스예요.",
@@ -1129,7 +1476,7 @@
       "register": "polite",
       "note": "서비스 in a restaurant means something given free.",
       "lexemes": [
-        "이것",
+        "이거",
         "서비스"
       ],
       "distractors": [
@@ -1163,6 +1510,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "restaurants/to-be-full",
+      "kind": "word",
+      "korean": "배부르다",
+      "english": "to be full",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "배부르다"
+      ]
     },
     {
       "id": "restaurants/are-you-full",
@@ -1207,6 +1565,17 @@
       }
     },
     {
+      "id": "restaurants/to-pay",
+      "kind": "word",
+      "korean": "계산하다",
+      "english": "to pay",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "계산하다"
+      ]
+    },
+    {
       "id": "restaurants/check-please",
       "kind": "sentence",
       "korean": "계산해 주세요.",
@@ -1237,6 +1606,39 @@
         "What time is it?",
         "How much was it?",
         "How many people?"
+      ]
+    },
+    {
+      "id": "restaurants/in-total",
+      "kind": "word",
+      "korean": "총",
+      "english": "in total",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "총"
+      ]
+    },
+    {
+      "id": "restaurants/thirty-thousand",
+      "kind": "word",
+      "korean": "삼만",
+      "english": "thirty thousand",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "삼만"
+      ]
+    },
+    {
+      "id": "restaurants/won-currency",
+      "kind": "word",
+      "korean": "원",
+      "english": "won (currency)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "원"
       ]
     },
     {
@@ -1283,6 +1685,18 @@
           }
         ]
       }
+    },
+    {
+      "id": "restaurants/card",
+      "kind": "word",
+      "korean": "카드",
+      "english": "card",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "카드"
+      ],
+      "image": "credit card"
     },
     {
       "id": "restaurants/do-you-take-cards",
@@ -1343,6 +1757,28 @@
           }
         ]
       }
+    },
+    {
+      "id": "restaurants/bill-payment",
+      "kind": "word",
+      "korean": "계산",
+      "english": "bill payment",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "계산"
+      ]
+    },
+    {
+      "id": "restaurants/separately",
+      "kind": "word",
+      "korean": "따로",
+      "english": "separately",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "따로"
+      ]
     },
     {
       "id": "restaurants/together-or-separately",
@@ -1450,6 +1886,28 @@
       }
     },
     {
+      "id": "restaurants/points",
+      "kind": "word",
+      "korean": "포인트",
+      "english": "points",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "포인트"
+      ]
+    },
+    {
+      "id": "restaurants/to-collect-points",
+      "kind": "word",
+      "korean": "적립하다",
+      "english": "to collect (points)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "적립하다"
+      ]
+    },
+    {
       "id": "restaurants/collect-points",
       "kind": "sentence",
       "korean": "포인트 적립하시겠어요?",
@@ -1537,6 +1995,17 @@
       }
     },
     {
+      "id": "restaurants/takeout",
+      "kind": "word",
+      "korean": "포장",
+      "english": "takeout",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "포장"
+      ]
+    },
+    {
       "id": "restaurants/is-it-to-go",
       "kind": "sentence",
       "korean": "포장이세요?",
@@ -1580,6 +2049,17 @@
       }
     },
     {
+      "id": "restaurants/to-pack-to-go",
+      "kind": "word",
+      "korean": "포장하다",
+      "english": "to pack to go",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "포장하다"
+      ]
+    },
+    {
       "id": "restaurants/to-go-please",
       "kind": "sentence",
       "korean": "포장해 주세요.",
@@ -1613,6 +2093,40 @@
       ]
     },
     {
+      "id": "restaurants/iced",
+      "kind": "word",
+      "korean": "아이스",
+      "english": "iced",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "아이스"
+      ]
+    },
+    {
+      "id": "restaurants/americano",
+      "kind": "word",
+      "korean": "아메리카노",
+      "english": "americano",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "아메리카노"
+      ],
+      "image": "americano coffee"
+    },
+    {
+      "id": "restaurants/cup-counter",
+      "kind": "word",
+      "korean": "잔",
+      "english": "cup (counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잔"
+      ]
+    },
+    {
       "id": "restaurants/one-iced-americano",
       "kind": "sentence",
       "korean": "아이스 아메리카노 한 잔 주세요.",
@@ -1632,6 +2146,17 @@
         "One iced latte, please."
       ],
       "image": "iced americano"
+    },
+    {
+      "id": "restaurants/to-be-warm",
+      "kind": "word",
+      "korean": "따뜻하다",
+      "english": "to be warm",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "따뜻하다"
+      ]
     },
     {
       "id": "restaurants/hot-or-iced",
@@ -1679,6 +2204,17 @@
       }
     },
     {
+      "id": "restaurants/size",
+      "kind": "word",
+      "korean": "사이즈",
+      "english": "size",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "사이즈"
+      ]
+    },
+    {
       "id": "restaurants/what-size",
       "kind": "sentence",
       "korean": "사이즈는 어떻게 해 드릴까요?",
@@ -1722,6 +2258,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "restaurants/syrup-word",
+      "kind": "word",
+      "korean": "시럽",
+      "english": "syrup",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "시럽"
+      ],
+      "image": "syrup"
+    },
+    {
+      "id": "restaurants/to-put-in",
+      "kind": "word",
+      "korean": "넣다",
+      "english": "to put in",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "넣다"
+      ]
     },
     {
       "id": "restaurants/syrup",
@@ -1768,6 +2327,18 @@
       }
     },
     {
+      "id": "restaurants/straw",
+      "kind": "word",
+      "korean": "빨대",
+      "english": "straw",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "빨대"
+      ],
+      "image": "drinking straw"
+    },
+    {
       "id": "restaurants/need-a-straw",
       "kind": "sentence",
       "korean": "빨대 필요하세요?",
@@ -1811,6 +2382,18 @@
       }
     },
     {
+      "id": "restaurants/ice",
+      "kind": "word",
+      "korean": "얼음",
+      "english": "ice",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "얼음"
+      ],
+      "image": "ice cubes"
+    },
+    {
       "id": "restaurants/light-ice",
       "kind": "sentence",
       "korean": "얼음 적게 넣어 주세요.",
@@ -1820,12 +2403,47 @@
       "lexemes": [
         "얼음",
         "적다",
-        "넣다"
+        "넣다",
+        "주다"
       ],
       "distractors": [
         "Extra ice, please.",
         "No ice, please.",
         "Less sugar, please."
+      ]
+    },
+    {
+      "id": "restaurants/buzzer-word",
+      "kind": "word",
+      "korean": "진동벨",
+      "english": "buzzer",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "진동벨"
+      ],
+      "image": "restaurant pager"
+    },
+    {
+      "id": "restaurants/to-ring",
+      "kind": "word",
+      "korean": "울리다",
+      "english": "to ring",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "울리다"
+      ]
+    },
+    {
+      "id": "restaurants/to-take-have",
+      "kind": "word",
+      "korean": "가지다",
+      "english": "to take / have",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "가지다"
       ]
     },
     {

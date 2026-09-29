@@ -24,7 +24,9 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "사람"
+        "사람",
+        "여기",
+        "많다"
       ],
       "distractors": [
         "There aren't many people here.",
@@ -62,7 +64,8 @@
       "context": "basics",
       "register": "polite",
       "lexemes": [
-        "네"
+        "네",
+        "학생"
       ],
       "distractors": [
         "No, I'm not a student.",
@@ -89,7 +92,9 @@
       "context": "basics",
       "register": "polite",
       "lexemes": [
-        "아니요"
+        "아니요",
+        "한국",
+        "사람"
       ],
       "distractors": [
         "Yes, I'm Korean.",
@@ -116,7 +121,8 @@
       "context": "greetings",
       "register": "formal",
       "lexemes": [
-        "감사합니다"
+        "감사합니다",
+        "정말"
       ],
       "distractors": [
         "I'm really sorry.",
@@ -169,7 +175,8 @@
       "context": "greetings",
       "register": "formal",
       "lexemes": [
-        "고맙습니다"
+        "고맙습니다",
+        "돕다"
       ],
       "distractors": [
         "Can you help me?",
@@ -222,7 +229,8 @@
       "context": "greetings",
       "register": "polite",
       "lexemes": [
-        "안녕하세요"
+        "안녕하세요",
+        "저"
       ],
       "distractors": [
         "Goodbye, I'm Sarah.",
@@ -250,7 +258,9 @@
       "register": "polite",
       "note": "Said by the person leaving to the person who stays.",
       "lexemes": [
-        "안녕히 계세요"
+        "안녕히 계세요",
+        "내일",
+        "보다"
       ],
       "distractors": [
         "Hello, nice to see you.",
@@ -277,7 +287,9 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "안녕히 가세요"
+        "안녕히 가세요",
+        "또",
+        "오다"
       ],
       "distractors": [
         "Welcome, please come in.",
@@ -330,7 +342,10 @@
       "context": "ordering",
       "register": "polite",
       "lexemes": [
-        "저기요"
+        "저기요",
+        "메뉴판",
+        "좀",
+        "주다"
       ],
       "distractors": [
         "Excuse me, could I have the bill, please?",
@@ -357,7 +372,8 @@
       "context": "apologies",
       "register": "formal",
       "lexemes": [
-        "죄송합니다"
+        "죄송합니다",
+        "늦다"
       ],
       "distractors": [
         "Sorry, I have to leave early.",
@@ -384,7 +400,9 @@
       "context": "apologies",
       "register": "polite",
       "lexemes": [
-        "미안합니다"
+        "미안합니다",
+        "저",
+        "실수하다"
       ],
       "distractors": [
         "It's okay, you made a mistake.",
@@ -411,7 +429,8 @@
       "context": "paying",
       "register": "polite",
       "lexemes": [
-        "주세요"
+        "주세요",
+        "영수증"
       ],
       "distractors": [
         "The bill, please.",
@@ -491,7 +510,8 @@
       "context": "introductions",
       "register": "formal",
       "lexemes": [
-        "반갑습니다"
+        "반갑습니다",
+        "만나다"
       ],
       "distractors": [
         "Nice to see you again.",
@@ -555,7 +575,8 @@
       "context": "feelings",
       "register": "casual",
       "lexemes": [
-        "나"
+        "나",
+        "좋다"
       ],
       "distractors": [
         "I don't like it either.",
@@ -605,7 +626,10 @@
       "register": "polite",
       "note": "우리 ('our') is the natural way to say 'my' for family, home and country.",
       "lexemes": [
-        "우리"
+        "우리",
+        "가족",
+        "넷",
+        "명"
       ],
       "distractors": [
         "There are three people in my family.",
@@ -632,7 +656,9 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "친구"
+        "친구",
+        "오늘",
+        "만나다"
       ],
       "distractors": [
         "I met a friend yesterday.",
@@ -660,7 +686,8 @@
       "context": "family",
       "register": "polite",
       "lexemes": [
-        "가족"
+        "가족",
+        "보다"
       ],
       "distractors": [
         "I miss my friends.",
@@ -687,7 +714,8 @@
       "context": "family",
       "register": "polite",
       "lexemes": [
-        "어머니"
+        "어머니",
+        "선생님"
       ],
       "distractors": [
         "My father is a teacher.",
@@ -747,7 +775,8 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "뭐"
+        "뭐",
+        "먹다"
       ],
       "distractors": [
         "What do you want to drink?",
@@ -800,7 +829,8 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "어디"
+        "어디",
+        "가다"
       ],
       "distractors": [
         "When are you going?",
@@ -853,7 +883,9 @@
       "context": "travel",
       "register": "polite",
       "lexemes": [
-        "언제"
+        "언제",
+        "한국",
+        "오다"
       ],
       "distractors": [
         "Why are you coming to Korea?",
@@ -906,7 +938,9 @@
       "context": "introductions",
       "register": "polite",
       "lexemes": [
-        "누구"
+        "누구",
+        "이",
+        "사람"
       ],
       "distractors": [
         "Where is this person?",
@@ -959,7 +993,9 @@
       "context": "introductions",
       "register": "polite",
       "lexemes": [
-        "왜"
+        "왜",
+        "한국어",
+        "공부하다"
       ],
       "distractors": [
         "How long have you studied Korean?",
@@ -1012,7 +1048,8 @@
       "context": "travel",
       "register": "polite",
       "lexemes": [
-        "어떻게"
+        "어떻게",
+        "가다"
       ],
       "distractors": [
         "When are you going?",
@@ -1087,7 +1124,9 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "얼마나"
+        "얼마나",
+        "몇 개",
+        "드리다"
       ],
       "distractors": [
         "Which one would you like?",
@@ -1151,7 +1190,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "그거"
+        "그거",
+        "좀",
+        "보이다",
+        "주다"
       ],
       "distractors": [
         "Please give me this one.",
@@ -1223,7 +1265,9 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "집"
+        "집",
+        "지금",
+        "가다"
       ],
       "distractors": [
         "I'm at home now.",
@@ -1263,7 +1307,10 @@
       "context": "study",
       "register": "polite",
       "lexemes": [
-        "학교"
+        "학교",
+        "저",
+        "한국어",
+        "배우다"
       ],
       "distractors": [
         "I teach Korean at school.",
@@ -1291,7 +1338,10 @@
       "context": "work",
       "register": "polite",
       "lexemes": [
-        "회사"
+        "회사",
+        "아홉",
+        "시",
+        "가다"
       ],
       "distractors": [
         "I leave work at nine.",
@@ -1319,7 +1369,8 @@
       "context": "health",
       "register": "polite",
       "lexemes": [
-        "병원"
+        "병원",
+        "가다"
       ],
       "distractors": [
         "I don't have to go to the hospital.",
@@ -1347,7 +1398,9 @@
       "context": "health",
       "register": "polite",
       "lexemes": [
-        "약국"
+        "약국",
+        "근처",
+        "있다"
       ],
       "distractors": [
         "Is there a hospital nearby?",
@@ -1401,7 +1454,10 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "식당"
+        "식당",
+        "이",
+        "정말",
+        "맛있다"
       ],
       "distractors": [
         "The food at this restaurant is really bad.",
@@ -1429,7 +1485,9 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "카페"
+        "카페",
+        "친구",
+        "기다리다"
       ],
       "distractors": [
         "I'm meeting a friend at a cafe.",
@@ -1457,7 +1515,11 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "가게"
+        "가게",
+        "이",
+        "몇",
+        "시",
+        "열다"
       ],
       "distractors": [
         "What time does this shop close?",
@@ -1523,7 +1585,9 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "시장"
+        "시장",
+        "과일",
+        "사다"
       ],
       "distractors": [
         "I sell fruit at the market.",
@@ -1551,7 +1615,11 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "은행"
+        "은행",
+        "넷",
+        "시",
+        "문",
+        "닫다"
       ],
       "distractors": [
         "The bank opens at four.",
@@ -1579,7 +1647,8 @@
       "context": "transport",
       "register": "polite",
       "lexemes": [
-        "지하철"
+        "지하철",
+        "빠르다"
       ],
       "distractors": [
         "The subway is slow.",
@@ -1607,7 +1676,9 @@
       "context": "transport",
       "register": "polite",
       "lexemes": [
-        "기차역"
+        "기차역",
+        "어떻게",
+        "가다"
       ],
       "distractors": [
         "How far is the train station?",
@@ -1661,7 +1732,9 @@
       "context": "travel",
       "register": "polite",
       "lexemes": [
-        "공항"
+        "공항",
+        "내일",
+        "가다"
       ],
       "distractors": [
         "I went to the airport yesterday.",
@@ -1688,7 +1761,9 @@
       "context": "travel",
       "register": "polite",
       "lexemes": [
-        "한국"
+        "한국",
+        "처음",
+        "오다"
       ],
       "distractors": [
         "It's my second time in Korea.",
@@ -1716,7 +1791,10 @@
       "context": "ordering",
       "register": "polite",
       "lexemes": [
-        "물"
+        "물",
+        "한",
+        "잔",
+        "주다"
       ],
       "distractors": [
         "A cup of coffee, please.",
@@ -1745,7 +1823,8 @@
       "register": "polite",
       "note": "Also a friendly everyday greeting, a bit like 'how are you?'.",
       "lexemes": [
-        "밥"
+        "밥",
+        "먹다"
       ],
       "distractors": [
         "Do you want to eat?",
@@ -1799,7 +1878,8 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "빵"
+        "빵",
+        "먹다"
       ],
       "distractors": [
         "I eat rice in the morning.",
@@ -1827,7 +1907,8 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "커피"
+        "커피",
+        "한잔하다"
       ],
       "distractors": [
         "Did you have coffee?",
@@ -1881,7 +1962,10 @@
       "context": "ordering",
       "register": "polite",
       "lexemes": [
-        "맥주"
+        "맥주",
+        "두",
+        "병",
+        "주다"
       ],
       "distractors": [
         "Two glasses of beer, please.",
@@ -1933,7 +2017,9 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "야채"
+        "야채",
+        "많이",
+        "먹다"
       ],
       "distractors": [
         "I don't eat vegetables.",
@@ -1973,7 +2059,8 @@
       "context": "paying",
       "register": "polite",
       "lexemes": [
-        "계산서"
+        "계산서",
+        "주다"
       ],
       "distractors": [
         "The menu, please.",
@@ -2011,7 +2098,9 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "오늘"
+        "오늘",
+        "날씨",
+        "좋다"
       ],
       "distractors": [
         "The weather was nice yesterday.",
@@ -2038,7 +2127,8 @@
       "context": "greetings",
       "register": "polite",
       "lexemes": [
-        "내일"
+        "내일",
+        "만나다"
       ],
       "distractors": [
         "See you next week.",
@@ -2091,7 +2181,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "어제"
+        "어제",
+        "뭐",
+        "하다"
       ],
       "distractors": [
         "What are you doing tomorrow?",
@@ -2144,7 +2236,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "아침"
+        "아침",
+        "일찍",
+        "일어나다"
       ],
       "distractors": [
         "I get up late in the morning.",
@@ -2193,7 +2287,9 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "저녁"
+        "저녁",
+        "뭐",
+        "하다"
       ],
       "distractors": [
         "What did you do this evening?",
@@ -2246,7 +2342,11 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "밤"
+        "밤",
+        "어젯밤",
+        "잠",
+        "못",
+        "자다"
       ],
       "distractors": [
         "I slept well last night.",
@@ -2273,7 +2373,10 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "항상"
+        "항상",
+        "저",
+        "늦다",
+        "자다"
       ],
       "distractors": [
         "I never go to bed late.",
@@ -2300,7 +2403,10 @@
       "context": "small-talk",
       "register": "polite",
       "lexemes": [
-        "자주"
+        "자주",
+        "이",
+        "카페",
+        "오다"
       ],
       "distractors": [
         "Do you like this cafe?",
@@ -2353,7 +2459,10 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "가끔"
+        "가끔",
+        "한국",
+        "음식",
+        "만들다"
       ],
       "distractors": [
         "I often make Korean food.",
@@ -2380,7 +2489,8 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "시간"
+        "시간",
+        "있다"
       ],
       "distractors": [
         "What time is it?",
@@ -2433,7 +2543,10 @@
       "context": "time",
       "register": "polite",
       "lexemes": [
-        "분"
+        "분",
+        "오",
+        "기다리다",
+        "주다"
       ],
       "distractors": [
         "Please wait five hours.",
@@ -2460,7 +2573,9 @@
       "context": "weekend",
       "register": "polite",
       "lexemes": [
-        "하다"
+        "하다",
+        "주말",
+        "뭐"
       ],
       "distractors": [
         "What did you do on the weekend?",
@@ -2513,7 +2628,9 @@
       "context": "weekend",
       "register": "polite",
       "lexemes": [
-        "가다"
+        "가다",
+        "주말",
+        "바다"
       ],
       "distractors": [
         "I went to the beach last weekend.",
@@ -2540,7 +2657,10 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "오다"
+        "오다",
+        "친구",
+        "우리",
+        "집"
       ],
       "distractors": [
         "My friend is going home.",
@@ -2567,7 +2687,9 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "먹다"
+        "먹다",
+        "같이",
+        "점심"
       ],
       "distractors": [
         "I had lunch alone.",
@@ -2620,7 +2742,10 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "마시다"
+        "마시다",
+        "저",
+        "매일",
+        "커피"
       ],
       "distractors": [
         "I drink tea every day.",
@@ -2647,7 +2772,10 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "자다"
+        "자다",
+        "보통",
+        "열하나",
+        "시"
       ],
       "distractors": [
         "I usually get up at eleven.",
@@ -2674,7 +2802,9 @@
       "context": "weekend",
       "register": "polite",
       "lexemes": [
-        "보다"
+        "보다",
+        "주말",
+        "영화"
       ],
       "distractors": [
         "I'll watch a movie this weekend.",
@@ -2701,7 +2831,10 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
-        "듣다"
+        "듣다",
+        "저",
+        "음악",
+        "자주"
       ],
       "distractors": [
         "I rarely listen to music.",
@@ -2739,7 +2872,9 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
-        "읽다"
+        "읽다",
+        "지하철",
+        "책"
       ],
       "distractors": [
         "I read the news on the subway.",
@@ -2766,7 +2901,10 @@
       "context": "classroom",
       "register": "polite",
       "lexemes": [
-        "쓰다"
+        "쓰다",
+        "여기",
+        "이름",
+        "주다"
       ],
       "distractors": [
         "Please say your name here.",
@@ -2819,7 +2957,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "사다"
+        "사다",
+        "어제",
+        "새",
+        "옷"
       ],
       "distractors": [
         "I sold my old clothes yesterday.",
@@ -2857,7 +2998,9 @@
       "context": "study",
       "register": "polite",
       "lexemes": [
-        "공부하다"
+        "공부하다",
+        "매일",
+        "한국어"
       ],
       "distractors": [
         "I study English every day.",
@@ -2884,7 +3027,8 @@
       "context": "work",
       "register": "polite",
       "lexemes": [
-        "일하다"
+        "일하다",
+        "어디"
       ],
       "distractors": [
         "When do you work?",
@@ -2937,7 +3081,9 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "만나다"
+        "만나다",
+        "우리",
+        "어디"
       ],
       "distractors": [
         "When shall we meet?",
@@ -2990,7 +3136,8 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "기다리다"
+        "기다리다",
+        "여기"
       ],
       "distractors": [
         "Please wait here.",
@@ -3028,7 +3175,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "받다"
+        "받다",
+        "생일",
+        "선물"
       ],
       "distractors": [
         "I gave a birthday present.",
@@ -3055,7 +3204,9 @@
       "context": "family",
       "register": "polite",
       "lexemes": [
-        "사랑하다"
+        "사랑하다",
+        "가족",
+        "정말"
       ],
       "distractors": [
         "My family really loves me.",
@@ -3082,7 +3233,9 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "좋아하다"
+        "좋아하다",
+        "무슨",
+        "음식"
       ],
       "distractors": [
         "What kind of music do you like?",
@@ -3135,7 +3288,10 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "싫어하다"
+        "싫어하다",
+        "저",
+        "춥다",
+        "날씨"
       ],
       "distractors": [
         "I like cold weather.",
@@ -3162,7 +3318,8 @@
       "context": "small-talk",
       "register": "polite",
       "lexemes": [
-        "알다"
+        "알다",
+        "그 사람"
       ],
       "distractors": [
         "Do you know that place?",
@@ -3226,7 +3383,10 @@
       "context": "home",
       "register": "polite",
       "lexemes": [
-        "열다"
+        "열다",
+        "창문",
+        "좀",
+        "주다"
       ],
       "distractors": [
         "Could you close the window, please?",
@@ -3264,7 +3424,10 @@
       "context": "transport",
       "register": "polite",
       "lexemes": [
-        "타다"
+        "타다",
+        "버스",
+        "회사",
+        "가다"
       ],
       "distractors": [
         "I walk to work.",
@@ -3291,7 +3454,9 @@
       "context": "transport",
       "register": "polite",
       "lexemes": [
-        "내리다"
+        "내리다",
+        "다음",
+        "역"
       ],
       "distractors": [
         "I'm getting on at the next station.",
@@ -3307,7 +3472,9 @@
       "context": "introductions",
       "register": "polite",
       "lexemes": [
-        "이다"
+        "이다",
+        "저",
+        "학생"
       ],
       "distractors": [
         "I'm a teacher.",
@@ -3323,7 +3490,9 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "이다"
+        "이다",
+        "이거",
+        "커피"
       ],
       "distractors": [
         "That is coffee.",
@@ -3339,7 +3508,11 @@
       "context": "home",
       "register": "polite",
       "lexemes": [
-        "에 있다"
+        "에 있다",
+        "저",
+        "가방",
+        "의자",
+        "위"
       ],
       "distractors": [
         "My bag is under the chair.",
@@ -3366,7 +3539,9 @@
       "context": "classroom",
       "register": "polite",
       "lexemes": [
-        "있다"
+        "있다",
+        "혹시",
+        "펜"
       ],
       "distractors": [
         "Do you happen to have a pencil?",
@@ -3419,7 +3594,9 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "없다"
+        "없다",
+        "오늘",
+        "시간"
       ],
       "distractors": [
         "I have time today.",
@@ -3446,7 +3623,9 @@
       "context": "small-talk",
       "register": "polite",
       "lexemes": [
-        "좋다"
+        "좋다",
+        "그거",
+        "생각"
       ],
       "distractors": [
         "That's a bad idea.",
@@ -3484,7 +3663,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "크다"
+        "크다",
+        "이",
+        "신발",
+        "좀"
       ],
       "distractors": [
         "These shoes are a bit small.",
@@ -3522,7 +3704,9 @@
       "context": "work",
       "register": "polite",
       "lexemes": [
-        "많다"
+        "많다",
+        "오늘",
+        "일"
       ],
       "distractors": [
         "I don't have much work today.",
@@ -3560,7 +3744,9 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "맛있다"
+        "맛있다",
+        "이거",
+        "정말"
       ],
       "distractors": [
         "This really tastes bad!",
@@ -3598,7 +3784,9 @@
       "context": "study",
       "register": "polite",
       "lexemes": [
-        "재미있다"
+        "재미있다",
+        "한국어",
+        "공부"
       ],
       "distractors": [
         "Studying Korean is hard.",
@@ -3636,7 +3824,9 @@
       "context": "study",
       "register": "polite",
       "lexemes": [
-        "어렵다"
+        "어렵다",
+        "한국어",
+        "조금"
       ],
       "distractors": [
         "Korean is quite easy.",
@@ -3663,7 +3853,9 @@
       "context": "study",
       "register": "polite",
       "lexemes": [
-        "쉽다"
+        "쉽다",
+        "이",
+        "문제"
       ],
       "distractors": [
         "This problem is hard.",
@@ -3690,7 +3882,8 @@
       "context": "health",
       "register": "polite",
       "lexemes": [
-        "아프다"
+        "아프다",
+        "머리"
       ],
       "distractors": [
         "I have a stomachache.",
@@ -3717,7 +3910,9 @@
       "context": "feelings",
       "register": "polite",
       "lexemes": [
-        "피곤하다"
+        "피곤하다",
+        "오늘",
+        "좀"
       ],
       "distractors": [
         "I'm a little busy today.",
@@ -3755,7 +3950,9 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "덥다"
+        "덥다",
+        "오늘",
+        "정말"
       ],
       "distractors": [
         "It's really cold today.",
@@ -3782,7 +3979,8 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "춥다"
+        "춥다",
+        "밖"
       ],
       "distractors": [
         "Is it hot outside?",
@@ -3835,7 +4033,9 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "뜨겁다"
+        "뜨겁다",
+        "커피",
+        "조심하다"
       ],
       "distractors": [
         "The coffee is cold. Be careful.",
@@ -3888,7 +4088,9 @@
       "context": "ordering",
       "register": "polite",
       "lexemes": [
-        "차갑다"
+        "차갑다",
+        "물",
+        "주다"
       ],
       "distractors": [
         "Hot water, please.",
@@ -3915,7 +4117,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "예쁘다"
+        "예쁘다",
+        "그",
+        "옷",
+        "정말"
       ],
       "distractors": [
         "Those clothes are really expensive.",
@@ -3964,7 +4169,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "아주"
+        "아주",
+        "이",
+        "가방",
+        "비싸다"
       ],
       "distractors": [
         "This bag is very cheap.",
@@ -3981,7 +4189,9 @@
       "register": "polite",
       "note": "너무 literally means 'too (much)' but is used everyday for 'so, really'.",
       "lexemes": [
-        "아주"
+        "아주",
+        "너무",
+        "피곤하다"
       ],
       "distractors": [
         "I'm not tired at all.",
@@ -4008,7 +4218,9 @@
       "context": "introductions",
       "register": "polite",
       "lexemes": [
-        "조금"
+        "조금",
+        "한국어",
+        "하다"
       ],
       "distractors": [
         "I can't speak Korean at all.",
@@ -4035,7 +4247,8 @@
       "context": "feelings",
       "register": "polite",
       "lexemes": [
-        "진짜"
+        "진짜",
+        "재미있다"
       ],
       "distractors": [
         "It was really boring.",
@@ -4051,7 +4264,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "하고"
+        "하고",
+        "빵",
+        "우유",
+        "사다"
       ],
       "distractors": [
         "I bought bread and coffee.",
@@ -4078,7 +4294,11 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "그리고"
+        "그리고",
+        "밥",
+        "먹다",
+        "커피",
+        "마시다"
       ],
       "distractors": [
         "I had coffee, then I ate.",
@@ -4105,7 +4325,10 @@
       "context": "study",
       "register": "polite",
       "lexemes": [
-        "하지만"
+        "하지만",
+        "한국어",
+        "어렵다",
+        "재미있다"
       ],
       "distractors": [
         "Korean is hard. So it's boring.",
@@ -4132,7 +4355,11 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "그래서"
+        "그래서",
+        "비",
+        "오다",
+        "집",
+        "있다"
       ],
       "distractors": [
         "It's raining. But I'm going out.",
@@ -4147,6 +4374,10 @@
       "english": "I want to go to Korea.",
       "context": "travel",
       "register": "polite",
+      "lexemes": [
+        "한국",
+        "가다"
+      ],
       "distractors": [
         "I don't want to go to Korea.",
         "I went to Korea.",
@@ -4160,6 +4391,11 @@
       "english": "Can you eat spicy food?",
       "context": "food",
       "register": "polite",
+      "lexemes": [
+        "맵다",
+        "음식",
+        "먹다"
+      ],
       "distractors": [
         "Do you like spicy food?",
         "Can you cook spicy food?",
@@ -4211,7 +4447,9 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "못"
+        "못",
+        "오늘",
+        "가다"
       ],
       "distractors": [
         "I can go today.",
@@ -4238,7 +4476,8 @@
       "context": "classroom",
       "register": "polite",
       "lexemes": [
-        "이해 못 해요"
+        "이해 못 해요",
+        "죄송하다"
       ],
       "distractors": [
         "Sorry, I didn't hear you.",
@@ -4265,7 +4504,12 @@
       "context": "classroom",
       "register": "polite",
       "lexemes": [
-        "천천히 말해 주세요"
+        "천천히 말해 주세요",
+        "좀",
+        "더",
+        "천천히",
+        "말하다",
+        "주다"
       ],
       "distractors": [
         "Please speak a little louder.",
@@ -4292,7 +4536,10 @@
       "context": "classroom",
       "register": "polite",
       "lexemes": [
-        "한국말로 뭐예요?"
+        "한국말로 뭐예요?",
+        "이거",
+        "한국말",
+        "뭐"
       ],
       "distractors": [
         "What's this called in English?",
@@ -4345,7 +4592,9 @@
       "context": "greetings",
       "register": "polite",
       "lexemes": [
-        "잘 자요"
+        "잘 자요",
+        "내일",
+        "보다"
       ],
       "distractors": [
         "Good morning, see you tonight.",
@@ -4394,7 +4643,8 @@
       "context": "food",
       "register": "formal",
       "lexemes": [
-        "잘 먹겠습니다"
+        "잘 먹겠습니다",
+        "그럼"
       ],
       "distractors": [
         "Thank you, that was a delicious meal.",
@@ -4421,7 +4671,8 @@
       "context": "food",
       "register": "formal",
       "lexemes": [
-        "잘 먹었습니다"
+        "잘 먹었습니다",
+        "정말"
       ],
       "distractors": [
         "Thank you, I'm going to enjoy the meal.",
@@ -4448,7 +4699,8 @@
       "context": "celebrations",
       "register": "polite",
       "lexemes": [
-        "축하해요"
+        "축하해요",
+        "생일"
       ],
       "distractors": [
         "Happy New Year!",
@@ -4497,7 +4749,9 @@
       "context": "ordering",
       "register": "polite",
       "lexemes": [
-        "어서 오세요"
+        "어서 오세요",
+        "몇",
+        "분"
       ],
       "distractors": [
         "Goodbye. Please come again.",
@@ -4550,7 +4804,10 @@
       "context": "encouragement",
       "register": "polite",
       "lexemes": [
-        "화이팅"
+        "화이팅",
+        "시험",
+        "잘",
+        "보다"
       ],
       "distractors": [
         "How was your exam? Well done!",
@@ -4603,7 +4860,9 @@
       "context": "emergencies",
       "register": "polite",
       "lexemes": [
-        "제발"
+        "제발",
+        "돕다",
+        "주다"
       ],
       "distractors": [
         "Thanks for helping me!",
@@ -4630,7 +4889,8 @@
       "context": "classroom",
       "register": "polite",
       "lexemes": [
-        "알겠어요"
+        "알겠어요",
+        "네"
       ],
       "distractors": [
         "No, I don't understand.",
@@ -4657,7 +4917,9 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "그럼요"
+        "그럼요",
+        "같이",
+        "가다"
       ],
       "distractors": [
         "No, I'll go alone.",
@@ -4684,7 +4946,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "잠시만요"
+        "잠시만요",
+        "금방",
+        "오다"
       ],
       "distractors": [
         "Just a moment, I'm leaving now.",
@@ -4711,7 +4975,8 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "빨리"
+        "빨리",
+        "오다"
       ],
       "distractors": [
         "Come slowly.",
@@ -4771,7 +5036,10 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "전"
+        "전",
+        "자다",
+        "책",
+        "읽다"
       ],
       "distractors": [
         "I read after I wake up.",
@@ -4798,7 +5066,10 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "후"
+        "후",
+        "수업",
+        "뭐",
+        "하다"
       ],
       "distractors": [
         "What did you do after class?",
@@ -4851,7 +5122,8 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "이제"
+        "이제",
+        "가다"
       ],
       "distractors": [
         "I don't have to go yet.",
@@ -4878,7 +5150,8 @@
       "context": "greetings",
       "register": "polite",
       "lexemes": [
-        "또"
+        "또",
+        "만나다"
       ],
       "distractors": [
         "Nice to meet you!",
@@ -4927,7 +5200,9 @@
       "context": "classroom",
       "register": "polite",
       "lexemes": [
-        "다시"
+        "다시",
+        "하다",
+        "보다"
       ],
       "distractors": [
         "I won't try again.",
@@ -4944,7 +5219,10 @@
       "register": "polite",
       "note": "With 밖에 the verb turns negative: 물밖에 안 마셔요 (I drink nothing but water).",
       "lexemes": [
-        "만"
+        "만",
+        "저",
+        "물",
+        "마시다"
       ],
       "distractors": [
         "I don't drink water.",
@@ -4971,7 +5249,9 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "갑자기"
+        "갑자기",
+        "비",
+        "오다"
       ],
       "distractors": [
         "It suddenly stopped raining.",
@@ -4999,7 +5279,10 @@
       "register": "polite",
       "note": "Only a woman calls her older sister 언니; a man says 누나.",
       "lexemes": [
-        "언니"
+        "언니",
+        "한",
+        "명",
+        "있다"
       ],
       "distractors": [
         "I have two older sisters.",
@@ -5027,7 +5310,10 @@
       "register": "polite",
       "note": "Only a man calls his older brother 형; a woman says 오빠.",
       "lexemes": [
-        "형"
+        "형",
+        "두",
+        "명",
+        "있다"
       ],
       "distractors": [
         "I have two younger brothers.",
@@ -5089,7 +5375,10 @@
       "context": "family",
       "register": "polite",
       "lexemes": [
-        "아이"
+        "아이",
+        "두",
+        "명",
+        "있다"
       ],
       "distractors": [
         "I don't have children.",
@@ -5117,7 +5406,8 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
-        "동물"
+        "동물",
+        "좋아하다"
       ],
       "distractors": [
         "Do you have any pets?",
@@ -5171,7 +5461,9 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
-        "개"
+        "개",
+        "저",
+        "키우다"
       ],
       "distractors": [
         "I have a cat.",
@@ -5199,7 +5491,9 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
-        "고양이"
+        "고양이",
+        "정말",
+        "귀엽다"
       ],
       "distractors": [
         "The dog is really cute.",
@@ -5227,7 +5521,9 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "비"
+        "비",
+        "내일",
+        "오다"
       ],
       "distractors": [
         "It rained yesterday.",
@@ -5255,7 +5551,9 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "눈"
+        "눈",
+        "많이",
+        "오다"
       ],
       "distractors": [
         "It's raining a lot.",
@@ -5306,7 +5604,9 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "바람"
+        "바람",
+        "많이",
+        "불다"
       ],
       "distractors": [
         "It's very cloudy.",
@@ -5345,7 +5645,10 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "흐림"
+        "흐림",
+        "오늘",
+        "날씨",
+        "흐리다"
       ],
       "distractors": [
         "It's sunny today.",
@@ -5373,7 +5676,9 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
-        "산"
+        "산",
+        "저",
+        "좋아하다"
       ],
       "distractors": [
         "I like the sea.",
@@ -5425,7 +5730,10 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "공원"
+        "공원",
+        "집",
+        "근처",
+        "있다"
       ],
       "distractors": [
         "There's no park near my house.",
@@ -5453,7 +5761,9 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
-        "책"
+        "책",
+        "이",
+        "재미있다"
       ],
       "distractors": [
         "This book is boring.",
@@ -5561,7 +5871,9 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "영화"
+        "영화",
+        "같이",
+        "보다"
       ],
       "distractors": [
         "Did you watch a movie yesterday?",
@@ -5639,7 +5951,9 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "돈"
+        "돈",
+        "많이",
+        "쓰다"
       ],
       "distractors": [
         "I saved a lot of money.",
@@ -5666,7 +5980,9 @@
       "context": "weather",
       "register": "polite",
       "lexemes": [
-        "날씨"
+        "날씨",
+        "내일",
+        "어떻다"
       ],
       "distractors": [
         "What was the weather like yesterday?",
@@ -5719,7 +6035,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "문제"
+        "문제",
+        "무슨",
+        "있다"
       ],
       "distractors": [
         "What's the question?",
@@ -5805,7 +6123,9 @@
       "context": "work",
       "register": "polite",
       "lexemes": [
-        "휴가"
+        "휴가",
+        "다음",
+        "주"
       ],
       "distractors": [
         "I was on vacation last week.",
@@ -5832,7 +6152,8 @@
       "context": "travel",
       "register": "polite",
       "lexemes": [
-        "여행"
+        "여행",
+        "어떻다"
       ],
       "distractors": [
         "Where did you go on your trip?",
@@ -5933,7 +6254,9 @@
       "context": "transport",
       "register": "polite",
       "lexemes": [
-        "차"
+        "차",
+        "많이",
+        "막히다"
       ],
       "distractors": [
         "The roads are empty.",
@@ -5961,7 +6284,10 @@
       "context": "transport",
       "register": "polite",
       "lexemes": [
-        "자전거"
+        "자전거",
+        "타다",
+        "학교",
+        "가다"
       ],
       "distractors": [
         "I walk to school.",
@@ -6000,7 +6326,8 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "들어가다"
+        "들어가다",
+        "되다"
       ],
       "distractors": [
         "May I go out?",
@@ -6053,7 +6380,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "나가다"
+        "나가다",
+        "잠깐",
+        "오다"
       ],
       "distractors": [
         "I'm coming in for a moment.",
@@ -6080,7 +6409,11 @@
       "context": "travel",
       "register": "polite",
       "lexemes": [
-        "머무르다"
+        "머무르다",
+        "호텔",
+        "삼",
+        "일",
+        "동안"
       ],
       "distractors": [
         "I'm staying at a friend's house for three days.",
@@ -6107,7 +6440,9 @@
       "context": "travel",
       "register": "polite",
       "lexemes": [
-        "떠나다"
+        "떠나다",
+        "내일",
+        "한국"
       ],
       "distractors": [
         "I'm arriving in Korea tomorrow.",
@@ -6145,7 +6480,10 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "걷다"
+        "걷다",
+        "매일",
+        "삼십",
+        "분"
       ],
       "distractors": [
         "I run thirty minutes every day.",
@@ -6172,7 +6510,8 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "앉다"
+        "앉다",
+        "여기"
       ],
       "distractors": [
         "Please stand here.",
@@ -6225,7 +6564,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "일어나다"
+        "일어나다",
+        "몇",
+        "시"
       ],
       "distractors": [
         "What time do you go to bed?",
@@ -6289,7 +6630,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "입다"
+        "입다",
+        "이거",
+        "보다",
+        "되다"
       ],
       "distractors": [
         "Can I buy this?",
@@ -6342,7 +6686,9 @@
       "context": "home",
       "register": "polite",
       "lexemes": [
-        "벗다"
+        "벗다",
+        "여기",
+        "신발"
       ],
       "distractors": [
         "Please put on your shoes here.",
@@ -6391,7 +6737,11 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "씻다"
+        "씻다",
+        "밥",
+        "먹다",
+        "전",
+        "손"
       ],
       "distractors": [
         "I wash my hands after eating.",
@@ -6418,7 +6768,9 @@
       "context": "home",
       "register": "polite",
       "lexemes": [
-        "청소하다"
+        "청소하다",
+        "주말",
+        "방"
       ],
       "distractors": [
         "I cleaned my room last weekend.",
@@ -6445,7 +6797,10 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
-        "요리하다"
+        "요리하다",
+        "저",
+        "것",
+        "좋아하다"
       ],
       "distractors": [
         "I don't like cooking.",
@@ -6472,7 +6827,9 @@
       "context": "family",
       "register": "polite",
       "lexemes": [
-        "사 드리다"
+        "사 드리다",
+        "어머니",
+        "꽃"
       ],
       "distractors": [
         "My mother bought me flowers.",
@@ -6487,6 +6844,12 @@
       "english": "Give this a try.",
       "context": "food",
       "register": "polite",
+      "lexemes": [
+        "이거",
+        "한번",
+        "먹다",
+        "보다"
+      ],
       "distractors": [
         "Don't eat this.",
         "I already tried this.",
@@ -6538,7 +6901,9 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "바꾸다"
+        "바꾸다",
+        "다른",
+        "사이즈"
       ],
       "distractors": [
         "Can I return this?",
@@ -6591,7 +6956,10 @@
       "context": "work",
       "register": "polite",
       "lexemes": [
-        "사용하다"
+        "사용하다",
+        "이",
+        "컴퓨터",
+        "되다"
       ],
       "distractors": [
         "May I use your phone?",
@@ -6677,7 +7045,9 @@
       "context": "small-talk",
       "register": "polite",
       "lexemes": [
-        "생각하다"
+        "생각하다",
+        "저",
+        "그렇게"
       ],
       "distractors": [
         "I don't think so.",
@@ -6779,7 +7149,10 @@
       "context": "feelings",
       "register": "polite",
       "lexemes": [
-        "슬프다"
+        "슬프다",
+        "이",
+        "영화",
+        "너무"
       ],
       "distractors": [
         "This movie is so funny.",
@@ -6806,7 +7179,8 @@
       "context": "feelings",
       "register": "polite",
       "lexemes": [
-        "화나다"
+        "화나다",
+        "왜"
       ],
       "distractors": [
         "Why are you sad?",
@@ -6859,7 +7233,8 @@
       "context": "feelings",
       "register": "polite",
       "lexemes": [
-        "놀라다"
+        "놀라다",
+        "깜짝"
       ],
       "distractors": [
         "I wasn't surprised at all.",
@@ -6886,7 +7261,9 @@
       "context": "feelings",
       "register": "polite",
       "lexemes": [
-        "무섭다"
+        "무섭다",
+        "저",
+        "개"
       ],
       "distractors": [
         "I love dogs.",
@@ -6913,7 +7290,9 @@
       "context": "work",
       "register": "polite",
       "lexemes": [
-        "지루하다"
+        "지루하다",
+        "회의",
+        "너무"
       ],
       "distractors": [
         "The meeting is so long.",
@@ -6940,7 +7319,9 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "조용하다"
+        "조용하다",
+        "이",
+        "카페"
       ],
       "distractors": [
         "This cafe is noisy.",
@@ -6967,7 +7348,9 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "시끄럽다"
+        "시끄럽다",
+        "밖",
+        "좀"
       ],
       "distractors": [
         "It's a bit quiet outside.",
@@ -6994,7 +7377,8 @@
       "context": "home",
       "register": "polite",
       "lexemes": [
-        "깨끗하다"
+        "깨끗하다",
+        "방"
       ],
       "distractors": [
         "The room is dirty.",
@@ -7043,7 +7427,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "새롭다"
+        "새롭다",
+        "새",
+        "휴대폰",
+        "사다"
       ],
       "distractors": [
         "I bought a used phone.",
@@ -7125,7 +7512,9 @@
       "context": "travel",
       "register": "polite",
       "lexemes": [
-        "무겁다"
+        "무겁다",
+        "가방",
+        "너무"
       ],
       "distractors": [
         "My bag is very light.",
@@ -7163,7 +7552,10 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "딱딱하다"
+        "딱딱하다",
+        "이",
+        "빵",
+        "너무"
       ],
       "distractors": [
         "This bread is too soft.",
@@ -7201,7 +7593,9 @@
       "context": "places",
       "register": "polite",
       "lexemes": [
-        "비어 있다"
+        "비어 있다",
+        "이",
+        "자리"
       ],
       "distractors": [
         "Is that seat free?",
@@ -7265,7 +7659,10 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "비싸다"
+        "비싸다",
+        "좀",
+        "깎다",
+        "주다"
       ],
       "distractors": [
         "It's very cheap. I'll take two.",
@@ -7292,7 +7689,9 @@
       "context": "shopping",
       "register": "polite",
       "lexemes": [
-        "싸다"
+        "싸다",
+        "여기",
+        "정말"
       ],
       "distractors": [
         "It's really expensive here.",
@@ -7374,7 +7773,10 @@
       "context": "home",
       "register": "polite",
       "lexemes": [
-        "불편하다"
+        "불편하다",
+        "이",
+        "의자",
+        "좀"
       ],
       "distractors": [
         "This chair is very comfortable.",
@@ -7401,7 +7803,9 @@
       "context": "small-talk",
       "register": "polite",
       "lexemes": [
-        "진실"
+        "진실",
+        "말하다",
+        "주다"
       ],
       "distractors": [
         "Please tell me a story.",
@@ -7481,7 +7885,9 @@
       "context": "paying",
       "register": "polite",
       "lexemes": [
-        "가능하다"
+        "가능하다",
+        "카드",
+        "결제"
       ],
       "distractors": [
         "Can I pay in cash?",
@@ -7545,7 +7951,8 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "필요하다"
+        "필요하다",
+        "도움"
       ],
       "distractors": [
         "Can you help me?",
@@ -7598,7 +8005,9 @@
       "context": "health",
       "register": "polite",
       "lexemes": [
-        "중요하다"
+        "중요하다",
+        "건강",
+        "제일"
       ],
       "distractors": [
         "Money is the most important thing.",
@@ -7679,7 +8088,9 @@
       "context": "family",
       "register": "polite",
       "lexemes": [
-        "의사"
+        "의사",
+        "우리",
+        "아버지"
       ],
       "distractors": [
         "My mother is a doctor.",
@@ -7717,7 +8128,9 @@
       "context": "family",
       "register": "polite",
       "lexemes": [
-        "고등학생"
+        "고등학생",
+        "저",
+        "동생"
       ],
       "distractors": [
         "My older brother is a college student.",
@@ -7791,7 +8204,9 @@
       "context": "weekend",
       "register": "polite",
       "lexemes": [
-        "놀다"
+        "놀다",
+        "주말",
+        "친구"
       ],
       "distractors": [
         "I studied with friends on the weekend.",
@@ -7818,7 +8233,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "산책하다"
+        "산책하다",
+        "저녁",
+        "공원"
       ],
       "distractors": [
         "I go running in the park in the morning.",
@@ -7845,7 +8262,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "쉬다"
+        "쉬다",
+        "오늘",
+        "집"
       ],
       "distractors": [
         "I want to go out today.",
@@ -7872,7 +8291,8 @@
       "context": "plans",
       "register": "polite",
       "lexemes": [
-        "같이"
+        "같이",
+        "가다"
       ],
       "distractors": [
         "Do you want to go alone?",
@@ -7925,7 +8345,9 @@
       "context": "feelings",
       "register": "polite",
       "lexemes": [
-        "심심하다"
+        "심심하다",
+        "뭐",
+        "하다"
       ],
       "distractors": [
         "I'm busy. What should we do?",
@@ -7978,7 +8400,9 @@
       "context": "daily-life",
       "register": "polite",
       "lexemes": [
-        "일찍"
+        "일찍",
+        "오늘",
+        "자다"
       ],
       "distractors": [
         "I can stay up late tonight.",
@@ -8006,7 +8430,8 @@
       "register": "formal",
       "note": "The usual answer is 잘 다녀왔어? or 왔어?",
       "lexemes": [
-        "다녀왔습니다"
+        "다녀왔습니다",
+        "엄마"
       ],
       "distractors": [
         "Mom, I'm leaving!",
@@ -8034,7 +8459,10 @@
       "context": "ordering",
       "register": "polite",
       "lexemes": [
-        "김밥"
+        "김밥",
+        "한",
+        "줄",
+        "주다"
       ],
       "distractors": [
         "Two seaweed rice rolls, please.",
@@ -8062,7 +8490,8 @@
       "context": "food",
       "register": "polite",
       "lexemes": [
-        "라면"
+        "라면",
+        "먹다"
       ],
       "distractors": [
         "Do you want some rice?",

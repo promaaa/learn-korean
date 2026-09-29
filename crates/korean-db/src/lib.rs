@@ -10,6 +10,7 @@ pub mod images;
 mod open;
 pub mod progress;
 pub mod reviews;
+pub mod settings;
 
 pub use open::{Database, OpenError};
 pub use sqlx::SqlitePool;

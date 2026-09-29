@@ -1,6 +1,6 @@
 import { clearMocks, mockIPC } from "@tauri-apps/api/mocks";
 import { afterEach, describe, expect, it } from "vitest";
-import type { Answered, Current, ExerciseView } from "./api";
+import type { Answered, Current, ExerciseView, Focus } from "./api";
 import { SessionController } from "./session.svelte";
 
 const exercise: ExerciseView = {
@@ -25,12 +25,18 @@ interface Backend {
 function backend({ total = 1, queue = [exercise, null], fail }: Backend = {}) {
   const calls: { cmd: string; args: unknown }[] = [];
   let latest = progress;
+  let focus: Focus = "guided";
   mockIPC(async (cmd, args) => {
     calls.push({ cmd, args });
     if (fail === cmd) throw new Error("boom");
     switch (cmd) {
+      case "set_focus": {
+        const next = args && typeof args === "object" && "focus" in args ? args.focus : null;
+        if (next === "words" || next === "guided" || next === "all") focus = next;
+        return null;
+      }
       case "session_start":
-        return { total, due: 0, new: total };
+        return { total, due: 0, new: total, focus };
       case "session_current":
         return { exercise: queue.shift() ?? null, progress: latest } satisfies Current;
       case "session_answer":
@@ -149,5 +155,20 @@ describe("SessionController", () => {
     await broken.start();
     expect(broken.phase).toBe("error");
     expect(broken.error).toContain("boom");
+  });
+
+  it("cycles the focus words → guided → all and restarts the session with it", async () => {
+    const calls = backend({ queue: [exercise, exercise, exercise, exercise] });
+    const s = new SessionController(clock().now);
+    await s.start();
+    expect(s.focus).toBe("guided");
+    const seen: (Focus | null)[] = [];
+    for (let i = 0; i < 3; i++) {
+      await s.cycleFocus();
+      seen.push(s.focus);
+      expect(s.phase).toBe("exercise");
+    }
+    expect(seen).toEqual(["all", "words", "guided"]);
+    expect(calls.filter((c) => c.cmd === "session_start")).toHaveLength(4);
   });
 });

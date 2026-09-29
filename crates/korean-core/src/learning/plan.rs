@@ -1,11 +1,11 @@
 //! Which cards a session contains.
 
-use std::collections::{HashMap, VecDeque};
+use std::collections::{HashMap, HashSet, VecDeque};
 
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 
-use crate::content::{Item, Skill};
-use crate::scheduler::MemoryState;
+use crate::content::{Item, ItemKind, Skill};
+use crate::scheduler::{MemoryState, Phase};
 
 /// One schedulable unit: an item trained through one skill.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, Serialize)]
@@ -39,6 +39,35 @@ impl Default for Limits {
     }
 }
 
+/// How much of the content a session draws from; chosen by the learner.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Focus {
+    /// Word cards only: build vocabulary before meeting sentences.
+    Words,
+    /// Words first; a sentence is served once every word of it is known.
+    #[default]
+    Guided,
+    /// Every card, words and sentences alike.
+    All,
+}
+
+impl Focus {
+    pub const ALL: [Focus; 3] = [Focus::Words, Focus::Guided, Focus::All];
+
+    pub fn as_str(self) -> &'static str {
+        match self {
+            Focus::Words => "words",
+            Focus::Guided => "guided",
+            Focus::All => "all",
+        }
+    }
+
+    pub fn parse(s: &str) -> Option<Focus> {
+        Focus::ALL.into_iter().find(|focus| focus.as_str() == s)
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Plan {
     pub cards: Vec<Card>,
@@ -50,24 +79,83 @@ fn pack_of(item_id: &str) -> &str {
     item_id.split_once('/').map_or(item_id, |(pack, _)| pack)
 }
 
+/// Word cards of each lemma. Lemmas without a word card (particles, the copula…) are grammar,
+/// taught through sentences only.
+fn word_cards(items: &[Item]) -> HashMap<&str, Vec<&str>> {
+    let mut words: HashMap<&str, Vec<&str>> = HashMap::new();
+    for item in items.iter().filter(|i| i.kind == ItemKind::Word) {
+        let lemmas: Vec<&str> = if item.lexemes.is_empty() {
+            vec![item.korean.as_str()]
+        } else {
+            item.lexemes.iter().map(String::as_str).collect()
+        };
+        for lemma in lemmas {
+            words.entry(lemma).or_default().push(item.id.as_str());
+        }
+    }
+    words
+}
+
 /// Due cards first (most overdue first), then new cards, interleaved so a session never starts
 /// with a wall of unknown material.
 ///
 /// New cards: an item is introduced through `listening`; its other skills become available once
 /// that card has been reviewed. New material is taken round-robin across packs, in content order
 /// within a pack.
+///
+/// Vocabulary first (`Focus::Words` and `Focus::Guided`): a word is known once its listening card
+/// has graduated to FSRS review. With `Guided`, a sentence whose words are all known is served
+/// normally. Any other sentence waits, even when due, and its words not introduced yet are queued
+/// as new cards in its place, so the words taught first are the ones sentences need next.
 pub fn plan_session(
     items: &[Item],
     states: &HashMap<Card, MemoryState>,
     enabled: &[Skill],
+    focus: Focus,
     now_ms: i64,
     limits: Limits,
 ) -> Plan {
+    let words = word_cards(items);
+    let listening = |id: &str| states.get(&Card::new(id, Skill::Listening));
+    let known = |lemma: &str| {
+        words.get(lemma).is_none_or(|ids| {
+            ids.iter()
+                .any(|id| listening(id).is_some_and(|s| s.phase == Phase::Review))
+        })
+    };
+
     let mut due: Vec<(&MemoryState, Card)> = Vec::new();
     let mut new_by_pack: Vec<(&str, VecDeque<Card>)> = Vec::new();
+    let mut queued: HashSet<Card> = HashSet::new();
+    let mut queue_new = |pack, card: Card| {
+        if !queued.insert(card.clone()) {
+            return;
+        }
+        match new_by_pack.iter_mut().find(|(p, _)| *p == pack) {
+            Some((_, queue)) => queue.push_back(card),
+            None => new_by_pack.push((pack, VecDeque::from([card]))),
+        }
+    };
 
     for item in items {
-        let introduced = states.contains_key(&Card::new(&item.id, Skill::Listening));
+        let pack = pack_of(&item.id);
+        if item.kind == ItemKind::Sentence && focus != Focus::All {
+            let ready = focus == Focus::Guided && item.lexemes.iter().all(|l| known(l));
+            if !ready {
+                for lemma in &item.lexemes {
+                    let Some(ids) = words.get(lemma.as_str()) else {
+                        continue;
+                    };
+                    if enabled.contains(&Skill::Listening)
+                        && ids.iter().all(|id| listening(id).is_none())
+                    {
+                        queue_new(pack, Card::new(ids[0], Skill::Listening));
+                    }
+                }
+                continue;
+            }
+        }
+        let introduced = listening(&item.id).is_some();
         for skill in item.skills() {
             if !enabled.contains(&skill) {
                 continue;
@@ -76,13 +164,7 @@ pub fn plan_session(
             match states.get(&card) {
                 Some(state) if state.is_due(now_ms) => due.push((state, card)),
                 Some(_) => {}
-                None if skill == Skill::Listening || introduced => {
-                    let pack = pack_of(&item.id);
-                    match new_by_pack.iter_mut().find(|(p, _)| *p == pack) {
-                        Some((_, queue)) => queue.push_back(card),
-                        None => new_by_pack.push((pack, VecDeque::from([card]))),
-                    }
-                }
+                None if skill == Skill::Listening || introduced => queue_new(pack, card),
                 None => {}
             }
         }
@@ -131,7 +213,7 @@ pub fn plan_session(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::content::{ItemKind, Line, Register, Replies};
+    use crate::content::{Line, Register, Replies};
     use crate::scheduler::{Rating, review};
 
     const NOW: i64 = 10_000_000_000;
@@ -160,6 +242,22 @@ mod tests {
         }
     }
 
+    fn word(id: &str, korean: &str) -> Item {
+        Item {
+            kind: ItemKind::Word,
+            lexemes: vec![korean.into()],
+            distractors: vec![],
+            ..item(id, korean, false)
+        }
+    }
+
+    fn sentence(id: &str, korean: &str, lexemes: &[&str]) -> Item {
+        Item {
+            lexemes: lexemes.iter().map(|l| l.to_string()).collect(),
+            ..item(id, korean, false)
+        }
+    }
+
     fn ids(plan: &Plan) -> Vec<(String, Skill)> {
         plan.cards
             .iter()
@@ -178,6 +276,7 @@ mod tests {
             &items,
             &HashMap::new(),
             &Skill::ALL,
+            Focus::Guided,
             NOW,
             Limits {
                 max_cards: 10,
@@ -201,10 +300,23 @@ mod tests {
         let mut states = HashMap::new();
         let seen = review(None, Rating::Good, NOW - 1);
         states.insert(Card::new("a/1", Skill::Listening), seen);
-        let all = plan_session(&items, &states, &Skill::ALL, NOW, Limits::default());
+        let all = plan_session(
+            &items,
+            &states,
+            &Skill::ALL,
+            Focus::Guided,
+            NOW,
+            Limits::default(),
+        );
         assert_eq!(ids(&all), [("a/1".into(), Skill::Response)]);
-        let only_listening =
-            plan_session(&items, &states, &[Skill::Listening], NOW, Limits::default());
+        let only_listening = plan_session(
+            &items,
+            &states,
+            &[Skill::Listening],
+            Focus::Guided,
+            NOW,
+            Limits::default(),
+        );
         assert!(only_listening.cards.is_empty());
     }
 
@@ -230,6 +342,7 @@ mod tests {
             &items,
             &states,
             &Skill::ALL,
+            Focus::Guided,
             NOW,
             Limits {
                 max_cards: 4,
@@ -246,5 +359,85 @@ mod tests {
             ]
         );
         assert_eq!((plan.due, plan.new), (3, 1));
+    }
+
+    /// 가다 known (graduated), 오다 still in learning steps, 먹다 never seen.
+    fn vocabulary() -> (Vec<Item>, HashMap<Card, MemoryState>) {
+        let items = vec![
+            word("a/go", "가다"),
+            word("a/come", "오다"),
+            sentence("a/go-eat", "가서 먹어요.", &["가다", "먹다", "이다"]),
+            sentence("a/go-come", "가고 와요.", &["가다", "오다"]),
+            sentence("a/go-only", "가요.", &["가다", "이다"]),
+            word("a/sleep", "자다"),
+            word("b/eat", "먹다"),
+        ];
+        let mut states = HashMap::new();
+        let known = review(None, Rating::Easy, NOW - 1);
+        assert_eq!(known.phase, Phase::Review);
+        states.insert(Card::new("a/go", Skill::Listening), known);
+        let learning = review(None, Rating::Good, NOW - 1);
+        assert_eq!(learning.phase, Phase::Learning);
+        states.insert(Card::new("a/come", Skill::Listening), learning);
+        // Introduced earlier under `Focus::All` and due now.
+        let mut due = review(None, Rating::Good, NOW - 1);
+        due.due_at = NOW - 1;
+        states.insert(Card::new("a/go-come", Skill::Listening), due);
+        (items, states)
+    }
+
+    const WIDE: Limits = Limits {
+        max_cards: 10,
+        max_new: 10,
+    };
+
+    #[test]
+    fn guided_serves_sentences_once_their_words_are_known_and_pulls_missing_words_first() {
+        let (items, states) = vocabulary();
+        let plan = plan_session(&items, &states, &Skill::ALL, Focus::Guided, NOW, WIDE);
+        assert_eq!(
+            ids(&plan),
+            [
+                // 먹다 lives in pack b but is needed by a/go-eat: taught in its place, once.
+                ("b/eat".into(), Skill::Listening),
+                // Only known words (a lemma without word card, 이다, is grammar).
+                ("a/go-only".into(), Skill::Listening),
+                ("a/sleep".into(), Skill::Listening),
+            ]
+        );
+        // a/go-come is due but waits for 오다, which is still being learned.
+        assert_eq!((plan.due, plan.new), (0, 3));
+    }
+
+    #[test]
+    fn words_focus_serves_no_sentence_and_all_ignores_vocabulary() {
+        let (items, states) = vocabulary();
+        let words = plan_session(&items, &states, &Skill::ALL, Focus::Words, NOW, WIDE);
+        assert_eq!(
+            ids(&words),
+            [
+                ("b/eat".into(), Skill::Listening),
+                ("a/sleep".into(), Skill::Listening),
+            ]
+        );
+        let all = plan_session(&items, &states, &Skill::ALL, Focus::All, NOW, WIDE);
+        assert_eq!(
+            ids(&all),
+            [
+                ("a/go-come".into(), Skill::Listening),
+                ("a/go-eat".into(), Skill::Listening),
+                ("b/eat".into(), Skill::Listening),
+                ("a/go-only".into(), Skill::Listening),
+                ("a/sleep".into(), Skill::Listening),
+            ]
+        );
+    }
+
+    #[test]
+    fn focus_names_round_trip() {
+        for focus in Focus::ALL {
+            assert_eq!(Focus::parse(focus.as_str()), Some(focus));
+        }
+        assert_eq!(Focus::parse("sentences"), None);
     }
 }

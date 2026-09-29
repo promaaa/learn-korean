@@ -13,6 +13,8 @@ describe("actionFor", () => {
     expect(actionFor({ key: "'", code: "Digit4" })).toEqual({ type: "choose", index: 3 });
     // The key labelled R on every layout replays.
     expect(actionFor({ key: "r", code: "KeyR" })).toEqual({ type: "replay" });
+    // Same for F (focus), which types "f" on AZERTY too but "u" on Dvorak.
+    expect(actionFor({ key: "u", code: "KeyF" })).toEqual({ type: "focus" });
   });
 
   it("maps vim keys and arrows to the same moves", () => {

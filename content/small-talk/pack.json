@@ -1,10 +1,32 @@
 {
   "id": "small-talk",
-  "version": 1,
+  "version": 2,
   "title": "Small talk",
   "description": "Everyday conversation openers and answers.",
   "unlock_level": 1,
   "items": [
+    {
+      "id": "small-talk/first-time",
+      "kind": "word",
+      "korean": "처음",
+      "english": "first time",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "처음"
+      ]
+    },
+    {
+      "id": "small-talk/to-meet-humble",
+      "kind": "word",
+      "korean": "뵙다",
+      "english": "to meet (humble)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "뵙다"
+      ]
+    },
     {
       "id": "small-talk/how-do-you-do",
       "kind": "sentence",
@@ -50,6 +72,17 @@
       }
     },
     {
+      "id": "small-talk/to-be-glad-to-meet",
+      "kind": "word",
+      "korean": "반갑다",
+      "english": "to be glad (to meet)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "반갑다"
+      ]
+    },
+    {
       "id": "small-talk/nice-to-meet-you",
       "kind": "sentence",
       "korean": "만나서 반가워요.",
@@ -93,6 +126,17 @@
       }
     },
     {
+      "id": "small-talk/a-long-time-since",
+      "kind": "word",
+      "korean": "오랜만",
+      "english": "a long time (since)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "오랜만"
+      ]
+    },
+    {
       "id": "small-talk/long-time-no-see",
       "kind": "sentence",
       "korean": "오랜만이에요.",
@@ -133,6 +177,28 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/to-be-late",
+      "kind": "word",
+      "korean": "늦다",
+      "english": "to be late",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "늦다"
+      ]
+    },
+    {
+      "id": "small-talk/to-be-sorry",
+      "kind": "word",
+      "korean": "미안하다",
+      "english": "to be sorry",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "미안하다"
+      ]
     },
     {
       "id": "small-talk/sorry-im-late",
@@ -178,6 +244,17 @@
       }
     },
     {
+      "id": "small-talk/to-be-thankful",
+      "kind": "word",
+      "korean": "고맙다",
+      "english": "to be thankful",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "고맙다"
+      ]
+    },
+    {
       "id": "small-talk/thanks-for-helping",
       "kind": "sentence",
       "korean": "도와줘서 고마워요.",
@@ -219,6 +296,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/next",
+      "kind": "word",
+      "korean": "다음",
+      "english": "next",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "다음"
+      ]
     },
     {
       "id": "small-talk/see-you-next-time",
@@ -280,6 +368,17 @@
         "See you next week!",
         "I saw you yesterday!",
         "Call me tomorrow!"
+      ]
+    },
+    {
+      "id": "small-talk/to-get-along-live",
+      "kind": "word",
+      "korean": "지내다",
+      "english": "to get along / live",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "지내다"
       ]
     },
     {
@@ -345,6 +444,17 @@
         "No, I'm not doing well.",
         "Yes, I did it well.",
         "Yes, I'm leaving now."
+      ]
+    },
+    {
+      "id": "small-talk/these-days",
+      "kind": "word",
+      "korean": "요즘",
+      "english": "these days",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "요즘"
       ]
     },
     {
@@ -522,6 +632,17 @@
       }
     },
     {
+      "id": "small-talk/name-honorific",
+      "kind": "word",
+      "korean": "성함",
+      "english": "name (honorific)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "성함"
+      ]
+    },
+    {
       "id": "small-talk/may-i-ask-your-name",
       "kind": "sentence",
       "korean": "성함이 어떻게 되세요?",
@@ -565,6 +686,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/which",
+      "kind": "word",
+      "korean": "어느",
+      "english": "which",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "어느"
+      ]
     },
     {
       "id": "small-talk/what-country-are-you-from",
@@ -654,6 +786,17 @@
       }
     },
     {
+      "id": "small-talk/france",
+      "kind": "word",
+      "korean": "프랑스",
+      "english": "France",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "프랑스"
+      ]
+    },
+    {
       "id": "small-talk/i-am-french",
       "kind": "sentence",
       "korean": "저는 프랑스 사람이에요.",
@@ -672,6 +815,17 @@
       ]
     },
     {
+      "id": "small-talk/paris",
+      "kind": "word",
+      "korean": "파리",
+      "english": "Paris",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "파리"
+      ]
+    },
+    {
       "id": "small-talk/i-am-from-paris",
       "kind": "sentence",
       "korean": "파리에서 왔어요.",
@@ -686,6 +840,17 @@
         "I'm going to Paris.",
         "I live in Paris.",
         "I came back from Paris yesterday."
+      ]
+    },
+    {
+      "id": "small-talk/age",
+      "kind": "word",
+      "korean": "나이",
+      "english": "age",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "나이"
       ]
     },
     {
@@ -795,6 +960,17 @@
       ]
     },
     {
+      "id": "small-talk/to-learn",
+      "kind": "word",
+      "korean": "배우다",
+      "english": "to learn",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "배우다"
+      ]
+    },
+    {
       "id": "small-talk/how-long-studying-korean",
       "kind": "sentence",
       "korean": "한국어는 얼마나 배웠어요?",
@@ -883,6 +1059,28 @@
       }
     },
     {
+      "id": "small-talk/how-many",
+      "kind": "word",
+      "korean": "몇",
+      "english": "how many",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "몇"
+      ]
+    },
+    {
+      "id": "small-talk/o-clock",
+      "kind": "word",
+      "korean": "시",
+      "english": "o'clock",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "시"
+      ]
+    },
+    {
       "id": "small-talk/what-time-is-it",
       "kind": "sentence",
       "korean": "지금 몇 시예요?",
@@ -926,6 +1124,28 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/what-kind-of",
+      "kind": "word",
+      "korean": "무슨",
+      "english": "what kind of",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "무슨"
+      ]
+    },
+    {
+      "id": "small-talk/day-of-the-week",
+      "kind": "word",
+      "korean": "요일",
+      "english": "day of the week",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "요일"
+      ]
     },
     {
       "id": "small-talk/what-day-is-it",
@@ -1174,6 +1394,17 @@
       "image": "rain umbrella"
     },
     {
+      "id": "small-talk/to-be-how",
+      "kind": "word",
+      "korean": "어떻다",
+      "english": "to be how",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "어떻다"
+      ]
+    },
+    {
       "id": "small-talk/weather-there",
       "kind": "sentence",
       "korean": "거기 날씨는 어때요?",
@@ -1236,6 +1467,39 @@
       "image": "snowfall"
     },
     {
+      "id": "small-talk/what-kind-of-which",
+      "kind": "word",
+      "korean": "어떤",
+      "english": "what kind of (which)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "어떤"
+      ]
+    },
+    {
+      "id": "small-talk/season",
+      "kind": "word",
+      "korean": "계절",
+      "english": "season",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "계절"
+      ]
+    },
+    {
+      "id": "small-talk/the-most",
+      "kind": "word",
+      "korean": "제일",
+      "english": "the most",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "제일"
+      ]
+    },
+    {
       "id": "small-talk/favorite-season",
       "kind": "sentence",
       "korean": "어떤 계절을 제일 좋아해요?",
@@ -1279,6 +1543,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/lunch",
+      "kind": "word",
+      "korean": "점심",
+      "english": "lunch",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "점심"
+      ]
     },
     {
       "id": "small-talk/did-you-have-lunch",
@@ -1369,6 +1644,17 @@
       }
     },
     {
+      "id": "small-talk/food",
+      "kind": "word",
+      "korean": "음식",
+      "english": "food",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "음식"
+      ]
+    },
+    {
       "id": "small-talk/like-korean-food",
       "kind": "sentence",
       "korean": "한국 음식 좋아해요?",
@@ -1411,6 +1697,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/to-be-spicy",
+      "kind": "word",
+      "korean": "맵다",
+      "english": "to be spicy",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "맵다"
+      ]
     },
     {
       "id": "small-talk/can-you-eat-spicy",
@@ -1503,6 +1800,17 @@
       }
     },
     {
+      "id": "small-talk/people-counter",
+      "kind": "word",
+      "korean": "명",
+      "english": "people (counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "명"
+      ]
+    },
+    {
       "id": "small-talk/how-many-in-family",
       "kind": "sentence",
       "korean": "가족이 몇 명이에요?",
@@ -1545,6 +1853,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/siblings",
+      "kind": "word",
+      "korean": "형제",
+      "english": "siblings",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "형제"
+      ]
     },
     {
       "id": "small-talk/do-you-have-siblings",
@@ -1590,6 +1909,17 @@
       }
     },
     {
+      "id": "small-talk/one-before-a-counter",
+      "kind": "word",
+      "korean": "한",
+      "english": "one (before a counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "한"
+      ]
+    },
+    {
       "id": "small-talk/one-younger-sister",
       "kind": "sentence",
       "korean": "여동생이 한 명 있어요.",
@@ -1606,6 +1936,17 @@
         "I have one older sister.",
         "I have two younger sisters.",
         "I have one younger brother."
+      ]
+    },
+    {
+      "id": "small-talk/work-day",
+      "kind": "word",
+      "korean": "일",
+      "english": "work / day",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "일"
       ]
     },
     {
@@ -1657,6 +1998,17 @@
       }
     },
     {
+      "id": "small-talk/university-student",
+      "kind": "word",
+      "korean": "대학생",
+      "english": "university student",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "대학생"
+      ]
+    },
+    {
       "id": "small-talk/i-am-a-university-student",
       "kind": "sentence",
       "korean": "저는 대학생이에요.",
@@ -1689,6 +2041,17 @@
         "I had a lot of work yesterday.",
         "I don't have much work today.",
         "I have a lot of homework today."
+      ]
+    },
+    {
+      "id": "small-talk/to-leave-work",
+      "kind": "word",
+      "korean": "퇴근하다",
+      "english": "to leave work",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "퇴근하다"
       ]
     },
     {
@@ -1779,6 +2142,17 @@
       }
     },
     {
+      "id": "small-talk/hobby",
+      "kind": "word",
+      "korean": "취미",
+      "english": "hobby",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "취미"
+      ]
+    },
+    {
       "id": "small-talk/whats-your-hobby",
       "kind": "sentence",
       "korean": "취미가 뭐예요?",
@@ -1822,6 +2196,17 @@
       }
     },
     {
+      "id": "small-talk/reading",
+      "kind": "word",
+      "korean": "독서",
+      "english": "reading",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "독서"
+      ]
+    },
+    {
       "id": "small-talk/my-hobby-is-reading",
       "kind": "sentence",
       "korean": "제 취미는 독서예요.",
@@ -1829,6 +2214,7 @@
       "context": "hobbies",
       "register": "polite",
       "lexemes": [
+        "저",
         "취미",
         "독서"
       ],
@@ -1838,6 +2224,17 @@
         "I don't like reading."
       ],
       "image": "reading book"
+    },
+    {
+      "id": "small-talk/exercise",
+      "kind": "word",
+      "korean": "운동",
+      "english": "exercise",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "운동"
+      ]
     },
     {
       "id": "small-talk/do-you-like-exercise",
@@ -1881,6 +2278,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/to-work-out",
+      "kind": "word",
+      "korean": "운동하다",
+      "english": "to work out",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "운동하다"
+      ]
     },
     {
       "id": "small-talk/how-often-exercise",
@@ -1971,6 +2379,29 @@
       }
     },
     {
+      "id": "small-talk/guitar",
+      "kind": "word",
+      "korean": "기타",
+      "english": "guitar",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "기타"
+      ],
+      "image": "guitar"
+    },
+    {
+      "id": "small-talk/to-play-an-instrument",
+      "kind": "word",
+      "korean": "치다",
+      "english": "to play (an instrument)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "치다"
+      ]
+    },
+    {
       "id": "small-talk/can-play-guitar",
       "kind": "sentence",
       "korean": "기타를 칠 줄 알아요.",
@@ -1991,6 +2422,17 @@
       "image": "acoustic guitar"
     },
     {
+      "id": "small-talk/tv-drama",
+      "kind": "word",
+      "korean": "드라마",
+      "english": "TV drama",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "드라마"
+      ]
+    },
+    {
       "id": "small-talk/like-korean-dramas",
       "kind": "sentence",
       "korean": "한국 드라마를 자주 봐요.",
@@ -2007,6 +2449,17 @@
         "I rarely watch Korean dramas.",
         "I often watch Korean movies.",
         "I watched a Korean drama yesterday."
+      ]
+    },
+    {
+      "id": "small-talk/weekend",
+      "kind": "word",
+      "korean": "주말",
+      "english": "weekend",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "주말"
       ]
     },
     {
@@ -2053,6 +2506,17 @@
         ]
       },
       "image": "weekend picnic park"
+    },
+    {
+      "id": "small-talk/this-time",
+      "kind": "word",
+      "korean": "이번",
+      "english": "this (time)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "이번"
+      ]
     },
     {
       "id": "small-talk/what-doing-this-weekend",
@@ -2148,6 +2612,17 @@
       }
     },
     {
+      "id": "small-talk/deeply-rest-sleep",
+      "kind": "word",
+      "korean": "푹",
+      "english": "deeply (rest, sleep)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "푹"
+      ]
+    },
+    {
       "id": "small-talk/rested-at-home",
       "kind": "sentence",
       "korean": "집에서 푹 쉬었어요.",
@@ -2186,6 +2661,29 @@
       "image": "movie theater"
     },
     {
+      "id": "small-talk/saturday",
+      "kind": "word",
+      "korean": "토요일",
+      "english": "Saturday",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "토요일"
+      ]
+    },
+    {
+      "id": "small-talk/hiking",
+      "kind": "word",
+      "korean": "등산",
+      "english": "hiking",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "등산"
+      ],
+      "image": "mountain hiking"
+    },
+    {
       "id": "small-talk/went-hiking-saturday",
       "kind": "sentence",
       "korean": "토요일에 등산을 했어요.",
@@ -2203,6 +2701,17 @@
         "I went swimming on Saturday."
       ],
       "image": "mountain hiking"
+    },
+    {
+      "id": "small-talk/to-spend-time",
+      "kind": "word",
+      "korean": "보내다",
+      "english": "to spend (time)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "보내다"
+      ]
     },
     {
       "id": "small-talk/did-you-have-good-weekend",
@@ -2293,6 +2802,17 @@
       }
     },
     {
+      "id": "small-talk/usually",
+      "kind": "word",
+      "korean": "보통",
+      "english": "usually",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "보통"
+      ]
+    },
+    {
       "id": "small-talk/what-usually-do-weekends",
       "kind": "sentence",
       "korean": "주말에는 보통 뭐 해요?",
@@ -2336,6 +2856,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/mood",
+      "kind": "word",
+      "korean": "기분",
+      "english": "mood",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "기분"
+      ]
     },
     {
       "id": "small-talk/how-are-you-feeling-today",
@@ -2382,6 +2913,28 @@
       }
     },
     {
+      "id": "small-talk/last-night",
+      "kind": "word",
+      "korean": "어젯밤",
+      "english": "last night",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "어젯밤"
+      ]
+    },
+    {
+      "id": "small-talk/sleep",
+      "kind": "word",
+      "korean": "잠",
+      "english": "sleep",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잠"
+      ]
+    },
+    {
       "id": "small-talk/tired-couldnt-sleep",
       "kind": "sentence",
       "korean": "어젯밤에 잠을 못 자서 너무 피곤해요.",
@@ -2400,6 +2953,17 @@
         "I'm so tired because I worked late last night.",
         "I slept well last night, so I feel great.",
         "I couldn't sleep last night because I was nervous."
+      ]
+    },
+    {
+      "id": "small-talk/really",
+      "kind": "word",
+      "korean": "정말",
+      "english": "really",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "정말"
       ]
     },
     {
@@ -2464,6 +3028,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/relief",
+      "kind": "word",
+      "korean": "다행",
+      "english": "relief",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "다행"
+      ]
     },
     {
       "id": "small-talk/thats-a-relief",
@@ -2615,6 +3190,17 @@
       }
     },
     {
+      "id": "small-talk/week",
+      "kind": "word",
+      "korean": "주",
+      "english": "week",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "주"
+      ]
+    },
+    {
       "id": "small-talk/movie-this-saturday",
       "kind": "sentence",
       "korean": "이번 주 토요일에 영화 보러 갈래요?",
@@ -2749,6 +3335,17 @@
       }
     },
     {
+      "id": "small-talk/then-that-time",
+      "kind": "word",
+      "korean": "그때",
+      "english": "then (that time)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "그때"
+      ]
+    },
+    {
       "id": "small-talk/sounds-good-see-you-then",
       "kind": "sentence",
       "korean": "좋아요, 그때 봐요.",
@@ -2783,6 +3380,17 @@
         "Sorry, I went there last time.",
         "Great, let's go together now.",
         "Sorry, I can't go next time."
+      ]
+    },
+    {
+      "id": "small-talk/to-be-good-at",
+      "kind": "word",
+      "korean": "잘하다",
+      "english": "to be good at",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잘하다"
       ]
     },
     {
@@ -2830,6 +3438,18 @@
       }
     },
     {
+      "id": "small-talk/clothes",
+      "kind": "word",
+      "korean": "옷",
+      "english": "clothes",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "옷"
+      ],
+      "image": "clothes"
+    },
+    {
       "id": "small-talk/your-clothes-are-pretty",
       "kind": "sentence",
       "korean": "옷이 정말 예쁘네요.",
@@ -2872,6 +3492,17 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/cooking",
+      "kind": "word",
+      "korean": "요리",
+      "english": "cooking",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "요리"
+      ]
     },
     {
       "id": "small-talk/you-are-a-good-cook",
@@ -2918,6 +3549,17 @@
       }
     },
     {
+      "id": "small-talk/to-be-fun",
+      "kind": "word",
+      "korean": "즐겁다",
+      "english": "to be fun",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "즐겁다"
+      ]
+    },
+    {
       "id": "small-talk/had-fun-today",
       "kind": "sentence",
       "korean": "오늘 정말 즐거웠어요.",
@@ -2962,6 +3604,17 @@
       }
     },
     {
+      "id": "small-talk/carefully",
+      "kind": "word",
+      "korean": "조심히",
+      "english": "carefully",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "조심히"
+      ]
+    },
+    {
       "id": "small-talk/get-home-safe",
       "kind": "sentence",
       "korean": "조심히 가세요.",
@@ -3003,6 +3656,28 @@
           }
         ]
       }
+    },
+    {
+      "id": "small-talk/later",
+      "kind": "word",
+      "korean": "나중",
+      "english": "later",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "나중"
+      ]
+    },
+    {
+      "id": "small-talk/to-contact",
+      "kind": "word",
+      "korean": "연락하다",
+      "english": "to contact",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "연락하다"
+      ]
     },
     {
       "id": "small-talk/ill-be-in-touch",

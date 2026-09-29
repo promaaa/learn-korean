@@ -163,6 +163,9 @@ pub struct Usage {
     pub chunks: Option<Vec<String>>,
     #[serde(default)]
     pub image: Option<String>,
+    /// The other content words of the sentence (dictionary forms), after the head lemma.
+    #[serde(default)]
+    pub lexemes: Vec<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
@@ -190,6 +193,17 @@ fn lemma_list(lemma: &str) -> Vec<String> {
     } else {
         Vec::new()
     }
+}
+
+/// Sentence lexemes: the head lemma (when Hangul) followed by the curated extras, deduplicated.
+fn sentence_lexemes(head: &str, extras: &[String]) -> Vec<String> {
+    let mut lexemes = lemma_list(head);
+    for extra in extras {
+        if !lexemes.contains(extra) {
+            lexemes.push(extra.clone());
+        }
+    }
+    lexemes
 }
 
 struct Normalized {
@@ -337,7 +351,7 @@ pub fn build(raw: &[RawEntry], curation: &Curation) -> Result<Built, ImportError
             context: u.context.clone(),
             register: u.register,
             note: u.note.clone(),
-            lexemes: lemma_list(&lemma),
+            lexemes: sentence_lexemes(&lemma, &u.lexemes),
             distractors: u.distractors.clone(),
             replies: u.replies.clone(),
             chunks: u.chunks.clone(),
@@ -470,6 +484,7 @@ mod tests {
               {"row":1,"skip":"header"},
               {"row":2,"lemma":"자전거","surface":"자전거","english":"bicycle","pos":"noun","register":"neutral","image":"bicycle",
                "usage":[{"id":"legacy/bike","korean":"자전거 있어요?","english":"Do you have a bicycle?","context":"transport","register":"polite",
+                         "lexemes":["있다","자전거"],
                          "distractors":["Do you have a car?","Is this a bicycle?","Do you like bicycles?"]}]},
               {"row":3,"lemma":"하고","surface":"하고","english":"and (with nouns)","pos":"particle","register":"neutral","fix":"template removed"}
             ]}"#,
@@ -492,7 +507,11 @@ mod tests {
             "particles get no word card"
         );
         assert_eq!(built.pack.items[0].image.as_deref(), Some("bicycle"));
-        assert_eq!(built.pack.items[1].lexemes, ["자전거"]);
+        assert_eq!(
+            built.pack.items[1].lexemes,
+            ["자전거", "있다"],
+            "head lemma first, deduplicated"
+        );
     }
 
     /// The committed generated files must be exactly what the importer produces.
