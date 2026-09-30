@@ -27,8 +27,9 @@ Tauri 2 · Rust · Svelte 5 · TypeScript · SQLite · FSRS.
 | arrows or `H` `J` `K` `L` | after answering: show the English of each Korean word |
 | `Space` | next card |
 | `R` | replay audio |
+| `J` / `K`, `H` / `L`, `Enter`, `Backspace` | Hangul primer: choose a lesson, browse its new letters, start / next, back to the lessons |
 | `F` | focus: words only → words, then sentences → everything |
-| `Tab` | switch between review and Typing Gym |
+| `Tab` / `Shift + Tab` | next / previous screen: review → Typing Gym → Hangul → stats |
 | `Esc` | hide |
 
 ## Development
@@ -48,6 +49,7 @@ Checks: see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - [Product](docs/product.md)
 - [Architecture](docs/architecture.md)
+- [Content packs and authoring them with pack-gen](docs/content.md)
 - [Architecture decision records](docs/adr/)
 - [Omarchy / Hyprland integration (Super+Z)](docs/omarchy.md)
 - [Contributing: Git workflow, commits, migrations, releases](CONTRIBUTING.md)

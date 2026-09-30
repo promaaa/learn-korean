@@ -3180,6 +3180,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "pack-gen"
+version = "0.6.0"
+dependencies = [
+ "korean-core",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.21",
+]
+
+[[package]]
 name = "pango"
 version = "0.18.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"

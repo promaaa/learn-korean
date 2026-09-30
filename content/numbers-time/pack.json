@@ -1,0 +1,2493 @@
+{
+  "id": "numbers-time",
+  "version": 1,
+  "title": "Numbers & time",
+  "description": "Native and Sino-Korean numbers, counters, prices, clock time, days and dates.",
+  "unlock_level": 2,
+  "items": [
+    {
+      "id": "numbers-time/two",
+      "kind": "word",
+      "korean": "둘",
+      "english": "two (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Native 하나 둘 셋 count things and hours; before a counter 둘 becomes 두.",
+      "lexemes": [
+        "둘"
+      ]
+    },
+    {
+      "id": "numbers-time/three",
+      "kind": "word",
+      "korean": "셋",
+      "english": "three (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Before a counter 셋 becomes 세: 세 개, 세 명.",
+      "lexemes": [
+        "셋"
+      ]
+    },
+    {
+      "id": "numbers-time/one-two-three",
+      "kind": "sentence",
+      "korean": "하나, 둘, 셋!",
+      "english": "One, two, three!",
+      "context": "counting",
+      "register": "neutral",
+      "note": "Counting aloud uses native numbers, e.g. before a photo.",
+      "lexemes": [
+        "하나",
+        "둘",
+        "셋"
+      ],
+      "distractors": [
+        "Three, two, one!",
+        "One, two, go!",
+        "First, second, third!"
+      ]
+    },
+    {
+      "id": "numbers-time/three-before-counter",
+      "kind": "word",
+      "korean": "세",
+      "english": "three (before a counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Short form of 셋 used right before a counter: 세 잔, 세 시.",
+      "lexemes": [
+        "세"
+      ]
+    },
+    {
+      "id": "numbers-time/three-coffees-please",
+      "kind": "sentence",
+      "korean": "커피 세 잔 주세요.",
+      "english": "Three coffees, please.",
+      "context": "counters",
+      "register": "polite",
+      "note": "잔 counts cups with native numbers; 셋 shortens to 세 before it.",
+      "lexemes": [
+        "커피",
+        "세",
+        "잔",
+        "주다"
+      ],
+      "distractors": [
+        "Two coffees, please.",
+        "Three teas, please.",
+        "A large coffee, please."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 잠시만요.",
+            "english": "Sure, one moment."
+          },
+          {
+            "korean": "따뜻한 거요, 차가운 거요?",
+            "english": "Hot or iced?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 시에 만나요.",
+            "english": "Let's meet at three."
+          },
+          {
+            "korean": "저는 세 살이에요.",
+            "english": "I'm three years old."
+          },
+          {
+            "korean": "커피를 안 좋아해요.",
+            "english": "I don't like coffee."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/five",
+      "kind": "word",
+      "korean": "다섯",
+      "english": "five (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "다섯"
+      ]
+    },
+    {
+      "id": "numbers-time/family-of-five",
+      "kind": "sentence",
+      "korean": "우리 가족은 다섯 명이에요.",
+      "english": "There are five people in my family.",
+      "context": "counters",
+      "register": "polite",
+      "note": "People are counted with native numbers + 명: 한 명, 다섯 명.",
+      "lexemes": [
+        "우리",
+        "가족",
+        "다섯",
+        "명",
+        "이다"
+      ],
+      "distractors": [
+        "There are four people in my family.",
+        "My family lives in five cities.",
+        "I have five brothers."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "와, 가족이 많네요.",
+            "english": "Wow, that's a big family."
+          },
+          {
+            "korean": "형제가 몇 명이에요?",
+            "english": "How many siblings do you have?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다섯 시에 끝나요.",
+            "english": "It ends at five."
+          },
+          {
+            "korean": "오천 원이에요.",
+            "english": "It's five thousand won."
+          },
+          {
+            "korean": "저는 혼자 왔어요.",
+            "english": "I came alone."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/counter-animals",
+      "kind": "word",
+      "korean": "마리",
+      "english": "counter for animals",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "마리 counts animals and fish, with native numbers: 한 마리, 두 마리.",
+      "lexemes": [
+        "마리"
+      ],
+      "image": "two cats"
+    },
+    {
+      "id": "numbers-time/have-two-cats",
+      "kind": "sentence",
+      "korean": "고양이 두 마리 키워요.",
+      "english": "I have two cats.",
+      "context": "counters",
+      "register": "polite",
+      "lexemes": [
+        "고양이",
+        "두",
+        "마리",
+        "키우다"
+      ],
+      "distractors": [
+        "I have two dogs.",
+        "I want two cats.",
+        "My cat is two years old."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "이름이 뭐예요?",
+            "english": "What are their names?"
+          },
+          {
+            "korean": "사진 있어요?",
+            "english": "Do you have a photo?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "두 시에 가요.",
+            "english": "I'm going at two."
+          },
+          {
+            "korean": "두 병 주세요.",
+            "english": "Two bottles, please."
+          },
+          {
+            "korean": "이 층에 있어요.",
+            "english": "It's on the second floor."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/counter-books",
+      "kind": "word",
+      "korean": "권",
+      "english": "counter for books",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "권 counts books and volumes, with native numbers: 한 권, 세 권.",
+      "lexemes": [
+        "권"
+      ],
+      "image": "stack of books"
+    },
+    {
+      "id": "numbers-time/how-many-books",
+      "kind": "sentence",
+      "korean": "책을 몇 권 샀어요?",
+      "english": "How many books did you buy?",
+      "context": "counters",
+      "register": "polite",
+      "lexemes": [
+        "책",
+        "몇",
+        "권",
+        "사다"
+      ],
+      "distractors": [
+        "How much were the books?",
+        "Which books did you buy?",
+        "Where did you buy the books?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "세 권 샀어요.",
+            "english": "I bought three."
+          },
+          {
+            "korean": "여섯 권이요.",
+            "english": "Six."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "삼 층에 있어요.",
+            "english": "It's on the third floor."
+          },
+          {
+            "korean": "세 시에 샀어요.",
+            "english": "I bought them at three."
+          },
+          {
+            "korean": "서점에서 샀어요.",
+            "english": "I bought them at a bookshop."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/how-many-students",
+      "kind": "sentence",
+      "korean": "학생이 몇 명 있어요?",
+      "english": "How many students are there?",
+      "context": "counters",
+      "register": "polite",
+      "lexemes": [
+        "학생",
+        "몇",
+        "명",
+        "있다"
+      ],
+      "distractors": [
+        "How many teachers are there?",
+        "How old are the students?",
+        "Where are the students?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "열 명 있어요.",
+            "english": "There are ten."
+          },
+          {
+            "korean": "스무 명쯤 있어요.",
+            "english": "There are about twenty."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "열 시에 와요.",
+            "english": "They come at ten."
+          },
+          {
+            "korean": "십 번이에요.",
+            "english": "It's number ten."
+          },
+          {
+            "korean": "네, 학생이에요.",
+            "english": "Yes, I'm a student."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/twenty",
+      "kind": "word",
+      "korean": "스물",
+      "english": "twenty (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Native 20; right before a counter it becomes 스무: 스무 살.",
+      "lexemes": [
+        "스물"
+      ]
+    },
+    {
+      "id": "numbers-time/counter-age",
+      "kind": "word",
+      "korean": "살",
+      "english": "years old (age counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Ages use native numbers + 살: 스무 살, 서른 살.",
+      "lexemes": [
+        "살"
+      ],
+      "image": "birthday cake candles"
+    },
+    {
+      "id": "numbers-time/im-twenty-five",
+      "kind": "sentence",
+      "korean": "저는 스물다섯 살이에요.",
+      "english": "I'm twenty-five years old.",
+      "context": "age",
+      "register": "polite",
+      "note": "Ages are native numbers + 살. 스물 stays whole in 스물다섯.",
+      "lexemes": [
+        "저",
+        "스물",
+        "다섯",
+        "살",
+        "이다"
+      ],
+      "distractors": [
+        "I'm fifteen years old.",
+        "I'm thirty-five years old.",
+        "My birthday is on the 25th."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저도 스물다섯 살이에요!",
+            "english": "I'm twenty-five too!"
+          },
+          {
+            "korean": "그럼 저보다 동생이네요.",
+            "english": "Then you're younger than me."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이십오 일이에요.",
+            "english": "It's the 25th."
+          },
+          {
+            "korean": "다섯 명이에요.",
+            "english": "There are five of us."
+          },
+          {
+            "korean": "스물다섯 개 주세요.",
+            "english": "Twenty-five, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/this-year",
+      "kind": "word",
+      "korean": "올해",
+      "english": "this year",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "올해"
+      ]
+    },
+    {
+      "id": "numbers-time/twenty-before-counter",
+      "kind": "word",
+      "korean": "스무",
+      "english": "twenty (before a counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Short form of 스물 used right before a counter: 스무 명, 스무 살.",
+      "lexemes": [
+        "스무"
+      ]
+    },
+    {
+      "id": "numbers-time/turned-twenty",
+      "kind": "sentence",
+      "korean": "올해 스무 살이 됐어요.",
+      "english": "I turned twenty this year.",
+      "context": "age",
+      "register": "polite",
+      "note": "스물 becomes 스무 right before a counter: 스무 살, but 스물한 살.",
+      "lexemes": [
+        "올해",
+        "스무",
+        "살",
+        "되다"
+      ],
+      "distractors": [
+        "I'll turn twenty next year.",
+        "I turned thirty this year.",
+        "I've lived here for twenty years."
+      ]
+    },
+    {
+      "id": "numbers-time/how-old-sibling",
+      "kind": "sentence",
+      "korean": "동생은 몇 살이에요?",
+      "english": "How old is your younger sibling?",
+      "context": "age",
+      "register": "polite",
+      "lexemes": [
+        "동생",
+        "몇",
+        "살",
+        "이다"
+      ],
+      "distractors": [
+        "How many siblings do you have?",
+        "Where does your sibling live?",
+        "What's your sibling's name?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "열여섯 살이에요.",
+            "english": "Sixteen."
+          },
+          {
+            "korean": "저보다 세 살 어려요.",
+            "english": "Three years younger than me."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여섯 시예요.",
+            "english": "It's six o'clock."
+          },
+          {
+            "korean": "두 명이에요.",
+            "english": "There are two of them."
+          },
+          {
+            "korean": "학교에 가요.",
+            "english": "She goes to school."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/thirty",
+      "kind": "word",
+      "korean": "서른",
+      "english": "thirty (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "서른"
+      ]
+    },
+    {
+      "id": "numbers-time/brother-is-thirty",
+      "kind": "sentence",
+      "korean": "형은 서른 살이에요.",
+      "english": "My older brother is thirty.",
+      "context": "age",
+      "register": "polite",
+      "note": "Native tens: 열, 스물, 서른, 마흔, 쉰. Ages above that often switch to Sino-Korean.",
+      "lexemes": [
+        "형",
+        "서른",
+        "살",
+        "이다"
+      ],
+      "distractors": [
+        "My older brother is forty.",
+        "My older brother is three.",
+        "My older brother has thirty books."
+      ]
+    },
+    {
+      "id": "numbers-time/what-time-now",
+      "kind": "sentence",
+      "korean": "혹시 지금 몇 시예요?",
+      "english": "Excuse me, do you know what time it is?",
+      "context": "clock",
+      "register": "polite",
+      "lexemes": [
+        "혹시",
+        "지금",
+        "몇",
+        "시",
+        "이다"
+      ],
+      "distractors": [
+        "What day is it today?",
+        "How long does it take?",
+        "What time does it open?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "세 시 반이에요.",
+            "english": "It's half past three."
+          },
+          {
+            "korean": "두 시 십 분이에요.",
+            "english": "It's ten past two."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 명이에요.",
+            "english": "There are three of us."
+          },
+          {
+            "korean": "삼 층에 있어요.",
+            "english": "It's on the third floor."
+          },
+          {
+            "korean": "세 개 주세요.",
+            "english": "Three, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/ten-sino",
+      "kind": "word",
+      "korean": "십",
+      "english": "ten (Sino-Korean)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Sino-Korean tens: 이십 (20), 삼십 (30), 오십 (50).",
+      "lexemes": [
+        "십"
+      ]
+    },
+    {
+      "id": "numbers-time/four-fifty-five",
+      "kind": "sentence",
+      "korean": "지금 네 시 오십오 분이에요.",
+      "english": "It's four fifty-five now.",
+      "context": "clock",
+      "register": "polite",
+      "note": "Clock hours are native (네 시), minutes Sino-Korean (오십오 분).",
+      "lexemes": [
+        "지금",
+        "네",
+        "시",
+        "오",
+        "십",
+        "분",
+        "이다"
+      ],
+      "distractors": [
+        "It's five to four now.",
+        "It's four fifteen now.",
+        "It's forty-five past five now."
+      ]
+    },
+    {
+      "id": "numbers-time/morning-am",
+      "kind": "word",
+      "korean": "오전",
+      "english": "morning, a.m.",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "오전"
+      ]
+    },
+    {
+      "id": "numbers-time/meeting-nine-am",
+      "kind": "sentence",
+      "korean": "오전 아홉 시에 회의가 있어요.",
+      "english": "I have a meeting at 9 a.m.",
+      "context": "clock",
+      "register": "polite",
+      "note": "오전 = a.m., 오후 = p.m.; they come before the hour.",
+      "lexemes": [
+        "오전",
+        "아홉",
+        "시",
+        "회의",
+        "있다"
+      ],
+      "distractors": [
+        "I have a meeting at 9 p.m.",
+        "The meeting ends at nine.",
+        "I have nine meetings today."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "몇 시에 끝나요?",
+            "english": "What time does it end?"
+          },
+          {
+            "korean": "그럼 일찍 일어나야겠네요.",
+            "english": "Then you'll have to get up early."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아홉 명이에요.",
+            "english": "There are nine of us."
+          },
+          {
+            "korean": "구 번 버스요.",
+            "english": "Bus number nine."
+          },
+          {
+            "korean": "회의가 재미있어요.",
+            "english": "The meetings are fun."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/ten",
+      "kind": "word",
+      "korean": "열",
+      "english": "ten (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "열 + 하나 = 열하나 (11); before a counter: 열한 시, 열두 개.",
+      "lexemes": [
+        "열"
+      ]
+    },
+    {
+      "id": "numbers-time/half",
+      "kind": "word",
+      "korean": "반",
+      "english": "half (past)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "세 시 반 = half past three.",
+      "lexemes": [
+        "반"
+      ]
+    },
+    {
+      "id": "numbers-time/to-start",
+      "kind": "word",
+      "korean": "시작하다",
+      "english": "to start, to begin",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "시작하다"
+      ]
+    },
+    {
+      "id": "numbers-time/class-starts-half-eleven",
+      "kind": "sentence",
+      "korean": "수업은 열한 시 반에 시작해요.",
+      "english": "Class starts at half past eleven.",
+      "context": "clock",
+      "register": "polite",
+      "note": "열한 시 = 열 + 한 (from 하나); 반 adds half an hour.",
+      "lexemes": [
+        "수업",
+        "열",
+        "한",
+        "시",
+        "반",
+        "시작하다"
+      ],
+      "distractors": [
+        "Class ends at half past eleven.",
+        "Class starts at eleven.",
+        "Class starts at half past one."
+      ]
+    },
+    {
+      "id": "numbers-time/eight",
+      "kind": "word",
+      "korean": "여덟",
+      "english": "eight (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "여덟"
+      ]
+    },
+    {
+      "id": "numbers-time/wake-up-at-eight",
+      "kind": "sentence",
+      "korean": "아침 여덟 시에 일어나요.",
+      "english": "I get up at eight in the morning.",
+      "context": "clock",
+      "register": "polite",
+      "lexemes": [
+        "아침",
+        "여덟",
+        "시",
+        "일어나다"
+      ],
+      "distractors": [
+        "I go to bed at eight in the evening.",
+        "I get up at seven in the morning.",
+        "I eat breakfast at eight."
+      ]
+    },
+    {
+      "id": "numbers-time/six",
+      "kind": "word",
+      "korean": "여섯",
+      "english": "six (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "여섯"
+      ]
+    },
+    {
+      "id": "numbers-time/off-work-at-six",
+      "kind": "sentence",
+      "korean": "보통 여섯 시에 퇴근해요.",
+      "english": "I usually leave work at six.",
+      "context": "clock",
+      "register": "polite",
+      "lexemes": [
+        "보통",
+        "여섯",
+        "시",
+        "퇴근하다"
+      ],
+      "distractors": [
+        "I usually start work at six.",
+        "I usually leave work at seven.",
+        "I left work early today."
+      ]
+    },
+    {
+      "id": "numbers-time/closes-at-midnight",
+      "kind": "sentence",
+      "korean": "밤 열두 시에 문을 닫아요.",
+      "english": "It closes at midnight.",
+      "context": "clock",
+      "register": "polite",
+      "note": "열두 시 = 열 + 두 (from 둘); 밤 열두 시 is midnight.",
+      "lexemes": [
+        "밤",
+        "열",
+        "두",
+        "시",
+        "문",
+        "닫다"
+      ],
+      "distractors": [
+        "It opens at midnight.",
+        "It closes at ten at night.",
+        "It closes at noon."
+      ]
+    },
+    {
+      "id": "numbers-time/to-end",
+      "kind": "word",
+      "korean": "끝나다",
+      "english": "to end, to finish",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "끝나다"
+      ]
+    },
+    {
+      "id": "numbers-time/when-movie-ends",
+      "kind": "sentence",
+      "korean": "영화가 몇 시에 끝나요?",
+      "english": "What time does the movie end?",
+      "context": "clock",
+      "register": "polite",
+      "lexemes": [
+        "영화",
+        "몇",
+        "시",
+        "끝나다"
+      ],
+      "distractors": [
+        "What time does the movie start?",
+        "How long is the movie?",
+        "Which movie are we seeing?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아홉 시 사십 분에 끝나요.",
+            "english": "It ends at 9:40."
+          },
+          {
+            "korean": "열 시쯤 끝날 거예요.",
+            "english": "It'll end around ten."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "두 장 주세요.",
+            "english": "Two tickets, please."
+          },
+          {
+            "korean": "영화를 좋아해요.",
+            "english": "I like movies."
+          },
+          {
+            "korean": "삼 층에 있어요.",
+            "english": "It's on the third floor."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/wait-ten-minutes",
+      "kind": "sentence",
+      "korean": "십 분만 기다려 주세요.",
+      "english": "Please wait just ten minutes.",
+      "context": "duration",
+      "register": "polite",
+      "note": "Minutes are Sino-Korean: 오 분, 십 분, 삼십 분.",
+      "lexemes": [
+        "십",
+        "분",
+        "기다리다",
+        "주다"
+      ],
+      "distractors": [
+        "Please wait ten hours.",
+        "I waited for ten minutes.",
+        "Please come in ten minutes."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 괜찮아요.",
+            "english": "Sure, no problem."
+          },
+          {
+            "korean": "천천히 하세요.",
+            "english": "Take your time."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "열 개 주세요.",
+            "english": "Ten, please."
+          },
+          {
+            "korean": "시월이에요.",
+            "english": "It's October."
+          },
+          {
+            "korean": "벌써 열 시예요.",
+            "english": "It's already ten o'clock."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/four-sino",
+      "kind": "word",
+      "korean": "사",
+      "english": "four (Sino-Korean)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "사"
+      ]
+    },
+    {
+      "id": "numbers-time/takes-forty-minutes",
+      "kind": "sentence",
+      "korean": "사십 분쯤 걸려요.",
+      "english": "It takes about forty minutes.",
+      "context": "duration",
+      "register": "polite",
+      "lexemes": [
+        "사",
+        "십",
+        "분",
+        "걸리다"
+      ],
+      "distractors": [
+        "It takes about fourteen minutes.",
+        "It takes about four hours.",
+        "It starts in forty minutes."
+      ]
+    },
+    {
+      "id": "numbers-time/how-long-to-office",
+      "kind": "sentence",
+      "korean": "집에서 회사까지 얼마나 걸려요?",
+      "english": "How long does it take from home to the office?",
+      "context": "duration",
+      "register": "polite",
+      "lexemes": [
+        "집",
+        "회사",
+        "얼마나",
+        "걸리다"
+      ],
+      "distractors": [
+        "How far is it from home to the office?",
+        "When do you leave for the office?",
+        "How do you get to the office?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "지하철로 한 시간쯤 걸려요.",
+            "english": "About an hour by subway."
+          },
+          {
+            "korean": "삼십 분 정도요.",
+            "english": "About thirty minutes."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "회사가 삼 층에 있어요.",
+            "english": "The office is on the third floor."
+          },
+          {
+            "korean": "아홉 시에 출근해요.",
+            "english": "I start work at nine."
+          },
+          {
+            "korean": "회사가 커요.",
+            "english": "The company is big."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/exercised-hour-and-half",
+      "kind": "sentence",
+      "korean": "한 시간 반 동안 운동했어요.",
+      "english": "I worked out for an hour and a half.",
+      "context": "duration",
+      "register": "polite",
+      "note": "Hours of duration use native numbers + 시간: 한 시간, 두 시간.",
+      "lexemes": [
+        "한",
+        "시간",
+        "반",
+        "동안",
+        "운동하다"
+      ],
+      "distractors": [
+        "I worked out at half past one.",
+        "I worked out for half an hour.",
+        "I work out once a week."
+      ]
+    },
+    {
+      "id": "numbers-time/one-day",
+      "kind": "word",
+      "korean": "하루",
+      "english": "a day, one day",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "하루"
+      ]
+    },
+    {
+      "id": "numbers-time/coffees-a-day",
+      "kind": "sentence",
+      "korean": "하루에 커피 몇 잔 마셔요?",
+      "english": "How many cups of coffee do you drink a day?",
+      "context": "how-many",
+      "register": "polite",
+      "lexemes": [
+        "하루",
+        "커피",
+        "몇",
+        "잔",
+        "마시다"
+      ],
+      "distractors": [
+        "How much is a cup of coffee?",
+        "What time do you drink coffee?",
+        "Where do you drink coffee?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "두 잔 마셔요.",
+            "english": "I drink two cups."
+          },
+          {
+            "korean": "보통 세 잔쯤이요.",
+            "english": "Usually about three."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "두 시에 마셔요.",
+            "english": "I drink it at two."
+          },
+          {
+            "korean": "천 원이에요.",
+            "english": "It's a thousand won."
+          },
+          {
+            "korean": "카페에서 마셔요.",
+            "english": "I drink it at a café."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/one-week",
+      "kind": "word",
+      "korean": "일주일",
+      "english": "a week",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "일주일"
+      ]
+    },
+    {
+      "id": "numbers-time/counter-times-number",
+      "kind": "word",
+      "korean": "번",
+      "english": "times; number (counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Native 번 counts times (두 번 = twice); Sino 번 names a number (이 번 = number two).",
+      "lexemes": [
+        "번"
+      ]
+    },
+    {
+      "id": "numbers-time/three-times-a-week",
+      "kind": "sentence",
+      "korean": "일주일에 세 번 운동해요.",
+      "english": "I work out three times a week.",
+      "context": "how-many",
+      "register": "polite",
+      "note": "번 with native numbers counts times: 한 번, 두 번, 세 번.",
+      "lexemes": [
+        "일주일",
+        "세",
+        "번",
+        "운동하다"
+      ],
+      "distractors": [
+        "I work out three days a month.",
+        "I work out for three hours a week.",
+        "I worked out three weeks ago."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "대단해요!",
+            "english": "Impressive!"
+          },
+          {
+            "korean": "무슨 운동 해요?",
+            "english": "What kind of exercise do you do?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "삼 번이에요.",
+            "english": "It's number three."
+          },
+          {
+            "korean": "세 명이에요.",
+            "english": "There are three of us."
+          },
+          {
+            "korean": "세 시에 해요.",
+            "english": "I do it at three."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/been-to-korea-three-times",
+      "kind": "sentence",
+      "korean": "한국에 세 번 와 봤어요.",
+      "english": "I've been to Korea three times.",
+      "context": "how-many",
+      "register": "polite",
+      "lexemes": [
+        "한국",
+        "세",
+        "번",
+        "오다",
+        "보다"
+      ],
+      "distractors": [
+        "I've never been to Korea.",
+        "I've been in Korea for three years.",
+        "I'm coming to Korea for three weeks."
+      ]
+    },
+    {
+      "id": "numbers-time/seat-number-fifteen",
+      "kind": "sentence",
+      "korean": "제 자리는 십오 번이에요.",
+      "english": "My seat is number fifteen.",
+      "context": "number-names",
+      "register": "polite",
+      "note": "Sino-Korean + 번 names a number (십오 번 = no. 15); native + 번 counts times.",
+      "lexemes": [
+        "저",
+        "자리",
+        "십",
+        "오",
+        "번",
+        "이다"
+      ],
+      "distractors": [
+        "My seat is in row five.",
+        "I have fifteen seats.",
+        "My seat is by the window."
+      ]
+    },
+    {
+      "id": "numbers-time/counter-floor",
+      "kind": "word",
+      "korean": "층",
+      "english": "floor, storey",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Floors use Sino-Korean numbers: 삼 층, 십오 층.",
+      "lexemes": [
+        "층"
+      ],
+      "image": "apartment building"
+    },
+    {
+      "id": "numbers-time/which-floor-restaurant",
+      "kind": "sentence",
+      "korean": "그 식당은 몇 층에 있어요?",
+      "english": "What floor is that restaurant on?",
+      "context": "number-names",
+      "register": "polite",
+      "lexemes": [
+        "그",
+        "식당",
+        "몇",
+        "층",
+        "에 있다"
+      ],
+      "distractors": [
+        "How many floors does the building have?",
+        "How big is that restaurant?",
+        "Where is that restaurant?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "십오 층에 있어요.",
+            "english": "It's on the fifteenth floor."
+          },
+          {
+            "korean": "이 층이요.",
+            "english": "The second floor."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "두 개예요.",
+            "english": "There are two."
+          },
+          {
+            "korean": "다섯 명이 살아요.",
+            "english": "Five people live there."
+          },
+          {
+            "korean": "엘리베이터가 없어요.",
+            "english": "There's no elevator."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/toilet-third-floor",
+      "kind": "sentence",
+      "korean": "화장실은 삼 층에 있어요.",
+      "english": "The restroom is on the third floor.",
+      "context": "number-names",
+      "register": "polite",
+      "lexemes": [
+        "화장실",
+        "삼",
+        "층",
+        "에 있다"
+      ],
+      "distractors": [
+        "The restroom is on the first floor.",
+        "There are three restrooms.",
+        "The restroom is next to the stairs."
+      ]
+    },
+    {
+      "id": "numbers-time/subway-line",
+      "kind": "word",
+      "korean": "호선",
+      "english": "(subway) line number",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Subway lines use Sino-Korean + 호선: 일 호선, 사 호선.",
+      "lexemes": [
+        "호선"
+      ],
+      "image": "subway map"
+    },
+    {
+      "id": "numbers-time/take-line-four",
+      "kind": "sentence",
+      "korean": "사 호선을 타세요.",
+      "english": "Take line four.",
+      "context": "number-names",
+      "register": "polite",
+      "lexemes": [
+        "사",
+        "호선",
+        "타다"
+      ],
+      "distractors": [
+        "Take bus number four.",
+        "Take exit four.",
+        "Get off after four stops."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 감사합니다.",
+            "english": "OK, thank you."
+          },
+          {
+            "korean": "어디서 내려요?",
+            "english": "Where do I get off?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네 명이에요.",
+            "english": "There are four of us."
+          },
+          {
+            "korean": "사 층에 있어요.",
+            "english": "It's on the fourth floor."
+          },
+          {
+            "korean": "네 시에 타요.",
+            "english": "I take it at four."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/zero-phone",
+      "kind": "word",
+      "korean": "공",
+      "english": "zero (in phone numbers)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "In phone numbers zero is 공; in maths and scores it is 영.",
+      "lexemes": [
+        "공"
+      ]
+    },
+    {
+      "id": "numbers-time/six-sino",
+      "kind": "word",
+      "korean": "육",
+      "english": "six (Sino-Korean)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "육"
+      ]
+    },
+    {
+      "id": "numbers-time/seven-sino",
+      "kind": "word",
+      "korean": "칠",
+      "english": "seven (Sino-Korean)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "칠"
+      ]
+    },
+    {
+      "id": "numbers-time/eight-sino",
+      "kind": "word",
+      "korean": "팔",
+      "english": "eight (Sino-Korean)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "팔"
+      ]
+    },
+    {
+      "id": "numbers-time/nine-sino",
+      "kind": "word",
+      "korean": "구",
+      "english": "nine (Sino-Korean)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "구"
+      ]
+    },
+    {
+      "id": "numbers-time/phone-number-digits",
+      "kind": "sentence",
+      "korean": "공일공 삼사오육에 칠팔구공이에요.",
+      "english": "It's 010-3456-7890.",
+      "context": "phone-numbers",
+      "register": "polite",
+      "note": "Phone numbers go digit by digit in Sino-Korean; zero is 공, the dash is read 에.",
+      "lexemes": [
+        "공",
+        "일",
+        "삼",
+        "사",
+        "오",
+        "육",
+        "칠",
+        "팔",
+        "구",
+        "이다"
+      ],
+      "distractors": [
+        "It's 010-3456-7980.",
+        "It's 010-3465-7890.",
+        "It's 010-4567-8901."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "다시 한번 말해 주세요.",
+            "english": "Could you say that again?"
+          },
+          {
+            "korean": "네, 저장할게요.",
+            "english": "OK, I'll save it."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 시에 올게요.",
+            "english": "I'll come at three."
+          },
+          {
+            "korean": "삼만 원이에요.",
+            "english": "It's thirty thousand won."
+          },
+          {
+            "korean": "칠 층에 있어요.",
+            "english": "It's on the seventh floor."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/what-day-tomorrow",
+      "kind": "sentence",
+      "korean": "내일이 무슨 요일이에요?",
+      "english": "What day of the week is it tomorrow?",
+      "context": "days",
+      "register": "polite",
+      "lexemes": [
+        "내일",
+        "무슨",
+        "요일",
+        "이다"
+      ],
+      "distractors": [
+        "What's the date tomorrow?",
+        "What are you doing tomorrow?",
+        "What time is it tomorrow?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "목요일이에요.",
+            "english": "It's Thursday."
+          },
+          {
+            "korean": "금요일이요.",
+            "english": "Friday."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "삼월이에요.",
+            "english": "It's March."
+          },
+          {
+            "korean": "세 시예요.",
+            "english": "It's three o'clock."
+          },
+          {
+            "korean": "내일 만나요.",
+            "english": "See you tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/monday",
+      "kind": "word",
+      "korean": "월요일",
+      "english": "Monday",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "월요일"
+      ]
+    },
+    {
+      "id": "numbers-time/friday",
+      "kind": "word",
+      "korean": "금요일",
+      "english": "Friday",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "금요일"
+      ]
+    },
+    {
+      "id": "numbers-time/work-monday-to-friday",
+      "kind": "sentence",
+      "korean": "월요일부터 금요일까지 일해요.",
+      "english": "I work from Monday to Friday.",
+      "context": "days",
+      "register": "polite",
+      "lexemes": [
+        "월요일",
+        "금요일",
+        "일하다"
+      ],
+      "distractors": [
+        "I work from Monday to Saturday.",
+        "I only work on Mondays and Fridays.",
+        "I'm off from Monday to Friday."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "주말에는 쉬어요?",
+            "english": "Do you rest on weekends?"
+          },
+          {
+            "korean": "저도요.",
+            "english": "Me too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다섯 시예요.",
+            "english": "It's five o'clock."
+          },
+          {
+            "korean": "오월에 와요.",
+            "english": "I'm coming in May."
+          },
+          {
+            "korean": "금요일이 좋아요?",
+            "english": "Do you like Fridays?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/tuesday",
+      "kind": "word",
+      "korean": "화요일",
+      "english": "Tuesday",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "화요일"
+      ]
+    },
+    {
+      "id": "numbers-time/free-tuesday-evening",
+      "kind": "sentence",
+      "korean": "화요일 저녁에 시간 있어요?",
+      "english": "Are you free on Tuesday evening?",
+      "context": "days",
+      "register": "polite",
+      "lexemes": [
+        "화요일",
+        "저녁",
+        "시간",
+        "있다"
+      ],
+      "distractors": [
+        "Are you free on Thursday evening?",
+        "What did you do on Tuesday evening?",
+        "Do you have dinner on Tuesdays?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 괜찮아요.",
+            "english": "Yes, I'm free."
+          },
+          {
+            "korean": "화요일은 좀 바빠요. 수요일은 어때요?",
+            "english": "Tuesday's a bit busy. How about Wednesday?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여섯 시간 걸려요.",
+            "english": "It takes six hours."
+          },
+          {
+            "korean": "저녁을 먹었어요.",
+            "english": "I had dinner."
+          },
+          {
+            "korean": "화요일이었어요.",
+            "english": "It was Tuesday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/thursday",
+      "kind": "word",
+      "korean": "목요일",
+      "english": "Thursday",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "목요일"
+      ]
+    },
+    {
+      "id": "numbers-time/exam-on-thursday",
+      "kind": "sentence",
+      "korean": "목요일에 시험이 있어요.",
+      "english": "I have an exam on Thursday.",
+      "context": "days",
+      "register": "polite",
+      "lexemes": [
+        "목요일",
+        "시험",
+        "있다"
+      ],
+      "distractors": [
+        "I had an exam on Thursday.",
+        "I have an exam on Tuesday.",
+        "The exam is at four."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "열심히 하세요!",
+            "english": "Good luck with it!"
+          },
+          {
+            "korean": "무슨 시험이에요?",
+            "english": "What exam is it?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "목요일이 좋아요.",
+            "english": "I like Thursdays."
+          },
+          {
+            "korean": "네 명이에요.",
+            "english": "There are four of us."
+          },
+          {
+            "korean": "시험이 끝났어요.",
+            "english": "The exam is over."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/sunday",
+      "kind": "word",
+      "korean": "일요일",
+      "english": "Sunday",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "일요일"
+      ]
+    },
+    {
+      "id": "numbers-time/hiking-on-sundays",
+      "kind": "sentence",
+      "korean": "일요일마다 등산 가요.",
+      "english": "I go hiking every Sunday.",
+      "context": "days",
+      "register": "polite",
+      "lexemes": [
+        "일요일",
+        "등산",
+        "가다"
+      ],
+      "distractors": [
+        "I went hiking last Sunday.",
+        "I go hiking every Saturday.",
+        "I go swimming every Sunday."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어느 산에 가요?",
+            "english": "Which mountain do you go to?"
+          },
+          {
+            "korean": "저도 같이 가고 싶어요.",
+            "english": "I'd like to come along."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "일 번이에요.",
+            "english": "It's number one."
+          },
+          {
+            "korean": "일요일은 문을 닫아요.",
+            "english": "It's closed on Sundays."
+          },
+          {
+            "korean": "산이 높아요.",
+            "english": "The mountain is high."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/wednesday",
+      "kind": "word",
+      "korean": "수요일",
+      "english": "Wednesday",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "수요일"
+      ]
+    },
+    {
+      "id": "numbers-time/wednesday-meeting",
+      "kind": "sentence",
+      "korean": "회의는 수요일 오후 두 시예요.",
+      "english": "The meeting is on Wednesday at 2 p.m.",
+      "context": "days",
+      "register": "polite",
+      "lexemes": [
+        "회의",
+        "수요일",
+        "오후",
+        "두",
+        "시",
+        "이다"
+      ],
+      "distractors": [
+        "The meeting is on Wednesday at 2 a.m.",
+        "The meeting is on Tuesday at 2 p.m.",
+        "The meeting lasts two hours on Wednesday."
+      ]
+    },
+    {
+      "id": "numbers-time/last-week",
+      "kind": "word",
+      "korean": "지난주",
+      "english": "last week",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "지난주"
+      ]
+    },
+    {
+      "id": "numbers-time/last-saturday",
+      "kind": "sentence",
+      "korean": "지난주 토요일에 뭐 했어요?",
+      "english": "What did you do last Saturday?",
+      "context": "days",
+      "register": "polite",
+      "lexemes": [
+        "지난주",
+        "토요일",
+        "뭐",
+        "하다"
+      ],
+      "distractors": [
+        "What are you doing this Saturday?",
+        "Where did you go last Sunday?",
+        "What did you do last night?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "친구 생일 파티에 갔어요.",
+            "english": "I went to a friend's birthday party."
+          },
+          {
+            "korean": "집에서 쉬었어요.",
+            "english": "I rested at home."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "토요일에 할 거예요.",
+            "english": "I'll do it on Saturday."
+          },
+          {
+            "korean": "여섯 시예요.",
+            "english": "It's six o'clock."
+          },
+          {
+            "korean": "네, 했어요.",
+            "english": "Yes, I did."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/month",
+      "kind": "word",
+      "korean": "월",
+      "english": "month (with Sino numbers)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Months are Sino-Korean + 월: 일월, 이월, 삼월…",
+      "lexemes": [
+        "월"
+      ],
+      "image": "calendar"
+    },
+    {
+      "id": "numbers-time/what-date",
+      "kind": "word",
+      "korean": "며칠",
+      "english": "what date; a few days",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Asks for the day of the month: 며칠이에요? Never written 몇 일.",
+      "lexemes": [
+        "며칠"
+      ]
+    },
+    {
+      "id": "numbers-time/birthday-month-day",
+      "kind": "sentence",
+      "korean": "생일이 몇 월 며칠이에요?",
+      "english": "What's the date of your birthday?",
+      "context": "dates",
+      "register": "polite",
+      "note": "Dates are Sino-Korean: 몇 월 며칠 asks for the month and the day.",
+      "lexemes": [
+        "생일",
+        "몇",
+        "월",
+        "며칠",
+        "이다"
+      ],
+      "distractors": [
+        "How old are you?",
+        "What did you do on your birthday?",
+        "What day of the week is your birthday?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "시월 구 일이에요.",
+            "english": "It's October ninth."
+          },
+          {
+            "korean": "유월 이십오 일이에요.",
+            "english": "It's June twenty-fifth."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "스물다섯 살이에요.",
+            "english": "I'm twenty-five."
+          },
+          {
+            "korean": "월요일이에요.",
+            "english": "It's Monday."
+          },
+          {
+            "korean": "선물 고마워요.",
+            "english": "Thanks for the present."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/june",
+      "kind": "word",
+      "korean": "유월",
+      "english": "June",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Six is 육, but June is 유월: the ㄱ drops.",
+      "lexemes": [
+        "유월"
+      ]
+    },
+    {
+      "id": "numbers-time/birthday-june-sixth",
+      "kind": "sentence",
+      "korean": "제 생일은 유월 육 일이에요.",
+      "english": "My birthday is June sixth.",
+      "context": "dates",
+      "register": "polite",
+      "note": "June is 유월, not 육월; October is 시월, not 십월.",
+      "lexemes": [
+        "저",
+        "생일",
+        "유월",
+        "육",
+        "일",
+        "이다"
+      ],
+      "distractors": [
+        "My birthday is June first.",
+        "My birthday is in May.",
+        "My birthday is on the sixteenth."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "다음 주네요!",
+            "english": "That's next week!"
+          },
+          {
+            "korean": "저는 시월이에요.",
+            "english": "Mine is in October."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여섯 살이에요.",
+            "english": "I'm six."
+          },
+          {
+            "korean": "여섯 시예요.",
+            "english": "It's six o'clock."
+          },
+          {
+            "korean": "생일 축하해요!",
+            "english": "Happy birthday!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/october",
+      "kind": "word",
+      "korean": "시월",
+      "english": "October",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Ten is 십, but October is 시월: the ㅂ drops.",
+      "lexemes": [
+        "시월"
+      ]
+    },
+    {
+      "id": "numbers-time/october-weather",
+      "kind": "sentence",
+      "korean": "한국은 시월에 날씨가 좋아요.",
+      "english": "The weather in Korea is nice in October.",
+      "context": "dates",
+      "register": "polite",
+      "lexemes": [
+        "한국",
+        "시월",
+        "날씨",
+        "좋다"
+      ],
+      "distractors": [
+        "The weather in Korea is nice in June.",
+        "It rains a lot in Korea in October.",
+        "Korea is cold in October."
+      ]
+    },
+    {
+      "id": "numbers-time/today-march-first",
+      "kind": "sentence",
+      "korean": "오늘은 삼월 일 일이에요.",
+      "english": "Today is March first.",
+      "context": "dates",
+      "register": "polite",
+      "note": "Month and day are both Sino-Korean: 삼월 일 일 = 3/1.",
+      "lexemes": [
+        "오늘",
+        "삼",
+        "월",
+        "일",
+        "이다"
+      ],
+      "distractors": [
+        "Today is January third.",
+        "Today is Monday.",
+        "Today is March eleventh."
+      ]
+    },
+    {
+      "id": "numbers-time/whats-the-date",
+      "kind": "sentence",
+      "korean": "오늘이 며칠이에요?",
+      "english": "What's the date today?",
+      "context": "dates",
+      "register": "polite",
+      "lexemes": [
+        "오늘",
+        "며칠",
+        "이다"
+      ],
+      "distractors": [
+        "What day of the week is it today?",
+        "What time is it today?",
+        "What are you doing today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "십이 일이에요.",
+            "english": "It's the twelfth."
+          },
+          {
+            "korean": "삼십 일이에요.",
+            "english": "It's the thirtieth."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "열두 시예요.",
+            "english": "It's twelve o'clock."
+          },
+          {
+            "korean": "금요일에 봐요.",
+            "english": "See you Friday."
+          },
+          {
+            "korean": "열두 명이에요.",
+            "english": "There are twelve."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/thousand",
+      "kind": "word",
+      "korean": "천",
+      "english": "thousand",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "천 alone is 1,000; say 천 원, not 일천 원.",
+      "lexemes": [
+        "천"
+      ]
+    },
+    {
+      "id": "numbers-time/year",
+      "kind": "word",
+      "korean": "년",
+      "english": "year (with Sino numbers)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "년"
+      ]
+    },
+    {
+      "id": "numbers-time/to-be-born",
+      "kind": "word",
+      "korean": "태어나다",
+      "english": "to be born",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "태어나다"
+      ]
+    },
+    {
+      "id": "numbers-time/born-in-two-thousand",
+      "kind": "sentence",
+      "korean": "저는 이천 년에 태어났어요.",
+      "english": "I was born in 2000.",
+      "context": "dates",
+      "register": "polite",
+      "note": "Years are Sino-Korean + 년: 이천 년, 이천이십오 년.",
+      "lexemes": [
+        "저",
+        "이",
+        "천",
+        "년",
+        "태어나다"
+      ],
+      "distractors": [
+        "I was born in 2002.",
+        "I came here in 2000.",
+        "I was born in 1990."
+      ]
+    },
+    {
+      "id": "numbers-time/worked-three-years",
+      "kind": "sentence",
+      "korean": "한국에서 삼 년 일했어요.",
+      "english": "I worked in Korea for three years.",
+      "context": "duration",
+      "register": "polite",
+      "lexemes": [
+        "한국",
+        "삼",
+        "년",
+        "일하다"
+      ],
+      "distractors": [
+        "I worked in Korea for three months.",
+        "I've been to Korea three times.",
+        "I'll work in Korea for three years."
+      ]
+    },
+    {
+      "id": "numbers-time/month-native",
+      "kind": "word",
+      "korean": "달",
+      "english": "month (with native numbers)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Native count of months: 한 달, 두 달. Named months use 월.",
+      "lexemes": [
+        "달"
+      ]
+    },
+    {
+      "id": "numbers-time/movies-twice-a-month",
+      "kind": "sentence",
+      "korean": "한 달에 두 번 영화를 봐요.",
+      "english": "I see a movie twice a month.",
+      "context": "how-many",
+      "register": "polite",
+      "note": "달 counts months with native numbers (한 달, 두 달); 월 names them (이월).",
+      "lexemes": [
+        "한",
+        "달",
+        "두",
+        "번",
+        "영화",
+        "보다"
+      ],
+      "distractors": [
+        "I see a movie every two months.",
+        "I saw two movies this month.",
+        "I see a movie twice a week."
+      ]
+    },
+    {
+      "id": "numbers-time/how-much-this-bag",
+      "kind": "sentence",
+      "korean": "이 가방은 얼마예요?",
+      "english": "How much is this bag?",
+      "context": "prices",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "가방",
+        "얼마",
+        "이다"
+      ],
+      "distractors": [
+        "How heavy is this bag?",
+        "Whose bag is this?",
+        "Do you have this bag in black?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "삼만 오천 원이에요.",
+            "english": "It's 35,000 won."
+          },
+          {
+            "korean": "사만 원이에요.",
+            "english": "It's 40,000 won."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 개 있어요.",
+            "english": "There are three."
+          },
+          {
+            "korean": "삼 층에 있어요.",
+            "english": "It's on the third floor."
+          },
+          {
+            "korean": "가방이 예뻐요.",
+            "english": "The bag is pretty."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/hundred",
+      "kind": "word",
+      "korean": "백",
+      "english": "hundred",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "백"
+      ]
+    },
+    {
+      "id": "numbers-time/coffee-four-thousand-five-hundred",
+      "kind": "sentence",
+      "korean": "커피는 사천오백 원이에요.",
+      "english": "The coffee is 4,500 won.",
+      "context": "prices",
+      "register": "polite",
+      "note": "Prices are Sino-Korean; 1,000 is just 천 and 100 just 백, never 일천 or 일백.",
+      "lexemes": [
+        "커피",
+        "사",
+        "천",
+        "오",
+        "백",
+        "원",
+        "이다"
+      ],
+      "distractors": [
+        "The coffee is 5,400 won.",
+        "The coffee is 45,000 won.",
+        "The coffee is 4,050 won."
+      ]
+    },
+    {
+      "id": "numbers-time/to-pay",
+      "kind": "word",
+      "korean": "내다",
+      "english": "to pay",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "내다"
+      ]
+    },
+    {
+      "id": "numbers-time/paid-ten-thousand",
+      "kind": "sentence",
+      "korean": "만 원 냈어요.",
+      "english": "I paid ten thousand won.",
+      "context": "prices",
+      "register": "polite",
+      "note": "10,000 is 만 on its own: 만 원, never 일만 원.",
+      "lexemes": [
+        "만",
+        "원",
+        "내다"
+      ],
+      "distractors": [
+        "I paid one thousand won.",
+        "I paid a hundred thousand won.",
+        "It costs ten thousand won."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "비싸지 않네요.",
+            "english": "That's not expensive."
+          },
+          {
+            "korean": "저도 만 원 냈어요.",
+            "english": "I paid ten thousand too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "만 명이에요.",
+            "english": "There are ten thousand people."
+          },
+          {
+            "korean": "만나서 반가워요.",
+            "english": "Nice to meet you."
+          },
+          {
+            "korean": "열 시예요.",
+            "english": "It's ten o'clock."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/shoes-eighty-nine-thousand",
+      "kind": "sentence",
+      "korean": "이 신발은 팔만 오천 원이에요.",
+      "english": "These shoes are 85,000 won.",
+      "context": "prices",
+      "register": "polite",
+      "note": "Big numbers group by 만: 팔만 오천 = 8 × 10,000 + 5,000.",
+      "lexemes": [
+        "이",
+        "신발",
+        "팔",
+        "만",
+        "오",
+        "천",
+        "원",
+        "이다"
+      ],
+      "distractors": [
+        "These shoes are 58,000 won.",
+        "These shoes are 8,500 won.",
+        "These shoes are 850,000 won."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "좀 비싸네요.",
+            "english": "That's a bit expensive."
+          },
+          {
+            "korean": "좀 깎아 주세요.",
+            "english": "Could you give me a discount?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "팔 층에 있어요.",
+            "english": "It's on the eighth floor."
+          },
+          {
+            "korean": "여덟 켤레 주세요.",
+            "english": "Eight pairs, please."
+          },
+          {
+            "korean": "신발이 작아요.",
+            "english": "The shoes are small."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/thousand-won-off",
+      "kind": "sentence",
+      "korean": "천 원 깎아 주세요.",
+      "english": "Please take a thousand won off.",
+      "context": "prices",
+      "register": "polite",
+      "lexemes": [
+        "천",
+        "원",
+        "깎다",
+        "주다"
+      ],
+      "distractors": [
+        "Please take ten thousand won off.",
+        "It's only a thousand won.",
+        "Please give me a thousand won."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 그럼 만 원 주세요.",
+            "english": "OK, then ten thousand won."
+          },
+          {
+            "korean": "죄송해요, 안 돼요.",
+            "english": "Sorry, I can't."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "천천히 말해 주세요.",
+            "english": "Please speak slowly."
+          },
+          {
+            "korean": "천 명이 왔어요.",
+            "english": "A thousand people came."
+          },
+          {
+            "korean": "네, 한 개 주세요.",
+            "english": "Yes, one please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/two-for-ten-thousand",
+      "kind": "sentence",
+      "korean": "두 개에 만 원이에요.",
+      "english": "Two for ten thousand won.",
+      "context": "prices",
+      "register": "polite",
+      "note": "Native numbers count the items (두 개), Sino-Korean gives the price (만 원).",
+      "lexemes": [
+        "두",
+        "개",
+        "만",
+        "원",
+        "이다"
+      ],
+      "distractors": [
+        "Ten thousand won each.",
+        "Two for twenty thousand won.",
+        "Two for a thousand won."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼 네 개 주세요.",
+            "english": "Then I'll take four."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "두 시에 와요.",
+            "english": "Come at two."
+          },
+          {
+            "korean": "이 번이에요.",
+            "english": "It's number two."
+          },
+          {
+            "korean": "두 명이에요.",
+            "english": "There are two of us."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/water-bottle-thousand",
+      "kind": "sentence",
+      "korean": "물 한 병에 천 원이에요.",
+      "english": "A bottle of water is 1,000 won.",
+      "context": "prices",
+      "register": "polite",
+      "lexemes": [
+        "물",
+        "한",
+        "병",
+        "천",
+        "원",
+        "이다"
+      ],
+      "distractors": [
+        "A bottle of water is 10,000 won.",
+        "A glass of water is 1,000 won.",
+        "Two bottles of water are 1,000 won."
+      ]
+    },
+    {
+      "id": "numbers-time/counter-flat",
+      "kind": "word",
+      "korean": "장",
+      "english": "counter for flat things",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "장 counts tickets, photos and sheets, with native numbers: 한 장, 두 장.",
+      "lexemes": [
+        "장"
+      ],
+      "image": "tickets"
+    },
+    {
+      "id": "numbers-time/take-one-photo",
+      "kind": "sentence",
+      "korean": "사진 한 장 찍어 주세요.",
+      "english": "Could you take a photo of me?",
+      "context": "counters",
+      "register": "polite",
+      "note": "장 counts flat things: photos, tickets, sheets of paper.",
+      "lexemes": [
+        "사진",
+        "한",
+        "장",
+        "찍다",
+        "주다"
+      ],
+      "distractors": [
+        "Could you take a video of me?",
+        "Let me take a photo of you.",
+        "Please print one photo."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 하나, 둘, 셋!",
+            "english": "Sure, one, two, three!"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "한 장에 천 원이에요.",
+            "english": "It's a thousand won a sheet."
+          },
+          {
+            "korean": "사진이 없어요.",
+            "english": "I don't have a photo."
+          },
+          {
+            "korean": "일 번이에요.",
+            "english": "It's number one."
+          }
+        ]
+      }
+    },
+    {
+      "id": "numbers-time/counter-machines",
+      "kind": "word",
+      "korean": "대",
+      "english": "counter for vehicles, machines",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "대 counts cars, bikes, computers and phones: 차 두 대.",
+      "lexemes": [
+        "대"
+      ],
+      "image": "parked cars"
+    },
+    {
+      "id": "numbers-time/two-cars",
+      "kind": "sentence",
+      "korean": "우리 집에 차가 두 대 있어요.",
+      "english": "We have two cars at home.",
+      "context": "counters",
+      "register": "polite",
+      "note": "대 counts vehicles and machines: 차 한 대, 컴퓨터 두 대.",
+      "lexemes": [
+        "우리",
+        "집",
+        "차",
+        "두",
+        "대",
+        "있다"
+      ],
+      "distractors": [
+        "We have two bikes at home.",
+        "We have two rooms at home.",
+        "Our house is two stops away."
+      ]
+    }
+  ]
+}

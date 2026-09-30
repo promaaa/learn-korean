@@ -125,8 +125,18 @@ impl Drill {
         })
     }
 
-    fn is_finished(&self) -> bool {
+    pub fn is_finished(&self) -> bool {
         self.cursor == self.steps.len()
+    }
+
+    /// Correct keystrokes so far.
+    pub fn keystrokes(&self) -> usize {
+        self.cursor
+    }
+
+    /// Wrong keys so far.
+    pub fn errors(&self) -> usize {
+        self.errors
     }
 
     /// Feed one physical key press. Wrong keys do not advance (strict mode) but count as errors.

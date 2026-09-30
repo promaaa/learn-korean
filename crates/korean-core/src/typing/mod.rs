@@ -1,10 +1,13 @@
 //! Hangul typing engine: 2-set (dubeolsik) layout on physical keys, jamo decomposition,
-//! IME-style composition and a strict typing drill. Pure logic: no I/O, no clock reads.
+//! IME-style composition, a strict typing drill, rounds of drills and the Hangul primer. Pure
+//! logic: no I/O, no clock reads.
 
 pub mod compose;
 pub mod drill;
 pub mod jamo;
 pub mod layout;
+pub mod primer;
+mod round;
 mod targets;
 
 pub use compose::compose;
@@ -15,4 +18,5 @@ pub use jamo::{
 pub use layout::{
     Finger, KeyCap, Keystroke, jamo_for_keystroke, keycap, keystroke_for_jamo, layout, shift_finger,
 };
+pub use round::Round;
 pub use targets::{Target, pick_targets};

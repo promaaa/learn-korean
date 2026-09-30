@@ -223,3 +223,119 @@ export function typingPress(code: string, shift: boolean, atMs: number): Promise
 export function typingNext(): Promise<DrillView | null> {
   return invoke("typing_next");
 }
+
+export interface DayActivity {
+  answers: number;
+  correct: number;
+}
+
+export interface Heatmap {
+  /** Local day number (days since 1970-01-01 in the learner's time zone) of `days[0]`. */
+  firstDay: number;
+  /** Weekday of `days[0]`: 0 = Monday … 6 = Sunday. */
+  firstWeekday: number;
+  /** Oldest first; the last entry is today. */
+  days: DayActivity[];
+}
+
+/** Answers whose previous answer to the same card was on an earlier day. */
+export interface Retention {
+  reviews: number;
+  correct: number;
+  /** `null` without reviews. */
+  rate: number | null;
+}
+
+export interface SkillRetention {
+  skill: Skill;
+  /** Last 30 days. */
+  recent: Retention;
+  allTime: Retention;
+}
+
+export interface Words {
+  known: number;
+  /** Introduced, not known yet. */
+  learning: number;
+  total: number;
+  sentencesReady: number;
+  sentences: number;
+}
+
+export interface Totals {
+  answers: number;
+  correct: number;
+  timeMs: number;
+  practiceDays: number;
+  dayStreak: number;
+}
+
+export interface Stats {
+  /** Today's local day number. */
+  today: number;
+  heatmap: Heatmap;
+  /** Milliseconds per day, the last 30 days, oldest first. */
+  timePerDay: number[];
+  retention: SkillRetention[];
+  words: Words;
+  /** Cards due per day for 14 days, today (with overdue cards) first. */
+  forecast: number[];
+  totals: Totals;
+}
+
+export function stats(): Promise<Stats> {
+  return invoke("stats");
+}
+
+/** A jamo a primer lesson introduces. */
+export interface NewJamo {
+  jamo: string;
+  /** Hangul name: 기역, 니은, 아… */
+  name: string;
+  example: { korean: string; english: string };
+}
+
+export interface HangulLesson {
+  id: string;
+  title: string;
+  jamo: NewJamo[];
+  lines: number;
+  unlocked: boolean;
+  passed: boolean;
+}
+
+export interface LessonResult {
+  /** Index of the lesson in `hangulLessons()`. */
+  lesson: number;
+  accuracy: number;
+  keystrokes: number;
+  errors: number;
+  passed: boolean;
+  /** Accuracy needed to pass, in percent. */
+  passPercent: number;
+}
+
+export type HangulNext = { type: "line"; view: DrillView } | { type: "over"; result: LessonResult };
+
+export function hangulLessons(): Promise<HangulLesson[]> {
+  return invoke("hangul_lessons");
+}
+
+/** Starts a round of the lesson's lines; fails when the lesson is locked. */
+export function hangulStart(lesson: number): Promise<DrillView> {
+  return invoke("hangul_start", { lesson });
+}
+
+/** The unfinished round left when the screen was switched away, if any. */
+export function hangulCurrent(): Promise<{ lesson: number; view: DrillView } | null> {
+  return invoke("hangul_current");
+}
+
+export function hangulPress(code: string, shift: boolean, atMs: number): Promise<Pressed> {
+  return invoke("hangul_press", { code, shift, atMs });
+}
+
+/** The next line, or the scored round (a pass is recorded) after the last one. */
+export function hangulNext(): Promise<HangulNext> {
+  return invoke("hangul_next");
+}

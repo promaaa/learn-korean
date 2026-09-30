@@ -37,7 +37,8 @@ describe("actionFor", () => {
     expect(actionFor({ key: " ", code: "Space" })).toEqual({ type: "continue" });
     expect(actionFor({ key: "Backspace", code: "Backspace" })).toEqual({ type: "erase" });
     expect(actionFor({ key: "Escape", code: "Escape" })).toEqual({ type: "hide" });
-    expect(actionFor({ key: "Tab", code: "Tab" })).toEqual({ type: "mode" });
+    expect(actionFor({ key: "Tab", code: "Tab" })).toEqual({ type: "mode", step: 1 });
+    expect(actionFor({ key: "Tab", code: "Tab", shiftKey: true })).toEqual({ type: "mode", step: -1 });
   });
 
   it("ignores modified keys so system shortcuts keep working", () => {

@@ -1,0 +1,2524 @@
+{
+  "id": "doctor",
+  "version": 1,
+  "title": "Doctor & pharmacy",
+  "description": "Symptoms, body parts, appointments, the pharmacy and medicine.",
+  "unlock_level": 4,
+  "items": [
+    {
+      "id": "doctor/body",
+      "kind": "word",
+      "korean": "몸",
+      "english": "body",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "몸"
+      ],
+      "image": "human body"
+    },
+    {
+      "id": "doctor/not-feeling-well",
+      "kind": "sentence",
+      "korean": "몸이 좀 안 좋아요.",
+      "english": "I'm not feeling very well.",
+      "context": "symptoms",
+      "register": "polite",
+      "lexemes": [
+        "몸",
+        "좀",
+        "안",
+        "좋다"
+      ],
+      "distractors": [
+        "I'm feeling much better.",
+        "I'm a bit tired today.",
+        "My whole body aches."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어디가 아프세요?",
+            "english": "Where does it hurt?"
+          },
+          {
+            "korean": "병원에 가 보세요.",
+            "english": "You should see a doctor."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 좋아요.",
+            "english": "Yes, sounds good."
+          },
+          {
+            "korean": "저는 회사원이에요.",
+            "english": "I'm an office worker."
+          },
+          {
+            "korean": "주말에 만나요.",
+            "english": "See you at the weekend."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/face",
+      "kind": "word",
+      "korean": "얼굴",
+      "english": "face",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "얼굴"
+      ],
+      "image": "face"
+    },
+    {
+      "id": "doctor/you-dont-look-well",
+      "kind": "sentence",
+      "korean": "너 괜찮아? 얼굴이 안 좋아 보여.",
+      "english": "Are you okay? You don't look well.",
+      "context": "symptoms",
+      "register": "casual",
+      "note": "보여 after an adjective means 'looks/seems': 좋아 보여 = looks good.",
+      "lexemes": [
+        "너",
+        "괜찮다",
+        "얼굴",
+        "안",
+        "좋다",
+        "보이다"
+      ],
+      "distractors": [
+        "Are you okay? You look tired.",
+        "Are you okay? Your face is red.",
+        "You look great today."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 좀 피곤해.",
+            "english": "Yeah, I'm a bit tired."
+          },
+          {
+            "korean": "감기 걸린 것 같아.",
+            "english": "I think I caught a cold."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 얼굴이 작아.",
+            "english": "Yeah, my face is small."
+          },
+          {
+            "korean": "고마워, 맛있게 먹을게.",
+            "english": "Thanks, I'll enjoy the food."
+          },
+          {
+            "korean": "아니, 안 보여.",
+            "english": "No, I can't see it."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/where-does-it-hurt",
+      "kind": "sentence",
+      "korean": "어디가 아프세요?",
+      "english": "Where does it hurt?",
+      "context": "doctor-questions",
+      "register": "polite",
+      "note": "Doctors ask this to mean 'What's wrong?'. 아프세요 is the honorific of 아파요.",
+      "lexemes": [
+        "어디",
+        "아프다"
+      ],
+      "distractors": [
+        "When did it start hurting?",
+        "Does it hurt a lot?",
+        "Which hospital are you going to?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "머리가 아파요.",
+            "english": "I have a headache."
+          },
+          {
+            "korean": "배가 좀 아파요.",
+            "english": "My stomach hurts a bit."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여기서 멀어요.",
+            "english": "It's far from here."
+          },
+          {
+            "korean": "지하철역 근처에 있어요.",
+            "english": "It's near the subway station."
+          },
+          {
+            "korean": "아니요, 한국 사람이에요.",
+            "english": "No, I'm Korean."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/headache-since-morning",
+      "kind": "sentence",
+      "korean": "아침부터 머리가 아파요.",
+      "english": "I've had a headache since this morning.",
+      "context": "symptoms",
+      "register": "polite",
+      "lexemes": [
+        "아침",
+        "머리",
+        "아프다"
+      ],
+      "distractors": [
+        "I've had a stomachache since this morning.",
+        "I had a headache yesterday.",
+        "My head hurts every morning."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "약은 드셨어요?",
+            "english": "Have you taken any medicine?"
+          },
+          {
+            "korean": "많이 아프세요?",
+            "english": "Does it hurt a lot?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "머리가 길어요.",
+            "english": "My hair is long."
+          },
+          {
+            "korean": "저도 배고파요.",
+            "english": "I'm hungry too."
+          },
+          {
+            "korean": "내일 봐요.",
+            "english": "See you tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/come-out",
+      "kind": "word",
+      "korean": "나다",
+      "english": "to come out, to break out (fever, cough)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "나다"
+      ]
+    },
+    {
+      "id": "doctor/i-have-a-fever",
+      "kind": "sentence",
+      "korean": "열이 나요.",
+      "english": "I have a fever.",
+      "context": "symptoms",
+      "register": "polite",
+      "note": "열이 나다 = to run a fever. Without the particle, 열 is also 'ten'.",
+      "lexemes": [
+        "열",
+        "나다"
+      ],
+      "distractors": [
+        "I feel cold.",
+        "I have a cough.",
+        "I'm sweating a lot."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "열이 몇 도예요?",
+            "english": "How high is your temperature?"
+          },
+          {
+            "korean": "언제부터 열이 났어요?",
+            "english": "Since when have you had a fever?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "문을 열어 주세요.",
+            "english": "Please open the door."
+          },
+          {
+            "korean": "지금 열 시예요.",
+            "english": "It's ten o'clock now."
+          },
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's tasty."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/cough",
+      "kind": "word",
+      "korean": "기침",
+      "english": "cough",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "기침"
+      ]
+    },
+    {
+      "id": "doctor/fever-and-cough",
+      "kind": "sentence",
+      "korean": "어제부터 열이 나고 기침을 해요.",
+      "english": "I've had a fever and a cough since yesterday.",
+      "context": "symptoms",
+      "register": "polite",
+      "lexemes": [
+        "어제",
+        "열",
+        "나다",
+        "기침",
+        "하다"
+      ],
+      "distractors": [
+        "I've had a fever since this morning.",
+        "I had a cough yesterday, but it's gone now.",
+        "I've had a headache and a fever since yesterday."
+      ]
+    },
+    {
+      "id": "doctor/runny-nose",
+      "kind": "word",
+      "korean": "콧물",
+      "english": "runny nose, nasal mucus",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "콧물"
+      ]
+    },
+    {
+      "id": "doctor/throat",
+      "kind": "word",
+      "korean": "목",
+      "english": "throat, neck",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "목"
+      ],
+      "image": "throat"
+    },
+    {
+      "id": "doctor/runny-nose-sore-throat",
+      "kind": "sentence",
+      "korean": "콧물이 나고 목이 아파요.",
+      "english": "I have a runny nose and a sore throat.",
+      "context": "symptoms",
+      "register": "polite",
+      "lexemes": [
+        "콧물",
+        "나다",
+        "목",
+        "아프다"
+      ],
+      "distractors": [
+        "I have a stuffy nose and a headache.",
+        "My neck hurts from sleeping badly.",
+        "I have a cough and a fever."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "감기인 것 같네요.",
+            "english": "It sounds like a cold."
+          },
+          {
+            "korean": "열도 있어요?",
+            "english": "Do you have a fever too?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "목이 말라요.",
+            "english": "I'm thirsty."
+          },
+          {
+            "korean": "네, 목요일에 만나요.",
+            "english": "Yes, see you on Thursday."
+          },
+          {
+            "korean": "물 좀 주세요.",
+            "english": "Some water, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/a-cold",
+      "kind": "word",
+      "korean": "감기",
+      "english": "a cold",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "감기"
+      ],
+      "image": "sick cold tissue"
+    },
+    {
+      "id": "doctor/caught-a-cold",
+      "kind": "sentence",
+      "korean": "감기에 걸린 것 같아요.",
+      "english": "I think I've caught a cold.",
+      "context": "symptoms",
+      "register": "polite",
+      "note": "감기에 걸리다 = to catch a cold.",
+      "lexemes": [
+        "감기",
+        "걸리다",
+        "것"
+      ],
+      "distractors": [
+        "I think I'm getting better.",
+        "I caught a cold last week.",
+        "I think it's just an allergy."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "따뜻한 물 많이 드세요.",
+            "english": "Drink lots of warm water."
+          },
+          {
+            "korean": "푹 쉬세요.",
+            "english": "Get plenty of rest."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "시간이 많이 걸려요.",
+            "english": "It takes a long time."
+          },
+          {
+            "korean": "네, 걸어서 왔어요.",
+            "english": "Yes, I walked here."
+          },
+          {
+            "korean": "오늘 날씨 좋네요.",
+            "english": "Nice weather today."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/diarrhea",
+      "kind": "word",
+      "korean": "설사",
+      "english": "diarrhea",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "설사"
+      ]
+    },
+    {
+      "id": "doctor/continuously",
+      "kind": "word",
+      "korean": "계속",
+      "english": "continuously, keep (doing)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "계속"
+      ]
+    },
+    {
+      "id": "doctor/diarrhea-since-yesterday",
+      "kind": "sentence",
+      "korean": "어제부터 계속 설사를 해요.",
+      "english": "I've had diarrhea since yesterday.",
+      "context": "symptoms",
+      "register": "polite",
+      "lexemes": [
+        "어제",
+        "계속",
+        "설사",
+        "하다"
+      ],
+      "distractors": [
+        "I've been throwing up since yesterday.",
+        "I had diarrhea yesterday, but I'm fine now.",
+        "I've had a stomachache since this morning."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "뭘 드셨어요?",
+            "english": "What did you eat?"
+          },
+          {
+            "korean": "물을 많이 드셔야 해요.",
+            "english": "You need to drink a lot of water."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "어제 영화 봤어요.",
+            "english": "I saw a movie yesterday."
+          },
+          {
+            "korean": "계속 가세요.",
+            "english": "Keep going."
+          },
+          {
+            "korean": "설탕 넣어 드릴까요?",
+            "english": "Shall I add sugar?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/dizzy",
+      "kind": "word",
+      "korean": "어지럽다",
+      "english": "to be dizzy",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "어지럽다"
+      ]
+    },
+    {
+      "id": "doctor/i-feel-dizzy",
+      "kind": "sentence",
+      "korean": "어지러워요.",
+      "english": "I feel dizzy.",
+      "context": "symptoms",
+      "register": "polite",
+      "note": "어지러워요 (dizzy) sounds close to 어려워요 (difficult).",
+      "lexemes": [
+        "어지럽다"
+      ],
+      "distractors": [
+        "I feel sick.",
+        "I'm sleepy.",
+        "It's difficult."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "여기 잠깐 앉으세요.",
+            "english": "Sit down here for a moment."
+          },
+          {
+            "korean": "언제부터 어지러웠어요?",
+            "english": "Since when have you felt dizzy?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "방이 좀 더러워요.",
+            "english": "The room is a bit dirty."
+          },
+          {
+            "korean": "네, 어려워요.",
+            "english": "Yes, it's difficult."
+          },
+          {
+            "korean": "안녕히 가세요.",
+            "english": "Goodbye."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/stomach",
+      "kind": "word",
+      "korean": "배",
+      "english": "stomach, belly",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "배"
+      ],
+      "image": "stomach belly"
+    },
+    {
+      "id": "doctor/stomachache-couldnt-eat",
+      "kind": "sentence",
+      "korean": "배가 아파서 밥을 못 먹었어요.",
+      "english": "My stomach hurt, so I couldn't eat.",
+      "context": "symptoms",
+      "register": "polite",
+      "lexemes": [
+        "배",
+        "아프다",
+        "밥",
+        "못",
+        "먹다"
+      ],
+      "distractors": [
+        "I ate too much and now my stomach hurts.",
+        "I'm hungry because I skipped a meal.",
+        "My stomach hurt, but I ate anyway."
+      ]
+    },
+    {
+      "id": "doctor/inside",
+      "kind": "word",
+      "korean": "속",
+      "english": "inside; the stomach (upset)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "속"
+      ]
+    },
+    {
+      "id": "doctor/vomit",
+      "kind": "word",
+      "korean": "토하다",
+      "english": "to vomit, to throw up",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "토하다"
+      ]
+    },
+    {
+      "id": "doctor/upset-stomach-throw-up",
+      "kind": "sentence",
+      "korean": "속이 안 좋고 토할 것 같아요.",
+      "english": "My stomach is upset and I feel like throwing up.",
+      "context": "symptoms",
+      "register": "polite",
+      "note": "속이 안 좋다 = to have an upset stomach (lit. the inside isn't good).",
+      "lexemes": [
+        "속",
+        "안",
+        "좋다",
+        "토하다",
+        "것"
+      ],
+      "distractors": [
+        "I ate too much and feel full.",
+        "I threw up this morning.",
+        "I feel better now, but I'm tired."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "화장실은 저쪽이에요.",
+            "english": "The restroom is over there."
+          },
+          {
+            "korean": "언제부터 그랬어요?",
+            "english": "Since when has it been like this?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "좋은 생각이에요.",
+            "english": "Good idea."
+          },
+          {
+            "korean": "네, 다 먹었어요.",
+            "english": "Yes, I ate it all."
+          },
+          {
+            "korean": "토요일에 만나요.",
+            "english": "See you on Saturday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/lower-back",
+      "kind": "word",
+      "korean": "허리",
+      "english": "lower back, waist",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "허리"
+      ],
+      "image": "lower back pain"
+    },
+    {
+      "id": "doctor/lower-back-hurts",
+      "kind": "sentence",
+      "korean": "허리가 너무 아파요.",
+      "english": "My lower back really hurts.",
+      "context": "symptoms",
+      "register": "polite",
+      "lexemes": [
+        "허리",
+        "너무",
+        "아프다"
+      ],
+      "distractors": [
+        "My shoulders are stiff.",
+        "My legs really hurt.",
+        "My back is a little better."
+      ]
+    },
+    {
+      "id": "doctor/fall-over",
+      "kind": "word",
+      "korean": "넘어지다",
+      "english": "to fall over, to trip",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "넘어지다"
+      ]
+    },
+    {
+      "id": "doctor/get-hurt",
+      "kind": "word",
+      "korean": "다치다",
+      "english": "to get hurt, to injure",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "다치다"
+      ]
+    },
+    {
+      "id": "doctor/fell-hurt-leg",
+      "kind": "sentence",
+      "korean": "넘어져서 다리를 다쳤어요.",
+      "english": "I fell and hurt my leg.",
+      "context": "injuries",
+      "register": "polite",
+      "lexemes": [
+        "넘어지다",
+        "다리",
+        "다치다"
+      ],
+      "distractors": [
+        "I fell and hurt my arm.",
+        "My leg hurts from walking too much.",
+        "I fell, but I'm not hurt."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "걸을 수 있어요?",
+            "english": "Can you walk?"
+          },
+          {
+            "korean": "엑스레이 찍어 볼게요.",
+            "english": "Let's take an X-ray."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다리가 길어요.",
+            "english": "Your legs are long."
+          },
+          {
+            "korean": "다리를 건너세요.",
+            "english": "Cross the bridge."
+          },
+          {
+            "korean": "천천히 드세요.",
+            "english": "Eat slowly."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/ankle",
+      "kind": "word",
+      "korean": "발목",
+      "english": "ankle",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "발목"
+      ],
+      "image": "ankle"
+    },
+    {
+      "id": "doctor/sprain",
+      "kind": "word",
+      "korean": "삐다",
+      "english": "to sprain, to twist (a joint)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "삐다"
+      ]
+    },
+    {
+      "id": "doctor/sprained-ankle",
+      "kind": "sentence",
+      "korean": "발목을 삐었어요.",
+      "english": "I sprained my ankle.",
+      "context": "injuries",
+      "register": "polite",
+      "lexemes": [
+        "발목",
+        "삐다"
+      ],
+      "distractors": [
+        "I broke my ankle.",
+        "I sprained my wrist.",
+        "My ankle is itchy."
+      ]
+    },
+    {
+      "id": "doctor/itchy",
+      "kind": "word",
+      "korean": "가렵다",
+      "english": "to be itchy",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "가렵다"
+      ]
+    },
+    {
+      "id": "doctor/red",
+      "kind": "word",
+      "korean": "빨갛다",
+      "english": "to be red",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "빨갛다"
+      ]
+    },
+    {
+      "id": "doctor/itchy-red-eyes",
+      "kind": "sentence",
+      "korean": "눈이 가렵고 빨개요.",
+      "english": "My eyes are itchy and red.",
+      "context": "symptoms",
+      "register": "polite",
+      "lexemes": [
+        "눈",
+        "가렵다",
+        "빨갛다"
+      ],
+      "distractors": [
+        "My eyes are dry and tired.",
+        "My skin is itchy and red.",
+        "I can't see well."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "알레르기일 수도 있어요.",
+            "english": "It might be an allergy."
+          },
+          {
+            "korean": "눈을 비비지 마세요.",
+            "english": "Don't rub your eyes."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "눈이 많이 와요.",
+            "english": "It's snowing a lot."
+          },
+          {
+            "korean": "빨간색 좋아해요?",
+            "english": "Do you like red?"
+          },
+          {
+            "korean": "안경이 멋있어요.",
+            "english": "Nice glasses."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/since-when-in-pain",
+      "kind": "sentence",
+      "korean": "언제부터 아프셨어요?",
+      "english": "Since when have you been in pain?",
+      "context": "doctor-questions",
+      "register": "polite",
+      "lexemes": [
+        "언제",
+        "아프다"
+      ],
+      "distractors": [
+        "Where does it hurt?",
+        "How long will it take?",
+        "When did you last eat?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어젯밤부터요.",
+            "english": "Since last night."
+          },
+          {
+            "korean": "삼 일 전부터요.",
+            "english": "Since three days ago."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "내일부터요.",
+            "english": "From tomorrow."
+          },
+          {
+            "korean": "병원에서요.",
+            "english": "At the hospital."
+          },
+          {
+            "korean": "친구하고요.",
+            "english": "With a friend."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/about",
+      "kind": "word",
+      "korean": "정도",
+      "english": "about, around (an amount)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "정도"
+      ]
+    },
+    {
+      "id": "doctor/about-a-week",
+      "kind": "sentence",
+      "korean": "일주일 정도 됐어요.",
+      "english": "It's been about a week.",
+      "context": "how-long",
+      "register": "polite",
+      "lexemes": [
+        "일주일",
+        "정도",
+        "되다"
+      ],
+      "distractors": [
+        "It's been about a month.",
+        "It'll take about a week.",
+        "It's been about three days."
+      ]
+    },
+    {
+      "id": "doctor/symptom",
+      "kind": "word",
+      "korean": "증상",
+      "english": "symptom",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "증상"
+      ]
+    },
+    {
+      "id": "doctor/any-other-symptoms",
+      "kind": "sentence",
+      "korean": "다른 증상은 없으세요?",
+      "english": "Do you have any other symptoms?",
+      "context": "doctor-questions",
+      "register": "polite",
+      "lexemes": [
+        "다른",
+        "증상",
+        "없다"
+      ],
+      "distractors": [
+        "Do you have any allergies?",
+        "Are you taking any other medicine?",
+        "Is this your first time here?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "기침도 조금 해요.",
+            "english": "I'm coughing a bit too."
+          },
+          {
+            "korean": "아니요, 그것뿐이에요.",
+            "english": "No, that's all."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다른 사람이에요.",
+            "english": "It's someone else."
+          },
+          {
+            "korean": "네, 다른 색도 있어요.",
+            "english": "Yes, we have other colors too."
+          },
+          {
+            "korean": "지금 없어요, 나갔어요.",
+            "english": "He's not here now, he went out."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/medicine",
+      "kind": "word",
+      "korean": "약",
+      "english": "medicine, medication",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "약"
+      ],
+      "image": "pills medicine"
+    },
+    {
+      "id": "doctor/drug-allergy",
+      "kind": "sentence",
+      "korean": "혹시 약 알레르기 있으세요?",
+      "english": "Are you allergic to any medication?",
+      "context": "doctor-questions",
+      "register": "polite",
+      "lexemes": [
+        "혹시",
+        "약",
+        "알레르기",
+        "있다"
+      ],
+      "distractors": [
+        "Do you have any food allergies?",
+        "Are you taking any medicine?",
+        "Did you bring your medicine?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아니요, 없어요.",
+            "english": "No, I'm not."
+          },
+          {
+            "korean": "네, 페니실린 알레르기가 있어요.",
+            "english": "Yes, I'm allergic to penicillin."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 약국이 저기 있어요.",
+            "english": "Yes, the pharmacy is over there."
+          },
+          {
+            "korean": "땅콩 좋아해요.",
+            "english": "I like peanuts."
+          },
+          {
+            "korean": "약속이 있어요.",
+            "english": "I have plans."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/taking-medicine-now",
+      "kind": "sentence",
+      "korean": "지금 드시는 약 있어요?",
+      "english": "Are you taking any medicine at the moment?",
+      "context": "doctor-questions",
+      "register": "polite",
+      "note": "드시다 is the honorific of 먹다; for medicine Koreans say 'eat' (약을 먹다).",
+      "lexemes": [
+        "지금",
+        "드시다",
+        "약",
+        "있다"
+      ],
+      "distractors": [
+        "Did you take any medicine this morning?",
+        "Would you like to buy some medicine?",
+        "Are you allergic to any medicine?"
+      ]
+    },
+    {
+      "id": "doctor/open-wide",
+      "kind": "word",
+      "korean": "벌리다",
+      "english": "to open (the mouth), to spread apart",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "벌리다"
+      ]
+    },
+    {
+      "id": "doctor/open-your-mouth",
+      "kind": "sentence",
+      "korean": "입을 벌려 보세요.",
+      "english": "Open your mouth, please.",
+      "context": "examination",
+      "register": "polite",
+      "note": "보세요 after a verb softens a request: 'try doing'.",
+      "lexemes": [
+        "입",
+        "벌리다",
+        "보다"
+      ],
+      "distractors": [
+        "Close your mouth, please.",
+        "Open your eyes, please.",
+        "Stick out your tongue, please."
+      ]
+    },
+    {
+      "id": "doctor/breath",
+      "kind": "word",
+      "korean": "숨",
+      "english": "breath",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "숨"
+      ]
+    },
+    {
+      "id": "doctor/take-a-deep-breath",
+      "kind": "sentence",
+      "korean": "숨을 크게 쉬세요.",
+      "english": "Take a deep breath.",
+      "context": "examination",
+      "register": "polite",
+      "note": "숨을 쉬다 = to breathe; 크게 (big) makes it a deep breath.",
+      "lexemes": [
+        "숨",
+        "크다",
+        "쉬다"
+      ],
+      "distractors": [
+        "Hold your breath.",
+        "Breathe out slowly.",
+        "Get some rest."
+      ]
+    },
+    {
+      "id": "doctor/does-it-hurt-when-i-press",
+      "kind": "sentence",
+      "korean": "여기 누르면 아파요?",
+      "english": "Does it hurt when I press here?",
+      "context": "examination",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "누르다",
+        "아프다"
+      ],
+      "distractors": [
+        "Does it hurt when you walk?",
+        "Where does it hurt the most?",
+        "Does it still hurt here?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 거기가 아파요.",
+            "english": "Yes, it hurts there."
+          },
+          {
+            "korean": "아니요, 괜찮아요.",
+            "english": "No, it's fine."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "버튼을 누르세요.",
+            "english": "Press the button."
+          },
+          {
+            "korean": "여기 앉아도 돼요?",
+            "english": "Can I sit here?"
+          },
+          {
+            "korean": "네, 여기 살아요.",
+            "english": "Yes, I live here."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/simple",
+      "kind": "word",
+      "korean": "간단하다",
+      "english": "to be simple, quick",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "간단하다"
+      ]
+    },
+    {
+      "id": "doctor/test",
+      "kind": "word",
+      "korean": "검사",
+      "english": "(medical) test, examination",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "검사"
+      ]
+    },
+    {
+      "id": "doctor/quick-test",
+      "kind": "sentence",
+      "korean": "간단한 검사를 좀 해 볼게요.",
+      "english": "Let's do a quick test.",
+      "context": "examination",
+      "register": "polite",
+      "lexemes": [
+        "간단하다",
+        "검사",
+        "좀",
+        "하다",
+        "보다"
+      ],
+      "distractors": [
+        "Let's take an X-ray.",
+        "The test results are fine.",
+        "Let's do the test next time."
+      ]
+    },
+    {
+      "id": "doctor/injection",
+      "kind": "word",
+      "korean": "주사",
+      "english": "injection, shot",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "주사"
+      ],
+      "image": "syringe injection"
+    },
+    {
+      "id": "doctor/need-an-injection",
+      "kind": "sentence",
+      "korean": "주사를 맞으셔야 해요.",
+      "english": "You need to get an injection.",
+      "context": "treatment",
+      "register": "polite",
+      "note": "주사를 맞다 = to get a shot (lit. to be hit by an injection).",
+      "lexemes": [
+        "주사",
+        "맞다"
+      ],
+      "distractors": [
+        "You need to take this medicine.",
+        "You don't need an injection.",
+        "You need to stay in the hospital."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "많이 아파요?",
+            "english": "Does it hurt a lot?"
+          },
+          {
+            "korean": "네, 알겠어요.",
+            "english": "Okay, I see."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맞아요.",
+            "english": "Yes, that's right."
+          },
+          {
+            "korean": "주소가 어디예요?",
+            "english": "What's the address?"
+          },
+          {
+            "korean": "사진 찍어 주세요.",
+            "english": "Please take a picture."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/nothing-serious",
+      "kind": "sentence",
+      "korean": "큰 병은 아니니까 걱정하지 마세요.",
+      "english": "It's nothing serious, so don't worry.",
+      "context": "treatment",
+      "register": "polite",
+      "note": "병 means both 'illness' and 'bottle'.",
+      "lexemes": [
+        "크다",
+        "병",
+        "아니다",
+        "걱정하다"
+      ],
+      "distractors": [
+        "It's serious, so you need surgery.",
+        "It's not a cold, it's an allergy.",
+        "Don't worry, the pharmacy is still open."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "다행이네요, 감사합니다.",
+            "english": "What a relief, thank you."
+          },
+          {
+            "korean": "그럼 약만 먹으면 돼요?",
+            "english": "So I just need to take medicine?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "큰 병 하나 주세요.",
+            "english": "One large bottle, please."
+          },
+          {
+            "korean": "저는 병원에서 일해요.",
+            "english": "I work at a hospital."
+          },
+          {
+            "korean": "아니요, 작은 거요.",
+            "english": "No, the small one."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/consultation",
+      "kind": "word",
+      "korean": "진료",
+      "english": "medical consultation, treatment",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "진료"
+      ]
+    },
+    {
+      "id": "doctor/book-an-appointment",
+      "kind": "sentence",
+      "korean": "진료 예약하고 싶은데요.",
+      "english": "I'd like to book an appointment.",
+      "context": "appointment",
+      "register": "polite",
+      "lexemes": [
+        "진료",
+        "예약하다"
+      ],
+      "distractors": [
+        "I'd like to cancel my appointment.",
+        "I'd like to change my appointment.",
+        "I have an appointment at three."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "언제 오시겠어요?",
+            "english": "When would you like to come?"
+          },
+          {
+            "korean": "성함이 어떻게 되세요?",
+            "english": "May I have your name?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있게 드세요.",
+            "english": "Okay, enjoy your meal."
+          },
+          {
+            "korean": "저도 가고 싶어요.",
+            "english": "I want to go too."
+          },
+          {
+            "korean": "아니요, 괜찮아요.",
+            "english": "No, thanks."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/see-doctor-this-afternoon",
+      "kind": "sentence",
+      "korean": "오늘 오후에 진료 가능해요?",
+      "english": "Can I see the doctor this afternoon?",
+      "context": "appointment",
+      "register": "polite",
+      "lexemes": [
+        "오늘",
+        "오후",
+        "진료",
+        "가능하다"
+      ],
+      "distractors": [
+        "Is the clinic open this morning?",
+        "Can I see the doctor tomorrow afternoon?",
+        "Can I pick up my medicine this afternoon?"
+      ]
+    },
+    {
+      "id": "doctor/no-appointment",
+      "kind": "sentence",
+      "korean": "예약 안 했는데 진료 받을 수 있어요?",
+      "english": "I don't have an appointment. Can I still be seen?",
+      "context": "appointment",
+      "register": "polite",
+      "lexemes": [
+        "예약",
+        "안",
+        "하다",
+        "진료",
+        "받다"
+      ],
+      "distractors": [
+        "I have an appointment. Where do I go?",
+        "Can I book an appointment for tomorrow?",
+        "I didn't get my test results."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 조금 기다리셔야 해요.",
+            "english": "Yes, but you'll have to wait a bit."
+          },
+          {
+            "korean": "네, 먼저 접수해 주세요.",
+            "english": "Yes, please check in first."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 예약이 취소됐어요.",
+            "english": "Yes, the booking was cancelled."
+          },
+          {
+            "korean": "선물 받았어요.",
+            "english": "I got a present."
+          },
+          {
+            "korean": "택시로 오세요.",
+            "english": "Come by taxi."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/we-humble",
+      "kind": "word",
+      "korean": "저희",
+      "english": "we, our (humble)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "저희"
+      ]
+    },
+    {
+      "id": "doctor/first-visit",
+      "kind": "sentence",
+      "korean": "저희 병원 처음 오셨어요?",
+      "english": "Is this your first visit to our clinic?",
+      "context": "reception",
+      "register": "polite",
+      "lexemes": [
+        "저희",
+        "병원",
+        "처음",
+        "오다"
+      ],
+      "distractors": [
+        "When did you last come here?",
+        "How did you find our clinic?",
+        "Is this your first time in Korea?"
+      ]
+    },
+    {
+      "id": "doctor/check-in",
+      "kind": "word",
+      "korean": "접수",
+      "english": "reception, registration (check-in)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "접수"
+      ]
+    },
+    {
+      "id": "doctor/where-to-check-in",
+      "kind": "sentence",
+      "korean": "접수는 어디에서 해요?",
+      "english": "Where do I check in?",
+      "context": "reception",
+      "register": "polite",
+      "lexemes": [
+        "접수",
+        "어디",
+        "하다"
+      ],
+      "distractors": [
+        "Where is the pharmacy?",
+        "Where is the waiting room?",
+        "When do I pay?"
+      ]
+    },
+    {
+      "id": "doctor/arc",
+      "kind": "word",
+      "korean": "외국인등록증",
+      "english": "alien registration card",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "The residence card foreigners in Korea carry; hospitals ask for it.",
+      "lexemes": [
+        "외국인등록증"
+      ],
+      "image": "id card"
+    },
+    {
+      "id": "doctor/show-arc",
+      "kind": "sentence",
+      "korean": "외국인등록증 좀 보여 주시겠어요?",
+      "english": "Could I see your alien registration card?",
+      "context": "reception",
+      "register": "polite",
+      "lexemes": [
+        "외국인등록증",
+        "좀",
+        "보이다",
+        "주다"
+      ],
+      "distractors": [
+        "Could I see your passport?",
+        "Could you write down your address?",
+        "Do you have a membership card?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 여기 있어요.",
+            "english": "Sure, here you are."
+          },
+          {
+            "korean": "여권도 괜찮아요?",
+            "english": "Is my passport okay too?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘 보여요.",
+            "english": "Yes, I can see well."
+          },
+          {
+            "korean": "등록금이 비싸요.",
+            "english": "Tuition is expensive."
+          },
+          {
+            "korean": "한국 사람이에요.",
+            "english": "I'm Korean."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/insurance",
+      "kind": "word",
+      "korean": "보험",
+      "english": "insurance",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "보험"
+      ]
+    },
+    {
+      "id": "doctor/health-insurance",
+      "kind": "sentence",
+      "korean": "건강보험 있으세요?",
+      "english": "Do you have health insurance?",
+      "context": "reception",
+      "register": "polite",
+      "lexemes": [
+        "건강",
+        "보험",
+        "있다"
+      ],
+      "distractors": [
+        "Do you have your ID card?",
+        "Are you in good health?",
+        "Do you have a reservation?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 있어요.",
+            "english": "Yes, I do."
+          },
+          {
+            "korean": "아니요, 여행자 보험만 있어요.",
+            "english": "No, I only have travel insurance."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 건강해요.",
+            "english": "Yes, I'm healthy."
+          },
+          {
+            "korean": "보통 걸어서 와요.",
+            "english": "I usually walk here."
+          },
+          {
+            "korean": "네, 봉투 있어요.",
+            "english": "Yes, I have a bag."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/date-of-birth",
+      "kind": "word",
+      "korean": "생년월일",
+      "english": "date of birth",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "생년월일"
+      ]
+    },
+    {
+      "id": "doctor/name-and-date-of-birth",
+      "kind": "sentence",
+      "korean": "여기에 성함하고 생년월일 좀 써 주세요.",
+      "english": "Please write your name and date of birth here.",
+      "context": "reception",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "성함",
+        "생년월일",
+        "좀",
+        "쓰다",
+        "주다"
+      ],
+      "distractors": [
+        "Please write your address and phone number here.",
+        "Please sign here.",
+        "Please tell me your name and age."
+      ]
+    },
+    {
+      "id": "doctor/call-out",
+      "kind": "word",
+      "korean": "부르다",
+      "english": "to call (out), to summon; to sing",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "부르다"
+      ]
+    },
+    {
+      "id": "doctor/well-call-your-name",
+      "kind": "sentence",
+      "korean": "앉아서 기다리시면 이름 불러 드릴게요.",
+      "english": "Take a seat and we'll call your name.",
+      "context": "reception",
+      "register": "polite",
+      "lexemes": [
+        "앉다",
+        "기다리다",
+        "이름",
+        "부르다",
+        "드리다"
+      ],
+      "distractors": [
+        "Please come in, the doctor will see you now.",
+        "Write your name and wait here.",
+        "We'll call you when the medicine is ready."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 감사합니다.",
+            "english": "Okay, thank you."
+          },
+          {
+            "korean": "얼마나 기다려야 돼요?",
+            "english": "How long do I have to wait?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "배불러요.",
+            "english": "I'm full."
+          },
+          {
+            "korean": "노래 불러 주세요.",
+            "english": "Please sing a song."
+          },
+          {
+            "korean": "이름이 예뻐요.",
+            "english": "What a pretty name."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/consultation-fee",
+      "kind": "word",
+      "korean": "진료비",
+      "english": "consultation fee, medical bill",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "진료비"
+      ]
+    },
+    {
+      "id": "doctor/how-much-is-the-fee",
+      "kind": "sentence",
+      "korean": "진료비는 얼마예요?",
+      "english": "How much is the consultation?",
+      "context": "reception",
+      "register": "polite",
+      "lexemes": [
+        "진료비",
+        "얼마"
+      ],
+      "distractors": [
+        "How much is the medicine?",
+        "How long will the consultation take?",
+        "Do I pay now or later?"
+      ]
+    },
+    {
+      "id": "doctor/prescription",
+      "kind": "word",
+      "korean": "처방전",
+      "english": "prescription",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "처방전"
+      ],
+      "image": "prescription paper"
+    },
+    {
+      "id": "doctor/take-along",
+      "kind": "word",
+      "korean": "가져가다",
+      "english": "to take (something) along",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "가져가다"
+      ]
+    },
+    {
+      "id": "doctor/take-prescription-to-pharmacy",
+      "kind": "sentence",
+      "korean": "처방전 드릴게요. 약국에 가져가세요.",
+      "english": "Here's your prescription. Take it to a pharmacy.",
+      "context": "prescription",
+      "register": "polite",
+      "lexemes": [
+        "처방전",
+        "드리다",
+        "약국",
+        "가져가다"
+      ],
+      "distractors": [
+        "Here's your receipt. Pay at the front desk.",
+        "Your medicine is ready. Take it home.",
+        "Bring your prescription next time."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "근처에 약국 있어요?",
+            "english": "Is there a pharmacy nearby?"
+          },
+          {
+            "korean": "네, 감사합니다.",
+            "english": "Okay, thank you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "처음 뵙겠습니다.",
+            "english": "Nice to meet you."
+          },
+          {
+            "korean": "포장해 주세요.",
+            "english": "To go, please."
+          },
+          {
+            "korean": "여기서 먹을게요.",
+            "english": "I'll eat here."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/three-times-a-day",
+      "kind": "sentence",
+      "korean": "하루에 세 번 드세요.",
+      "english": "Take it three times a day.",
+      "context": "pharmacy",
+      "register": "polite",
+      "lexemes": [
+        "하루",
+        "세",
+        "번",
+        "드시다"
+      ],
+      "distractors": [
+        "Take it twice a day.",
+        "Take it three times a week.",
+        "Take three pills at once."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "밥 먹고 먹어요?",
+            "english": "Do I take it after eating?"
+          },
+          {
+            "korean": "네, 알겠습니다.",
+            "english": "All right, I understand."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 번 출구로 나가세요.",
+            "english": "Take exit three."
+          },
+          {
+            "korean": "하루 종일 일했어요.",
+            "english": "I worked all day."
+          },
+          {
+            "korean": "세 명이에요.",
+            "english": "There are three of us."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/after-meals",
+      "kind": "word",
+      "korean": "식후",
+      "english": "after a meal",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "식후"
+      ]
+    },
+    {
+      "id": "doctor/thirty-minutes-after-meals",
+      "kind": "sentence",
+      "korean": "식후 삼십 분에 드세요.",
+      "english": "Take it thirty minutes after meals.",
+      "context": "pharmacy",
+      "register": "polite",
+      "note": "식후 = after meals; 식전 = before meals.",
+      "lexemes": [
+        "식후",
+        "삼십",
+        "분",
+        "드시다"
+      ],
+      "distractors": [
+        "Take it thirty minutes before meals.",
+        "Take it three hours after meals.",
+        "Take it right before bed."
+      ]
+    },
+    {
+      "id": "doctor/sleepy",
+      "kind": "word",
+      "korean": "졸리다",
+      "english": "to be sleepy, drowsy",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "졸리다"
+      ]
+    },
+    {
+      "id": "doctor/may-make-you-drowsy",
+      "kind": "sentence",
+      "korean": "이 약은 먹으면 졸릴 수 있어요.",
+      "english": "This medicine may make you drowsy.",
+      "context": "pharmacy",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "약",
+        "먹다",
+        "졸리다"
+      ],
+      "distractors": [
+        "This medicine may upset your stomach.",
+        "This medicine works quickly.",
+        "Take this medicine before you go to sleep."
+      ]
+    },
+    {
+      "id": "doctor/alcohol",
+      "kind": "word",
+      "korean": "술",
+      "english": "alcohol, alcoholic drinks",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "술"
+      ],
+      "image": "soju bottle"
+    },
+    {
+      "id": "doctor/no-alcohol",
+      "kind": "sentence",
+      "korean": "약 드시는 동안 술은 드시지 마세요.",
+      "english": "Please don't drink alcohol while taking the medicine.",
+      "context": "pharmacy",
+      "register": "polite",
+      "note": "드시다 (honorific) covers both eating and drinking.",
+      "lexemes": [
+        "약",
+        "드시다",
+        "동안",
+        "술"
+      ],
+      "distractors": [
+        "Please don't eat anything while taking the medicine.",
+        "Take the medicine with a drink.",
+        "Don't drive after taking the medicine."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "커피는 괜찮아요?",
+            "english": "Is coffee okay?"
+          },
+          {
+            "korean": "네, 안 마실게요.",
+            "english": "Okay, I won't drink."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "소주 한 병 주세요.",
+            "english": "A bottle of soju, please."
+          },
+          {
+            "korean": "동안이시네요.",
+            "english": "You look young for your age."
+          },
+          {
+            "korean": "저는 약사예요.",
+            "english": "I'm a pharmacist."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/cold-medicine",
+      "kind": "word",
+      "korean": "감기약",
+      "english": "cold medicine",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "감기약"
+      ]
+    },
+    {
+      "id": "doctor/cold-medicine-please",
+      "kind": "sentence",
+      "korean": "감기약 좀 주세요.",
+      "english": "Some cold medicine, please.",
+      "context": "pharmacy",
+      "register": "polite",
+      "lexemes": [
+        "감기약",
+        "좀",
+        "주다"
+      ],
+      "distractors": [
+        "Some headache medicine, please.",
+        "I'd like some cough syrup.",
+        "Do you have anything for allergies?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "증상이 어떠세요?",
+            "english": "What are your symptoms?"
+          },
+          {
+            "korean": "열도 있으세요?",
+            "english": "Do you have a fever as well?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "감자 좀 드릴까요?",
+            "english": "Would you like some potatoes?"
+          },
+          {
+            "korean": "저는 감기 안 걸렸어요.",
+            "english": "I don't have a cold."
+          },
+          {
+            "korean": "영화가 재미있어요.",
+            "english": "The movie is fun."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/painkiller",
+      "kind": "word",
+      "korean": "진통제",
+      "english": "painkiller",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "진통제"
+      ]
+    },
+    {
+      "id": "doctor/any-painkillers",
+      "kind": "sentence",
+      "korean": "진통제 있어요?",
+      "english": "Do you have any painkillers?",
+      "context": "pharmacy",
+      "register": "polite",
+      "lexemes": [
+        "진통제",
+        "있다"
+      ],
+      "distractors": [
+        "Do you have any cold medicine?",
+        "Is this a painkiller?",
+        "Does it hurt a lot?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어디가 아프세요?",
+            "english": "Where does it hurt?"
+          },
+          {
+            "korean": "네, 하루에 두 번까지 드세요.",
+            "english": "Yes, take it up to twice a day."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니요, 진짜예요.",
+            "english": "No, it's real."
+          },
+          {
+            "korean": "네, 저기 은행 있어요.",
+            "english": "Yes, there's a bank over there."
+          },
+          {
+            "korean": "통장 만들어 드릴까요?",
+            "english": "Shall I open a bank account for you?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/side-effect",
+      "kind": "word",
+      "korean": "부작용",
+      "english": "side effect",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "부작용"
+      ]
+    },
+    {
+      "id": "doctor/any-side-effects",
+      "kind": "sentence",
+      "korean": "이 약 부작용 있어요?",
+      "english": "Does this medicine have any side effects?",
+      "context": "pharmacy",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "약",
+        "부작용",
+        "있다"
+      ],
+      "distractors": [
+        "How much is this medicine?",
+        "Is this medicine strong?",
+        "Does this medicine need a prescription?"
+      ]
+    },
+    {
+      "id": "doctor/how-many-days-take-it",
+      "kind": "sentence",
+      "korean": "며칠 동안 먹어야 돼요?",
+      "english": "How many days do I need to take it?",
+      "context": "pharmacy",
+      "register": "polite",
+      "lexemes": [
+        "며칠",
+        "동안",
+        "먹다"
+      ],
+      "distractors": [
+        "How many times a day do I take it?",
+        "How many pills do I take?",
+        "What day should I come back?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "삼 일 동안 드세요.",
+            "english": "Take it for three days."
+          },
+          {
+            "korean": "다 나을 때까지 드세요.",
+            "english": "Take it until you're better."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "많이 드세요.",
+            "english": "Eat a lot."
+          },
+          {
+            "korean": "칠 일에 가요.",
+            "english": "I'm going on the seventh."
+          },
+          {
+            "korean": "네, 먹어도 돼요.",
+            "english": "Yes, you can eat it."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/ambulance",
+      "kind": "word",
+      "korean": "구급차",
+      "english": "ambulance",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "구급차"
+      ],
+      "image": "ambulance"
+    },
+    {
+      "id": "doctor/call-an-ambulance",
+      "kind": "sentence",
+      "korean": "구급차 좀 불러 주세요!",
+      "english": "Please call an ambulance!",
+      "context": "emergency",
+      "register": "polite",
+      "lexemes": [
+        "구급차",
+        "좀",
+        "부르다",
+        "주다"
+      ],
+      "distractors": [
+        "Please call a taxi!",
+        "Please call the police!",
+        "The ambulance is coming!"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 지금 바로 부를게요.",
+            "english": "Okay, I'll call right now."
+          },
+          {
+            "korean": "괜찮으세요? 움직이지 마세요.",
+            "english": "Are you okay? Don't move."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "노래는 못 불러요.",
+            "english": "I can't sing."
+          },
+          {
+            "korean": "구두가 예뻐요.",
+            "english": "Nice shoes."
+          },
+          {
+            "korean": "네, 다음 주에 할게요.",
+            "english": "Okay, I'll do it next week."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/collapse",
+      "kind": "word",
+      "korean": "쓰러지다",
+      "english": "to collapse, to fall down",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "쓰러지다"
+      ]
+    },
+    {
+      "id": "doctor/someone-collapsed",
+      "kind": "sentence",
+      "korean": "여기 사람이 쓰러졌어요!",
+      "english": "Someone has collapsed here!",
+      "context": "emergency",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "사람",
+        "쓰러지다"
+      ],
+      "distractors": [
+        "Someone is lost here!",
+        "Someone fell asleep here!",
+        "Someone is hurt over there!"
+      ]
+    },
+    {
+      "id": "doctor/emergency-room",
+      "kind": "word",
+      "korean": "응급실",
+      "english": "emergency room",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "응급실"
+      ],
+      "image": "emergency room"
+    },
+    {
+      "id": "doctor/where-is-the-er",
+      "kind": "sentence",
+      "korean": "응급실이 어디예요?",
+      "english": "Where is the emergency room?",
+      "context": "emergency",
+      "register": "polite",
+      "lexemes": [
+        "응급실",
+        "어디"
+      ],
+      "distractors": [
+        "Where is the pharmacy?",
+        "Is the emergency room open?",
+        "Where is the restroom?"
+      ]
+    },
+    {
+      "id": "doctor/call-one-one-nine",
+      "kind": "sentence",
+      "korean": "일일구에 전화하세요!",
+      "english": "Call 119!",
+      "context": "emergency",
+      "register": "polite",
+      "note": "119 (일일구) is fire and ambulance in Korea; 112 (일일이) is the police.",
+      "lexemes": [
+        "일",
+        "구",
+        "전화하다"
+      ],
+      "distractors": [
+        "Call 112!",
+        "Call the hospital!",
+        "Call your family!"
+      ]
+    },
+    {
+      "id": "doctor/get-better",
+      "kind": "word",
+      "korean": "좋아지다",
+      "english": "to get better, to improve",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "좋아지다"
+      ]
+    },
+    {
+      "id": "doctor/feeling-any-better",
+      "kind": "sentence",
+      "korean": "좀 좋아지셨어요?",
+      "english": "Are you feeling any better?",
+      "context": "recovery",
+      "register": "polite",
+      "lexemes": [
+        "좀",
+        "좋아지다"
+      ],
+      "distractors": [
+        "Do you like it?",
+        "Are you feeling worse?",
+        "Did you sleep well?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 많이 좋아졌어요.",
+            "english": "Yes, much better."
+          },
+          {
+            "korean": "아직 기침이 조금 나요.",
+            "english": "I still have a bit of a cough."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 좋아해요.",
+            "english": "Yes, I like it."
+          },
+          {
+            "korean": "좀 더 주세요.",
+            "english": "A little more, please."
+          },
+          {
+            "korean": "아니요, 싫어요.",
+            "english": "No, I don't want to."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/much-more",
+      "kind": "word",
+      "korean": "훨씬",
+      "english": "much, far (more)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "훨씬"
+      ]
+    },
+    {
+      "id": "doctor/much-better-after-medicine",
+      "kind": "sentence",
+      "korean": "약을 먹으니까 훨씬 좋아졌어요.",
+      "english": "I've gotten much better since taking the medicine.",
+      "context": "recovery",
+      "register": "polite",
+      "lexemes": [
+        "약",
+        "먹다",
+        "훨씬",
+        "좋아지다"
+      ],
+      "distractors": [
+        "The medicine didn't help at all.",
+        "I've felt worse since taking the medicine.",
+        "I got better without any medicine."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "다행이에요!",
+            "english": "What a relief!"
+          },
+          {
+            "korean": "그래도 약은 다 드세요.",
+            "english": "Still, finish all the medicine."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "약속 시간에 늦었어요.",
+            "english": "I'm late for my appointment."
+          },
+          {
+            "korean": "훨씬 비싸요.",
+            "english": "It's much more expensive."
+          },
+          {
+            "korean": "더 드릴까요?",
+            "english": "Shall I give you more?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/recover",
+      "kind": "word",
+      "korean": "낫다",
+      "english": "to get well, to recover",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "낫다"
+      ]
+    },
+    {
+      "id": "doctor/get-well-soon",
+      "kind": "sentence",
+      "korean": "빨리 나으세요.",
+      "english": "Get well soon.",
+      "context": "recovery",
+      "register": "polite",
+      "lexemes": [
+        "빨리",
+        "낫다"
+      ],
+      "distractors": [
+        "Come back soon.",
+        "Take care on your way home.",
+        "Get some rest."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "고마워요.",
+            "english": "Thank you."
+          },
+          {
+            "korean": "걱정해 줘서 고마워요.",
+            "english": "Thanks for worrying about me."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "빨리 오세요.",
+            "english": "Come quickly."
+          },
+          {
+            "korean": "네, 나가요.",
+            "english": "Yes, I'm going out."
+          },
+          {
+            "korean": "저도 반가워요.",
+            "english": "Nice to meet you too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/come-back-in-a-week",
+      "kind": "sentence",
+      "korean": "일주일 후에 다시 오세요.",
+      "english": "Come back in a week.",
+      "context": "appointment",
+      "register": "polite",
+      "lexemes": [
+        "일주일",
+        "후",
+        "다시",
+        "오다"
+      ],
+      "distractors": [
+        "Come back tomorrow.",
+        "Come back in a month.",
+        "Come back if it gets worse."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 예약하고 갈게요.",
+            "english": "Okay, I'll book before I leave."
+          },
+          {
+            "korean": "그때까지 약 먹으면 돼요?",
+            "english": "Should I take the medicine until then?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "일주일에 한 번 운동해요.",
+            "english": "I exercise once a week."
+          },
+          {
+            "korean": "주말에 친구를 만났어요.",
+            "english": "I met a friend at the weekend."
+          },
+          {
+            "korean": "커피 한 잔 주세요.",
+            "english": "A cup of coffee, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor/doctors-note",
+      "kind": "word",
+      "korean": "진단서",
+      "english": "medical certificate, doctor's note",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "진단서"
+      ]
+    },
+    {
+      "id": "doctor/medical-certificate",
+      "kind": "sentence",
+      "korean": "진단서 좀 끊어 주실 수 있어요?",
+      "english": "Could you issue me a medical certificate?",
+      "context": "reception",
+      "register": "polite",
+      "note": "끊다 'to cut' also means to issue a ticket or a certificate.",
+      "lexemes": [
+        "진단서",
+        "좀",
+        "끊다",
+        "주다"
+      ],
+      "distractors": [
+        "Could you give me a receipt?",
+        "Could you write me a prescription?",
+        "Could you call my company?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 회사에 내실 거예요?",
+            "english": "Sure, is it for your work?"
+          },
+          {
+            "korean": "네, 수납 창구에서 받으세요.",
+            "english": "Sure, pick it up at the payment desk."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "전화 끊을게요.",
+            "english": "I'll hang up now."
+          },
+          {
+            "korean": "술 끊었어요.",
+            "english": "I quit drinking."
+          },
+          {
+            "korean": "표가 매진됐어요.",
+            "english": "The tickets are sold out."
+          }
+        ]
+      }
+    }
+  ]
+}
