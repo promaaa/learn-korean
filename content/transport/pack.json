@@ -1,0 +1,2487 @@
+{
+  "id": "transport",
+  "version": 1,
+  "title": "Getting around",
+  "description": "Directions, subway, bus, taxi and train.",
+  "unlock_level": 2,
+  "items": [
+    {
+      "id": "transport/excuse-me",
+      "kind": "word",
+      "korean": "실례",
+      "english": "excuse me (lit. a discourtesy)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "실례"
+      ]
+    },
+    {
+      "id": "transport/convenience-store",
+      "kind": "word",
+      "korean": "편의점",
+      "english": "convenience store",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "편의점"
+      ],
+      "image": "convenience store"
+    },
+    {
+      "id": "transport/excuse-me-convenience-store",
+      "kind": "sentence",
+      "korean": "실례지만 이 근처에 편의점 있어요?",
+      "english": "Excuse me, is there a convenience store near here?",
+      "context": "directions",
+      "register": "polite",
+      "note": "실례지만 (lit. 'it's rude, but') is the polite way to stop a stranger.",
+      "lexemes": [
+        "실례",
+        "이다",
+        "이",
+        "근처",
+        "편의점",
+        "있다"
+      ],
+      "distractors": [
+        "Excuse me, is there a bank near here?",
+        "Excuse me, is the convenience store open now?",
+        "Excuse me, where is the nearest subway station?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 저기 은행 옆에 있어요.",
+            "english": "Yes, it's over there next to the bank."
+          },
+          {
+            "korean": "쭉 가시면 오른쪽에 있어요.",
+            "english": "Go straight and it's on your right."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 편의점에서 일해요.",
+            "english": "Yes, I work at a convenience store."
+          },
+          {
+            "korean": "오늘은 좀 추워요.",
+            "english": "It's a bit cold today."
+          },
+          {
+            "korean": "저도 커피 좋아해요.",
+            "english": "I like coffee too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/bus-stop",
+      "kind": "word",
+      "korean": "정류장",
+      "english": "(bus) stop",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "정류장"
+      ],
+      "image": "bus stop"
+    },
+    {
+      "id": "transport/where-bus-stop",
+      "kind": "sentence",
+      "korean": "버스 정류장이 어디예요?",
+      "english": "Where is the bus stop?",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "버스",
+        "정류장",
+        "어디",
+        "이다"
+      ],
+      "distractors": [
+        "Where is the subway station?",
+        "When does the bus come?",
+        "Which bus goes there?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "길 건너편에 있어요.",
+            "english": "It's across the street."
+          },
+          {
+            "korean": "저기 편의점 앞이에요.",
+            "english": "It's in front of that convenience store."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "버스로 십 분 걸려요.",
+            "english": "It takes ten minutes by bus."
+          },
+          {
+            "korean": "네, 버스 타요.",
+            "english": "Yes, I take the bus."
+          },
+          {
+            "korean": "지금 두 시예요.",
+            "english": "It's two o'clock now."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/straight-on",
+      "kind": "word",
+      "korean": "쭉",
+      "english": "straight on, all the way",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "쭉"
+      ]
+    },
+    {
+      "id": "transport/go-straight-this-road",
+      "kind": "sentence",
+      "korean": "이 길로 쭉 가세요.",
+      "english": "Go straight down this road.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "길",
+        "쭉",
+        "가다"
+      ],
+      "distractors": [
+        "Turn right on this road.",
+        "Cross this road.",
+        "Don't take this road."
+      ]
+    },
+    {
+      "id": "transport/intersection",
+      "kind": "word",
+      "korean": "사거리",
+      "english": "intersection, crossroads",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "사거리"
+      ],
+      "image": "street intersection"
+    },
+    {
+      "id": "transport/left",
+      "kind": "word",
+      "korean": "왼쪽",
+      "english": "left, left side",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "왼쪽"
+      ]
+    },
+    {
+      "id": "transport/to-turn",
+      "kind": "word",
+      "korean": "돌다",
+      "english": "to turn",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "돌다"
+      ]
+    },
+    {
+      "id": "transport/turn-left-intersection",
+      "kind": "sentence",
+      "korean": "사거리에서 왼쪽으로 도세요.",
+      "english": "Turn left at the intersection.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "사거리",
+        "왼쪽",
+        "돌다"
+      ],
+      "distractors": [
+        "Turn right at the intersection.",
+        "Go straight through the intersection.",
+        "Turn left at the traffic light."
+      ]
+    },
+    {
+      "id": "transport/right",
+      "kind": "word",
+      "korean": "오른쪽",
+      "english": "right, right side",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "오른쪽"
+      ]
+    },
+    {
+      "id": "transport/turn-right-then-straight",
+      "kind": "sentence",
+      "korean": "오른쪽으로 돌아서 쭉 가세요.",
+      "english": "Turn right, then keep going straight.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "오른쪽",
+        "돌다",
+        "쭉",
+        "가다"
+      ],
+      "distractors": [
+        "Turn left, then keep going straight.",
+        "Go straight, then turn right.",
+        "Turn around and go back."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 감사합니다.",
+            "english": "Okay, thank you."
+          },
+          {
+            "korean": "오른쪽이요? 감사합니다.",
+            "english": "Right? Thank you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "천만에요.",
+            "english": "You're welcome."
+          },
+          {
+            "korean": "쭉 여기 살았어요.",
+            "english": "I've always lived here."
+          },
+          {
+            "korean": "오른쪽 자리가 좋아요.",
+            "english": "I like the seat on the right."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/across-the-way",
+      "kind": "word",
+      "korean": "건너편",
+      "english": "the other side, across",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "건너편"
+      ]
+    },
+    {
+      "id": "transport/across-from-bank",
+      "kind": "sentence",
+      "korean": "은행 건너편에 있어요.",
+      "english": "It's across from the bank.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "은행",
+        "건너편",
+        "에 있다"
+      ],
+      "distractors": [
+        "It's next to the bank.",
+        "It's behind the bank.",
+        "It's inside the bank."
+      ]
+    },
+    {
+      "id": "transport/traffic-light",
+      "kind": "word",
+      "korean": "신호등",
+      "english": "traffic light",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "신호등"
+      ],
+      "image": "traffic light"
+    },
+    {
+      "id": "transport/to-cross",
+      "kind": "word",
+      "korean": "건너다",
+      "english": "to cross",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "건너다"
+      ]
+    },
+    {
+      "id": "transport/cross-at-traffic-light",
+      "kind": "sentence",
+      "korean": "저기 신호등에서 길을 건너세요.",
+      "english": "Cross the street at the traffic light over there.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "저기",
+        "신호등",
+        "길",
+        "건너다"
+      ],
+      "distractors": [
+        "Turn left at the traffic light over there.",
+        "Wait at the traffic light over there.",
+        "Cross the street right here."
+      ]
+    },
+    {
+      "id": "transport/to-be-far",
+      "kind": "word",
+      "korean": "멀다",
+      "english": "to be far",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "멀다"
+      ]
+    },
+    {
+      "id": "transport/is-it-far",
+      "kind": "sentence",
+      "korean": "여기서 멀어요?",
+      "english": "Is it far from here?",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "멀다"
+      ],
+      "distractors": [
+        "Is it near here?",
+        "Is it far from the station?",
+        "Can I walk from here?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아니요, 가까워요.",
+            "english": "No, it's close."
+          },
+          {
+            "korean": "걸어서 오 분이면 가요.",
+            "english": "It's five minutes on foot."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니요, 안 비싸요.",
+            "english": "No, it's not expensive."
+          },
+          {
+            "korean": "저는 여기 살아요.",
+            "english": "I live here."
+          },
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/five-minutes-on-foot",
+      "kind": "sentence",
+      "korean": "걸어서 오 분쯤 걸려요.",
+      "english": "It's about five minutes on foot.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "걷다",
+        "오",
+        "분",
+        "걸리다"
+      ],
+      "distractors": [
+        "It's about five minutes by car.",
+        "It's about fifteen minutes on foot.",
+        "It's five stops from here."
+      ]
+    },
+    {
+      "id": "transport/can-i-walk-there",
+      "kind": "sentence",
+      "korean": "걸어서 갈 수 있어요?",
+      "english": "Can I walk there?",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "걷다",
+        "가다"
+      ],
+      "distractors": [
+        "Can I take the bus there?",
+        "Did you walk here?",
+        "Do you want to walk there together?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 금방 가요.",
+            "english": "Yes, it's a short walk."
+          },
+          {
+            "korean": "좀 멀어요. 버스 타세요.",
+            "english": "It's a bit far. Take the bus."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 운동 좋아해요.",
+            "english": "Yes, I like exercise."
+          },
+          {
+            "korean": "어제 갔어요.",
+            "english": "I went yesterday."
+          },
+          {
+            "korean": "아니요, 안 먹어요.",
+            "english": "No, I don't eat it."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/to-walk-there",
+      "kind": "word",
+      "korean": "걸어가다",
+      "english": "to walk (somewhere)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "걸어가다"
+      ]
+    },
+    {
+      "id": "transport/bit-far-to-walk",
+      "kind": "sentence",
+      "korean": "걸어가기에는 좀 멀어요.",
+      "english": "It's a bit far to walk.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "걸어가다",
+        "좀",
+        "멀다"
+      ],
+      "distractors": [
+        "It's close enough to walk.",
+        "It's a bit far by bus.",
+        "It's a nice walk from here."
+      ]
+    },
+    {
+      "id": "transport/new-here-too",
+      "kind": "sentence",
+      "korean": "저도 여기 처음이라서 잘 몰라요.",
+      "english": "I'm new here too, so I don't really know.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "여기",
+        "처음",
+        "이다",
+        "잘",
+        "모르다"
+      ],
+      "distractors": [
+        "I've lived here a long time, so I know it well.",
+        "It's my first time in Korea too.",
+        "I don't know that person either."
+      ]
+    },
+    {
+      "id": "transport/map",
+      "kind": "word",
+      "korean": "지도",
+      "english": "map",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "지도"
+      ],
+      "image": "city map"
+    },
+    {
+      "id": "transport/show-me-on-map",
+      "kind": "sentence",
+      "korean": "지도에서 좀 보여 주실래요?",
+      "english": "Could you show me on the map?",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "지도",
+        "좀",
+        "보이다",
+        "주다"
+      ],
+      "distractors": [
+        "Could you draw me a map?",
+        "Do you have a map?",
+        "Could you take me there?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 지금 여기 계신 거예요.",
+            "english": "Sure, this is where you are now."
+          },
+          {
+            "korean": "네, 이쪽으로 가시면 돼요.",
+            "english": "Sure, you go this way."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 사진 찍어 드릴게요.",
+            "english": "Sure, I'll take a photo for you."
+          },
+          {
+            "korean": "저는 한국 사람이에요.",
+            "english": "I'm Korean."
+          },
+          {
+            "korean": "아니요, 배 안 고파요.",
+            "english": "No, I'm not hungry."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/walk-you-there",
+      "kind": "sentence",
+      "korean": "제가 같이 가 드릴게요.",
+      "english": "I'll walk you there.",
+      "context": "directions",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "같이",
+        "가다",
+        "드리다"
+      ],
+      "distractors": [
+        "Please come with me.",
+        "I'll call a taxi for you.",
+        "Let's go together tomorrow."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "정말 감사합니다!",
+            "english": "Thank you so much!"
+          },
+          {
+            "korean": "아, 괜찮아요. 혼자 갈 수 있어요.",
+            "english": "Oh, it's fine. I can go on my own."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "천만에요.",
+            "english": "You're welcome."
+          },
+          {
+            "korean": "네, 같이 먹어요.",
+            "english": "Sure, let's eat together."
+          },
+          {
+            "korean": "저도 학생이에요.",
+            "english": "I'm a student too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/think-im-lost",
+      "kind": "sentence",
+      "korean": "길을 잃은 것 같아요.",
+      "english": "I think I'm lost.",
+      "context": "lost",
+      "register": "polite",
+      "lexemes": [
+        "길",
+        "잃다",
+        "것"
+      ],
+      "distractors": [
+        "I think I lost my wallet.",
+        "I know the way.",
+        "I think the road is closed."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어디 가세요? 도와드릴게요.",
+            "english": "Where are you going? I'll help you."
+          },
+          {
+            "korean": "지도 한번 볼까요?",
+            "english": "Shall we look at the map?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 길이 넓네요.",
+            "english": "Yes, the road is wide."
+          },
+          {
+            "korean": "오늘 날씨 좋네요.",
+            "english": "The weather's nice today."
+          },
+          {
+            "korean": "저도 배고파요.",
+            "english": "I'm hungry too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/wrongly",
+      "kind": "word",
+      "korean": "잘못",
+      "english": "wrongly, by mistake",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잘못"
+      ]
+    },
+    {
+      "id": "transport/got-on-wrong-one",
+      "kind": "sentence",
+      "korean": "제가 잘못 탄 것 같아요.",
+      "english": "I think I got on the wrong one.",
+      "context": "lost",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "잘못",
+        "타다",
+        "것"
+      ],
+      "distractors": [
+        "I think I missed my stop.",
+        "I think I got off too early.",
+        "I think I bought the wrong ticket."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어디 가세요?",
+            "english": "Where are you going?"
+          },
+          {
+            "korean": "다음 역에서 내려서 반대쪽에서 타세요.",
+            "english": "Get off at the next stop and ride back the other way."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘 타요.",
+            "english": "Yes, I ride well."
+          },
+          {
+            "korean": "저는 버스가 좋아요.",
+            "english": "I prefer the bus."
+          },
+          {
+            "korean": "아니요, 괜찮아요.",
+            "english": "No, I'm fine."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/opposite",
+      "kind": "word",
+      "korean": "반대",
+      "english": "opposite",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "반대"
+      ]
+    },
+    {
+      "id": "transport/direction",
+      "kind": "word",
+      "korean": "방향",
+      "english": "direction",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "방향"
+      ]
+    },
+    {
+      "id": "transport/going-opposite-direction",
+      "kind": "sentence",
+      "korean": "반대 방향으로 타셨어요.",
+      "english": "You're going the wrong way.",
+      "context": "lost",
+      "register": "polite",
+      "note": "Lit. 'you boarded in the opposite direction'.",
+      "lexemes": [
+        "반대",
+        "방향",
+        "타다"
+      ],
+      "distractors": [
+        "You took the right line.",
+        "You need to transfer here.",
+        "You got off at the wrong station."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아, 그럼 어디서 갈아타야 돼요?",
+            "english": "Oh, so where do I change?"
+          },
+          {
+            "korean": "정말요? 어떻게 해요?",
+            "english": "Really? What do I do?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 방향이 좋아요.",
+            "english": "Yes, the direction is nice."
+          },
+          {
+            "korean": "저는 반대해요.",
+            "english": "I'm against it."
+          },
+          {
+            "korean": "다음에 또 올게요.",
+            "english": "I'll come again next time."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/to-go-past",
+      "kind": "word",
+      "korean": "지나치다",
+      "english": "to go past, to miss",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "지나치다"
+      ]
+    },
+    {
+      "id": "transport/missed-my-stop",
+      "kind": "sentence",
+      "korean": "내릴 역을 지나쳤어요.",
+      "english": "I missed my stop.",
+      "context": "lost",
+      "register": "polite",
+      "lexemes": [
+        "내리다",
+        "역",
+        "지나치다"
+      ],
+      "distractors": [
+        "I got off one stop early.",
+        "I don't know where to get off.",
+        "My stop is the next one."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "다음 역에서 내려서 다시 타세요.",
+            "english": "Get off at the next stop and go back."
+          },
+          {
+            "korean": "괜찮아요. 한 정거장만 돌아가면 돼요.",
+            "english": "It's fine. Just go back one stop."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "역이 정말 커요.",
+            "english": "The station is really big."
+          },
+          {
+            "korean": "네, 여기서 내리세요.",
+            "english": "Yes, get off here."
+          },
+          {
+            "korean": "저는 걸어서 왔어요.",
+            "english": "I came on foot."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/which-line",
+      "kind": "sentence",
+      "korean": "몇 호선 타야 돼요?",
+      "english": "Which line should I take?",
+      "context": "subway",
+      "register": "polite",
+      "note": "Seoul's subway lines are numbered: 이호선 is Line 2, the green loop line.",
+      "lexemes": [
+        "몇",
+        "호선",
+        "타다"
+      ],
+      "distractors": [
+        "Which exit should I take?",
+        "Which bus should I take?",
+        "Where should I transfer?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "이호선 타세요.",
+            "english": "Take Line 2."
+          },
+          {
+            "korean": "삼호선 타시면 돼요.",
+            "english": "You can take Line 3."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "삼 번 출구예요.",
+            "english": "It's exit 3."
+          },
+          {
+            "korean": "십 분 걸려요.",
+            "english": "It takes ten minutes."
+          },
+          {
+            "korean": "저는 지하철 안 타요.",
+            "english": "I don't take the subway."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/to-transfer",
+      "kind": "word",
+      "korean": "갈아타다",
+      "english": "to transfer, to change (lines)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "갈아타다"
+      ]
+    },
+    {
+      "id": "transport/transfer-line-two-city-hall",
+      "kind": "sentence",
+      "korean": "시청역에서 이호선으로 갈아타세요.",
+      "english": "Change to Line 2 at City Hall Station.",
+      "context": "subway",
+      "register": "polite",
+      "lexemes": [
+        "시청",
+        "역",
+        "이",
+        "호선",
+        "갈아타다"
+      ],
+      "distractors": [
+        "Take Line 2 to City Hall Station.",
+        "Get off at City Hall Station and walk.",
+        "Change to Line 3 at City Hall Station."
+      ]
+    },
+    {
+      "id": "transport/where-do-i-transfer",
+      "kind": "sentence",
+      "korean": "어디서 갈아타야 돼요?",
+      "english": "Where do I have to change?",
+      "context": "subway",
+      "register": "polite",
+      "lexemes": [
+        "어디",
+        "갈아타다"
+      ],
+      "distractors": [
+        "Do I have to change?",
+        "Where do I get off?",
+        "When do I have to change?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "다음 역에서 갈아타세요.",
+            "english": "Change at the next station."
+          },
+          {
+            "korean": "시청역에서 갈아타시면 돼요.",
+            "english": "You change at City Hall Station."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "지하철이 편해요.",
+            "english": "The subway is convenient."
+          },
+          {
+            "korean": "천오백 원이에요.",
+            "english": "It's fifteen hundred won."
+          },
+          {
+            "korean": "옷을 갈아입었어요.",
+            "english": "I changed my clothes."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/exit",
+      "kind": "word",
+      "korean": "출구",
+      "english": "exit (station)",
+      "context": "subway",
+      "register": "neutral",
+      "lexemes": [
+        "출구"
+      ],
+      "image": "subway exit"
+    },
+    {
+      "id": "transport/which-exit",
+      "kind": "sentence",
+      "korean": "몇 번 출구로 나가야 돼요?",
+      "english": "Which exit should I take?",
+      "context": "subway",
+      "register": "polite",
+      "lexemes": [
+        "몇",
+        "번",
+        "출구",
+        "나가다"
+      ],
+      "distractors": [
+        "Which line should I take?",
+        "Where is the exit?",
+        "Which platform is it?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "삼 번 출구로 나가세요.",
+            "english": "Take exit 3."
+          },
+          {
+            "korean": "칠 번 출구가 제일 가까워요.",
+            "english": "Exit 7 is the closest."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이호선 타세요.",
+            "english": "Take Line 2."
+          },
+          {
+            "korean": "두 정거장이에요.",
+            "english": "It's two stops."
+          },
+          {
+            "korean": "지금 나가요.",
+            "english": "I'm heading out now."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/come-out-exit-three",
+      "kind": "sentence",
+      "korean": "삼 번 출구로 나오세요.",
+      "english": "Come out of exit 3.",
+      "context": "subway",
+      "register": "polite",
+      "note": "Friends meet at a numbered exit; station exits are clearly signed.",
+      "lexemes": [
+        "삼",
+        "번",
+        "출구",
+        "나오다"
+      ],
+      "distractors": [
+        "Come out of exit 8.",
+        "Wait for me at exit 3.",
+        "Take Line 3."
+      ]
+    },
+    {
+      "id": "transport/what-station-is-this",
+      "kind": "sentence",
+      "korean": "이번 역이 무슨 역이에요?",
+      "english": "What station is this?",
+      "context": "subway",
+      "register": "polite",
+      "lexemes": [
+        "이번",
+        "역",
+        "무슨",
+        "이다"
+      ],
+      "distractors": [
+        "What's the next station?",
+        "Which line is this?",
+        "Is this my station?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "시청역이에요.",
+            "english": "It's City Hall Station."
+          },
+          {
+            "korean": "서울역이에요.",
+            "english": "It's Seoul Station."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다음 역에서 내려요.",
+            "english": "I'm getting off at the next station."
+          },
+          {
+            "korean": "지하철이 빨라요.",
+            "english": "The subway is fast."
+          },
+          {
+            "korean": "세 시예요.",
+            "english": "It's three o'clock."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/stop-station",
+      "kind": "word",
+      "korean": "정거장",
+      "english": "stop (on a line)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "정거장"
+      ]
+    },
+    {
+      "id": "transport/how-many-more-stops",
+      "kind": "sentence",
+      "korean": "몇 정거장 더 가야 돼요?",
+      "english": "How many more stops do I have to go?",
+      "context": "subway",
+      "register": "polite",
+      "note": "Stops are counted with native numbers: 한, 두, 세 정거장.",
+      "lexemes": [
+        "몇",
+        "정거장",
+        "더",
+        "가다"
+      ],
+      "distractors": [
+        "Which stop do I get off at?",
+        "How many more minutes will it take?",
+        "How many stations are on this line?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "세 정거장 더 가세요.",
+            "english": "Three more stops."
+          },
+          {
+            "korean": "두 정거장만 가시면 돼요.",
+            "english": "Just two more stops."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "삼 번 출구예요.",
+            "english": "It's exit 3."
+          },
+          {
+            "korean": "오 분 후에 와요.",
+            "english": "It comes in five minutes."
+          },
+          {
+            "korean": "더 드세요.",
+            "english": "Please have some more."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/last-train",
+      "kind": "word",
+      "korean": "막차",
+      "english": "last train or bus",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "막차"
+      ]
+    },
+    {
+      "id": "transport/last-train-time",
+      "kind": "sentence",
+      "korean": "막차가 몇 시예요?",
+      "english": "What time is the last train?",
+      "context": "subway",
+      "register": "polite",
+      "note": "막차 is the night's last train or bus; 첫차 is the first one.",
+      "lexemes": [
+        "막차",
+        "몇",
+        "시",
+        "이다"
+      ],
+      "distractors": [
+        "What time is the first train?",
+        "How often does the train come?",
+        "Where is the last car?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "열두 시쯤이에요.",
+            "english": "Around midnight."
+          },
+          {
+            "korean": "열한 시 반에 있어요.",
+            "english": "There's one at eleven thirty."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "첫차는 다섯 시 반이에요.",
+            "english": "The first train is at five thirty."
+          },
+          {
+            "korean": "두 시간 걸려요.",
+            "english": "It takes two hours."
+          },
+          {
+            "korean": "이호선이에요.",
+            "english": "It's Line 2."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/transit-card",
+      "kind": "word",
+      "korean": "교통카드",
+      "english": "transit card",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "교통카드"
+      ],
+      "image": "transit card"
+    },
+    {
+      "id": "transport/to-top-up",
+      "kind": "word",
+      "korean": "충전하다",
+      "english": "to top up, to charge",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "충전하다"
+      ]
+    },
+    {
+      "id": "transport/top-up-transit-card",
+      "kind": "sentence",
+      "korean": "교통카드 충전해 주세요.",
+      "english": "Please top up my transit card.",
+      "context": "transit-card",
+      "register": "polite",
+      "note": "T-money cards are topped up in cash at convenience stores or station machines.",
+      "lexemes": [
+        "교통카드",
+        "충전하다",
+        "주다"
+      ],
+      "distractors": [
+        "I'd like to buy a transit card.",
+        "Please refund my transit card.",
+        "How much is left on my transit card?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "얼마 충전해 드릴까요?",
+            "english": "How much would you like to put on it?"
+          },
+          {
+            "korean": "충전은 현금만 돼요.",
+            "english": "Top-ups are cash only."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "봉투 필요하세요?",
+            "english": "Do you need a bag?"
+          },
+          {
+            "korean": "영수증 주세요.",
+            "english": "A receipt, please."
+          },
+          {
+            "korean": "카드가 예뻐요.",
+            "english": "The card is pretty."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/how-much-to-top-up",
+      "kind": "sentence",
+      "korean": "얼마 충전해 드릴까요?",
+      "english": "How much would you like to put on it?",
+      "context": "transit-card",
+      "register": "polite",
+      "lexemes": [
+        "얼마",
+        "충전하다",
+        "드리다"
+      ],
+      "distractors": [
+        "How much is the transit card?",
+        "How much is left on your card?",
+        "Would you like a receipt?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "만 원이요.",
+            "english": "Ten thousand won."
+          },
+          {
+            "korean": "이만 원 충전해 주세요.",
+            "english": "Twenty thousand won, please."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "두 시간 걸려요.",
+            "english": "It takes two hours."
+          },
+          {
+            "korean": "편의점에서 샀어요.",
+            "english": "I bought it at a convenience store."
+          },
+          {
+            "korean": "삼 번 출구예요.",
+            "english": "It's exit 3."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/buy-card-convenience-store",
+      "kind": "sentence",
+      "korean": "교통카드는 편의점에서 살 수 있어요.",
+      "english": "You can buy a transit card at a convenience store.",
+      "context": "transit-card",
+      "register": "polite",
+      "lexemes": [
+        "교통카드",
+        "편의점",
+        "사다"
+      ],
+      "distractors": [
+        "You can top up a transit card at the station.",
+        "You can't buy transit cards at convenience stores.",
+        "Transit cards are sold at the bank."
+      ]
+    },
+    {
+      "id": "transport/balance",
+      "kind": "word",
+      "korean": "잔액",
+      "english": "balance (money left)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "잔액"
+      ]
+    },
+    {
+      "id": "transport/to-be-short",
+      "kind": "word",
+      "korean": "부족하다",
+      "english": "to be insufficient",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "부족하다"
+      ]
+    },
+    {
+      "id": "transport/insufficient-balance",
+      "kind": "sentence",
+      "korean": "잔액이 부족합니다.",
+      "english": "Insufficient balance.",
+      "context": "transit-card",
+      "register": "formal",
+      "note": "The gate or card reader says this when your card is low: top it up.",
+      "lexemes": [
+        "잔액",
+        "부족하다"
+      ],
+      "distractors": [
+        "Please tap your card again.",
+        "Transfer accepted.",
+        "Your card has expired."
+      ]
+    },
+    {
+      "id": "transport/tap-card-again",
+      "kind": "sentence",
+      "korean": "카드를 다시 찍어 주세요.",
+      "english": "Please tap your card again.",
+      "context": "transit-card",
+      "register": "polite",
+      "note": "찍다 means tapping a card on a reader, not only taking a photo.",
+      "lexemes": [
+        "카드",
+        "다시",
+        "찍다",
+        "주다"
+      ],
+      "distractors": [
+        "Please tap only one card.",
+        "Please insert your card.",
+        "Please top up your card."
+      ]
+    },
+    {
+      "id": "transport/when-time",
+      "kind": "word",
+      "korean": "때",
+      "english": "time, when",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "때"
+      ]
+    },
+    {
+      "id": "transport/tap-off-bus",
+      "kind": "sentence",
+      "korean": "버스에서 내릴 때도 카드를 찍으세요.",
+      "english": "Tap your card when you get off the bus, too.",
+      "context": "transit-card",
+      "register": "polite",
+      "note": "Tapping off makes your next ride within 30 minutes a free or cheap transfer.",
+      "lexemes": [
+        "버스",
+        "내리다",
+        "때",
+        "카드",
+        "찍다"
+      ],
+      "distractors": [
+        "Tap your card when you get on the bus.",
+        "You don't need to tap when getting off.",
+        "Pay in cash when you get off the bus."
+      ]
+    },
+    {
+      "id": "transport/does-bus-go-city-hall",
+      "kind": "sentence",
+      "korean": "이 버스 시청 가요?",
+      "english": "Does this bus go to City Hall?",
+      "context": "bus",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "버스",
+        "시청",
+        "가다"
+      ],
+      "distractors": [
+        "Does this bus stop at the station?",
+        "Where does this bus go?",
+        "Is this the stop for City Hall?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 가요. 타세요.",
+            "english": "Yes, it does. Get on."
+          },
+          {
+            "korean": "아니요, 길 건너편에서 타세요.",
+            "english": "No, take it from across the street."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "시청에서 일해요.",
+            "english": "I work at City Hall."
+          },
+          {
+            "korean": "버스가 빨라요.",
+            "english": "The bus is fast."
+          },
+          {
+            "korean": "오늘은 쉬어요.",
+            "english": "I'm off today."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/which-bus-number",
+      "kind": "sentence",
+      "korean": "몇 번 버스 타야 돼요?",
+      "english": "Which bus number should I take?",
+      "context": "bus",
+      "register": "polite",
+      "lexemes": [
+        "몇",
+        "번",
+        "버스",
+        "타다"
+      ],
+      "distractors": [
+        "Where should I catch the bus?",
+        "When does the bus come?",
+        "Which exit should I take?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "사백칠십이 번 타세요.",
+            "english": "Take the 472."
+          },
+          {
+            "korean": "저기서 칠 번 버스 타시면 돼요.",
+            "english": "You can take the number 7 bus over there."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "삼 번 출구예요.",
+            "english": "It's exit 3."
+          },
+          {
+            "korean": "버스로 이십 분 걸려요.",
+            "english": "It's twenty minutes by bus."
+          },
+          {
+            "korean": "버스 정류장이에요.",
+            "english": "It's a bus stop."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/when-does-bus-come",
+      "kind": "sentence",
+      "korean": "버스가 언제 와요?",
+      "english": "When does the bus come?",
+      "context": "bus",
+      "register": "polite",
+      "lexemes": [
+        "버스",
+        "언제",
+        "오다"
+      ],
+      "distractors": [
+        "Where does the bus stop?",
+        "How often does the bus come?",
+        "Is the bus late?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "오 분 후에 와요.",
+            "english": "It comes in five minutes."
+          },
+          {
+            "korean": "곧 와요.",
+            "english": "It's coming soon."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "버스로 가요.",
+            "english": "I go by bus."
+          },
+          {
+            "korean": "저기서 타요.",
+            "english": "You get on over there."
+          },
+          {
+            "korean": "어제 왔어요.",
+            "english": "It came yesterday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/bell",
+      "kind": "word",
+      "korean": "벨",
+      "english": "bell, buzzer",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "벨"
+      ],
+      "image": "bus stop button"
+    },
+    {
+      "id": "transport/to-press",
+      "kind": "word",
+      "korean": "누르다",
+      "english": "to press, to push",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "누르다"
+      ]
+    },
+    {
+      "id": "transport/press-bell-to-get-off",
+      "kind": "sentence",
+      "korean": "내리실 때 벨을 누르세요.",
+      "english": "Press the bell when you want to get off.",
+      "context": "bus",
+      "register": "polite",
+      "lexemes": [
+        "내리다",
+        "때",
+        "벨",
+        "누르다"
+      ],
+      "distractors": [
+        "Tap your card when you get off.",
+        "Press the bell when you get on.",
+        "Get off at the back door."
+      ]
+    },
+    {
+      "id": "transport/back-door",
+      "kind": "word",
+      "korean": "뒷문",
+      "english": "back door",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "뒷문"
+      ],
+      "image": "bus back door"
+    },
+    {
+      "id": "transport/get-off-back-door",
+      "kind": "sentence",
+      "korean": "뒷문으로 내리세요.",
+      "english": "Please get off through the back door.",
+      "context": "bus",
+      "register": "polite",
+      "note": "On city buses you board at the front and get off at the back.",
+      "lexemes": [
+        "뒷문",
+        "내리다"
+      ],
+      "distractors": [
+        "Please get on through the front door.",
+        "Please get off at the next stop.",
+        "Please move to the back."
+      ]
+    },
+    {
+      "id": "transport/this-stop-is-city-hall",
+      "kind": "sentence",
+      "korean": "이번 정류장은 시청입니다.",
+      "english": "This stop is City Hall.",
+      "context": "bus",
+      "register": "formal",
+      "note": "Bus announcement: 이번 is the stop coming up now, 다음 the one after.",
+      "lexemes": [
+        "이번",
+        "정류장",
+        "시청",
+        "이다"
+      ],
+      "distractors": [
+        "The next stop is City Hall.",
+        "This bus is bound for City Hall.",
+        "This bus doesn't stop at City Hall."
+      ]
+    },
+    {
+      "id": "transport/driver",
+      "kind": "word",
+      "korean": "기사님",
+      "english": "driver (polite)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "기사님"
+      ],
+      "image": "taxi driver"
+    },
+    {
+      "id": "transport/driver-to-the-airport",
+      "kind": "sentence",
+      "korean": "기사님, 공항까지 가 주세요.",
+      "english": "Driver, to the airport, please.",
+      "context": "taxi",
+      "register": "polite",
+      "note": "Address taxi and bus drivers as 기사님: polite and friendly.",
+      "lexemes": [
+        "기사님",
+        "공항",
+        "가다",
+        "주다"
+      ],
+      "distractors": [
+        "Please stop at the airport.",
+        "How far is the airport?",
+        "Please take me to the station."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 알겠습니다.",
+            "english": "Sure."
+          },
+          {
+            "korean": "네, 안전벨트 매 주세요.",
+            "english": "Sure, please fasten your seatbelt."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "공항에서 일해요.",
+            "english": "I work at the airport."
+          },
+          {
+            "korean": "비행기가 늦었어요.",
+            "english": "The flight was late."
+          },
+          {
+            "korean": "네, 잘 먹겠습니다.",
+            "english": "Thanks for the meal."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/to-take-honorific",
+      "kind": "word",
+      "korean": "모시다",
+      "english": "to take, to escort (honorific)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "모시다"
+      ]
+    },
+    {
+      "id": "transport/where-can-i-take-you",
+      "kind": "sentence",
+      "korean": "어디로 모실까요?",
+      "english": "Where can I take you?",
+      "context": "taxi",
+      "register": "polite",
+      "note": "모시다 is the honorific 'to take someone'; drivers use it with passengers.",
+      "lexemes": [
+        "어디",
+        "모시다"
+      ],
+      "distractors": [
+        "Where are you from?",
+        "Where shall I wait for you?",
+        "Where would you like to sit?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "이 주소로 가 주세요.",
+            "english": "This address, please."
+          },
+          {
+            "korean": "서울역으로 가 주세요.",
+            "english": "Seoul Station, please."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "제가 모실게요.",
+            "english": "I'll take you."
+          },
+          {
+            "korean": "저는 여기 살아요.",
+            "english": "I live here."
+          },
+          {
+            "korean": "택시가 비싸요.",
+            "english": "Taxis are expensive."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/address",
+      "kind": "word",
+      "korean": "주소",
+      "english": "address",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "주소"
+      ]
+    },
+    {
+      "id": "transport/take-me-to-this-address",
+      "kind": "sentence",
+      "korean": "이 주소로 가 주세요.",
+      "english": "Please take me to this address.",
+      "context": "taxi",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "주소",
+        "가다",
+        "주다"
+      ],
+      "distractors": [
+        "Please write down this address.",
+        "Is this address near here?",
+        "Please send it to this address."
+      ]
+    },
+    {
+      "id": "transport/front",
+      "kind": "word",
+      "korean": "앞",
+      "english": "front, ahead",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "앞"
+      ]
+    },
+    {
+      "id": "transport/stop-up-ahead",
+      "kind": "sentence",
+      "korean": "저 앞에서 세워 주세요.",
+      "english": "Please stop just up ahead.",
+      "context": "taxi",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "앞",
+        "세우다",
+        "주다"
+      ],
+      "distractors": [
+        "Please stop right here.",
+        "Please keep going straight.",
+        "Please stop at the traffic light."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 저기 편의점 앞이요?",
+            "english": "Sure, in front of that convenience store?"
+          },
+          {
+            "korean": "네, 알겠습니다.",
+            "english": "Okay."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "앞자리에 앉으세요.",
+            "english": "Sit in the front seat."
+          },
+          {
+            "korean": "저 사람이 제 친구예요.",
+            "english": "That person is my friend."
+          },
+          {
+            "korean": "네, 쭉 가세요.",
+            "english": "Yes, go straight."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/trunk",
+      "kind": "word",
+      "korean": "트렁크",
+      "english": "trunk (of a car)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "트렁크"
+      ],
+      "image": "car trunk"
+    },
+    {
+      "id": "transport/open-the-trunk",
+      "kind": "sentence",
+      "korean": "트렁크 좀 열어 주세요.",
+      "english": "Could you open the trunk, please?",
+      "context": "taxi",
+      "register": "polite",
+      "lexemes": [
+        "트렁크",
+        "좀",
+        "열다",
+        "주다"
+      ],
+      "distractors": [
+        "Could you close the trunk, please?",
+        "Could you open the window, please?",
+        "Could you put my bag in the trunk?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 잠시만요.",
+            "english": "Sure, one moment."
+          },
+          {
+            "korean": "짐 넣어 드릴게요.",
+            "english": "I'll put your luggage in."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니요, 안 추워요.",
+            "english": "No, I'm not cold."
+          },
+          {
+            "korean": "가게가 몇 시에 열어요?",
+            "english": "What time does the shop open?"
+          },
+          {
+            "korean": "카드로 할게요.",
+            "english": "I'll pay by card."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/traffic-will-take-a-while",
+      "kind": "sentence",
+      "korean": "차가 막혀서 좀 걸릴 거예요.",
+      "english": "The traffic's bad, so it'll take a while.",
+      "context": "taxi",
+      "register": "polite",
+      "lexemes": [
+        "차",
+        "막히다",
+        "좀",
+        "걸리다",
+        "것",
+        "이다"
+      ],
+      "distractors": [
+        "There's no traffic, so we'll be there soon.",
+        "The car broke down, so it'll take a while.",
+        "The road is closed, so we'll go another way."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "괜찮아요. 천천히 가 주세요.",
+            "english": "That's fine. No rush."
+          },
+          {
+            "korean": "얼마나 걸릴까요?",
+            "english": "How long will it take?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 차 한잔해요.",
+            "english": "Sure, let's have some tea."
+          },
+          {
+            "korean": "저는 차가 없어요.",
+            "english": "I don't have a car."
+          },
+          {
+            "korean": "길이 넓어요.",
+            "english": "The road is wide."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/taxi",
+      "kind": "word",
+      "korean": "택시",
+      "english": "taxi",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "택시"
+      ],
+      "image": "taxi"
+    },
+    {
+      "id": "transport/place",
+      "kind": "word",
+      "korean": "곳",
+      "english": "place",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "곳"
+      ]
+    },
+    {
+      "id": "transport/where-taxi-stand",
+      "kind": "sentence",
+      "korean": "택시 타는 곳이 어디예요?",
+      "english": "Where's the taxi stand?",
+      "context": "taxi",
+      "register": "polite",
+      "note": "타는 곳 (lit. 'the place to board') marks taxi stands and platforms.",
+      "lexemes": [
+        "택시",
+        "타다",
+        "곳",
+        "어디",
+        "이다"
+      ],
+      "distractors": [
+        "Where can I get out of the taxi?",
+        "Where is the bus stop?",
+        "How much is a taxi?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저기 출구 앞에 있어요.",
+            "english": "It's in front of that exit."
+          },
+          {
+            "korean": "밖으로 나가서 오른쪽이에요.",
+            "english": "Go outside and it's on the right."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "택시가 비싸요.",
+            "english": "Taxis are expensive."
+          },
+          {
+            "korean": "네, 택시 타요.",
+            "english": "Yes, I take taxis."
+          },
+          {
+            "korean": "세 시에 탔어요.",
+            "english": "I got on at three."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/how-long-by-subway",
+      "kind": "sentence",
+      "korean": "지하철로 가면 얼마나 걸려요?",
+      "english": "How long does it take by subway?",
+      "context": "time",
+      "register": "polite",
+      "lexemes": [
+        "지하철",
+        "가다",
+        "얼마나",
+        "걸리다"
+      ],
+      "distractors": [
+        "How much is it by subway?",
+        "How long does it take by bus?",
+        "How many stops is it by subway?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "삼십 분쯤 걸려요.",
+            "english": "About thirty minutes."
+          },
+          {
+            "korean": "한 시간 정도 걸려요.",
+            "english": "About an hour."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이호선이에요.",
+            "english": "It's Line 2."
+          },
+          {
+            "korean": "천오백 원이에요.",
+            "english": "It's fifteen hundred won."
+          },
+          {
+            "korean": "지하철이 싸요.",
+            "english": "The subway is cheap."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/twenty",
+      "kind": "word",
+      "korean": "이십",
+      "english": "twenty",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "이십"
+      ]
+    },
+    {
+      "id": "transport/twenty-minutes-by-taxi",
+      "kind": "sentence",
+      "korean": "택시로 이십 분쯤 걸려요.",
+      "english": "It's about twenty minutes by taxi.",
+      "context": "time",
+      "register": "polite",
+      "lexemes": [
+        "택시",
+        "이십",
+        "분",
+        "걸리다"
+      ],
+      "distractors": [
+        "It's about twenty minutes on foot.",
+        "It's about two minutes by taxi.",
+        "A taxi costs about twenty thousand won."
+      ]
+    },
+    {
+      "id": "transport/busan",
+      "kind": "word",
+      "korean": "부산",
+      "english": "Busan",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "부산"
+      ],
+      "image": "Busan"
+    },
+    {
+      "id": "transport/ktx",
+      "kind": "word",
+      "korean": "케이티엑스",
+      "english": "KTX (high-speed train)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "케이티엑스"
+      ],
+      "image": "KTX train"
+    },
+    {
+      "id": "transport/two-ktx-tickets-busan",
+      "kind": "sentence",
+      "korean": "부산 가는 케이티엑스 두 장 주세요.",
+      "english": "Two KTX tickets to Busan, please.",
+      "context": "train",
+      "register": "polite",
+      "note": "장 counts flat things such as tickets. The KTX is Korea's high-speed train.",
+      "lexemes": [
+        "부산",
+        "가다",
+        "케이티엑스",
+        "두",
+        "장",
+        "주다"
+      ],
+      "distractors": [
+        "Two KTX tickets to Seoul, please.",
+        "One KTX ticket to Busan, please.",
+        "Two bus tickets to Busan, please."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "몇 시 기차로 드릴까요?",
+            "english": "Which departure would you like?"
+          },
+          {
+            "korean": "편도요, 왕복이요?",
+            "english": "One-way or round trip?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "부산은 바다가 예뻐요.",
+            "english": "Busan has a beautiful sea."
+          },
+          {
+            "korean": "두 시간 걸려요.",
+            "english": "It takes two hours."
+          },
+          {
+            "korean": "봉투 드릴까요?",
+            "english": "Would you like a bag?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/one-way",
+      "kind": "word",
+      "korean": "편도",
+      "english": "one way (ticket)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "편도"
+      ]
+    },
+    {
+      "id": "transport/round-trip",
+      "kind": "word",
+      "korean": "왕복",
+      "english": "round trip",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "왕복"
+      ]
+    },
+    {
+      "id": "transport/one-way-or-round-trip",
+      "kind": "sentence",
+      "korean": "편도요, 왕복이요?",
+      "english": "One-way or round trip?",
+      "context": "train",
+      "register": "polite",
+      "lexemes": [
+        "편도",
+        "왕복",
+        "이다"
+      ],
+      "distractors": [
+        "Window or aisle?",
+        "Adult or child?",
+        "Today or tomorrow?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "왕복이요.",
+            "english": "Round trip."
+          },
+          {
+            "korean": "편도로 주세요.",
+            "english": "One-way, please."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "부산이요.",
+            "english": "Busan."
+          },
+          {
+            "korean": "창가 자리요.",
+            "english": "A window seat."
+          },
+          {
+            "korean": "네, 맞아요.",
+            "english": "Yes, that's right."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/train",
+      "kind": "word",
+      "korean": "기차",
+      "english": "train",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "기차"
+      ],
+      "image": "train"
+    },
+    {
+      "id": "transport/which-departure-time",
+      "kind": "sentence",
+      "korean": "몇 시 기차로 드릴까요?",
+      "english": "Which departure would you like?",
+      "context": "train",
+      "register": "polite",
+      "lexemes": [
+        "몇",
+        "시",
+        "기차",
+        "드리다"
+      ],
+      "distractors": [
+        "How many tickets would you like?",
+        "Which seat would you like?",
+        "What time does the train arrive?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "세 시 기차로 주세요.",
+            "english": "The three o'clock train, please."
+          },
+          {
+            "korean": "제일 빠른 걸로 주세요.",
+            "english": "The earliest one, please."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "세 시간 걸려요.",
+            "english": "It takes three hours."
+          },
+          {
+            "korean": "기차가 빨라요.",
+            "english": "The train is fast."
+          },
+          {
+            "korean": "현금으로 할게요.",
+            "english": "I'll pay in cash."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/to-sell-out",
+      "kind": "word",
+      "korean": "매진되다",
+      "english": "to be sold out",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "매진되다"
+      ]
+    },
+    {
+      "id": "transport/that-train-is-sold-out",
+      "kind": "sentence",
+      "korean": "그 기차는 매진됐어요.",
+      "english": "That train is sold out.",
+      "context": "train",
+      "register": "polite",
+      "lexemes": [
+        "그",
+        "기차",
+        "매진되다"
+      ],
+      "distractors": [
+        "That train has already left.",
+        "That train is delayed.",
+        "That train still has seats."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼 다음 기차로 주세요.",
+            "english": "Then the next train, please."
+          },
+          {
+            "korean": "입석은 있어요?",
+            "english": "Are there standing tickets?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "기차가 빨라요.",
+            "english": "The train is fast."
+          },
+          {
+            "korean": "부산에 살아요.",
+            "english": "I live in Busan."
+          },
+          {
+            "korean": "다 먹었어요.",
+            "english": "I ate it all."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/which-platform",
+      "kind": "sentence",
+      "korean": "몇 번 타는 곳으로 가야 돼요?",
+      "english": "Which platform should I go to?",
+      "context": "train",
+      "register": "polite",
+      "lexemes": [
+        "몇",
+        "번",
+        "타다",
+        "곳",
+        "가다"
+      ],
+      "distractors": [
+        "Which exit should I take?",
+        "Which car am I in?",
+        "What time do I board?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "칠 번 타는 곳으로 가세요.",
+            "english": "Go to platform 7."
+          },
+          {
+            "korean": "표에 나와 있어요.",
+            "english": "It's on your ticket."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "삼 번 출구예요.",
+            "english": "It's exit 3."
+          },
+          {
+            "korean": "몇 번 버스 타요?",
+            "english": "Which bus do you take?"
+          },
+          {
+            "korean": "저는 운전 못 해요.",
+            "english": "I can't drive."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/seoul",
+      "kind": "word",
+      "korean": "서울",
+      "english": "Seoul",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "서울"
+      ],
+      "image": "Seoul"
+    },
+    {
+      "id": "transport/seoul-to-busan-how-long",
+      "kind": "sentence",
+      "korean": "서울에서 부산까지 얼마나 걸려요?",
+      "english": "How long does it take from Seoul to Busan?",
+      "context": "train",
+      "register": "polite",
+      "lexemes": [
+        "서울",
+        "부산",
+        "얼마나",
+        "걸리다"
+      ],
+      "distractors": [
+        "How much is it from Seoul to Busan?",
+        "How far is Busan from Seoul?",
+        "When does the train to Busan leave?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "케이티엑스로 두 시간 반쯤 걸려요.",
+            "english": "About two and a half hours by KTX."
+          },
+          {
+            "korean": "버스로는 네 시간 정도 걸려요.",
+            "english": "About four hours by bus."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "오만 구천 원이에요.",
+            "english": "It's fifty-nine thousand won."
+          },
+          {
+            "korean": "편도예요.",
+            "english": "It's one-way."
+          },
+          {
+            "korean": "부산 사람이에요.",
+            "english": "I'm from Busan."
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport/think-this-is-my-seat",
+      "kind": "sentence",
+      "korean": "여기 제 자리인 것 같은데요.",
+      "english": "I think this is my seat.",
+      "context": "train",
+      "register": "polite",
+      "note": "Ending with -는데요 softens it: a polite way to point out a problem.",
+      "lexemes": [
+        "여기",
+        "저",
+        "자리",
+        "이다",
+        "것"
+      ],
+      "distractors": [
+        "Is this seat taken?",
+        "I think you're on the wrong train.",
+        "Could we switch seats?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아, 죄송해요. 제가 잘못 앉았네요.",
+            "english": "Oh, sorry. I'm in the wrong seat."
+          },
+          {
+            "korean": "그래요? 표 한번 볼게요.",
+            "english": "Really? Let me check my ticket."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "자리가 편해요.",
+            "english": "The seat is comfortable."
+          },
+          {
+            "korean": "창가가 좋아요.",
+            "english": "I like the window side."
+          },
+          {
+            "korean": "여기 처음 와요.",
+            "english": "It's my first time here."
+          }
+        ]
+      }
+    }
+  ]
+}

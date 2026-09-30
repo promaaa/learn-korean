@@ -1,0 +1,2550 @@
+{
+  "id": "workplace",
+  "version": 1,
+  "title": "At work",
+  "description": "Colleagues, meetings, schedules, emails and after-work dinners, polite and formal.",
+  "unlock_level": 5,
+  "items": [
+    {
+      "id": "workplace/department-head",
+      "kind": "word",
+      "korean": "부장님",
+      "english": "department head, director (title)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "부장님"
+      ],
+      "image": "office manager"
+    },
+    {
+      "id": "workplace/to-be-well",
+      "kind": "word",
+      "korean": "안녕하다",
+      "english": "to be well, at peace",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "안녕하다"
+      ]
+    },
+    {
+      "id": "workplace/hello-director",
+      "kind": "sentence",
+      "korean": "부장님, 안녕하십니까?",
+      "english": "Hello, director.",
+      "context": "greetings",
+      "register": "formal",
+      "note": "안녕하십니까 is the 합니다체 form of 안녕하세요, the usual way to greet superiors at work.",
+      "lexemes": [
+        "부장님",
+        "안녕하다"
+      ],
+      "distractors": [
+        "Goodbye, director.",
+        "Thank you, director.",
+        "Nice to meet you, director."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 안녕하세요.",
+            "english": "Yes, hello."
+          },
+          {
+            "korean": "어, 일찍 왔네요.",
+            "english": "Oh, you're in early."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "잘 먹겠습니다.",
+            "english": "Thanks for the meal."
+          },
+          {
+            "korean": "안녕히 계세요.",
+            "english": "Goodbye (to someone staying)."
+          },
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's tasty."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-work-hard",
+      "kind": "word",
+      "korean": "수고하다",
+      "english": "to work hard, to take trouble",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "수고하다"
+      ]
+    },
+    {
+      "id": "workplace/thanks-for-hard-work",
+      "kind": "sentence",
+      "korean": "수고하셨습니다.",
+      "english": "Thank you for your hard work.",
+      "context": "greetings",
+      "register": "formal",
+      "note": "Said when a task or the workday ends. It is safe to use with superiors too.",
+      "lexemes": [
+        "수고하다"
+      ],
+      "distractors": [
+        "Please keep working hard.",
+        "Sorry for the trouble.",
+        "Good luck with your work."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 수고하셨습니다.",
+            "english": "You too, thanks for your work."
+          },
+          {
+            "korean": "오늘 고생 많았어요.",
+            "english": "You worked hard today."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "처음 뵙겠습니다.",
+            "english": "Nice to meet you."
+          },
+          {
+            "korean": "네, 여기 있습니다.",
+            "english": "Yes, here you are."
+          },
+          {
+            "korean": "잘 먹겠습니다.",
+            "english": "Thanks for the meal."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/keep-up-good-work",
+      "kind": "sentence",
+      "korean": "수고하세요.",
+      "english": "Keep up the good work.",
+      "context": "greetings",
+      "register": "polite",
+      "note": "Said to someone still working as you leave. Many avoid it with superiors.",
+      "lexemes": [
+        "수고하다"
+      ],
+      "distractors": [
+        "Thank you for your hard work.",
+        "Take care on the way home.",
+        "Please help me with this."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 안녕히 가세요.",
+            "english": "Okay, goodbye."
+          },
+          {
+            "korean": "네, 들어가세요.",
+            "english": "Okay, get home safe."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "어서 오세요.",
+            "english": "Welcome."
+          },
+          {
+            "korean": "잘 먹었습니다.",
+            "english": "Thanks for the meal."
+          },
+          {
+            "korean": "저도 배고파요.",
+            "english": "I'm hungry too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/first-ahead",
+      "kind": "word",
+      "korean": "먼저",
+      "english": "first, ahead (of others)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "먼저"
+      ]
+    },
+    {
+      "id": "workplace/heading-home-first",
+      "kind": "sentence",
+      "korean": "먼저 들어가겠습니다.",
+      "english": "I'll head home before you.",
+      "context": "leaving-work",
+      "register": "formal",
+      "note": "The polite way to leave before colleagues or your boss. 들어가다 here means going home.",
+      "lexemes": [
+        "먼저",
+        "들어가다"
+      ],
+      "distractors": [
+        "I'll go into the office first.",
+        "I'll be leaving a little late.",
+        "Please go home before me."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 수고하셨습니다.",
+            "english": "Okay, thanks for your hard work."
+          },
+          {
+            "korean": "네, 조심히 들어가세요.",
+            "english": "Okay, get home safely."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "어서 오세요.",
+            "english": "Welcome."
+          },
+          {
+            "korean": "저는 커피 마실게요.",
+            "english": "I'll have a coffee."
+          },
+          {
+            "korean": "다음 역에서 내리세요.",
+            "english": "Get off at the next station."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-finish",
+      "kind": "word",
+      "korean": "끝내다",
+      "english": "to finish (something)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "끝내다"
+      ]
+    },
+    {
+      "id": "workplace/go-ahead-finish-this",
+      "kind": "sentence",
+      "korean": "먼저 가세요, 저는 이거만 끝내고 갈게요.",
+      "english": "Go ahead, I'll leave once I finish this.",
+      "context": "leaving-work",
+      "register": "polite",
+      "lexemes": [
+        "먼저",
+        "가다",
+        "저",
+        "이거",
+        "만",
+        "끝내다"
+      ],
+      "distractors": [
+        "Go ahead, I've already finished this.",
+        "Wait for me, I'll finish this quickly.",
+        "Go ahead, I'll start this tomorrow."
+      ]
+    },
+    {
+      "id": "workplace/new-hire",
+      "kind": "word",
+      "korean": "신입",
+      "english": "newcomer, new hire",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "신입"
+      ],
+      "image": "new employee"
+    },
+    {
+      "id": "workplace/employee",
+      "kind": "word",
+      "korean": "사원",
+      "english": "employee, staff member",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "사원"
+      ],
+      "image": "office worker"
+    },
+    {
+      "id": "workplace/newly",
+      "kind": "word",
+      "korean": "새로",
+      "english": "newly, anew",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "새로"
+      ]
+    },
+    {
+      "id": "workplace/to-come-in",
+      "kind": "word",
+      "korean": "들어오다",
+      "english": "to come in, to join",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "들어오다"
+      ]
+    },
+    {
+      "id": "workplace/im-the-new-hire",
+      "kind": "sentence",
+      "korean": "저는 이번에 새로 들어온 신입 사원입니다.",
+      "english": "I'm the new employee who just joined.",
+      "context": "new-job",
+      "register": "formal",
+      "lexemes": [
+        "저",
+        "이번",
+        "새로",
+        "들어오다",
+        "신입",
+        "사원",
+        "이다"
+      ],
+      "distractors": [
+        "I'm the employee who is leaving this time.",
+        "I'm the new manager who just joined.",
+        "I'm the new student who just enrolled."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "반가워요, 환영합니다.",
+            "english": "Nice to meet you, welcome."
+          },
+          {
+            "korean": "아, 이야기 많이 들었어요.",
+            "english": "Oh, I've heard a lot about you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 계산해 드릴게요.",
+            "english": "Okay, I'll ring you up."
+          },
+          {
+            "korean": "오늘은 쉬는 날이에요.",
+            "english": "Today is my day off."
+          },
+          {
+            "korean": "다음에 또 오세요.",
+            "english": "Please come again."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/team",
+      "kind": "word",
+      "korean": "팀",
+      "english": "team",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "팀"
+      ],
+      "image": "office team"
+    },
+    {
+      "id": "workplace/start-on-team-today",
+      "kind": "sentence",
+      "korean": "오늘부터 이 팀에서 일하게 됐습니다.",
+      "english": "I start working on this team today.",
+      "context": "new-job",
+      "register": "formal",
+      "lexemes": [
+        "오늘",
+        "이",
+        "팀",
+        "일하다",
+        "되다"
+      ],
+      "distractors": [
+        "I stopped working on this team today.",
+        "I worked on this team until today.",
+        "I'll join this team tomorrow."
+      ]
+    },
+    {
+      "id": "workplace/to-ask-a-favour",
+      "kind": "word",
+      "korean": "부탁드리다",
+      "english": "to ask a favour (humble)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "부탁드리다"
+      ]
+    },
+    {
+      "id": "workplace/from-now-on",
+      "kind": "word",
+      "korean": "앞으로",
+      "english": "from now on, in the future",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "앞으로"
+      ]
+    },
+    {
+      "id": "workplace/look-forward-working",
+      "kind": "sentence",
+      "korean": "앞으로 잘 부탁드립니다.",
+      "english": "I look forward to working with you.",
+      "context": "new-job",
+      "register": "formal",
+      "note": "Lit. 'I humbly ask you to treat me well.' The standard close of a self-introduction.",
+      "lexemes": [
+        "앞으로",
+        "잘",
+        "부탁드리다"
+      ],
+      "distractors": [
+        "Thank you for all your help.",
+        "Please take good care of yourself.",
+        "I hope we meet again."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저야말로 잘 부탁드립니다.",
+            "english": "Likewise, I look forward to it."
+          },
+          {
+            "korean": "네, 같이 열심히 해요.",
+            "english": "Yes, let's work hard together."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "많이 드세요.",
+            "english": "Enjoy your meal."
+          },
+          {
+            "korean": "안녕히 주무세요.",
+            "english": "Good night."
+          },
+          {
+            "korean": "여기서 세워 주세요.",
+            "english": "Please stop here."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/colleague",
+      "kind": "word",
+      "korean": "동료",
+      "english": "colleague, coworker",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "동료"
+      ],
+      "image": "coworkers"
+    },
+    {
+      "id": "workplace/to-introduce",
+      "kind": "word",
+      "korean": "소개하다",
+      "english": "to introduce",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "소개하다"
+      ]
+    },
+    {
+      "id": "workplace/introduce-new-colleague",
+      "kind": "sentence",
+      "korean": "새로 온 동료를 소개할게요.",
+      "english": "Let me introduce our new colleague.",
+      "context": "new-job",
+      "register": "polite",
+      "lexemes": [
+        "새로",
+        "오다",
+        "동료",
+        "소개하다"
+      ],
+      "distractors": [
+        "Let me introduce our new boss.",
+        "Our new colleague will introduce himself.",
+        "Let me introduce an old friend."
+      ]
+    },
+    {
+      "id": "workplace/where-worked-before",
+      "kind": "sentence",
+      "korean": "전에는 어디에서 일했어요?",
+      "english": "Where did you work before?",
+      "context": "new-job",
+      "register": "polite",
+      "lexemes": [
+        "전",
+        "어디",
+        "일하다"
+      ],
+      "distractors": [
+        "Where do you work now?",
+        "Where will you work next?",
+        "How long did you work there?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "전에는 은행에서 일했어요.",
+            "english": "I worked at a bank before."
+          },
+          {
+            "korean": "작은 회사에서 삼 년 일했어요.",
+            "english": "I worked at a small company for three years."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "은행은 저쪽이에요.",
+            "english": "The bank is over there."
+          },
+          {
+            "korean": "다음 주에 가요.",
+            "english": "I'm going next week."
+          },
+          {
+            "korean": "네, 일해요.",
+            "english": "Yes, I work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-be-curious",
+      "kind": "word",
+      "korean": "궁금하다",
+      "english": "to be curious, to wonder",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "궁금하다"
+      ]
+    },
+    {
+      "id": "workplace/anytime",
+      "kind": "word",
+      "korean": "언제든지",
+      "english": "anytime, whenever",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "언제든지"
+      ]
+    },
+    {
+      "id": "workplace/to-ask",
+      "kind": "word",
+      "korean": "물어보다",
+      "english": "to ask (a question)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "물어보다"
+      ]
+    },
+    {
+      "id": "workplace/ask-me-anytime",
+      "kind": "sentence",
+      "korean": "궁금한 거 있으면 언제든지 물어보세요.",
+      "english": "If you have any questions, ask me anytime.",
+      "context": "new-job",
+      "register": "polite",
+      "lexemes": [
+        "궁금하다",
+        "것",
+        "있다",
+        "언제든지",
+        "물어보다"
+      ],
+      "distractors": [
+        "If you have questions, ask the team leader.",
+        "Ask me anything after the meeting.",
+        "If you're curious, look it up yourself."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 감사합니다.",
+            "english": "Okay, thank you."
+          },
+          {
+            "korean": "감사합니다, 많이 배울게요.",
+            "english": "Thank you, I'll learn a lot."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "지금 몇 시예요?",
+            "english": "What time is it now?"
+          },
+          {
+            "korean": "사이즈가 안 맞아요.",
+            "english": "The size doesn't fit."
+          },
+          {
+            "korean": "저는 커피 안 마셔요.",
+            "english": "I don't drink coffee."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/how-long-at-company",
+      "kind": "sentence",
+      "korean": "이 회사에서 일한 지 얼마나 됐어요?",
+      "english": "How long have you worked at this company?",
+      "context": "new-job",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "회사",
+        "일하다",
+        "얼마나",
+        "되다"
+      ],
+      "distractors": [
+        "How far is this company from here?",
+        "How many people work at this company?",
+        "How long will you work at this company?"
+      ]
+    },
+    {
+      "id": "workplace/team-leader",
+      "kind": "word",
+      "korean": "팀장님",
+      "english": "team leader (title)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "팀장님"
+      ]
+    },
+    {
+      "id": "workplace/opinion",
+      "kind": "word",
+      "korean": "의견",
+      "english": "opinion, view",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "의견"
+      ]
+    },
+    {
+      "id": "workplace/team-leader-opinion",
+      "kind": "sentence",
+      "korean": "팀장님 의견은 어떠세요?",
+      "english": "What's your opinion, team leader?",
+      "context": "meetings",
+      "register": "polite",
+      "note": "Use the title instead of a name or 'you': 팀장님 의견, not 당신 의견.",
+      "lexemes": [
+        "팀장님",
+        "의견",
+        "어떻다"
+      ],
+      "distractors": [
+        "What's your schedule, team leader?",
+        "How are you feeling, team leader?",
+        "What did the director say, team leader?"
+      ]
+    },
+    {
+      "id": "workplace/new-team-leader-like",
+      "kind": "sentence",
+      "korean": "새 팀장님은 어떤 분이에요?",
+      "english": "What is the new team leader like?",
+      "context": "colleagues",
+      "register": "polite",
+      "lexemes": [
+        "새",
+        "팀장님",
+        "어떤",
+        "분",
+        "이다"
+      ],
+      "distractors": [
+        "Who is the new team leader?",
+        "When does the new team leader start?",
+        "What was the old team leader like?"
+      ]
+    },
+    {
+      "id": "workplace/assistant-manager",
+      "kind": "word",
+      "korean": "대리님",
+      "english": "assistant manager (title)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "대리님"
+      ]
+    },
+    {
+      "id": "workplace/have-a-moment",
+      "kind": "sentence",
+      "korean": "대리님, 잠깐 시간 괜찮으세요?",
+      "english": "Do you have a moment, assistant manager?",
+      "context": "asking-for-help",
+      "register": "polite",
+      "note": "Titles replace names at work: 대리님 or 김 대리님. 씨 is only for peers or juniors.",
+      "lexemes": [
+        "대리님",
+        "잠깐",
+        "시간",
+        "괜찮다"
+      ],
+      "distractors": [
+        "What time is it, assistant manager?",
+        "Are you feeling okay, assistant manager?",
+        "Are you free tonight, assistant manager?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 무슨 일이에요?",
+            "english": "Sure, what is it?"
+          },
+          {
+            "korean": "지금은 좀 바빠서요, 이따가 괜찮아요?",
+            "english": "I'm a bit busy now, is later okay?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 두 명이에요.",
+            "english": "Yes, two people."
+          },
+          {
+            "korean": "오늘 날씨가 좋네요.",
+            "english": "Nice weather today."
+          },
+          {
+            "korean": "아니요, 저는 학생이에요.",
+            "english": "No, I'm a student."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/could-you-help-this",
+      "kind": "sentence",
+      "korean": "이거 좀 도와주실 수 있어요?",
+      "english": "Could you help me with this?",
+      "context": "asking-for-help",
+      "register": "polite",
+      "lexemes": [
+        "이거",
+        "좀",
+        "돕다",
+        "주다"
+      ],
+      "distractors": [
+        "Can I help you with this?",
+        "Could you do this for me tomorrow?",
+        "Could you explain this to me?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼요, 뭐 도와 드릴까요?",
+            "english": "Of course, what do you need?"
+          },
+          {
+            "korean": "잠시만 기다려 주세요.",
+            "english": "Just a moment, please."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "도와줘서 고마워요.",
+            "english": "Thanks for helping me."
+          },
+          {
+            "korean": "저는 서울에 살아요.",
+            "english": "I live in Seoul."
+          },
+          {
+            "korean": "이거 너무 비싸요.",
+            "english": "This is too expensive."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/section-chief",
+      "kind": "word",
+      "korean": "과장님",
+      "english": "section chief, manager (title)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "과장님"
+      ]
+    },
+    {
+      "id": "workplace/section-chief-not-at-desk",
+      "kind": "sentence",
+      "korean": "과장님은 지금 자리에 안 계십니다.",
+      "english": "The section chief isn't at his desk right now.",
+      "context": "colleagues",
+      "register": "formal",
+      "note": "Titles rise 사원, 대리, 과장, 차장, 부장; add 님 when addressing them.",
+      "lexemes": [
+        "과장님",
+        "지금",
+        "자리",
+        "안",
+        "계시다"
+      ],
+      "distractors": [
+        "The section chief is at his desk right now.",
+        "The section chief has gone home for the day.",
+        "The section chief is in a meeting right now."
+      ]
+    },
+    {
+      "id": "workplace/report",
+      "kind": "word",
+      "korean": "보고서",
+      "english": "report (document)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "보고서"
+      ],
+      "image": "business report"
+    },
+    {
+      "id": "workplace/to-review",
+      "kind": "word",
+      "korean": "검토하다",
+      "english": "to review, to look over",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "검토하다"
+      ]
+    },
+    {
+      "id": "workplace/review-my-report",
+      "kind": "sentence",
+      "korean": "보고서 좀 검토해 주시겠어요?",
+      "english": "Would you review my report?",
+      "context": "asking-for-help",
+      "register": "polite",
+      "lexemes": [
+        "보고서",
+        "좀",
+        "검토하다",
+        "주다"
+      ],
+      "distractors": [
+        "Would you write the report for me?",
+        "Did you read my report?",
+        "Could you print the report?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 오늘 안에 볼게요.",
+            "english": "Sure, I'll look at it today."
+          },
+          {
+            "korean": "지금 메일로 보내 주세요.",
+            "english": "Send it to me by email now."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있게 드세요.",
+            "english": "Sure, enjoy your meal."
+          },
+          {
+            "korean": "저는 주말에 쉬어요.",
+            "english": "I rest on weekends."
+          },
+          {
+            "korean": "택시로 가요.",
+            "english": "I'm going by taxi."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/read-report-nice-work",
+      "kind": "sentence",
+      "korean": "보고서 잘 봤어요, 수고했어요.",
+      "english": "I read your report. Nice work.",
+      "context": "reports",
+      "register": "polite",
+      "lexemes": [
+        "보고서",
+        "잘",
+        "보다",
+        "수고하다"
+      ],
+      "distractors": [
+        "I haven't read your report yet.",
+        "Please rewrite your report.",
+        "I wrote the report, please read it."
+      ]
+    },
+    {
+      "id": "workplace/just-now",
+      "kind": "word",
+      "korean": "방금",
+      "english": "just now, a moment ago",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "방금"
+      ]
+    },
+    {
+      "id": "workplace/email",
+      "kind": "word",
+      "korean": "메일",
+      "english": "email",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "메일"
+      ],
+      "image": "email inbox"
+    },
+    {
+      "id": "workplace/just-sent-email",
+      "kind": "sentence",
+      "korean": "방금 메일 보내 드렸어요.",
+      "english": "I just sent you an email.",
+      "context": "emails",
+      "register": "polite",
+      "lexemes": [
+        "방금",
+        "메일",
+        "보내다",
+        "드리다"
+      ],
+      "distractors": [
+        "I'll send you an email later.",
+        "I just got your email.",
+        "I forgot to send the email."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 확인해 볼게요.",
+            "english": "Okay, I'll take a look."
+          },
+          {
+            "korean": "아직 안 왔는데요.",
+            "english": "It hasn't arrived yet."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "천천히 드세요.",
+            "english": "Take your time eating."
+          },
+          {
+            "korean": "네, 일시불로 해 주세요.",
+            "english": "Yes, in one payment please."
+          },
+          {
+            "korean": "오늘은 바람이 많이 불어요.",
+            "english": "It's very windy today."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/did-you-check-email",
+      "kind": "sentence",
+      "korean": "제 메일 확인하셨어요?",
+      "english": "Did you check my email?",
+      "context": "emails",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "메일",
+        "확인하다"
+      ],
+      "distractors": [
+        "Did you send my email?",
+        "Did you get my text?",
+        "Can you check my report?"
+      ]
+    },
+    {
+      "id": "workplace/materials",
+      "kind": "word",
+      "korean": "자료",
+      "english": "materials, data, documents",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "자료"
+      ],
+      "image": "office documents"
+    },
+    {
+      "id": "workplace/attachment",
+      "kind": "word",
+      "korean": "첨부",
+      "english": "attachment, attaching",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "첨부"
+      ]
+    },
+    {
+      "id": "workplace/file",
+      "kind": "word",
+      "korean": "파일",
+      "english": "file",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "파일"
+      ],
+      "image": "computer file"
+    },
+    {
+      "id": "workplace/send-as-attachment",
+      "kind": "sentence",
+      "korean": "자료는 첨부 파일로 보내 드리겠습니다.",
+      "english": "I'll send the materials as an attachment.",
+      "context": "emails",
+      "register": "formal",
+      "lexemes": [
+        "자료",
+        "첨부",
+        "파일",
+        "보내다",
+        "드리다"
+      ],
+      "distractors": [
+        "I'll print the materials for you.",
+        "Please send me the attached file.",
+        "The attached file didn't open."
+      ]
+    },
+    {
+      "id": "workplace/part",
+      "kind": "word",
+      "korean": "부분",
+      "english": "part, section",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "부분"
+      ]
+    },
+    {
+      "id": "workplace/to-revise",
+      "kind": "word",
+      "korean": "수정하다",
+      "english": "to revise, to correct",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "수정하다"
+      ]
+    },
+    {
+      "id": "workplace/fix-this-part-resend",
+      "kind": "sentence",
+      "korean": "이 부분만 수정해서 다시 보내 주세요.",
+      "english": "Please fix just this part and send it again.",
+      "context": "reports",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "부분",
+        "만",
+        "수정하다",
+        "다시",
+        "보내다",
+        "주다"
+      ],
+      "distractors": [
+        "Please delete this part and send it again.",
+        "Please check this part and call me.",
+        "I fixed this part and sent it again."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 바로 수정하겠습니다.",
+            "english": "Okay, I'll fix it right away."
+          },
+          {
+            "korean": "어느 부분이요?",
+            "english": "Which part?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다시 오세요.",
+            "english": "Come again."
+          },
+          {
+            "korean": "계산은 카드로 할게요.",
+            "english": "I'll pay by card."
+          },
+          {
+            "korean": "오늘은 쉬는 날이에요.",
+            "english": "Today is my day off."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-submit",
+      "kind": "word",
+      "korean": "제출하다",
+      "english": "to submit, to hand in",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "제출하다"
+      ]
+    },
+    {
+      "id": "workplace/submit-report-tomorrow",
+      "kind": "sentence",
+      "korean": "보고서는 내일 아침까지 제출하겠습니다.",
+      "english": "I'll submit the report by tomorrow morning.",
+      "context": "reports",
+      "register": "formal",
+      "lexemes": [
+        "보고서",
+        "내일",
+        "아침",
+        "제출하다"
+      ],
+      "distractors": [
+        "I submitted the report this morning.",
+        "I'll submit the report by tomorrow evening.",
+        "Please submit the report by tomorrow morning."
+      ]
+    },
+    {
+      "id": "workplace/deadline",
+      "kind": "word",
+      "korean": "마감",
+      "english": "deadline, closing",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "마감"
+      ]
+    },
+    {
+      "id": "workplace/when-is-deadline",
+      "kind": "sentence",
+      "korean": "마감이 언제예요?",
+      "english": "When is the deadline?",
+      "context": "deadlines",
+      "register": "polite",
+      "lexemes": [
+        "마감",
+        "언제",
+        "이다"
+      ],
+      "distractors": [
+        "Is the deadline today?",
+        "Can we move the deadline?",
+        "Who set the deadline?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "이번 주 금요일까지예요.",
+            "english": "It's due by this Friday."
+          },
+          {
+            "korean": "내일 오후 세 시까지요.",
+            "english": "By three tomorrow afternoon."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "회의실에 있어요.",
+            "english": "It's in the meeting room."
+          },
+          {
+            "korean": "저는 괜찮아요.",
+            "english": "I'm fine."
+          },
+          {
+            "korean": "커피 한 잔 주세요.",
+            "english": "A coffee, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/send-by-this-friday",
+      "kind": "sentence",
+      "korean": "이번 주 금요일까지 보내 주세요.",
+      "english": "Please send it by this Friday.",
+      "context": "deadlines",
+      "register": "polite",
+      "lexemes": [
+        "이번",
+        "주",
+        "금요일",
+        "보내다",
+        "주다"
+      ],
+      "distractors": [
+        "Please send it after this Friday.",
+        "Please send it by next Friday.",
+        "I'll send it this Friday."
+      ]
+    },
+    {
+      "id": "workplace/to-put-off",
+      "kind": "word",
+      "korean": "미루다",
+      "english": "to put off, to postpone",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "미루다"
+      ]
+    },
+    {
+      "id": "workplace/push-deadline-next-week",
+      "kind": "sentence",
+      "korean": "마감을 다음 주로 미룰 수 있을까요?",
+      "english": "Could we push the deadline to next week?",
+      "context": "deadlines",
+      "register": "polite",
+      "lexemes": [
+        "마감",
+        "다음",
+        "주",
+        "미루다"
+      ],
+      "distractors": [
+        "Could we move the deadline up to this week?",
+        "Is the deadline next week?",
+        "Could we cancel next week's meeting?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "팀장님께 한번 물어볼게요.",
+            "english": "I'll ask the team leader."
+          },
+          {
+            "korean": "이번에는 좀 어려워요.",
+            "english": "That's difficult this time."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다음 주에 여행 가요.",
+            "english": "I'm travelling next week."
+          },
+          {
+            "korean": "여기서 가까워요.",
+            "english": "It's close to here."
+          },
+          {
+            "korean": "저는 한국 사람이에요.",
+            "english": "I'm Korean."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-work-late",
+      "kind": "word",
+      "korean": "야근하다",
+      "english": "to work late, to do overtime",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "야근하다"
+      ]
+    },
+    {
+      "id": "workplace/deadline-tomorrow-work-late",
+      "kind": "sentence",
+      "korean": "마감이 내일이라서 오늘 야근해야 해요.",
+      "english": "The deadline is tomorrow, so I have to work late today.",
+      "context": "deadlines",
+      "register": "polite",
+      "lexemes": [
+        "마감",
+        "내일",
+        "이다",
+        "오늘",
+        "야근하다",
+        "하다"
+      ],
+      "distractors": [
+        "The deadline was yesterday, so I stayed late.",
+        "The deadline is tomorrow, so I'm leaving early.",
+        "The deadline is today, so I have to work late tomorrow."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "힘내세요!",
+            "english": "Hang in there!"
+          },
+          {
+            "korean": "저도요, 같이 저녁 먹어요.",
+            "english": "Me too, let's have dinner together."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "잘 먹겠습니다.",
+            "english": "Thanks for the meal."
+          },
+          {
+            "korean": "저는 버스 타요.",
+            "english": "I take the bus."
+          },
+          {
+            "korean": "여기 영수증이요.",
+            "english": "Here's the receipt."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/schedule",
+      "kind": "word",
+      "korean": "일정",
+      "english": "schedule, plans",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "일정"
+      ]
+    },
+    {
+      "id": "workplace/next-week-schedule",
+      "kind": "sentence",
+      "korean": "다음 주 일정 좀 알려 주세요.",
+      "english": "Please let me know next week's schedule.",
+      "context": "schedules",
+      "register": "polite",
+      "lexemes": [
+        "다음",
+        "주",
+        "일정",
+        "좀",
+        "알리다",
+        "주다"
+      ],
+      "distractors": [
+        "Please tell me this week's schedule.",
+        "Please change next week's schedule.",
+        "I'll let you know next week's schedule."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "메일로 보내 드릴게요.",
+            "english": "I'll email it to you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다음 주에 만나요.",
+            "english": "See you next week."
+          },
+          {
+            "korean": "감사합니다, 또 오세요.",
+            "english": "Thank you, come again."
+          },
+          {
+            "korean": "이 옷 입어 봐도 돼요?",
+            "english": "Can I try this on?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/business-trip",
+      "kind": "word",
+      "korean": "출장",
+      "english": "business trip",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "출장"
+      ],
+      "image": "business trip suitcase"
+    },
+    {
+      "id": "workplace/business-trip-busan",
+      "kind": "sentence",
+      "korean": "다음 주 월요일부터 부산으로 출장 가요.",
+      "english": "I'm going to Busan on a business trip from next Monday.",
+      "context": "schedules",
+      "register": "polite",
+      "lexemes": [
+        "다음",
+        "주",
+        "월요일",
+        "부산",
+        "출장",
+        "가다"
+      ],
+      "distractors": [
+        "I'm coming back from a business trip to Busan next Monday.",
+        "I'm going on vacation to Busan next Monday.",
+        "I went to Busan on a business trip last Monday."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "며칠 동안 가요?",
+            "english": "How many days will you be gone?"
+          },
+          {
+            "korean": "조심히 다녀오세요.",
+            "english": "Have a safe trip."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 편도 한 장 주세요.",
+            "english": "Yes, one one-way ticket, please."
+          },
+          {
+            "korean": "여기 앉으세요.",
+            "english": "Have a seat here."
+          },
+          {
+            "korean": "생일 축하해요!",
+            "english": "Happy birthday!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/free-friday-afternoon",
+      "kind": "sentence",
+      "korean": "금요일 오후에 시간 괜찮으세요?",
+      "english": "Are you free on Friday afternoon?",
+      "context": "schedules",
+      "register": "polite",
+      "lexemes": [
+        "금요일",
+        "오후",
+        "시간",
+        "괜찮다"
+      ],
+      "distractors": [
+        "Are you free on Friday morning?",
+        "Were you free on Friday afternoon?",
+        "Are you busy this afternoon?"
+      ]
+    },
+    {
+      "id": "workplace/to-tell-humble",
+      "kind": "word",
+      "korean": "말씀드리다",
+      "english": "to tell (humble)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "말씀드리다"
+      ]
+    },
+    {
+      "id": "workplace/check-schedule-let-you-know",
+      "kind": "sentence",
+      "korean": "일정 확인해 보고 말씀드릴게요.",
+      "english": "I'll check my schedule and let you know.",
+      "context": "schedules",
+      "register": "polite",
+      "lexemes": [
+        "일정",
+        "확인하다",
+        "보다",
+        "말씀드리다"
+      ],
+      "distractors": [
+        "I checked my schedule and told you.",
+        "Please check your schedule and tell me.",
+        "I'll check the email and let you know."
+      ]
+    },
+    {
+      "id": "workplace/what-time-meeting-starts",
+      "kind": "sentence",
+      "korean": "회의가 몇 시에 시작해요?",
+      "english": "What time does the meeting start?",
+      "context": "meetings",
+      "register": "polite",
+      "lexemes": [
+        "회의",
+        "몇",
+        "시",
+        "시작하다"
+      ],
+      "distractors": [
+        "What time does the meeting end?",
+        "Where is the meeting held?",
+        "How long is the meeting?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "두 시에 시작해요.",
+            "english": "It starts at two."
+          },
+          {
+            "korean": "삼십 분 후에 시작해요.",
+            "english": "It starts in thirty minutes."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "한 시간 걸려요.",
+            "english": "It takes an hour."
+          },
+          {
+            "korean": "회의실이 넓어요.",
+            "english": "The meeting room is big."
+          },
+          {
+            "korean": "어제 했어요.",
+            "english": "We had it yesterday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/meeting-room",
+      "kind": "word",
+      "korean": "회의실",
+      "english": "meeting room",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "회의실"
+      ],
+      "image": "meeting room"
+    },
+    {
+      "id": "workplace/meeting-in-big-room",
+      "kind": "sentence",
+      "korean": "회의는 큰 회의실에서 합니다.",
+      "english": "The meeting is in the big meeting room.",
+      "context": "meetings",
+      "register": "formal",
+      "lexemes": [
+        "회의",
+        "크다",
+        "회의실",
+        "하다"
+      ],
+      "distractors": [
+        "The meeting is in the small meeting room.",
+        "The meeting was in the big meeting room.",
+        "The big meeting room is booked."
+      ]
+    },
+    {
+      "id": "workplace/lets-begin-meeting",
+      "kind": "sentence",
+      "korean": "그럼 회의 시작하겠습니다.",
+      "english": "Well then, let's begin the meeting.",
+      "context": "meetings",
+      "register": "formal",
+      "lexemes": [
+        "그럼",
+        "회의",
+        "시작하다"
+      ],
+      "distractors": [
+        "Well then, let's end the meeting.",
+        "The meeting will start late.",
+        "Well then, let's take a break."
+      ]
+    },
+    {
+      "id": "workplace/meeting-moved-tomorrow",
+      "kind": "sentence",
+      "korean": "오늘 회의는 내일 오전으로 미뤘습니다.",
+      "english": "We've moved today's meeting to tomorrow morning.",
+      "context": "meetings",
+      "register": "formal",
+      "lexemes": [
+        "오늘",
+        "회의",
+        "내일",
+        "오전",
+        "미루다"
+      ],
+      "distractors": [
+        "We've moved tomorrow's meeting to today.",
+        "Today's meeting has been cancelled.",
+        "We've moved today's meeting to tomorrow afternoon."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 알겠습니다.",
+            "english": "Understood."
+          },
+          {
+            "korean": "몇 시로 바뀌었어요?",
+            "english": "What time was it moved to?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "오늘 회의 재미있었어요.",
+            "english": "Today's meeting was fun."
+          },
+          {
+            "korean": "저는 아침을 안 먹어요.",
+            "english": "I don't eat breakfast."
+          },
+          {
+            "korean": "네, 이 버스 맞아요.",
+            "english": "Yes, this is the right bus."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-attend",
+      "kind": "word",
+      "korean": "참석하다",
+      "english": "to attend",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "참석하다"
+      ]
+    },
+    {
+      "id": "workplace/can-you-attend",
+      "kind": "sentence",
+      "korean": "내일 회의에 참석하실 수 있어요?",
+      "english": "Can you attend tomorrow's meeting?",
+      "context": "meetings",
+      "register": "polite",
+      "lexemes": [
+        "내일",
+        "회의",
+        "참석하다"
+      ],
+      "distractors": [
+        "Did you attend yesterday's meeting?",
+        "Can you lead tomorrow's meeting?",
+        "Can you book a room for tomorrow's meeting?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 참석할게요.",
+            "english": "Yes, I'll be there."
+          },
+          {
+            "korean": "죄송해요, 내일은 휴가예요.",
+            "english": "Sorry, I'm off tomorrow."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "내일 비가 온대요.",
+            "english": "They say it'll rain tomorrow."
+          },
+          {
+            "korean": "네, 맛있네요.",
+            "english": "Yes, it's tasty."
+          },
+          {
+            "korean": "다음 역이에요.",
+            "english": "It's the next station."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/presentation",
+      "kind": "word",
+      "korean": "발표",
+      "english": "presentation",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "발표"
+      ],
+      "image": "business presentation"
+    },
+    {
+      "id": "workplace/preparation",
+      "kind": "word",
+      "korean": "준비",
+      "english": "preparation",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "준비"
+      ]
+    },
+    {
+      "id": "workplace/all",
+      "kind": "word",
+      "korean": "다",
+      "english": "all, everything",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "다"
+      ]
+    },
+    {
+      "id": "workplace/presentation-ready",
+      "kind": "sentence",
+      "korean": "발표 준비는 다 됐어요?",
+      "english": "Is your presentation all ready?",
+      "context": "meetings",
+      "register": "polite",
+      "lexemes": [
+        "발표",
+        "준비",
+        "다",
+        "되다"
+      ],
+      "distractors": [
+        "Did your presentation go well?",
+        "When is your presentation?",
+        "Who is giving the presentation?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 거의 다 됐어요.",
+            "english": "Yes, it's almost done."
+          },
+          {
+            "korean": "아직이요, 오늘 밤에 끝낼 거예요.",
+            "english": "Not yet, I'll finish it tonight."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "발표가 재미있었어요.",
+            "english": "The presentation was interesting."
+          },
+          {
+            "korean": "네, 다 먹었어요.",
+            "english": "Yes, I ate it all."
+          },
+          {
+            "korean": "저는 지하철로 가요.",
+            "english": "I go by subway."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/question",
+      "kind": "word",
+      "korean": "질문",
+      "english": "question",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "질문"
+      ]
+    },
+    {
+      "id": "workplace/tell-me-questions",
+      "kind": "sentence",
+      "korean": "질문 있으시면 말씀해 주십시오.",
+      "english": "If you have any questions, please let me know.",
+      "context": "meetings",
+      "register": "formal",
+      "lexemes": [
+        "질문",
+        "있다",
+        "말씀하다",
+        "주다"
+      ],
+      "distractors": [
+        "If you have questions, please write them down.",
+        "Please answer the questions.",
+        "If you have any questions, ask me later."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "질문이 하나 있습니다.",
+            "english": "I have one question."
+          },
+          {
+            "korean": "없습니다, 잘 들었습니다.",
+            "english": "None, that was clear."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "감사합니다, 또 오세요.",
+            "english": "Thank you, come again."
+          },
+          {
+            "korean": "여기서 내려요.",
+            "english": "I get off here."
+          },
+          {
+            "korean": "이번 주는 바빠요.",
+            "english": "I'm busy this week."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/wrap-up-meeting",
+      "kind": "sentence",
+      "korean": "오늘 회의는 여기까지 하겠습니다.",
+      "english": "Let's wrap up today's meeting here.",
+      "context": "meetings",
+      "register": "formal",
+      "lexemes": [
+        "오늘",
+        "회의",
+        "여기",
+        "하다"
+      ],
+      "distractors": [
+        "Today's meeting will be held here.",
+        "Let's start today's meeting here.",
+        "Today's meeting has been moved."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "수고하셨습니다.",
+            "english": "Thank you for your hard work."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여기가 어디예요?",
+            "english": "Where is this?"
+          },
+          {
+            "korean": "잘 먹겠습니다.",
+            "english": "Thanks for the meal."
+          },
+          {
+            "korean": "네, 여기 앉을게요.",
+            "english": "Okay, I'll sit here."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/copier",
+      "kind": "word",
+      "korean": "복사기",
+      "english": "photocopier",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "복사기"
+      ],
+      "image": "photocopier"
+    },
+    {
+      "id": "workplace/to-break-down",
+      "kind": "word",
+      "korean": "고장 나다",
+      "english": "to break down, to be out of order",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "고장 나다"
+      ]
+    },
+    {
+      "id": "workplace/copier-broken",
+      "kind": "sentence",
+      "korean": "복사기가 고장 났어요.",
+      "english": "The copier is broken.",
+      "context": "office",
+      "register": "polite",
+      "lexemes": [
+        "복사기",
+        "고장 나다"
+      ],
+      "distractors": [
+        "The copier is working again.",
+        "The printer is out of paper.",
+        "The computer is broken."
+      ]
+    },
+    {
+      "id": "workplace/traffic-running-late",
+      "kind": "sentence",
+      "korean": "죄송합니다, 차가 막혀서 조금 늦을 것 같습니다.",
+      "english": "I'm sorry, traffic is bad, so I'll be a little late.",
+      "context": "late-or-sick",
+      "register": "formal",
+      "note": "Call or message before the start time; lateness is taken seriously in Korean offices.",
+      "lexemes": [
+        "죄송하다",
+        "차",
+        "막히다",
+        "조금",
+        "늦다",
+        "것"
+      ],
+      "distractors": [
+        "I'm sorry, traffic was bad, so I was a little late.",
+        "I'm sorry, the subway stopped, so I'll be late.",
+        "I'm sorry, the car broke down, so I can't come."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "알겠어요, 조심히 오세요.",
+            "english": "Okay, get here safely."
+          },
+          {
+            "korean": "괜찮아요, 회의는 십 분 후에 시작해요.",
+            "english": "It's fine, the meeting starts in ten minutes."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저도 차가 있어요.",
+            "english": "I have a car too."
+          },
+          {
+            "korean": "네, 다음 역에서 내리세요.",
+            "english": "Yes, get off at the next station."
+          },
+          {
+            "korean": "오늘 저녁에 한잔해요.",
+            "english": "Let's have a drink tonight."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/oversleeping",
+      "kind": "word",
+      "korean": "늦잠",
+      "english": "oversleeping, sleeping in",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "늦잠"
+      ]
+    },
+    {
+      "id": "workplace/overslept-sorry",
+      "kind": "sentence",
+      "korean": "늦잠을 자서 늦었습니다. 죄송합니다.",
+      "english": "I overslept and I'm late. I'm sorry.",
+      "context": "late-or-sick",
+      "register": "formal",
+      "lexemes": [
+        "늦잠",
+        "자다",
+        "늦다",
+        "죄송하다"
+      ],
+      "distractors": [
+        "I overslept, but I wasn't late.",
+        "I stayed up late, so I'm tired.",
+        "I'm sorry, I'll be late tomorrow."
+      ]
+    },
+    {
+      "id": "workplace/not-well-rest-today",
+      "kind": "sentence",
+      "korean": "몸이 안 좋아서 오늘 쉬어도 될까요?",
+      "english": "I'm not feeling well. Could I take today off?",
+      "context": "late-or-sick",
+      "register": "polite",
+      "lexemes": [
+        "몸",
+        "안",
+        "좋다",
+        "오늘",
+        "쉬다",
+        "되다"
+      ],
+      "distractors": [
+        "I'm not feeling well. Could I leave early today?",
+        "I'm feeling better, so I'll come in today.",
+        "My family is sick, so could I work from home?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 푹 쉬세요.",
+            "english": "Of course, get plenty of rest."
+          },
+          {
+            "korean": "병원 꼭 가 보세요.",
+            "english": "Make sure you see a doctor."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "몸에 좋은 음식이에요.",
+            "english": "This food is good for you."
+          },
+          {
+            "korean": "네, 여기 앉으세요.",
+            "english": "Sure, sit here."
+          },
+          {
+            "korean": "오늘 날씨가 좋네요.",
+            "english": "Nice weather today."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-leave-early",
+      "kind": "word",
+      "korean": "조퇴하다",
+      "english": "to leave early (work or school)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "조퇴하다"
+      ]
+    },
+    {
+      "id": "workplace/cold-leave-early",
+      "kind": "sentence",
+      "korean": "감기에 걸려서 오늘은 조퇴해도 될까요?",
+      "english": "I've caught a cold. May I leave early today?",
+      "context": "late-or-sick",
+      "register": "polite",
+      "note": "조퇴 is leaving work or school early, usually because you are ill.",
+      "lexemes": [
+        "감기",
+        "걸리다",
+        "오늘",
+        "조퇴하다",
+        "되다"
+      ],
+      "distractors": [
+        "I've caught a cold. May I stay home today?",
+        "I'm over my cold. May I stay late today?",
+        "My child has a cold. May I come in late today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그래요, 들어가서 푹 쉬어요.",
+            "english": "Sure, go home and rest well."
+          },
+          {
+            "korean": "약 먹고 일찍 자요.",
+            "english": "Take some medicine and sleep early."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "감기가 뭐예요?",
+            "english": "What's a cold?"
+          },
+          {
+            "korean": "네, 봉투에 넣어 드릴게요.",
+            "english": "Okay, I'll put it in a bag."
+          },
+          {
+            "korean": "다음 주에 가요.",
+            "english": "I'm going next week."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/annual-leave",
+      "kind": "word",
+      "korean": "연차",
+      "english": "annual leave (a day off)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "연차"
+      ]
+    },
+    {
+      "id": "workplace/take-leave-next-friday",
+      "kind": "sentence",
+      "korean": "다음 주 금요일에 연차 써도 될까요?",
+      "english": "Could I take a day of leave next Friday?",
+      "context": "time-off",
+      "register": "polite",
+      "note": "연차 is paid annual leave, used a day at a time; 반차 is half a day. You 'use' it: 연차를 쓰다.",
+      "lexemes": [
+        "다음",
+        "주",
+        "금요일",
+        "연차",
+        "쓰다",
+        "되다"
+      ],
+      "distractors": [
+        "Could I take this Friday off?",
+        "Could I work next Friday instead?",
+        "Could I take a week off next month?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 괜찮아요.",
+            "english": "Sure, that's fine."
+          },
+          {
+            "korean": "그날은 회의가 있어서 좀 어려워요.",
+            "english": "We have a meeting that day, so it's hard."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 연필로 써요.",
+            "english": "I write with a pencil."
+          },
+          {
+            "korean": "금요일에 만나요.",
+            "english": "See you on Friday."
+          },
+          {
+            "korean": "네, 그 차 좋아요.",
+            "english": "Yes, that car is nice."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/where-on-vacation",
+      "kind": "sentence",
+      "korean": "휴가 때 어디 가세요?",
+      "english": "Where are you going on your vacation?",
+      "context": "time-off",
+      "register": "polite",
+      "lexemes": [
+        "휴가",
+        "때",
+        "어디",
+        "가다"
+      ],
+      "distractors": [
+        "When is your vacation?",
+        "Where did you go on vacation?",
+        "How long is your vacation?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "가족이랑 제주도에 가요.",
+            "english": "I'm going to Jeju with my family."
+          },
+          {
+            "korean": "그냥 집에서 쉴 거예요.",
+            "english": "I'll just rest at home."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "다음 달이에요.",
+            "english": "It's next month."
+          },
+          {
+            "korean": "회사에서 가까워요.",
+            "english": "It's close to the office."
+          },
+          {
+            "korean": "저는 회사원이에요.",
+            "english": "I'm an office worker."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-go-and-come-back",
+      "kind": "word",
+      "korean": "다녀오다",
+      "english": "to go and come back",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "다녀오다"
+      ]
+    },
+    {
+      "id": "workplace/good-vacation",
+      "kind": "sentence",
+      "korean": "휴가 잘 다녀오셨어요?",
+      "english": "Did you have a good vacation?",
+      "context": "time-off",
+      "register": "polite",
+      "lexemes": [
+        "휴가",
+        "잘",
+        "다녀오다"
+      ],
+      "distractors": [
+        "Are you going on vacation soon?",
+        "Have a good vacation.",
+        "Did you have a good business trip?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 덕분에 잘 쉬었어요.",
+            "english": "Yes, I had a good rest, thanks."
+          },
+          {
+            "korean": "네, 여기 작은 선물이에요.",
+            "english": "Yes, here's a little gift."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘 다녀오세요.",
+            "english": "Yes, have a good trip."
+          },
+          {
+            "korean": "휴가가 언제예요?",
+            "english": "When is the vacation?"
+          },
+          {
+            "korean": "이거 할인돼요?",
+            "english": "Is this discounted?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/team-dinner",
+      "kind": "word",
+      "korean": "회식",
+      "english": "team dinner (after work)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "회식"
+      ],
+      "image": "korean office dinner"
+    },
+    {
+      "id": "workplace/team-dinner-this-friday",
+      "kind": "sentence",
+      "korean": "이번 주 금요일에 회식이 있습니다.",
+      "english": "There's a team dinner this Friday.",
+      "context": "team-dinner",
+      "register": "formal",
+      "note": "회식 is the team's dinner, usually with drinks. New staff are expected to come.",
+      "lexemes": [
+        "이번",
+        "주",
+        "금요일",
+        "회식",
+        "있다"
+      ],
+      "distractors": [
+        "There was a team dinner last Friday.",
+        "This Friday's team dinner is cancelled.",
+        "There's a meeting this Friday."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 몇 시에 시작해요?",
+            "english": "Okay, what time does it start?"
+          },
+          {
+            "korean": "저는 그날 약속이 있어서 좀 늦을 것 같아요.",
+            "english": "I have plans that day, so I'll be a bit late."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 영수증 주세요.",
+            "english": "Yes, the receipt please."
+          },
+          {
+            "korean": "이 버스 서울역 가요?",
+            "english": "Does this bus go to Seoul Station?"
+          },
+          {
+            "korean": "회식이 맛있어요.",
+            "english": "The team dinner is tasty."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/cant-drink-much",
+      "kind": "sentence",
+      "korean": "저는 술을 잘 못 마셔요.",
+      "english": "I can't really drink.",
+      "context": "team-dinner",
+      "register": "polite",
+      "note": "Saying so is fine. Hold out your glass for toasts and just take a sip, or drink a soft drink.",
+      "lexemes": [
+        "저",
+        "술",
+        "잘",
+        "못",
+        "마시다"
+      ],
+      "distractors": [
+        "I drink quite a lot.",
+        "I don't like beer.",
+        "I can't eat spicy food."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "괜찮아요, 음료수 드세요.",
+            "english": "That's fine, have a soft drink."
+          },
+          {
+            "korean": "그럼 한 잔만 받으세요.",
+            "english": "Then just take one glass."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 소주 두 병 주세요.",
+            "english": "Yes, two bottles of soju, please."
+          },
+          {
+            "korean": "저는 매일 운동해요.",
+            "english": "I work out every day."
+          },
+          {
+            "korean": "술집이 어디예요?",
+            "english": "Where's the bar?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-pour",
+      "kind": "word",
+      "korean": "따르다",
+      "english": "to pour",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "따르다"
+      ]
+    },
+    {
+      "id": "workplace/let-me-pour",
+      "kind": "sentence",
+      "korean": "제가 한 잔 따라 드릴게요.",
+      "english": "Let me pour you a glass.",
+      "context": "team-dinner",
+      "register": "polite",
+      "note": "Pour for seniors with both hands, and hold your glass with both hands when they pour for you.",
+      "lexemes": [
+        "저",
+        "한",
+        "잔",
+        "따르다",
+        "드리다"
+      ],
+      "distractors": [
+        "Please pour me a glass.",
+        "Let me buy you a drink.",
+        "Let me get you a glass of water."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아, 감사합니다.",
+            "english": "Oh, thank you."
+          },
+          {
+            "korean": "고마워요, 저도 한 잔 따라 드릴게요.",
+            "english": "Thanks, I'll pour you one too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 계산해 주세요.",
+            "english": "Yes, the bill please."
+          },
+          {
+            "korean": "안녕히 가세요.",
+            "english": "Goodbye."
+          },
+          {
+            "korean": "잔이 너무 작아요.",
+            "english": "The glass is too small."
+          }
+        ]
+      }
+    },
+    {
+      "id": "workplace/to-toast",
+      "kind": "word",
+      "korean": "건배하다",
+      "english": "to make a toast, to say cheers",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "건배하다"
+      ]
+    },
+    {
+      "id": "workplace/lets-all-toast",
+      "kind": "sentence",
+      "korean": "다 같이 건배합시다!",
+      "english": "Let's all raise a toast!",
+      "context": "team-dinner",
+      "register": "formal",
+      "note": "The senior usually leads the toast. When clinking, juniors keep their glass a little lower.",
+      "lexemes": [
+        "다",
+        "같이",
+        "건배하다"
+      ],
+      "distractors": [
+        "Let's all go home together!",
+        "Let's all eat together!",
+        "Let's all take a photo together!"
+      ]
+    },
+    {
+      "id": "workplace/superior-elder",
+      "kind": "word",
+      "korean": "윗사람",
+      "english": "superior, elder",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "윗사람"
+      ]
+    },
+    {
+      "id": "workplace/head-neck",
+      "kind": "word",
+      "korean": "고개",
+      "english": "head (as in nodding or turning)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "고개"
+      ]
+    },
+    {
+      "id": "workplace/to-turn",
+      "kind": "word",
+      "korean": "돌리다",
+      "english": "to turn (something)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "돌리다"
+      ]
+    },
+    {
+      "id": "workplace/turn-head-to-drink",
+      "kind": "sentence",
+      "korean": "윗사람 앞에서는 고개를 돌리고 마셔요.",
+      "english": "In front of seniors, you turn your head away to drink.",
+      "context": "team-dinner",
+      "register": "polite",
+      "note": "Turn slightly away and shield the glass with a hand when drinking with seniors.",
+      "lexemes": [
+        "윗사람",
+        "앞",
+        "고개",
+        "돌리다",
+        "마시다"
+      ],
+      "distractors": [
+        "In front of seniors, you drink looking straight at them.",
+        "In front of seniors, you pour your own drink.",
+        "In front of seniors, you don't drink at all."
+      ]
+    },
+    {
+      "id": "workplace/dinner-was-fun",
+      "kind": "sentence",
+      "korean": "오늘 회식 정말 즐거웠습니다.",
+      "english": "Tonight's team dinner was really fun.",
+      "context": "team-dinner",
+      "register": "formal",
+      "lexemes": [
+        "오늘",
+        "회식",
+        "정말",
+        "즐겁다"
+      ],
+      "distractors": [
+        "Tonight's team dinner was really boring.",
+        "Tomorrow's team dinner will be fun.",
+        "Today's meeting was really useful."
+      ]
+    },
+    {
+      "id": "workplace/thanks-for-dinner-director",
+      "kind": "sentence",
+      "korean": "부장님, 잘 먹었습니다.",
+      "english": "Thank you for dinner, director.",
+      "context": "team-dinner",
+      "register": "formal",
+      "note": "The boss often pays for 회식. Thank them like this, and again the next morning.",
+      "lexemes": [
+        "부장님",
+        "잘 먹었습니다"
+      ],
+      "distractors": [
+        "Enjoy your meal, director.",
+        "Dinner is on me, director.",
+        "Good night, director."
+      ]
+    }
+  ]
+}

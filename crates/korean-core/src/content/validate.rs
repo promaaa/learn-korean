@@ -28,7 +28,7 @@ fn is_syllable(c: char) -> bool {
     ('\u{AC00}'..='\u{D7A3}').contains(&c)
 }
 
-fn is_kebab(s: &str) -> bool {
+pub(crate) fn is_kebab(s: &str) -> bool {
     !s.is_empty()
         && !s.starts_with('-')
         && !s.ends_with('-')
@@ -83,6 +83,44 @@ pub fn validate_packs(packs: &[Pack]) -> Result<(), Vec<ValidationError>> {
             }
         }
     }
+    if errors.is_empty() {
+        Ok(())
+    } else {
+        Err(errors)
+    }
+}
+
+/// Lemmas taught through sentences only, never as word cards: particles, the copula, patterns.
+pub const GRAMMAR: &[&str] = &["이다", "에 있다", "하고", "만"];
+
+/// Lemmas with a word card: the lexemes of every `word` item.
+pub fn carded_lemmas(packs: &[Pack]) -> HashSet<&str> {
+    packs
+        .iter()
+        .flat_map(|p| &p.items)
+        .filter(|i| i.kind == ItemKind::Word)
+        .flat_map(|i| i.lexemes.iter().map(String::as_str))
+        .collect()
+}
+
+/// Every sentence lexeme except [`GRAMMAR`] has a word card in some pack, so the planner can teach
+/// the word before the sentence.
+pub fn validate_word_cards(packs: &[Pack]) -> Result<(), Vec<ValidationError>> {
+    let carded = carded_lemmas(packs);
+    let errors: Vec<ValidationError> = packs
+        .iter()
+        .flat_map(|p| &p.items)
+        .filter(|i| i.kind == ItemKind::Sentence)
+        .flat_map(|item| {
+            item.lexemes
+                .iter()
+                .filter(|l| !carded.contains(l.as_str()) && !GRAMMAR.contains(&l.as_str()))
+                .map(|lemma| ValidationError {
+                    location: item.id.clone(),
+                    message: format!("lexeme {lemma:?} has no word card (a word item listing it)"),
+                })
+        })
+        .collect();
     if errors.is_empty() {
         Ok(())
     } else {
@@ -305,5 +343,36 @@ mod tests {
         assert!(msgs.iter().any(|m| m.contains("replies.bad")));
         assert!(msgs.iter().any(|m| m.contains("appears twice")));
         assert!(msgs.iter().any(|m| m.contains("chunks joined")));
+    }
+
+    #[test]
+    fn sentence_lexemes_need_a_word_card_in_any_pack_except_grammar() {
+        let word = |id: &str, lemma: &str| {
+            let mut w = item(id, id);
+            w.kind = ItemKind::Word;
+            w.korean = lemma.into();
+            w.lexemes = vec![lemma.into()];
+            w
+        };
+        let mut weekend = item("p/a", "A");
+        weekend.lexemes = vec!["주말".into(), "뭐".into(), "하다".into(), "이다".into()];
+        let mut other = item("p/b", "B");
+        other.lexemes = vec!["뭐".into()];
+        let mut later = pack(vec![word("q/weekend", "주말")]);
+        later.id = "q".into();
+        let packs = [pack(vec![weekend, other, word("p/do", "하다")]), later];
+        let messages: Vec<String> = validate_word_cards(&packs)
+            .unwrap_err()
+            .iter()
+            .map(ToString::to_string)
+            .collect();
+        assert_eq!(
+            messages,
+            [
+                "p/a: lexeme \"뭐\" has no word card (a word item listing it)",
+                "p/b: lexeme \"뭐\" has no word card (a word item listing it)",
+            ],
+            "a sentence listing a lemma is not its card"
+        );
     }
 }

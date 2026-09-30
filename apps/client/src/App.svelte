@@ -2,18 +2,25 @@
   import FatalError from "./components/FatalError.svelte";
   import KeyHints from "./components/KeyHints.svelte";
   import XpBar from "./components/XpBar.svelte";
+  import Hangul from "./routes/Hangul.svelte";
   import Session from "./routes/Session.svelte";
+  import Stats from "./routes/Stats.svelte";
   import TypingGym from "./routes/TypingGym.svelte";
   import { appStatus, profile as loadProfile, type AppStatus, type Profile } from "./lib/api";
   import { actionFor } from "./lib/keys";
   import { hideWindow, onShown } from "./lib/shell";
 
+  /** Screens in `Tab` order; `Shift+Tab` goes backwards. */
+  const SCREENS = ["review", "typing", "hangul", "stats"] as const;
+  type Screen = (typeof SCREENS)[number];
+
   let status = $state<AppStatus | null>(null);
   let session = $state<Session | null>(null);
   let profile = $state<Profile | null>(null);
   let gym = $state<TypingGym | null>(null);
-  /** Review session or Typing Gym; `Tab` switches. */
-  let mode = $state<"review" | "typing">("review");
+  let hangul = $state<Hangul | null>(null);
+  let stats = $state<Stats | null>(null);
+  let mode = $state<Screen>("review");
   /** Another device's progress was merged; the review session restarts when next on screen. */
   let stale = false;
 
@@ -52,14 +59,29 @@
       void hideWindow();
     } else if (action?.type === "mode") {
       event.preventDefault();
-      mode = mode === "review" ? "typing" : "review";
-      // Time spent in the gym is not thinking time for the waiting card.
+      mode = SCREENS[(SCREENS.indexOf(mode) + action.step + SCREENS.length) % SCREENS.length] ?? mode;
+      // Time spent on other screens is not thinking time for the waiting card.
       if (mode === "review") resumeReview();
     } else if (mode === "typing") {
       gym?.key(event);
-    } else if (action) {
+    } else if (mode === "hangul") {
+      hangul?.key(event);
+    } else if (mode === "review" && action) {
       event.preventDefault();
       session?.handle(action);
+    }
+  }
+
+  function screenHints() {
+    switch (mode) {
+      case "typing":
+        return gym?.hints();
+      case "hangul":
+        return hangul?.hints();
+      case "stats":
+        return stats?.hints();
+      default:
+        return session?.hints();
     }
   }
 </script>
@@ -68,7 +90,14 @@
 
 <div class="frame">
   <header class="topbar">
-    <span class="brand">KOR</span>
+    <div class="left">
+      <span class="brand">KOR</span>
+      <nav class="screens" aria-label="screens">
+        {#each SCREENS as screen (screen)}
+          <span class:current={screen === mode}>{screen}</span>
+        {/each}
+      </nav>
+    </div>
     {#if profile}<XpBar {profile} />{/if}
   </header>
 
@@ -76,19 +105,24 @@
     {#if status?.error}
       <FatalError message={status.error} />
     {:else if status}
-      <!-- Both stay mounted so switching keeps the session where it was. -->
+      <!-- The session stays mounted so switching keeps it where it was; other screens mount only
+           while shown. -->
       <div class="screen" class:hidden={mode !== "review"}>
         <Session bind:this={session} onprofile={(p) => (profile = p)} />
       </div>
       {#if mode === "typing"}
         <div class="screen"><TypingGym bind:this={gym} /></div>
       {/if}
+      {#if mode === "hangul"}
+        <div class="screen"><Hangul bind:this={hangul} /></div>
+      {/if}
+      {#if mode === "stats"}
+        <div class="screen"><Stats bind:this={stats} /></div>
+      {/if}
     {/if}
   </main>
 
-  <KeyHints
-    hints={(mode === "typing" ? gym?.hints() : session?.hints()) ?? [{ keys: "Esc", label: "hide" }]}
-  />
+  <KeyHints hints={screenHints() ?? [{ keys: "Esc", label: "hide" }]} />
 </div>
 
 <style>
@@ -101,5 +135,25 @@
 
   .hidden {
     display: none;
+  }
+
+  .left {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+  }
+
+  .screens {
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .screens .current {
+    color: var(--fg);
+    box-shadow: 0 2px 0 var(--accent);
   }
 </style>

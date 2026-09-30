@@ -1,3 +1,4 @@
+mod hangul;
 mod images;
 mod memory;
 mod progress;
@@ -5,6 +6,7 @@ mod session;
 mod shell;
 mod speech;
 mod state;
+mod stats;
 mod sync;
 mod typing;
 
@@ -33,6 +35,7 @@ pub fn run() {
         )
         .manage(session::ActiveSession::default())
         .manage(typing::TypingGym::default())
+        .manage(hangul::HangulPrimer::default())
         .register_asynchronous_uri_scheme_protocol(images::SCHEME, |ctx, request, responder| {
             let app = ctx.app_handle().clone();
             tauri::async_runtime::spawn(async move {
@@ -53,6 +56,12 @@ pub fn run() {
             typing::typing_start,
             typing::typing_press,
             typing::typing_next,
+            hangul::hangul_lessons,
+            hangul::hangul_start,
+            hangul::hangul_current,
+            hangul::hangul_press,
+            hangul::hangul_next,
+            stats::stats,
         ])
         .setup(|app| {
             // Created here, not on the builder: a second instance exits before setup runs, so it

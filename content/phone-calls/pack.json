@@ -1,0 +1,2347 @@
+{
+  "id": "phone-calls",
+  "version": 1,
+  "title": "Phone calls",
+  "description": "Answering, calling a business, reservations, wrong numbers and messages.",
+  "unlock_level": 4,
+  "items": [
+    {
+      "id": "phone-calls/hello",
+      "kind": "word",
+      "korean": "여보세요",
+      "english": "hello (on the phone)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "여보세요"
+      ]
+    },
+    {
+      "id": "phone-calls/hello-answering",
+      "kind": "sentence",
+      "korean": "여보세요?",
+      "english": "Hello? (answering the phone)",
+      "context": "answering",
+      "register": "polite",
+      "note": "여보세요 is for the phone; in person, greet with 안녕하세요.",
+      "lexemes": [
+        "여보세요"
+      ],
+      "distractors": [
+        "Who is calling?",
+        "Can you hear me?",
+        "Goodbye, take care."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "여보세요, 저예요.",
+            "english": "Hello, it's me."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있게 드세요.",
+            "english": "Yes, enjoy your meal."
+          },
+          {
+            "korean": "잘 먹었습니다.",
+            "english": "Thank you for the meal."
+          },
+          {
+            "korean": "다음 역에서 내려요.",
+            "english": "I get off at the next station."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/yeah",
+      "kind": "word",
+      "korean": "응",
+      "english": "yeah (casual)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "응"
+      ]
+    },
+    {
+      "id": "phone-calls/yeah-its-me",
+      "kind": "sentence",
+      "korean": "응, 나야.",
+      "english": "Yeah, it's me.",
+      "context": "answering",
+      "register": "casual",
+      "lexemes": [
+        "응",
+        "나",
+        "이다"
+      ],
+      "distractors": [
+        "No, it's not me.",
+        "Yes, it's him.",
+        "Hey, is that you?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어, 왜 전화했어?",
+            "english": "Oh, why did you call?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 알겠습니다.",
+            "english": "Yes, understood."
+          },
+          {
+            "korean": "처음 뵙겠습니다.",
+            "english": "Nice to meet you."
+          },
+          {
+            "korean": "이쪽으로 앉으세요.",
+            "english": "Please take a seat over here."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/who-is-calling",
+      "kind": "sentence",
+      "korean": "실례지만 누구세요?",
+      "english": "Excuse me, but who is this?",
+      "context": "answering",
+      "register": "polite",
+      "lexemes": [
+        "실례",
+        "이다",
+        "누구"
+      ],
+      "distractors": [
+        "Excuse me, but where are you?",
+        "Sorry, who are you looking for?",
+        "Excuse me, but what's your number?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "택배 기사예요.",
+            "english": "I'm the delivery driver."
+          },
+          {
+            "korean": "고객센터입니다.",
+            "english": "This is customer service."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 괜찮아요.",
+            "english": "I'm fine."
+          },
+          {
+            "korean": "아니요, 안 바빠요.",
+            "english": "No, I'm not busy."
+          },
+          {
+            "korean": "세 시에 만나요.",
+            "english": "Let's meet at three."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/phone-call",
+      "kind": "word",
+      "korean": "전화",
+      "english": "phone call",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "전화"
+      ],
+      "image": "phone call"
+    },
+    {
+      "id": "phone-calls/speaking-after-handover",
+      "kind": "sentence",
+      "korean": "네, 전화 바꿨습니다.",
+      "english": "Hello, I'm on the line now.",
+      "context": "answering",
+      "register": "formal",
+      "note": "Said when you take a call someone passed to you: literally \"I have taken over the phone.\"",
+      "lexemes": [
+        "네",
+        "전화",
+        "바꾸다"
+      ],
+      "distractors": [
+        "Sorry, I'll change phones.",
+        "Yes, I'll put them on.",
+        "Yes, I changed my number."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아, 안녕하세요. 예약 때문에 전화드렸어요.",
+            "english": "Oh, hello. I'm calling about a reservation."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘 지내요.",
+            "english": "Yes, I'm doing well."
+          },
+          {
+            "korean": "배불러요.",
+            "english": "I'm full."
+          },
+          {
+            "korean": "이 옷 입어 봐도 돼요?",
+            "english": "Can I try this on?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/ill-put-them-on",
+      "kind": "sentence",
+      "korean": "잠시만요, 바꿔 드릴게요.",
+      "english": "One moment, I'll put them on.",
+      "context": "answering",
+      "register": "polite",
+      "lexemes": [
+        "잠시만요",
+        "바꾸다",
+        "드리다"
+      ],
+      "distractors": [
+        "One moment, I'll exchange it for you.",
+        "One moment, I'll call you back.",
+        "Hold on, I'll pass on your message."
+      ]
+    },
+    {
+      "id": "phone-calls/to-be-honorific",
+      "kind": "word",
+      "korean": "계시다",
+      "english": "to be (somewhere, honorific)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "계시다"
+      ]
+    },
+    {
+      "id": "phone-calls/is-the-owner-there",
+      "kind": "sentence",
+      "korean": "사장님 계세요?",
+      "english": "Is the owner there?",
+      "context": "calling-a-business",
+      "register": "polite",
+      "note": "사장님 is how you refer to or address any shop or restaurant owner.",
+      "lexemes": [
+        "사장님",
+        "계시다"
+      ],
+      "distractors": [
+        "Is the owner busy?",
+        "Where is the owner?",
+        "Are you the owner?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "지금 안 계세요.",
+            "english": "They're not in right now."
+          },
+          {
+            "korean": "네, 잠시만요.",
+            "english": "Yes, one moment."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여기 앉으세요.",
+            "english": "Sit here."
+          },
+          {
+            "korean": "카드로 할게요.",
+            "english": "I'll pay by card."
+          },
+          {
+            "korean": "사장님, 여기 물 좀 주세요.",
+            "english": "Excuse me, some water over here, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/not-at-desk",
+      "kind": "sentence",
+      "korean": "지금 자리에 안 계신데요.",
+      "english": "They're not at their desk right now.",
+      "context": "messages",
+      "register": "polite",
+      "note": "-는데요 softens the line and leaves room for the caller to go on.",
+      "lexemes": [
+        "지금",
+        "자리",
+        "안",
+        "계시다"
+      ],
+      "distractors": [
+        "They're not sitting in their seat.",
+        "They're on another call right now.",
+        "They just left for the day."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼 메시지 좀 전해 주세요.",
+            "english": "Then please pass on a message."
+          },
+          {
+            "korean": "그럼 이따가 다시 걸게요.",
+            "english": "Then I'll call again later."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여기 자리 있어요.",
+            "english": "This seat is taken."
+          },
+          {
+            "korean": "네, 창가 자리로 주세요.",
+            "english": "Yes, a window seat, please."
+          },
+          {
+            "korean": "저는 커피 마실게요.",
+            "english": "I'll have coffee."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/message",
+      "kind": "word",
+      "korean": "메시지",
+      "english": "message",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "메시지"
+      ]
+    },
+    {
+      "id": "phone-calls/to-leave-behind",
+      "kind": "word",
+      "korean": "남기다",
+      "english": "to leave (behind)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "남기다"
+      ]
+    },
+    {
+      "id": "phone-calls/leave-a-message",
+      "kind": "sentence",
+      "korean": "메시지 남기시겠어요?",
+      "english": "Would you like to leave a message?",
+      "context": "messages",
+      "register": "polite",
+      "lexemes": [
+        "메시지",
+        "남기다"
+      ],
+      "distractors": [
+        "Did you get my message?",
+        "Would you like to send a text?",
+        "Shall I read you the message?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 다시 전화해 달라고 전해 주세요.",
+            "english": "Yes, please ask them to call me back."
+          },
+          {
+            "korean": "아니요, 괜찮아요. 다시 걸게요.",
+            "english": "No, that's fine. I'll call back."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 두 명이요.",
+            "english": "Yes, two people."
+          },
+          {
+            "korean": "포장해 주세요.",
+            "english": "To go, please."
+          },
+          {
+            "korean": "음식이 좀 짜요.",
+            "english": "The food is a bit salty."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/to-call",
+      "kind": "word",
+      "korean": "전화하다",
+      "english": "to call, phone",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "전화하다"
+      ]
+    },
+    {
+      "id": "phone-calls/to-pass-on",
+      "kind": "word",
+      "korean": "전하다",
+      "english": "to pass on, convey",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "전하다"
+      ]
+    },
+    {
+      "id": "phone-calls/tell-them-i-called",
+      "kind": "sentence",
+      "korean": "제가 전화했다고 전해 주세요.",
+      "english": "Please tell them I called.",
+      "context": "messages",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "전화하다",
+        "전하다",
+        "주다"
+      ],
+      "distractors": [
+        "Please tell them to call me.",
+        "Please tell me who called.",
+        "Please put them on the phone."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 전해 드릴게요.",
+            "english": "Sure, I'll pass it on."
+          },
+          {
+            "korean": "네, 성함이 어떻게 되세요?",
+            "english": "Sure, may I have your name?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니요, 안 매워요.",
+            "english": "No, it's not spicy."
+          },
+          {
+            "korean": "다음 정류장에서 내리세요.",
+            "english": "Get off at the next stop."
+          },
+          {
+            "korean": "네, 영수증 여기 있어요.",
+            "english": "Yes, here's your receipt."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/ill-pass-it-on",
+      "kind": "sentence",
+      "korean": "네, 전해 드릴게요.",
+      "english": "Sure, I'll pass it on.",
+      "context": "messages",
+      "register": "polite",
+      "lexemes": [
+        "네",
+        "전하다",
+        "드리다"
+      ],
+      "distractors": [
+        "Sure, I'll put them on.",
+        "Sure, I'll call them back.",
+        "Sure, I'll write it down."
+      ]
+    },
+    {
+      "id": "phone-calls/number",
+      "kind": "word",
+      "korean": "번호",
+      "english": "number",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "번호"
+      ]
+    },
+    {
+      "id": "phone-calls/whats-your-number",
+      "kind": "sentence",
+      "korean": "번호가 어떻게 되세요?",
+      "english": "What's your number?",
+      "context": "messages",
+      "register": "polite",
+      "note": "Phone numbers are read digit by digit in Sino-Korean numbers, with 공 for zero.",
+      "lexemes": [
+        "번호",
+        "어떻게",
+        "되다"
+      ],
+      "distractors": [
+        "What's your name?",
+        "Which number did you call?",
+        "How old are you?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "공일공, 일이삼사, 오육칠팔이에요.",
+            "english": "It's 010-1234-5678."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 스물다섯 살이에요.",
+            "english": "I'm twenty-five."
+          },
+          {
+            "korean": "삼 번 출구예요.",
+            "english": "It's exit three."
+          },
+          {
+            "korean": "제 이름은 민준이에요.",
+            "english": "My name is Minjun."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/phone-number",
+      "kind": "word",
+      "korean": "전화번호",
+      "english": "phone number",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "전화번호"
+      ]
+    },
+    {
+      "id": "phone-calls/to-let-know",
+      "kind": "word",
+      "korean": "알리다",
+      "english": "to let know, tell",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "알리다"
+      ]
+    },
+    {
+      "id": "phone-calls/give-me-your-number",
+      "kind": "sentence",
+      "korean": "전화번호 좀 알려 줄래?",
+      "english": "Can you give me your phone number?",
+      "context": "messages",
+      "register": "casual",
+      "lexemes": [
+        "전화번호",
+        "좀",
+        "알리다",
+        "주다"
+      ],
+      "distractors": [
+        "Can you tell me your address?",
+        "Did you change your phone number?",
+        "Can I give you my number?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 문자로 보내 줄게.",
+            "english": "Sure, I'll text it to you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 잘 먹을게.",
+            "english": "Sure, I'll enjoy it."
+          },
+          {
+            "korean": "아니, 안 추워.",
+            "english": "No, I'm not cold."
+          },
+          {
+            "korean": "응, 배불러.",
+            "english": "Yeah, I'm full."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/to-dial",
+      "kind": "word",
+      "korean": "걸다",
+      "english": "to make (a call), dial",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "걸다"
+      ]
+    },
+    {
+      "id": "phone-calls/you-have-wrong-number",
+      "kind": "sentence",
+      "korean": "전화 잘못 거셨어요.",
+      "english": "You have the wrong number.",
+      "context": "wrong-number",
+      "register": "polite",
+      "lexemes": [
+        "전화",
+        "잘못",
+        "걸다"
+      ],
+      "distractors": [
+        "I called the wrong number.",
+        "Your phone is broken.",
+        "You hung up too early."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아, 죄송합니다.",
+            "english": "Oh, I'm sorry."
+          },
+          {
+            "korean": "어, 거기 식당 아니에요?",
+            "english": "Oh, isn't this the restaurant?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "감사합니다, 잘 먹겠습니다.",
+            "english": "Thank you, I'll enjoy the meal."
+          },
+          {
+            "korean": "다음 주에 봐요.",
+            "english": "See you next week."
+          },
+          {
+            "korean": "네, 두 명 예약할게요.",
+            "english": "Yes, I'll book for two."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/sorry-wrong-number",
+      "kind": "sentence",
+      "korean": "죄송합니다, 잘못 걸었습니다.",
+      "english": "Sorry, I dialed the wrong number.",
+      "context": "wrong-number",
+      "register": "formal",
+      "lexemes": [
+        "죄송합니다",
+        "잘못",
+        "걸다"
+      ],
+      "distractors": [
+        "Sorry, I'll call you back.",
+        "Sorry, you have the wrong number.",
+        "Sorry, I can't hear you."
+      ]
+    },
+    {
+      "id": "phone-calls/to-not-be",
+      "kind": "word",
+      "korean": "아니다",
+      "english": "to not be",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "아니다"
+      ]
+    },
+    {
+      "id": "phone-calls/isnt-this-the-pharmacy",
+      "kind": "sentence",
+      "korean": "거기 약국 아니에요?",
+      "english": "Isn't this the pharmacy?",
+      "context": "wrong-number",
+      "register": "polite",
+      "note": "On the phone, 거기 (\"there\") means the place of the person you are calling.",
+      "lexemes": [
+        "거기",
+        "약국",
+        "아니다"
+      ],
+      "distractors": [
+        "Is there a pharmacy there?",
+        "Isn't the pharmacy over there?",
+        "Is the pharmacy closed?"
+      ]
+    },
+    {
+      "id": "phone-calls/to-be-heard",
+      "kind": "word",
+      "korean": "들리다",
+      "english": "to be heard, can hear",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "들리다"
+      ]
+    },
+    {
+      "id": "phone-calls/cant-hear-well",
+      "kind": "sentence",
+      "korean": "잘 안 들려요.",
+      "english": "I can't hear you well.",
+      "context": "bad-signal",
+      "register": "polite",
+      "lexemes": [
+        "잘",
+        "안",
+        "들리다"
+      ],
+      "distractors": [
+        "I can't see well.",
+        "I don't understand you.",
+        "Please don't speak so loudly."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "지금은 들려요?",
+            "english": "Can you hear me now?"
+          },
+          {
+            "korean": "제가 다시 걸게요.",
+            "english": "I'll call you back."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저도 잘 몰라요.",
+            "english": "I don't really know either."
+          },
+          {
+            "korean": "네, 잘 먹었습니다.",
+            "english": "Yes, thank you for the meal."
+          },
+          {
+            "korean": "다음 역이에요.",
+            "english": "It's the next station."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/customer",
+      "kind": "word",
+      "korean": "고객님",
+      "english": "customer (honorific)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "고객님"
+      ]
+    },
+    {
+      "id": "phone-calls/can-you-hear-me-customer",
+      "kind": "sentence",
+      "korean": "고객님, 잘 들리세요?",
+      "english": "Can you hear me clearly? (staff to a customer)",
+      "context": "bad-signal",
+      "register": "polite",
+      "note": "고객님 (\"dear customer\") is how staff address you on the phone.",
+      "lexemes": [
+        "고객님",
+        "잘",
+        "들리다"
+      ],
+      "distractors": [
+        "Can you see it clearly?",
+        "Are you doing well today?",
+        "Did you hear the news?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 잘 들려요.",
+            "english": "Yes, I can hear you."
+          },
+          {
+            "korean": "아니요, 좀 끊겨요.",
+            "english": "No, it's cutting out a bit."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘 지내요.",
+            "english": "Yes, I'm doing well."
+          },
+          {
+            "korean": "네, 잘 보여요.",
+            "english": "Yes, I can see it well."
+          },
+          {
+            "korean": "아니요, 처음이에요.",
+            "english": "No, it's my first time."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/to-speak-honorific",
+      "kind": "word",
+      "korean": "말씀하다",
+      "english": "to speak (honorific)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "말씀하다"
+      ]
+    },
+    {
+      "id": "phone-calls/speak-louder",
+      "kind": "sentence",
+      "korean": "좀 크게 말씀해 주세요.",
+      "english": "Please speak a little louder.",
+      "context": "bad-signal",
+      "register": "polite",
+      "lexemes": [
+        "좀",
+        "크다",
+        "말씀하다",
+        "주다"
+      ],
+      "distractors": [
+        "Please speak a little slower.",
+        "Please say that one more time.",
+        "Please speak a bit more quietly."
+      ]
+    },
+    {
+      "id": "phone-calls/underground",
+      "kind": "word",
+      "korean": "지하",
+      "english": "underground, basement",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "지하"
+      ]
+    },
+    {
+      "id": "phone-calls/to-get-signal",
+      "kind": "word",
+      "korean": "터지다",
+      "english": "to get signal (phone); to burst",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "터지다"
+      ]
+    },
+    {
+      "id": "phone-calls/no-signal-underground",
+      "kind": "sentence",
+      "korean": "여기 지하라서 잘 안 터져요.",
+      "english": "I'm underground, so I barely get a signal.",
+      "context": "bad-signal",
+      "register": "polite",
+      "note": "터지다 (\"to burst\") is the everyday word for having phone reception.",
+      "lexemes": [
+        "여기",
+        "지하",
+        "이다",
+        "잘",
+        "안",
+        "터지다"
+      ],
+      "distractors": [
+        "It's underground here, so it's very quiet.",
+        "The basement here is flooded.",
+        "I'm in the basement, so I can't come out."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼 나와서 다시 전화해요.",
+            "english": "Then call again once you're out."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "지하철 타고 가요.",
+            "english": "I'm taking the subway."
+          },
+          {
+            "korean": "여기 너무 시끄러워요.",
+            "english": "It's too noisy here."
+          },
+          {
+            "korean": "네, 지하 일 층이에요.",
+            "english": "Yes, it's the first basement floor."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/repeatedly",
+      "kind": "word",
+      "korean": "자꾸",
+      "english": "repeatedly, keep (doing)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "자꾸"
+      ]
+    },
+    {
+      "id": "phone-calls/to-be-cut-off",
+      "kind": "word",
+      "korean": "끊기다",
+      "english": "to be cut off",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "끊기다"
+      ]
+    },
+    {
+      "id": "phone-calls/keeps-cutting-out",
+      "kind": "sentence",
+      "korean": "전화가 자꾸 끊겨요.",
+      "english": "The call keeps cutting out.",
+      "context": "bad-signal",
+      "register": "polite",
+      "lexemes": [
+        "전화",
+        "자꾸",
+        "끊기다"
+      ],
+      "distractors": [
+        "The phone keeps ringing.",
+        "You keep hanging up on me.",
+        "The call won't go through."
+      ]
+    },
+    {
+      "id": "phone-calls/ill-call-you-back",
+      "kind": "sentence",
+      "korean": "제가 다시 걸게요.",
+      "english": "I'll call you back.",
+      "context": "bad-signal",
+      "register": "polite",
+      "lexemes": [
+        "저",
+        "다시",
+        "걸다"
+      ],
+      "distractors": [
+        "Please call me back.",
+        "I'll hang up now.",
+        "I'll come back again."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 그럼 기다릴게요.",
+            "english": "Okay, I'll wait then."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "저는 걸어갈게요.",
+            "english": "I'll walk there."
+          },
+          {
+            "korean": "다시 오세요.",
+            "english": "Please come again."
+          },
+          {
+            "korean": "아니요, 한 번 더 주세요.",
+            "english": "No, one more, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/phone-conversation",
+      "kind": "word",
+      "korean": "통화",
+      "english": "phone conversation",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "통화"
+      ]
+    },
+    {
+      "id": "phone-calls/good-time-to-talk",
+      "kind": "sentence",
+      "korean": "지금 통화 괜찮으세요?",
+      "english": "Is now a good time to talk?",
+      "context": "call-back-later",
+      "register": "polite",
+      "lexemes": [
+        "지금",
+        "통화",
+        "괜찮다"
+      ],
+      "distractors": [
+        "Is your phone working now?",
+        "Are you feeling okay now?",
+        "Can I use your phone now?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 괜찮아요. 말씀하세요.",
+            "english": "Yes, it's fine. Go ahead."
+          },
+          {
+            "korean": "죄송한데 제가 이따가 다시 전화드릴게요.",
+            "english": "Sorry, I'll call you back in a bit."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있어요.",
+            "english": "Yes, it's delicious."
+          },
+          {
+            "korean": "아니요, 안 아파요.",
+            "english": "No, it doesn't hurt."
+          },
+          {
+            "korean": "네, 카드 돼요.",
+            "english": "Yes, we take cards."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/can-you-talk-now",
+      "kind": "sentence",
+      "korean": "지금 통화돼?",
+      "english": "Can you talk now?",
+      "context": "call-back-later",
+      "register": "casual",
+      "lexemes": [
+        "지금",
+        "통화",
+        "되다"
+      ],
+      "distractors": [
+        "Is the call over?",
+        "Did you get my call?",
+        "Are you on the phone now?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 괜찮아. 왜?",
+            "english": "Yeah, it's fine. What's up?"
+          },
+          {
+            "korean": "아니, 나 지금 수업 중이야.",
+            "english": "No, I'm in class right now."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 맛있어.",
+            "english": "Yeah, it's tasty."
+          },
+          {
+            "korean": "아니, 안 비싸.",
+            "english": "No, it's not expensive."
+          },
+          {
+            "korean": "응, 잘 자.",
+            "english": "Yeah, good night."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/in-the-middle-of",
+      "kind": "word",
+      "korean": "중",
+      "english": "in the middle of, during",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "중"
+      ]
+    },
+    {
+      "id": "phone-calls/later-today",
+      "kind": "word",
+      "korean": "이따가",
+      "english": "later (today), in a bit",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "이따가"
+      ]
+    },
+    {
+      "id": "phone-calls/in-meeting-call-later",
+      "kind": "sentence",
+      "korean": "지금 회의 중이라서 이따가 전화할게요.",
+      "english": "I'm in a meeting now, so I'll call you later.",
+      "context": "call-back-later",
+      "register": "polite",
+      "lexemes": [
+        "지금",
+        "회의",
+        "중",
+        "이다",
+        "이따가",
+        "전화하다"
+      ],
+      "distractors": [
+        "The meeting is over, so I'll call you now.",
+        "I'm in a meeting now, so please text me.",
+        "I have a meeting later, so call me now."
+      ]
+    },
+    {
+      "id": "phone-calls/driving",
+      "kind": "word",
+      "korean": "운전",
+      "english": "driving",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "운전"
+      ],
+      "image": "driving car"
+    },
+    {
+      "id": "phone-calls/driving-call-later",
+      "kind": "sentence",
+      "korean": "나 지금 운전 중이야. 이따가 전화할게.",
+      "english": "I'm driving right now. I'll call you later.",
+      "context": "call-back-later",
+      "register": "casual",
+      "lexemes": [
+        "나",
+        "지금",
+        "운전",
+        "중",
+        "이다",
+        "이따가",
+        "전화하다"
+      ],
+      "distractors": [
+        "I'm on the bus now. Call me later.",
+        "I'm driving now. I'll be there soon.",
+        "I just stopped driving. I'll call you now."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 운전 조심해.",
+            "english": "Okay, drive safe."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 나도 버스 탔어.",
+            "english": "Yeah, I got on the bus too."
+          },
+          {
+            "korean": "아니, 전화 안 왔어.",
+            "english": "No, nobody called."
+          },
+          {
+            "korean": "응, 맛있게 먹어.",
+            "english": "Okay, enjoy your meal."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/why-didnt-you-pick-up",
+      "kind": "sentence",
+      "korean": "왜 전화 안 받았어?",
+      "english": "Why didn't you answer my call?",
+      "context": "call-back-later",
+      "register": "casual",
+      "lexemes": [
+        "왜",
+        "전화",
+        "안",
+        "받다"
+      ],
+      "distractors": [
+        "Why didn't you call me?",
+        "Why did you hang up on me?",
+        "Why didn't you reply to my text?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "미안, 회의 중이었어.",
+            "english": "Sorry, I was in a meeting."
+          },
+          {
+            "korean": "미안, 휴대폰이 무음이었어.",
+            "english": "Sorry, my phone was on silent."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 나도 받았어.",
+            "english": "Yeah, I got one too."
+          },
+          {
+            "korean": "아니, 전화 안 할게.",
+            "english": "No, I won't call."
+          },
+          {
+            "korean": "응, 내일 줄게.",
+            "english": "Yeah, I'll give it to you tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/didnt-hear-it",
+      "kind": "sentence",
+      "korean": "미안, 못 들었어.",
+      "english": "Sorry, I didn't hear it.",
+      "context": "call-back-later",
+      "register": "casual",
+      "lexemes": [
+        "미안하다",
+        "못",
+        "듣다"
+      ],
+      "distractors": [
+        "Sorry, I couldn't come.",
+        "Sorry, I didn't see it.",
+        "Sorry, I forgot to call."
+      ]
+    },
+    {
+      "id": "phone-calls/you-have-a-call",
+      "kind": "sentence",
+      "korean": "전화 왔어요.",
+      "english": "You have a phone call.",
+      "context": "call-back-later",
+      "register": "polite",
+      "lexemes": [
+        "전화",
+        "오다"
+      ],
+      "distractors": [
+        "I called you earlier.",
+        "The phone is broken.",
+        "The call has ended."
+      ]
+    },
+    {
+      "id": "phone-calls/customer-service-center",
+      "kind": "word",
+      "korean": "고객센터",
+      "english": "customer service center",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "고객센터"
+      ],
+      "image": "call center"
+    },
+    {
+      "id": "phone-calls/thank-you-customer-service",
+      "kind": "sentence",
+      "korean": "감사합니다, 고객센터입니다.",
+      "english": "Thank you for calling customer service.",
+      "context": "calling-a-business",
+      "register": "formal",
+      "note": "Korean businesses often answer the phone with 감사합니다 followed by their name.",
+      "lexemes": [
+        "감사합니다",
+        "고객센터",
+        "이다"
+      ],
+      "distractors": [
+        "Thank you, I'll call customer service.",
+        "Sorry, customer service is closed.",
+        "Thank you, where is the service center?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "안녕하세요, 주문한 게 아직 안 왔어요.",
+            "english": "Hi, my order hasn't arrived yet."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "천만에요.",
+            "english": "You're welcome."
+          },
+          {
+            "korean": "잘 먹었습니다.",
+            "english": "Thanks for the meal."
+          },
+          {
+            "korean": "네, 저도 반가워요.",
+            "english": "Yes, nice to meet you too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/what",
+      "kind": "word",
+      "korean": "무엇",
+      "english": "what",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "무엇"
+      ]
+    },
+    {
+      "id": "phone-calls/how-can-i-help",
+      "kind": "sentence",
+      "korean": "무엇을 도와드릴까요?",
+      "english": "How can I help you?",
+      "context": "calling-a-business",
+      "register": "polite",
+      "lexemes": [
+        "무엇",
+        "돕다",
+        "드리다"
+      ],
+      "distractors": [
+        "Can you help me?",
+        "What should I bring you?",
+        "Who can help you?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "주소를 바꾸고 싶어요.",
+            "english": "I'd like to change my address."
+          },
+          {
+            "korean": "예약을 좀 확인하고 싶어요.",
+            "english": "I'd like to check my reservation."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 도와주세요.",
+            "english": "Yes, please help."
+          },
+          {
+            "korean": "오후 세 시예요.",
+            "english": "It's three p.m."
+          },
+          {
+            "korean": "아니요, 안 추워요.",
+            "english": "No, I'm not cold."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/person-in-charge",
+      "kind": "word",
+      "korean": "담당자",
+      "english": "person in charge",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "담당자"
+      ]
+    },
+    {
+      "id": "phone-calls/to-connect",
+      "kind": "word",
+      "korean": "연결하다",
+      "english": "to connect, put through",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "연결하다"
+      ]
+    },
+    {
+      "id": "phone-calls/put-you-through",
+      "kind": "sentence",
+      "korean": "담당자에게 연결해 드릴게요.",
+      "english": "I'll put you through to the person in charge.",
+      "context": "calling-a-business",
+      "register": "polite",
+      "lexemes": [
+        "담당자",
+        "연결하다",
+        "드리다"
+      ],
+      "distractors": [
+        "I'll give you the manager's number.",
+        "I'll ask the person in charge to call you.",
+        "The person in charge is out today."
+      ]
+    },
+    {
+      "id": "phone-calls/open-until-what-time",
+      "kind": "sentence",
+      "korean": "거기 몇 시까지 해요?",
+      "english": "What time are you open until?",
+      "context": "calling-a-business",
+      "register": "polite",
+      "lexemes": [
+        "거기",
+        "몇",
+        "시",
+        "하다"
+      ],
+      "distractors": [
+        "What time do you open?",
+        "How long does it take to get there?",
+        "What time does it start?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "밤 열 시까지 해요.",
+            "english": "We're open until ten at night."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "십 분쯤 걸려요.",
+            "english": "It takes about ten minutes."
+          },
+          {
+            "korean": "네, 거기 있어요.",
+            "english": "Yes, it's there."
+          },
+          {
+            "korean": "세 명이에요.",
+            "english": "There are three of us."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/reservation",
+      "kind": "word",
+      "korean": "예약",
+      "english": "reservation",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "예약"
+      ]
+    },
+    {
+      "id": "phone-calls/calling-to-reserve",
+      "kind": "sentence",
+      "korean": "예약 좀 하려고 전화드렸어요.",
+      "english": "I'm calling to make a reservation.",
+      "context": "reservations",
+      "register": "polite",
+      "note": "전화드리다 is the humble way to say you are calling someone.",
+      "lexemes": [
+        "예약",
+        "좀",
+        "하다",
+        "전화",
+        "드리다"
+      ],
+      "distractors": [
+        "I'm calling to cancel my reservation.",
+        "I called to check my reservation.",
+        "I made a reservation by phone."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 언제로 해 드릴까요?",
+            "english": "Sure, for when?"
+          },
+          {
+            "korean": "네, 몇 분이세요?",
+            "english": "Sure, for how many people?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있게 드세요.",
+            "english": "Sure, enjoy your meal."
+          },
+          {
+            "korean": "아니요, 현금으로 할게요.",
+            "english": "No, I'll pay in cash."
+          },
+          {
+            "korean": "네, 저도 예약했어요.",
+            "english": "Yes, I booked too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/what-time-to-book",
+      "kind": "sentence",
+      "korean": "몇 시로 예약해 드릴까요?",
+      "english": "What time shall I book it for?",
+      "context": "reservations",
+      "register": "polite",
+      "lexemes": [
+        "몇",
+        "시",
+        "예약하다",
+        "드리다"
+      ],
+      "distractors": [
+        "How many people shall I book for?",
+        "What time did you book for?",
+        "Which day would you like to book?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저녁 일곱 시로 해 주세요.",
+            "english": "Seven p.m., please."
+          },
+          {
+            "korean": "여섯 시 반 가능해요?",
+            "english": "Is six thirty possible?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "두 명이요.",
+            "english": "Two people."
+          },
+          {
+            "korean": "토요일이요.",
+            "english": "Saturday."
+          },
+          {
+            "korean": "지금 세 시예요.",
+            "english": "It's three o'clock now."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/seven",
+      "kind": "word",
+      "korean": "일곱",
+      "english": "seven (native)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "일곱"
+      ]
+    },
+    {
+      "id": "phone-calls/saturday-seven-for-two",
+      "kind": "sentence",
+      "korean": "토요일 저녁 일곱 시에 두 명이요.",
+      "english": "Two people, Saturday at seven p.m.",
+      "context": "reservations",
+      "register": "polite",
+      "lexemes": [
+        "토요일",
+        "저녁",
+        "일곱",
+        "시",
+        "두",
+        "명"
+      ],
+      "distractors": [
+        "Two people, Sunday at seven p.m.",
+        "Seven people, Saturday at two p.m.",
+        "Two people, Saturday at seven a.m."
+      ]
+    },
+    {
+      "id": "phone-calls/person-who-booked",
+      "kind": "word",
+      "korean": "예약자",
+      "english": "person who booked",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "예약자"
+      ]
+    },
+    {
+      "id": "phone-calls/reservation-name",
+      "kind": "sentence",
+      "korean": "예약자 성함이 어떻게 되세요?",
+      "english": "What name is the reservation under?",
+      "context": "reservations",
+      "register": "polite",
+      "lexemes": [
+        "예약자",
+        "성함",
+        "어떻게",
+        "되다"
+      ],
+      "distractors": [
+        "How many people is the reservation for?",
+        "When did you make the reservation?",
+        "What's your phone number?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "김민지로 되어 있을 거예요.",
+            "english": "It should be under Kim Minji."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여덟 시요.",
+            "english": "Eight o'clock."
+          },
+          {
+            "korean": "창가 자리요.",
+            "english": "A window seat."
+          },
+          {
+            "korean": "네 명이요.",
+            "english": "Four people."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/change-reservation-time",
+      "kind": "sentence",
+      "korean": "예약 시간을 좀 바꾸고 싶은데요.",
+      "english": "I'd like to change my reservation time.",
+      "context": "reservations",
+      "register": "polite",
+      "lexemes": [
+        "예약",
+        "시간",
+        "좀",
+        "바꾸다"
+      ],
+      "distractors": [
+        "I'd like to book for a later time.",
+        "I'd like to cancel my reservation.",
+        "I'd like to check my reservation time."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 몇 시로 바꿔 드릴까요?",
+            "english": "Sure, what time would you like instead?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 사이즈 바꿔 드릴게요.",
+            "english": "Sure, I'll exchange the size."
+          },
+          {
+            "korean": "지금 여덟 시예요.",
+            "english": "It's eight now."
+          },
+          {
+            "korean": "네, 영업시간은 열 시까지예요.",
+            "english": "Yes, we're open until ten."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/to-cancel",
+      "kind": "word",
+      "korean": "취소하다",
+      "english": "to cancel",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "취소하다"
+      ]
+    },
+    {
+      "id": "phone-calls/cancel-reservation",
+      "kind": "sentence",
+      "korean": "예약을 취소하고 싶어요.",
+      "english": "I'd like to cancel my reservation.",
+      "context": "reservations",
+      "register": "polite",
+      "lexemes": [
+        "예약",
+        "취소하다"
+      ],
+      "distractors": [
+        "I'd like to change my reservation.",
+        "I'd like to confirm my reservation.",
+        "I'd like to make a reservation."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 예약자 성함이 어떻게 되세요?",
+            "english": "Sure, what name is it under?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 두 명 자리 있어요.",
+            "english": "Yes, we have a table for two."
+          },
+          {
+            "korean": "네, 포장해 드릴게요.",
+            "english": "Sure, I'll pack it to go."
+          },
+          {
+            "korean": "아니요, 다 팔렸어요.",
+            "english": "No, it's sold out."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/cancelled-for-you",
+      "kind": "sentence",
+      "korean": "네, 취소해 드렸습니다.",
+      "english": "All right, your booking is cancelled.",
+      "context": "reservations",
+      "register": "formal",
+      "lexemes": [
+        "네",
+        "취소하다",
+        "드리다"
+      ],
+      "distractors": [
+        "All right, I've changed your booking.",
+        "Sorry, it can't be cancelled.",
+        "All right, I've made the booking."
+      ]
+    },
+    {
+      "id": "phone-calls/to-check",
+      "kind": "word",
+      "korean": "확인하다",
+      "english": "to check, confirm",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "확인하다"
+      ]
+    },
+    {
+      "id": "phone-calls/contact",
+      "kind": "word",
+      "korean": "연락",
+      "english": "contact, getting in touch",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "연락"
+      ]
+    },
+    {
+      "id": "phone-calls/check-and-get-back",
+      "kind": "sentence",
+      "korean": "확인해 보고 다시 연락드릴게요.",
+      "english": "I'll check and get back to you.",
+      "context": "reservations",
+      "register": "polite",
+      "lexemes": [
+        "확인하다",
+        "보다",
+        "다시",
+        "연락",
+        "드리다"
+      ],
+      "distractors": [
+        "Please check and get back to me.",
+        "I checked and called you back.",
+        "I'll check and send you a text."
+      ]
+    },
+    {
+      "id": "phone-calls/parcel-delivery",
+      "kind": "word",
+      "korean": "택배",
+      "english": "parcel delivery",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "택배"
+      ],
+      "image": "parcel delivery box"
+    },
+    {
+      "id": "phone-calls/driver",
+      "kind": "word",
+      "korean": "기사",
+      "english": "driver",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "기사"
+      ],
+      "image": "delivery driver"
+    },
+    {
+      "id": "phone-calls/delivery-driver-are-you-home",
+      "kind": "sentence",
+      "korean": "택배 기사인데요, 집에 계세요?",
+      "english": "This is the delivery driver. Are you home?",
+      "context": "deliveries",
+      "register": "polite",
+      "lexemes": [
+        "택배",
+        "기사",
+        "이다",
+        "집",
+        "계시다"
+      ],
+      "distractors": [
+        "This is the taxi driver. Where are you?",
+        "Your parcel arrived. Did you get it?",
+        "This is the delivery driver. Is this your house?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아니요, 지금 밖이에요.",
+            "english": "No, I'm out right now."
+          },
+          {
+            "korean": "네, 지금 집이에요.",
+            "english": "Yes, I'm home now."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 택시 불러 주세요.",
+            "english": "Yes, please call a taxi."
+          },
+          {
+            "korean": "저는 기사 아니에요.",
+            "english": "I'm not a driver."
+          },
+          {
+            "korean": "네, 집이 넓어요.",
+            "english": "Yes, the house is big."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/to-put",
+      "kind": "word",
+      "korean": "두다",
+      "english": "to put, leave",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "두다"
+      ]
+    },
+    {
+      "id": "phone-calls/leave-at-door",
+      "kind": "sentence",
+      "korean": "문 앞에 두고 갈게요.",
+      "english": "I'll leave it at your door.",
+      "context": "deliveries",
+      "register": "polite",
+      "lexemes": [
+        "문",
+        "앞",
+        "두다",
+        "가다"
+      ],
+      "distractors": [
+        "I'll wait in front of the door.",
+        "Please leave it at the door.",
+        "I'll bring it inside for you."
+      ]
+    },
+    {
+      "id": "phone-calls/security-office",
+      "kind": "word",
+      "korean": "경비실",
+      "english": "security office",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "경비실"
+      ],
+      "image": "apartment security office"
+    },
+    {
+      "id": "phone-calls/to-entrust",
+      "kind": "word",
+      "korean": "맡기다",
+      "english": "to leave with, entrust",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "맡기다"
+      ]
+    },
+    {
+      "id": "phone-calls/leave-with-security",
+      "kind": "sentence",
+      "korean": "경비실에 맡겨 주세요.",
+      "english": "Please leave it at the security office.",
+      "context": "deliveries",
+      "register": "polite",
+      "note": "Korean apartment blocks have a guard office, the 경비실, that keeps parcels.",
+      "lexemes": [
+        "경비실",
+        "맡기다",
+        "주다"
+      ],
+      "distractors": [
+        "Please pick it up from the security office.",
+        "Please call the security office.",
+        "Please leave it at my door."
+      ]
+    },
+    {
+      "id": "phone-calls/yet",
+      "kind": "word",
+      "korean": "아직",
+      "english": "yet, still",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "아직"
+      ]
+    },
+    {
+      "id": "phone-calls/food-not-arrived",
+      "kind": "sentence",
+      "korean": "음식이 아직 안 왔는데요.",
+      "english": "My food hasn't arrived yet.",
+      "context": "deliveries",
+      "register": "polite",
+      "lexemes": [
+        "음식",
+        "아직",
+        "안",
+        "오다"
+      ],
+      "distractors": [
+        "My food came cold.",
+        "I haven't ordered food yet.",
+        "My food just arrived."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "죄송합니다. 바로 확인해 보겠습니다.",
+            "english": "Sorry. I'll check right away."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 맛있게 드세요.",
+            "english": "Okay, enjoy your food."
+          },
+          {
+            "korean": "네, 영수증 드릴게요.",
+            "english": "Sure, I'll give you the receipt."
+          },
+          {
+            "korean": "아직 배 안 고파요.",
+            "english": "I'm not hungry yet."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/to-arrive",
+      "kind": "word",
+      "korean": "도착하다",
+      "english": "to arrive",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "도착하다"
+      ]
+    },
+    {
+      "id": "phone-calls/arriving-shortly",
+      "kind": "sentence",
+      "korean": "금방 도착합니다.",
+      "english": "I'll be there shortly.",
+      "context": "deliveries",
+      "register": "formal",
+      "lexemes": [
+        "금방",
+        "도착하다"
+      ],
+      "distractors": [
+        "I just arrived.",
+        "It'll take a long time.",
+        "Please come quickly."
+      ]
+    },
+    {
+      "id": "phone-calls/text-message",
+      "kind": "word",
+      "korean": "문자",
+      "english": "text message",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "문자"
+      ],
+      "image": "text message phone"
+    },
+    {
+      "id": "phone-calls/ill-text-you",
+      "kind": "sentence",
+      "korean": "문자 보낼게요.",
+      "english": "I'll text you.",
+      "context": "texting",
+      "register": "polite",
+      "lexemes": [
+        "문자",
+        "보내다"
+      ],
+      "distractors": [
+        "I'll call you.",
+        "I got your text.",
+        "Please text me."
+      ]
+    },
+    {
+      "id": "phone-calls/did-you-see-my-text",
+      "kind": "sentence",
+      "korean": "문자 봤어?",
+      "english": "Did you see my text?",
+      "context": "texting",
+      "register": "casual",
+      "lexemes": [
+        "문자",
+        "보다"
+      ],
+      "distractors": [
+        "Did you send the text?",
+        "Did you see my missed call?",
+        "Did you watch the drama?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아, 아직 못 봤어.",
+            "english": "Oh, I haven't seen it yet."
+          },
+          {
+            "korean": "응, 봤어. 좋아!",
+            "english": "Yeah, I saw it. Sounds good!"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 영화 봤어.",
+            "english": "Yeah, I saw the movie."
+          },
+          {
+            "korean": "아니, 안 먹었어.",
+            "english": "No, I didn't eat."
+          },
+          {
+            "korean": "응, 버스 탔어.",
+            "english": "Yeah, I got on the bus."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/kakaotalk",
+      "kind": "word",
+      "korean": "카톡",
+      "english": "KakaoTalk (message)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "카톡"
+      ],
+      "image": "messaging app"
+    },
+    {
+      "id": "phone-calls/send-me-a-kakao",
+      "kind": "sentence",
+      "korean": "카톡 보내 줘.",
+      "english": "Send me a message on KakaoTalk.",
+      "context": "texting",
+      "register": "casual",
+      "note": "카톡 (KakaoTalk) is the messenger almost everyone in Korea uses.",
+      "lexemes": [
+        "카톡",
+        "보내다",
+        "주다"
+      ],
+      "distractors": [
+        "I'll send you a KakaoTalk message.",
+        "Did you get my KakaoTalk message?",
+        "Give me a call instead."
+      ]
+    },
+    {
+      "id": "phone-calls/reply",
+      "kind": "word",
+      "korean": "답장",
+      "english": "reply",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "답장"
+      ]
+    },
+    {
+      "id": "phone-calls/why-no-reply",
+      "kind": "sentence",
+      "korean": "왜 답장 안 해?",
+      "english": "Why aren't you replying?",
+      "context": "texting",
+      "register": "casual",
+      "lexemes": [
+        "왜",
+        "답장",
+        "안",
+        "하다"
+      ],
+      "distractors": [
+        "Why aren't you picking up?",
+        "Why didn't you send it?",
+        "Why aren't you coming?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "미안, 이제 봤어.",
+            "english": "Sorry, I just saw it."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 답장 고마워.",
+            "english": "Yeah, thanks for the reply."
+          },
+          {
+            "korean": "아니, 숙제 안 했어.",
+            "english": "No, I didn't do my homework."
+          },
+          {
+            "korean": "나도 몰라, 그냥 왔어.",
+            "english": "I don't know, I just came."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/text-you-the-address",
+      "kind": "sentence",
+      "korean": "문자로 주소 보내 드릴게요.",
+      "english": "I'll text you the address.",
+      "context": "texting",
+      "register": "polite",
+      "lexemes": [
+        "문자",
+        "주소",
+        "보내다",
+        "드리다"
+      ],
+      "distractors": [
+        "Please text me the address.",
+        "I'll tell you the address on the phone.",
+        "I sent the address by email."
+      ]
+    },
+    {
+      "id": "phone-calls/take-care-ending",
+      "kind": "sentence",
+      "korean": "네, 들어가세요.",
+      "english": "Okay, take care.",
+      "context": "ending-calls",
+      "register": "polite",
+      "note": "A common way to end a call; literally \"go on in\", like wishing someone a safe way home.",
+      "lexemes": [
+        "네",
+        "들어가다"
+      ],
+      "distractors": [
+        "Okay, come on in.",
+        "Okay, see you tomorrow.",
+        "Okay, hold on a moment."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 수고하세요.",
+            "english": "Okay, have a good one."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 실례합니다.",
+            "english": "Excuse me, coming in."
+          },
+          {
+            "korean": "네, 잘 먹겠습니다.",
+            "english": "Yes, I'll enjoy the meal."
+          },
+          {
+            "korean": "여기 앉으세요.",
+            "english": "Please sit here."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/to-hang-up",
+      "kind": "word",
+      "korean": "끊다",
+      "english": "to hang up, cut off",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "끊다"
+      ]
+    },
+    {
+      "id": "phone-calls/hang-up-then",
+      "kind": "sentence",
+      "korean": "그럼 끊을게요.",
+      "english": "Well, I'll let you go then.",
+      "context": "ending-calls",
+      "register": "polite",
+      "lexemes": [
+        "그럼",
+        "끊다"
+      ],
+      "distractors": [
+        "Then please hang up.",
+        "Then I'll call again.",
+        "Then I'll cut it for you."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 들어가세요.",
+            "english": "Okay, take care."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "네, 잘라 주세요.",
+            "english": "Yes, please cut it."
+          },
+          {
+            "korean": "네, 끓여 주세요.",
+            "english": "Yes, please boil it."
+          },
+          {
+            "korean": "그럼 내일 가요.",
+            "english": "Then let's go tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/okay-hanging-up",
+      "kind": "sentence",
+      "korean": "알았어, 끊을게.",
+      "english": "Okay, I'm hanging up.",
+      "context": "ending-calls",
+      "register": "casual",
+      "lexemes": [
+        "알다",
+        "끊다"
+      ],
+      "distractors": [
+        "Okay, I'll call you back.",
+        "Wait, don't hang up.",
+        "Okay, I'll text you."
+      ]
+    },
+    {
+      "id": "phone-calls/thanks-for-calling",
+      "kind": "sentence",
+      "korean": "전화 줘서 고마워.",
+      "english": "Thanks for calling.",
+      "context": "ending-calls",
+      "register": "casual",
+      "lexemes": [
+        "전화",
+        "주다",
+        "고맙다"
+      ],
+      "distractors": [
+        "Thanks for texting.",
+        "Sorry for calling so late.",
+        "Thanks for picking up."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 다음에 또 통화하자.",
+            "english": "Sure, let's talk again soon."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 선물 고마워.",
+            "english": "Yeah, thanks for the gift."
+          },
+          {
+            "korean": "아니, 전화 안 했어.",
+            "english": "No, I didn't call."
+          },
+          {
+            "korean": "응, 배고파.",
+            "english": "Yeah, I'm hungry."
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-calls/thank-you-for-your-call",
+      "kind": "sentence",
+      "korean": "전화 주셔서 감사합니다.",
+      "english": "Thank you for your call.",
+      "context": "ending-calls",
+      "register": "formal",
+      "lexemes": [
+        "전화",
+        "주다",
+        "감사합니다"
+      ],
+      "distractors": [
+        "Thank you for picking up.",
+        "Thank you for waiting.",
+        "Thank you for your message."
+      ]
+    }
+  ]
+}

@@ -6,11 +6,12 @@ learn-korean/
 │   ├── src/                Svelte 5 + TypeScript UI (rendering + input only)
 │   └── src-tauri/          Tauri commands: thin glue between UI and crates
 ├── crates/                 Rust libraries (added as features land)
-│   ├── korean-core/        pure domain logic: scheduling, sessions, scoring, typing
+│   ├── korean-core/        pure domain logic: scheduling, sessions, scoring, typing, stats
 │   ├── korean-db/          SQLite (sqlx), migrations, backups, repositories
 │   └── korean-providers/   network providers behind traits: TTS, images
-├── content/                bundled content packs (JSON), validated in CI
+├── content/                bundled content packs (JSON: pack + glossary per pack), validated in CI
 ├── tools/anki-import/      legacy Anki CSV importer
+├── tools/pack-gen/         content authoring: LLM drafts, validation, human review
 └── docs/                   product, architecture, ADRs
 ```
 

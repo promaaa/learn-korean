@@ -88,7 +88,7 @@ fn pack_of(item_id: &str) -> &str {
 
 /// Word cards of each lemma. Lemmas without a word card (particles, the copula…) are grammar,
 /// taught through sentences only.
-fn word_cards(items: &[Item]) -> HashMap<&str, Vec<&str>> {
+pub(crate) fn word_cards(items: &[Item]) -> HashMap<&str, Vec<&str>> {
     let mut words: HashMap<&str, Vec<&str>> = HashMap::new();
     for item in items.iter().filter(|i| i.kind == ItemKind::Word) {
         let lemmas: Vec<&str> = if item.lexemes.is_empty() {
@@ -101,6 +101,13 @@ fn word_cards(items: &[Item]) -> HashMap<&str, Vec<&str>> {
         }
     }
     words
+}
+
+/// A word item is known once its listening card has graduated to FSRS review.
+pub fn is_known_word(states: &HashMap<Card, MemoryState>, item_id: &str) -> bool {
+    states
+        .get(&Card::new(item_id, Skill::Listening))
+        .is_some_and(|s| s.phase == Phase::Review)
 }
 
 /// Due cards first, then new cards, interleaved so a session never starts with a wall of unknown
@@ -134,10 +141,9 @@ pub fn plan_session(
     let words = word_cards(items);
     let listening = |id: &str| states.get(&Card::new(id, Skill::Listening));
     let known = |lemma: &str| {
-        words.get(lemma).is_none_or(|ids| {
-            ids.iter()
-                .any(|id| listening(id).is_some_and(|s| s.phase == Phase::Review))
-        })
+        words
+            .get(lemma)
+            .is_none_or(|ids| ids.iter().any(|id| is_known_word(states, id)))
     };
 
     let mut due: Vec<(&MemoryState, Card)> = Vec::new();

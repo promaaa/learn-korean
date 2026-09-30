@@ -1,0 +1,247 @@
+{
+  "lessons": [
+    {
+      "id": "basic-vowels",
+      "title": "Basic vowels",
+      "jamo": [
+        {"jamo": "ㅏ", "name": "아", "example": {"korean": "아이", "english": "child"}},
+        {"jamo": "ㅓ", "name": "어", "example": {"korean": "어머니", "english": "mother"}},
+        {"jamo": "ㅗ", "name": "오", "example": {"korean": "오", "english": "five"}},
+        {"jamo": "ㅜ", "name": "우", "example": {"korean": "우유", "english": "milk"}},
+        {"jamo": "ㅡ", "name": "으", "example": {"korean": "그림", "english": "picture"}},
+        {"jamo": "ㅣ", "name": "이", "example": {"korean": "이", "english": "two / tooth"}},
+        {"jamo": "ㅇ", "name": "이응", "example": {"korean": "오이", "english": "cucumber"}}
+      ],
+      "lines": [
+        {"korean": "ㅏ ㅓ ㅗ"},
+        {"korean": "ㅜ ㅡ ㅣ"},
+        {"korean": "아 어 오"},
+        {"korean": "우 으 이"},
+        {"korean": "아이", "english": "child"},
+        {"korean": "오이", "english": "cucumber"},
+        {"korean": "이", "english": "two / tooth"},
+        {"korean": "오", "english": "five"}
+      ]
+    },
+    {
+      "id": "consonants-1",
+      "title": "First consonants",
+      "jamo": [
+        {"jamo": "ㄱ", "name": "기역", "example": {"korean": "고기", "english": "meat"}},
+        {"jamo": "ㄴ", "name": "니은", "example": {"korean": "나이", "english": "age"}},
+        {"jamo": "ㄷ", "name": "디귿", "example": {"korean": "다리", "english": "leg"}},
+        {"jamo": "ㄹ", "name": "리을", "example": {"korean": "우리", "english": "we"}}
+      ],
+      "lines": [
+        {"korean": "ㄱ ㄴ ㄷ ㄹ"},
+        {"korean": "가 나 다 라"},
+        {"korean": "거 노 두 리"},
+        {"korean": "고기", "english": "meat"},
+        {"korean": "나이", "english": "age"},
+        {"korean": "다리", "english": "leg / bridge"},
+        {"korean": "우리", "english": "we / our"},
+        {"korean": "누나", "english": "older sister (of a man)"},
+        {"korean": "거기", "english": "there"},
+        {"korean": "어디", "english": "where"},
+        {"korean": "나라", "english": "country"}
+      ]
+    },
+    {
+      "id": "consonants-2",
+      "title": "More consonants",
+      "jamo": [
+        {"jamo": "ㅁ", "name": "미음", "example": {"korean": "나무", "english": "tree"}},
+        {"jamo": "ㅂ", "name": "비읍", "example": {"korean": "바다", "english": "sea"}},
+        {"jamo": "ㅅ", "name": "시옷", "example": {"korean": "소리", "english": "sound"}}
+      ],
+      "lines": [
+        {"korean": "ㅁ ㅂ ㅅ"},
+        {"korean": "마 바 사"},
+        {"korean": "머 보 수 시"},
+        {"korean": "나무", "english": "tree"},
+        {"korean": "머리", "english": "head / hair"},
+        {"korean": "바다", "english": "sea"},
+        {"korean": "비", "english": "rain"},
+        {"korean": "소리", "english": "sound"},
+        {"korean": "어머니", "english": "mother"},
+        {"korean": "모두", "english": "all, everyone"},
+        {"korean": "바나나", "english": "banana"}
+      ]
+    },
+    {
+      "id": "consonants-3",
+      "title": "Last basic consonants",
+      "jamo": [
+        {"jamo": "ㅈ", "name": "지읒", "example": {"korean": "지도", "english": "map"}},
+        {"jamo": "ㅎ", "name": "히읗", "example": {"korean": "하나", "english": "one"}}
+      ],
+      "lines": [
+        {"korean": "ㅈ ㅎ"},
+        {"korean": "자 저 조 주"},
+        {"korean": "하 허 호 후"},
+        {"korean": "지도", "english": "map"},
+        {"korean": "모자", "english": "hat"},
+        {"korean": "바지", "english": "trousers"},
+        {"korean": "아버지", "english": "father"},
+        {"korean": "하나", "english": "one"},
+        {"korean": "허리", "english": "waist"},
+        {"korean": "호수", "english": "lake"},
+        {"korean": "아주", "english": "very"}
+      ]
+    },
+    {
+      "id": "aspirated-consonants",
+      "title": "Aspirated consonants",
+      "jamo": [
+        {"jamo": "ㅊ", "name": "치읓", "example": {"korean": "기차", "english": "train"}},
+        {"jamo": "ㅋ", "name": "키읔", "example": {"korean": "코", "english": "nose"}},
+        {"jamo": "ㅌ", "name": "티읕", "example": {"korean": "토마토", "english": "tomato"}},
+        {"jamo": "ㅍ", "name": "피읖", "example": {"korean": "포도", "english": "grapes"}}
+      ],
+      "lines": [
+        {"korean": "ㅊ ㅋ ㅌ ㅍ"},
+        {"korean": "차 카 타 파"},
+        {"korean": "자 차 가 카"},
+        {"korean": "다 타 바 파"},
+        {"korean": "기차", "english": "train"},
+        {"korean": "치마", "english": "skirt"},
+        {"korean": "코", "english": "nose"},
+        {"korean": "커피", "english": "coffee"},
+        {"korean": "토마토", "english": "tomato"},
+        {"korean": "포도", "english": "grapes"},
+        {"korean": "고추", "english": "chili pepper"},
+        {"korean": "피자", "english": "pizza"}
+      ]
+    },
+    {
+      "id": "iotized-vowels",
+      "title": "Vowels with an extra stroke",
+      "jamo": [
+        {"jamo": "ㅑ", "name": "야", "example": {"korean": "야구", "english": "baseball"}},
+        {"jamo": "ㅕ", "name": "여", "example": {"korean": "여자", "english": "woman"}},
+        {"jamo": "ㅛ", "name": "요", "example": {"korean": "요리", "english": "cooking"}},
+        {"jamo": "ㅠ", "name": "유", "example": {"korean": "우유", "english": "milk"}}
+      ],
+      "lines": [
+        {"korean": "ㅑ ㅕ ㅛ ㅠ"},
+        {"korean": "야 여 요 유"},
+        {"korean": "아 야 어 여"},
+        {"korean": "오 요 우 유"},
+        {"korean": "야구", "english": "baseball"},
+        {"korean": "여자", "english": "woman"},
+        {"korean": "여기", "english": "here"},
+        {"korean": "요리", "english": "cooking"},
+        {"korean": "우유", "english": "milk"},
+        {"korean": "휴지", "english": "tissue"},
+        {"korean": "우표", "english": "postage stamp"}
+      ]
+    },
+    {
+      "id": "front-vowels",
+      "title": "Vowels with ㅣ added",
+      "jamo": [
+        {"jamo": "ㅐ", "name": "애", "example": {"korean": "개", "english": "dog"}},
+        {"jamo": "ㅔ", "name": "에", "example": {"korean": "게", "english": "crab"}},
+        {"jamo": "ㅒ", "name": "얘", "example": {"korean": "얘기", "english": "talk, story"}},
+        {"jamo": "ㅖ", "name": "예", "example": {"korean": "시계", "english": "clock"}}
+      ],
+      "lines": [
+        {"korean": "ㅐ ㅔ ㅒ ㅖ"},
+        {"korean": "애 에 얘 예"},
+        {"korean": "개", "english": "dog"},
+        {"korean": "게", "english": "crab"},
+        {"korean": "새", "english": "bird"},
+        {"korean": "노래", "english": "song"},
+        {"korean": "베개", "english": "pillow"},
+        {"korean": "세계", "english": "world"},
+        {"korean": "시계", "english": "clock / watch"},
+        {"korean": "얘기", "english": "talk, story"},
+        {"korean": "예", "english": "yes"}
+      ]
+    },
+    {
+      "id": "tense-consonants",
+      "title": "Tense consonants",
+      "jamo": [
+        {"jamo": "ㄲ", "name": "쌍기역", "example": {"korean": "토끼", "english": "rabbit"}},
+        {"jamo": "ㄸ", "name": "쌍디귿", "example": {"korean": "허리띠", "english": "belt"}},
+        {"jamo": "ㅃ", "name": "쌍비읍", "example": {"korean": "아빠", "english": "dad"}},
+        {"jamo": "ㅆ", "name": "쌍시옷", "example": {"korean": "비싸다", "english": "to be expensive"}},
+        {"jamo": "ㅉ", "name": "쌍지읒", "example": {"korean": "찌개", "english": "stew"}}
+      ],
+      "lines": [
+        {"korean": "ㄲ ㄸ ㅃ ㅆ ㅉ"},
+        {"korean": "가 까 카"},
+        {"korean": "다 따 타"},
+        {"korean": "바 빠 파"},
+        {"korean": "사 싸 자 짜 차"},
+        {"korean": "토끼", "english": "rabbit"},
+        {"korean": "허리띠", "english": "belt"},
+        {"korean": "아빠", "english": "dad"},
+        {"korean": "오빠", "english": "older brother (of a woman)"},
+        {"korean": "비싸다", "english": "to be expensive"},
+        {"korean": "아저씨", "english": "mister"},
+        {"korean": "찌개", "english": "stew"},
+        {"korean": "가짜", "english": "fake"}
+      ]
+    },
+    {
+      "id": "final-consonants",
+      "title": "Final consonants (받침)",
+      "jamo": [
+        {"jamo": "ㄺ", "name": "리을기역", "example": {"korean": "닭", "english": "chicken"}},
+        {"jamo": "ㄶ", "name": "니은히읗", "example": {"korean": "많다", "english": "to be many"}},
+        {"jamo": "ㄵ", "name": "니은지읒", "example": {"korean": "앉다", "english": "to sit"}},
+        {"jamo": "ㅄ", "name": "비읍시옷", "example": {"korean": "값", "english": "price"}},
+        {"jamo": "ㄻ", "name": "리을미음", "example": {"korean": "삶", "english": "life"}},
+        {"jamo": "ㄼ", "name": "리을비읍", "example": {"korean": "여덟", "english": "eight"}},
+        {"jamo": "ㅀ", "name": "리을히읗", "example": {"korean": "싫다", "english": "to dislike"}},
+        {"jamo": "ㄳ", "name": "기역시옷", "example": {"korean": "몫", "english": "share"}}
+      ],
+      "lines": [
+        {"korean": "가 각 간 갈"},
+        {"korean": "감 갑 강 갓"},
+        {"korean": "밥", "english": "rice, meal"},
+        {"korean": "물", "english": "water"},
+        {"korean": "한국", "english": "Korea"},
+        {"korean": "사람", "english": "person"},
+        {"korean": "닭", "english": "chicken"},
+        {"korean": "많다", "english": "to be many"},
+        {"korean": "앉다", "english": "to sit"},
+        {"korean": "값", "english": "price"},
+        {"korean": "삶", "english": "life"},
+        {"korean": "여덟", "english": "eight"},
+        {"korean": "싫다", "english": "to dislike"},
+        {"korean": "몫", "english": "share"}
+      ]
+    },
+    {
+      "id": "compound-vowels",
+      "title": "Compound vowels",
+      "jamo": [
+        {"jamo": "ㅘ", "name": "와", "example": {"korean": "사과", "english": "apple"}},
+        {"jamo": "ㅝ", "name": "워", "example": {"korean": "뭐", "english": "what"}},
+        {"jamo": "ㅚ", "name": "외", "example": {"korean": "회사", "english": "company"}},
+        {"jamo": "ㅟ", "name": "위", "example": {"korean": "귀", "english": "ear"}},
+        {"jamo": "ㅢ", "name": "의", "example": {"korean": "의자", "english": "chair"}},
+        {"jamo": "ㅙ", "name": "왜", "example": {"korean": "돼지", "english": "pig"}},
+        {"jamo": "ㅞ", "name": "웨", "example": {"korean": "웨이터", "english": "waiter"}}
+      ],
+      "lines": [
+        {"korean": "와 워 외 위"},
+        {"korean": "의 왜 웨"},
+        {"korean": "사과", "english": "apple"},
+        {"korean": "뭐", "english": "what"},
+        {"korean": "회사", "english": "company"},
+        {"korean": "귀", "english": "ear"},
+        {"korean": "의자", "english": "chair"},
+        {"korean": "돼지", "english": "pig"},
+        {"korean": "왜", "english": "why"},
+        {"korean": "웨이터", "english": "waiter"},
+        {"korean": "병원", "english": "hospital"},
+        {"korean": "괜찮아요", "english": "It's okay."},
+        {"korean": "안녕하세요", "english": "Hello."}
+      ]
+    }
+  ]
+}

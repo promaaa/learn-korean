@@ -1,0 +1,2081 @@
+{
+  "id": "k-drama",
+  "version": 1,
+  "title": "K-drama Korean",
+  "description": "Casual lines and reactions heard in every drama, with when (not) to use them.",
+  "unlock_level": 5,
+  "items": [
+    {
+      "id": "k-drama/awesome",
+      "kind": "word",
+      "korean": "대박",
+      "english": "awesome; a huge hit (slang)",
+      "context": "vocabulary",
+      "register": "casual",
+      "lexemes": [
+        "대박"
+      ]
+    },
+    {
+      "id": "k-drama/wow-amazing",
+      "kind": "sentence",
+      "korean": "대박!",
+      "english": "Wow, that's amazing!",
+      "context": "reactions",
+      "register": "casual",
+      "note": "Slang for 'awesome' or 'unbelievable'. Fine with friends; avoid it with elders, teachers or at work.",
+      "lexemes": [
+        "대박"
+      ],
+      "distractors": [
+        "Oh no, that's terrible!",
+        "That's so boring.",
+        "Stop it!"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그치? 나도 깜짝 놀랐어.",
+            "english": "Right? I was shocked too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 나 배고파.",
+            "english": "Yeah, I'm hungry."
+          },
+          {
+            "korean": "내일 전화할게.",
+            "english": "I'll call you tomorrow."
+          },
+          {
+            "korean": "미안, 몰랐어.",
+            "english": "Sorry, I didn't know."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/what-shock",
+      "kind": "word",
+      "korean": "헐",
+      "english": "what?! (shock, slang)",
+      "context": "vocabulary",
+      "register": "casual",
+      "lexemes": [
+        "헐"
+      ]
+    },
+    {
+      "id": "k-drama/what-seriously",
+      "kind": "sentence",
+      "korean": "헐, 진짜?",
+      "english": "What?! Seriously?",
+      "context": "reactions",
+      "register": "casual",
+      "note": "헐 is internet slang for shock. Only with friends; it sounds childish or rude to elders.",
+      "lexemes": [
+        "헐",
+        "진짜"
+      ],
+      "distractors": [
+        "Oh, is that so? Okay.",
+        "Hey, are you okay?",
+        "Wait, where are you?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 진짜야.",
+            "english": "Yeah, for real."
+          },
+          {
+            "korean": "나도 방금 들었어.",
+            "english": "I just heard too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "배고파?",
+            "english": "Are you hungry?"
+          },
+          {
+            "korean": "고마워, 잘 먹을게.",
+            "english": "Thanks, I'll enjoy it."
+          },
+          {
+            "korean": "나 먼저 갈게.",
+            "english": "I'll head off first."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/what-to-do",
+      "kind": "word",
+      "korean": "어떡하다",
+      "english": "to do what (어떻게 하다)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "어떡하다"
+      ]
+    },
+    {
+      "id": "k-drama/oh-no-what-do-i-do",
+      "kind": "sentence",
+      "korean": "어떡해!",
+      "english": "Oh no, what do I do!",
+      "context": "reactions",
+      "register": "casual",
+      "note": "Short for 어떻게 해. Cried out in any panic; to elders say 어떡해요.",
+      "lexemes": [
+        "어떡하다"
+      ],
+      "distractors": [
+        "It's fine, don't worry!",
+        "Let's do it!",
+        "What are you doing?"
+      ]
+    },
+    {
+      "id": "k-drama/to-go-crazy",
+      "kind": "word",
+      "korean": "미치다",
+      "english": "to go crazy",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "미치다"
+      ]
+    },
+    {
+      "id": "k-drama/are-you-crazy",
+      "kind": "sentence",
+      "korean": "너 미쳤어?",
+      "english": "Are you out of your mind?",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Harsh but common between close friends, often half joking. Never say it to elders.",
+      "lexemes": [
+        "너",
+        "미치다"
+      ],
+      "distractors": [
+        "Are you angry?",
+        "Are you tired?",
+        "Did you forget?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아니, 나 진심이야.",
+            "english": "No, I'm serious."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 밥 먹었어.",
+            "english": "Yeah, I ate."
+          },
+          {
+            "korean": "잘 지냈어.",
+            "english": "I've been well."
+          },
+          {
+            "korean": "다음 주에 봐.",
+            "english": "See you next week."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/dont-go",
+      "kind": "sentence",
+      "korean": "가지 마.",
+      "english": "Don't go.",
+      "context": "romance",
+      "register": "casual",
+      "note": "-지 마 is the casual 'don't'. Said to a partner or friend; to elders: 가지 마세요.",
+      "lexemes": [
+        "가다"
+      ],
+      "distractors": [
+        "Let's go.",
+        "Go ahead.",
+        "Don't come."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "미안, 가야 돼.",
+            "english": "Sorry, I have to go."
+          },
+          {
+            "korean": "알았어, 안 갈게.",
+            "english": "Okay, I won't go."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "재밌겠다!",
+            "english": "Sounds fun!"
+          },
+          {
+            "korean": "누구야?",
+            "english": "Who is it?"
+          },
+          {
+            "korean": "생일 축하해!",
+            "english": "Happy birthday!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/missed-you",
+      "kind": "sentence",
+      "korean": "보고 싶었어.",
+      "english": "I missed you.",
+      "context": "romance",
+      "register": "casual",
+      "note": "-고 싶다 means 'to want to'. Casual with a partner, family or friends; polite: 보고 싶었어요.",
+      "lexemes": [
+        "보다"
+      ],
+      "distractors": [
+        "I want to see it.",
+        "I miss you.",
+        "I saw you."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "나도 보고 싶었어.",
+            "english": "I missed you too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 영화 봤어.",
+            "english": "Yes, I saw the movie."
+          },
+          {
+            "korean": "아니, 안 바빠.",
+            "english": "No, I'm not busy."
+          },
+          {
+            "korean": "여기 계산해 주세요.",
+            "english": "The bill, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/love-you",
+      "kind": "sentence",
+      "korean": "사랑해.",
+      "english": "I love you.",
+      "context": "romance",
+      "register": "casual",
+      "note": "For partners and family; rare between friends. Adults often tell parents 사랑해요.",
+      "lexemes": [
+        "사랑하다"
+      ],
+      "distractors": [
+        "I like you.",
+        "I miss you.",
+        "Thank you."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "나도 사랑해.",
+            "english": "I love you too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "괜찮아, 신경 쓰지 마.",
+            "english": "It's fine, don't worry about it."
+          },
+          {
+            "korean": "응, 나도 배고파.",
+            "english": "Yeah, I'm hungry too."
+          },
+          {
+            "korean": "잠깐만, 전화 왔어.",
+            "english": "Hold on, I've got a call."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/are-you-okay",
+      "kind": "sentence",
+      "korean": "괜찮아?",
+      "english": "Are you okay?",
+      "context": "caring",
+      "register": "casual",
+      "note": "Casual; to anyone older use 괜찮아요? or 괜찮으세요?",
+      "lexemes": [
+        "괜찮다"
+      ],
+      "distractors": [
+        "It's okay.",
+        "Are you sure?",
+        "Are you busy?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 괜찮아.",
+            "english": "Yeah, I'm okay."
+          },
+          {
+            "korean": "아니, 좀 아파.",
+            "english": "No, it hurts a bit."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 사랑해.",
+            "english": "Yes, I love you."
+          },
+          {
+            "korean": "아니, 커피 마실래.",
+            "english": "No, I'll have coffee."
+          },
+          {
+            "korean": "내일 몇 시야?",
+            "english": "What time tomorrow?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-date",
+      "kind": "word",
+      "korean": "사귀다",
+      "english": "to date, go out with",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "사귀다"
+      ]
+    },
+    {
+      "id": "k-drama/go-out-with-me",
+      "kind": "sentence",
+      "korean": "나랑 사귈래?",
+      "english": "Will you go out with me?",
+      "context": "romance",
+      "register": "casual",
+      "note": "The classic drama confession. -ㄹ래? asks what someone wants to do.",
+      "lexemes": [
+        "나",
+        "사귀다"
+      ],
+      "distractors": [
+        "Will you eat with me?",
+        "Do you want to be friends?",
+        "Will you marry me?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 좋아.",
+            "english": "Yes, I'd love to."
+          },
+          {
+            "korean": "미안, 생각할 시간이 필요해.",
+            "english": "Sorry, I need time to think."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 나 배불러.",
+            "english": "Yeah, I'm full."
+          },
+          {
+            "korean": "지하철 타고 가.",
+            "english": "Take the subway."
+          },
+          {
+            "korean": "오늘 날씨 좋다.",
+            "english": "Nice weather today."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-promise",
+      "kind": "word",
+      "korean": "약속하다",
+      "english": "to promise",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "약속하다"
+      ]
+    },
+    {
+      "id": "k-drama/promise-me",
+      "kind": "sentence",
+      "korean": "약속해.",
+      "english": "Promise me.",
+      "context": "romance",
+      "register": "casual",
+      "note": "Often sealed by linking pinkies and pressing thumbs as a 'stamp'. To elders: 약속해요.",
+      "lexemes": [
+        "약속하다"
+      ],
+      "distractors": [
+        "Forget it.",
+        "You promised.",
+        "Let's meet."
+      ]
+    },
+    {
+      "id": "k-drama/who-is-it",
+      "kind": "sentence",
+      "korean": "누구세요?",
+      "english": "Who is it?",
+      "context": "home",
+      "register": "polite",
+      "note": "Polite: the standard answer to a knock or an unknown caller, safe with anyone.",
+      "lexemes": [
+        "누구"
+      ],
+      "distractors": [
+        "Where are you?",
+        "Who is he?",
+        "What is it?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "나야, 문 열어.",
+            "english": "It's me, open the door."
+          },
+          {
+            "korean": "택배 왔습니다.",
+            "english": "Delivery!"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 알았어.",
+            "english": "Okay, got it."
+          },
+          {
+            "korean": "세 시에 만나.",
+            "english": "Let's meet at three."
+          },
+          {
+            "korean": "맛있게 드세요.",
+            "english": "Enjoy your meal."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-act-like-this",
+      "kind": "word",
+      "korean": "이러다",
+      "english": "to act like this",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "이러다"
+      ]
+    },
+    {
+      "id": "k-drama/why-are-you-like-this",
+      "kind": "sentence",
+      "korean": "왜 이래?",
+      "english": "Why are you acting like this?",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Said when someone acts strangely or oversteps. It can sound confrontational.",
+      "lexemes": [
+        "왜",
+        "이러다"
+      ],
+      "distractors": [
+        "Why did you come?",
+        "What is this?",
+        "Why are you late?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "미안, 나 오늘 좀 예민해.",
+            "english": "Sorry, I'm a bit on edge today."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 거기서 봐.",
+            "english": "Okay, see you there."
+          },
+          {
+            "korean": "나는 커피 마실래.",
+            "english": "I'll have coffee."
+          },
+          {
+            "korean": "다음에 또 와.",
+            "english": "Come again next time."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-act-like-that",
+      "kind": "word",
+      "korean": "그러다",
+      "english": "to act like that",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "그러다"
+      ]
+    },
+    {
+      "id": "k-drama/whats-wrong",
+      "kind": "sentence",
+      "korean": "왜 그래?",
+      "english": "What's wrong?",
+      "context": "caring",
+      "register": "casual",
+      "note": "Asks with concern why someone looks upset. Softer than 왜 이래?",
+      "lexemes": [
+        "왜",
+        "그러다"
+      ],
+      "distractors": [
+        "Why not?",
+        "Is that so?",
+        "Why did you do it?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아무것도 아니야.",
+            "english": "It's nothing."
+          },
+          {
+            "korean": "그냥 좀 피곤해.",
+            "english": "I'm just a bit tired."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 가자.",
+            "english": "Yeah, let's go."
+          },
+          {
+            "korean": "나도 좋아해.",
+            "english": "I like it too."
+          },
+          {
+            "korean": "만 원이야.",
+            "english": "It's ten thousand won."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-stop",
+      "kind": "word",
+      "korean": "그만하다",
+      "english": "to stop (doing)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "그만하다"
+      ]
+    },
+    {
+      "id": "k-drama/stop-it",
+      "kind": "sentence",
+      "korean": "그만해.",
+      "english": "Stop it.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Sharp in a fight, playful when teased. To elders: 그만하세요, and only if you must.",
+      "lexemes": [
+        "그만하다"
+      ],
+      "distractors": [
+        "Do it again.",
+        "Hurry up.",
+        "Wait a moment."
+      ]
+    },
+    {
+      "id": "k-drama/okay-got-it",
+      "kind": "sentence",
+      "korean": "알았어.",
+      "english": "Okay, got it.",
+      "context": "everyday",
+      "register": "casual",
+      "note": "Casual; with elders or at work say 알겠습니다 or 알았어요.",
+      "lexemes": [
+        "알다"
+      ],
+      "distractors": [
+        "I don't know.",
+        "Do you understand?",
+        "I'm not sure."
+      ]
+    },
+    {
+      "id": "k-drama/lets-go-eat",
+      "kind": "sentence",
+      "korean": "우리 밥 먹으러 가자.",
+      "english": "Let's go get something to eat.",
+      "context": "everyday",
+      "register": "casual",
+      "note": "밥 means rice but also any meal. -자 is the casual 'let's'.",
+      "lexemes": [
+        "우리",
+        "밥",
+        "먹다",
+        "가다"
+      ],
+      "distractors": [
+        "Let's cook at home.",
+        "Did you eat yet?",
+        "Let's go for a drink."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "좋아, 뭐 먹을래?",
+            "english": "Sure, what do you want to eat?"
+          },
+          {
+            "korean": "미안, 방금 먹었어.",
+            "english": "Sorry, I just ate."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 사랑해.",
+            "english": "Yes, I love you."
+          },
+          {
+            "korean": "아니, 안 무서워.",
+            "english": "No, I'm not scared."
+          },
+          {
+            "korean": "나 지금 버스야.",
+            "english": "I'm on the bus now."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-be-hungry",
+      "kind": "word",
+      "korean": "배고프다",
+      "english": "to be hungry",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "배고프다"
+      ]
+    },
+    {
+      "id": "k-drama/im-hungry",
+      "kind": "sentence",
+      "korean": "배고파.",
+      "english": "I'm hungry.",
+      "context": "everyday",
+      "register": "casual",
+      "note": "Casual, with friends or family; polite: 배고파요.",
+      "lexemes": [
+        "배고프다"
+      ],
+      "distractors": [
+        "I'm full.",
+        "I'm tired.",
+        "Are you hungry?"
+      ]
+    },
+    {
+      "id": "k-drama/oppa",
+      "kind": "word",
+      "korean": "오빠",
+      "english": "oppa (older brother, to a woman)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Only women say 오빠: to older brothers, boyfriends and close older male friends.",
+      "lexemes": [
+        "오빠"
+      ]
+    },
+    {
+      "id": "k-drama/oppa-where-are-you",
+      "kind": "sentence",
+      "korean": "오빠, 어디야?",
+      "english": "Oppa, where are you?",
+      "context": "family-names",
+      "register": "casual",
+      "note": "Women call older brothers, boyfriends or close older male friends 오빠. Men never do.",
+      "lexemes": [
+        "오빠",
+        "어디"
+      ],
+      "distractors": [
+        "Oppa, where are we going?",
+        "Oppa, who is it?",
+        "Oppa, what are you doing?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "다 왔어, 조금만 기다려.",
+            "english": "Almost there, wait a little."
+          },
+          {
+            "korean": "회사야. 왜?",
+            "english": "At work. Why?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "나도 사랑해.",
+            "english": "I love you too."
+          },
+          {
+            "korean": "응, 배고파.",
+            "english": "Yeah, I'm hungry."
+          },
+          {
+            "korean": "미안, 몰랐어.",
+            "english": "Sorry, I didn't know."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-believe",
+      "kind": "word",
+      "korean": "믿다",
+      "english": "to believe, trust",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "믿다"
+      ]
+    },
+    {
+      "id": "k-drama/trust-oppa",
+      "kind": "sentence",
+      "korean": "오빠 믿지?",
+      "english": "You trust me, right? (said by a man)",
+      "context": "family-names",
+      "register": "casual",
+      "note": "A man calling himself 오빠 to a younger woman: flirty, drama-famous and a bit cheesy.",
+      "lexemes": [
+        "오빠",
+        "믿다"
+      ],
+      "distractors": [
+        "Do you like me?",
+        "Did you wait for me?",
+        "You're mad at me, right?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 믿어.",
+            "english": "Yes, I trust you."
+          },
+          {
+            "korean": "음, 글쎄?",
+            "english": "Hmm, I'm not sure."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니, 배 안 불러.",
+            "english": "No, I'm not full."
+          },
+          {
+            "korean": "여기서 내려요.",
+            "english": "I get off here."
+          },
+          {
+            "korean": "오늘 금요일이야.",
+            "english": "It's Friday today."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/unni-im-here",
+      "kind": "sentence",
+      "korean": "언니, 나 왔어!",
+      "english": "Unni, I'm here!",
+      "context": "family-names",
+      "register": "casual",
+      "note": "Women call older sisters and older female friends 언니. Men say 누나 instead.",
+      "lexemes": [
+        "언니",
+        "나",
+        "오다"
+      ],
+      "distractors": [
+        "Unni, I'm leaving!",
+        "Unni, come here!",
+        "Unni, where are you?"
+      ]
+    },
+    {
+      "id": "k-drama/noona",
+      "kind": "word",
+      "korean": "누나",
+      "english": "noona (older sister, to a man)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "note": "Only men say 누나: to older sisters and close older female friends.",
+      "lexemes": [
+        "누나"
+      ]
+    },
+    {
+      "id": "k-drama/noona-help-me",
+      "kind": "sentence",
+      "korean": "누나, 나 좀 도와줘.",
+      "english": "Noona, help me out.",
+      "context": "family-names",
+      "register": "casual",
+      "note": "Men call older sisters and older female friends 누나. 좀 softens the request.",
+      "lexemes": [
+        "누나",
+        "나",
+        "좀",
+        "돕다"
+      ],
+      "distractors": [
+        "Noona, let's go together.",
+        "Noona, thanks for helping me.",
+        "Noona, wait for me."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "뭔데? 말해 봐.",
+            "english": "What is it? Tell me."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 보고 싶었어.",
+            "english": "Yeah, I missed you."
+          },
+          {
+            "korean": "아니, 안 매워.",
+            "english": "No, it's not spicy."
+          },
+          {
+            "korean": "다음 역이야.",
+            "english": "It's the next station."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/hyung-drink",
+      "kind": "sentence",
+      "korean": "형, 오늘 한잔할래?",
+      "english": "Hyung, want to grab a drink tonight?",
+      "context": "family-names",
+      "register": "casual",
+      "note": "Men call older brothers and older male friends 형. 한잔하다 means having a drink.",
+      "lexemes": [
+        "형",
+        "오늘",
+        "한잔하다"
+      ],
+      "distractors": [
+        "Hyung, did you drink a lot today?",
+        "Hyung, want to eat together today?",
+        "Hyung, are you busy today?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "좋지! 어디서 볼까?",
+            "english": "Sure! Where should we meet?"
+          },
+          {
+            "korean": "오늘은 안 돼, 내일 어때?",
+            "english": "Not today, how about tomorrow?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 그 영화 봤어.",
+            "english": "Yeah, I saw that movie."
+          },
+          {
+            "korean": "이거 너무 작아.",
+            "english": "This is too small."
+          },
+          {
+            "korean": "잘 먹었습니다.",
+            "english": "Thank you for the meal."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/wait-a-sec",
+      "kind": "sentence",
+      "korean": "잠깐만!",
+      "english": "Wait a sec!",
+      "context": "everyday",
+      "register": "casual",
+      "note": "Casual; polite 잠깐만요, and 잠시만요 is the politest.",
+      "lexemes": [
+        "잠깐"
+      ],
+      "distractors": [
+        "Just a little!",
+        "Hurry up!",
+        "Come here!"
+      ]
+    },
+    {
+      "id": "k-drama/to-follow",
+      "kind": "word",
+      "korean": "따라오다",
+      "english": "to follow, come along",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "따라오다"
+      ]
+    },
+    {
+      "id": "k-drama/follow-me",
+      "kind": "sentence",
+      "korean": "따라와.",
+      "english": "Follow me.",
+      "context": "everyday",
+      "register": "casual",
+      "note": "A casual command; with elders say 따라오세요 or 이쪽으로 오세요.",
+      "lexemes": [
+        "따라오다"
+      ],
+      "distractors": [
+        "Go first.",
+        "Stay here.",
+        "Come back."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어디 가는데?",
+            "english": "Where are we going?"
+          },
+          {
+            "korean": "알았어, 가자.",
+            "english": "Okay, let's go."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 배불러.",
+            "english": "Yeah, I'm full."
+          },
+          {
+            "korean": "맛있게 먹어.",
+            "english": "Enjoy your food."
+          },
+          {
+            "korean": "나도 사랑해.",
+            "english": "I love you too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/believe-me",
+      "kind": "sentence",
+      "korean": "믿어 줘.",
+      "english": "Please believe me.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "-아/어 줘 asks a favor. Casual; to elders: 믿어 주세요.",
+      "lexemes": [
+        "믿다"
+      ],
+      "distractors": [
+        "I believe you.",
+        "Don't believe it.",
+        "Did you believe me?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "어떻게 믿어?",
+            "english": "How can I believe you?"
+          },
+          {
+            "korean": "알았어, 믿을게.",
+            "english": "Okay, I'll believe you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여기 앉아.",
+            "english": "Sit here."
+          },
+          {
+            "korean": "오늘 비 와.",
+            "english": "It's raining today."
+          },
+          {
+            "korean": "응, 재밌었어.",
+            "english": "Yeah, it was fun."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/disappointment",
+      "kind": "word",
+      "korean": "실망",
+      "english": "disappointment",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "실망"
+      ]
+    },
+    {
+      "id": "k-drama/disappointed-in-you",
+      "kind": "sentence",
+      "korean": "너한테 실망이야.",
+      "english": "I'm disappointed in you.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Stings more than anger in dramas. Only with close people; never to a senior.",
+      "lexemes": [
+        "너",
+        "실망"
+      ],
+      "distractors": [
+        "I'm proud of you.",
+        "I'm angry at you.",
+        "You're so annoying."
+      ]
+    },
+    {
+      "id": "k-drama/this-is-fun",
+      "kind": "sentence",
+      "korean": "재밌다!",
+      "english": "This is fun!",
+      "context": "reactions",
+      "register": "casual",
+      "note": "Short for 재미있다. The plain -다 form is an exclamation to yourself or close friends.",
+      "lexemes": [
+        "재미있다"
+      ],
+      "distractors": [
+        "That's boring!",
+        "That's scary!",
+        "That's delicious!"
+      ]
+    },
+    {
+      "id": "k-drama/to-be-annoyed",
+      "kind": "word",
+      "korean": "짜증나다",
+      "english": "to be annoyed",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "짜증나다"
+      ]
+    },
+    {
+      "id": "k-drama/so-annoying",
+      "kind": "sentence",
+      "korean": "진짜 짜증나.",
+      "english": "This is so annoying.",
+      "context": "reactions",
+      "register": "casual",
+      "note": "Venting among friends; it sounds childish or rude at work or with elders.",
+      "lexemes": [
+        "진짜",
+        "짜증나다"
+      ],
+      "distractors": [
+        "This is so fun.",
+        "I'm so tired.",
+        "I'm so hungry."
+      ]
+    },
+    {
+      "id": "k-drama/whats-going-on",
+      "kind": "sentence",
+      "korean": "무슨 일이야?",
+      "english": "What's going on?",
+      "context": "caring",
+      "register": "casual",
+      "note": "Asked when something seems wrong. Polite: 무슨 일이에요?",
+      "lexemes": [
+        "무슨",
+        "일"
+      ],
+      "distractors": [
+        "What do you do for work?",
+        "What day is it?",
+        "What's this?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아무 일도 없어.",
+            "english": "Nothing's going on."
+          },
+          {
+            "korean": "나 회사 잘렸어.",
+            "english": "I got fired."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 잘 자.",
+            "english": "Yeah, good night."
+          },
+          {
+            "korean": "오늘 토요일이야.",
+            "english": "It's Saturday today."
+          },
+          {
+            "korean": "그래, 약속해.",
+            "english": "Okay, promise."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/dont-worry",
+      "kind": "sentence",
+      "korean": "걱정하지 마.",
+      "english": "Don't worry.",
+      "context": "caring",
+      "register": "casual",
+      "note": "Reassurance for friends or younger people; to elders: 걱정하지 마세요.",
+      "lexemes": [
+        "걱정하다"
+      ],
+      "distractors": [
+        "I'm worried.",
+        "Don't be late.",
+        "Are you worried?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "고마워, 너밖에 없다.",
+            "english": "Thanks, you're the best."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 잘 먹을게.",
+            "english": "Okay, I'll enjoy it."
+          },
+          {
+            "korean": "어디서 내려?",
+            "english": "Where do you get off?"
+          },
+          {
+            "korean": "나도 몰라.",
+            "english": "I don't know either."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/my-fault-sorry",
+      "kind": "sentence",
+      "korean": "내가 미안해.",
+      "english": "I'm sorry, it's my fault.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "내가 stresses that you take the blame. To elders: 제가 죄송해요.",
+      "lexemes": [
+        "나",
+        "미안하다"
+      ],
+      "distractors": [
+        "You should apologize.",
+        "It's not my fault.",
+        "Thanks for everything."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아니야, 나도 잘못했어.",
+            "english": "No, I was wrong too."
+          },
+          {
+            "korean": "됐어, 괜찮아.",
+            "english": "Forget it, it's okay."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 가자!",
+            "english": "Yeah, let's go!"
+          },
+          {
+            "korean": "이거 너무 맛있다.",
+            "english": "This is so good."
+          },
+          {
+            "korean": "몇 시에 끝나?",
+            "english": "What time does it end?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/dont-lie",
+      "kind": "sentence",
+      "korean": "거짓말하지 마.",
+      "english": "Don't lie to me.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Also a playful 'no way!' when news sounds too good to be true.",
+      "lexemes": [
+        "거짓말",
+        "하다"
+      ],
+      "distractors": [
+        "That's not a lie.",
+        "Don't say that.",
+        "Stop joking."
+      ]
+    },
+    {
+      "id": "k-drama/sound-talk",
+      "kind": "word",
+      "korean": "소리",
+      "english": "sound; talk",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "소리"
+      ]
+    },
+    {
+      "id": "k-drama/what-are-you-talking-about",
+      "kind": "sentence",
+      "korean": "무슨 소리야?",
+      "english": "What are you talking about?",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Rejects what was just said, in disbelief. Rude to elders; say 무슨 말씀이세요?",
+      "lexemes": [
+        "무슨",
+        "소리"
+      ],
+      "distractors": [
+        "What are you doing?",
+        "What happened to you?",
+        "Who told you that?"
+      ]
+    },
+    {
+      "id": "k-drama/words-speech",
+      "kind": "word",
+      "korean": "말",
+      "english": "words, what someone says",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "말"
+      ]
+    },
+    {
+      "id": "k-drama/that-makes-no-sense",
+      "kind": "sentence",
+      "korean": "말도 안 돼.",
+      "english": "No way, that makes no sense.",
+      "context": "reactions",
+      "register": "casual",
+      "note": "Pure disbelief. Fine with friends; 말도 안 돼요 works with anyone.",
+      "lexemes": [
+        "말",
+        "안",
+        "되다"
+      ],
+      "distractors": [
+        "Don't say that.",
+        "I can't hear you.",
+        "That makes sense."
+      ]
+    },
+    {
+      "id": "k-drama/no-way-surely",
+      "kind": "word",
+      "korean": "설마",
+      "english": "surely not",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "설마"
+      ]
+    },
+    {
+      "id": "k-drama/surely-not",
+      "kind": "sentence",
+      "korean": "설마!",
+      "english": "No way, it can't be!",
+      "context": "reactions",
+      "register": "casual",
+      "note": "Voices a dreaded guess: 'surely not…'. Fine with anyone, even as a lone word.",
+      "lexemes": [
+        "설마"
+      ],
+      "distractors": [
+        "Of course!",
+        "I knew it!",
+        "Maybe later!"
+      ]
+    },
+    {
+      "id": "k-drama/look-at-me",
+      "kind": "sentence",
+      "korean": "나 좀 봐.",
+      "english": "Look at me. / Can we talk?",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Also 'can we talk a sec?', said before pulling someone aside.",
+      "lexemes": [
+        "나",
+        "좀",
+        "보다"
+      ],
+      "distractors": [
+        "Let me see.",
+        "Look over there.",
+        "Wait for me."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "왜? 무슨 일인데?",
+            "english": "Why? What is it?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 배고프다.",
+            "english": "Yeah, I'm hungry."
+          },
+          {
+            "korean": "오늘 날씨 춥다.",
+            "english": "It's cold today."
+          },
+          {
+            "korean": "그 영화 재밌었어.",
+            "english": "That movie was fun."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/this-way",
+      "kind": "word",
+      "korean": "이리",
+      "english": "this way, over here",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "이리"
+      ]
+    },
+    {
+      "id": "k-drama/come-here",
+      "kind": "sentence",
+      "korean": "이리 와.",
+      "english": "Come here.",
+      "context": "romance",
+      "register": "casual",
+      "note": "Warm with open arms, bossy otherwise. Never to elders: say 이쪽으로 오세요.",
+      "lexemes": [
+        "이리",
+        "오다"
+      ],
+      "distractors": [
+        "Go over there.",
+        "Come in.",
+        "Come back later."
+      ]
+    },
+    {
+      "id": "k-drama/cant-live-without-you",
+      "kind": "sentence",
+      "korean": "너 없으면 못 살아.",
+      "english": "I can't live without you.",
+      "context": "romance",
+      "register": "casual",
+      "note": "Pure drama romance, also said jokingly to a friend who saves the day.",
+      "lexemes": [
+        "너",
+        "없다",
+        "못",
+        "살다"
+      ],
+      "distractors": [
+        "I can't live here anymore.",
+        "You can live without me.",
+        "I can't sleep without you."
+      ]
+    },
+    {
+      "id": "k-drama/i-like-you",
+      "kind": "sentence",
+      "korean": "나 너 좋아해.",
+      "english": "I like you.",
+      "context": "romance",
+      "register": "casual",
+      "note": "A casual confession. Particles drop in speech: 나는 너를 becomes 나 너.",
+      "lexemes": [
+        "나",
+        "너",
+        "좋아하다"
+      ],
+      "distractors": [
+        "You like me?",
+        "I like it too.",
+        "I love you."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "사실 나도.",
+            "english": "Actually, me too."
+          },
+          {
+            "korean": "갑자기 무슨 소리야?",
+            "english": "What are you saying all of a sudden?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "맛있게 먹어.",
+            "english": "Enjoy your meal."
+          },
+          {
+            "korean": "나 지금 지하철이야.",
+            "english": "I'm on the subway now."
+          },
+          {
+            "korean": "다음 주 월요일.",
+            "english": "Next Monday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-break-up",
+      "kind": "word",
+      "korean": "헤어지다",
+      "english": "to break up, part",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "헤어지다"
+      ]
+    },
+    {
+      "id": "k-drama/lets-break-up",
+      "kind": "sentence",
+      "korean": "우리 헤어지자.",
+      "english": "Let's break up.",
+      "context": "romance",
+      "register": "casual",
+      "note": "The drama breakup line. 헤어지다 also means parting ways after meeting up.",
+      "lexemes": [
+        "우리",
+        "헤어지다"
+      ],
+      "distractors": [
+        "Let's meet again.",
+        "Let's go out.",
+        "Let's go home."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "갑자기 왜 그래?",
+            "english": "Why are you doing this all of a sudden?"
+          },
+          {
+            "korean": "그래, 그게 좋겠어.",
+            "english": "Okay, that's for the best."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "좋아, 뭐 먹을까?",
+            "english": "Sure, what should we eat?"
+          },
+          {
+            "korean": "응, 나도 사랑해.",
+            "english": "Yeah, I love you too."
+          },
+          {
+            "korean": "생일 축하해!",
+            "english": "Happy birthday!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-get-lost",
+      "kind": "word",
+      "korean": "꺼지다",
+      "english": "to go out (light); get lost (rude)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "꺼지다"
+      ]
+    },
+    {
+      "id": "k-drama/get-lost",
+      "kind": "sentence",
+      "korean": "꺼져.",
+      "english": "Get lost.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Very rude: for drama fights only. Said for real, it can end a friendship.",
+      "lexemes": [
+        "꺼지다"
+      ],
+      "distractors": [
+        "Come back.",
+        "Calm down.",
+        "Be quiet."
+      ]
+    },
+    {
+      "id": "k-drama/to-tremble",
+      "kind": "word",
+      "korean": "떨리다",
+      "english": "to tremble, be nervous",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "떨리다"
+      ]
+    },
+    {
+      "id": "k-drama/so-nervous",
+      "kind": "sentence",
+      "korean": "나 지금 너무 떨려.",
+      "english": "I'm so nervous right now.",
+      "context": "feelings",
+      "register": "casual",
+      "note": "떨리다 is literally 'to tremble': nerves before a date, an exam or going on stage.",
+      "lexemes": [
+        "나",
+        "지금",
+        "너무",
+        "떨리다"
+      ],
+      "distractors": [
+        "I'm so angry right now.",
+        "I'm so sleepy right now.",
+        "I'm so bored right now."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "괜찮아, 잘할 거야.",
+            "english": "It's okay, you'll do great."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "나는 커피.",
+            "english": "Coffee for me."
+          },
+          {
+            "korean": "내일 비 온대.",
+            "english": "It'll rain tomorrow."
+          },
+          {
+            "korean": "그거 얼마였어?",
+            "english": "How much was that?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/forget-it",
+      "kind": "sentence",
+      "korean": "됐어.",
+      "english": "Forget it.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "A cold 'never mind' or 'no thanks' that ends the talk. Sounds sulky; avoid it with elders.",
+      "lexemes": [
+        "되다"
+      ],
+      "distractors": [
+        "Tell me more.",
+        "Try again.",
+        "Thank you."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "왜 그래, 화났어?",
+            "english": "What's wrong, are you mad?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 맛있어.",
+            "english": "Yeah, it's tasty."
+          },
+          {
+            "korean": "여기 앉아도 돼?",
+            "english": "Can I sit here?"
+          },
+          {
+            "korean": "다음 역에서 내려.",
+            "english": "Get off at the next stop."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-sulk",
+      "kind": "word",
+      "korean": "삐지다",
+      "english": "to sulk",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "삐지다"
+      ]
+    },
+    {
+      "id": "k-drama/im-sulking",
+      "kind": "sentence",
+      "korean": "나 삐졌어.",
+      "english": "I'm upset with you (sulking).",
+      "context": "feelings",
+      "register": "casual",
+      "note": "Cute, half-serious pouting between couples or close friends, not for real conflicts.",
+      "lexemes": [
+        "나",
+        "삐지다"
+      ],
+      "distractors": [
+        "I'm tired.",
+        "I got lost.",
+        "I'm scared."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "왜? 내가 뭐 잘못했어?",
+            "english": "Why? Did I do something wrong?"
+          },
+          {
+            "korean": "미안해, 맛있는 거 사 줄게.",
+            "english": "Sorry, I'll buy you something tasty."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "잘했어!",
+            "english": "Well done!"
+          },
+          {
+            "korean": "여기서 기다려.",
+            "english": "Wait here."
+          },
+          {
+            "korean": "지금 몇 시야?",
+            "english": "What time is it?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/sincerity",
+      "kind": "word",
+      "korean": "진심",
+      "english": "sincerity, what one truly means",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "진심"
+      ]
+    },
+    {
+      "id": "k-drama/i-mean-it",
+      "kind": "sentence",
+      "korean": "나 진심이야.",
+      "english": "I mean it.",
+      "context": "romance",
+      "register": "casual",
+      "note": "Stresses sincerity, e.g. after a confession. Polite: 진심이에요.",
+      "lexemes": [
+        "나",
+        "진심"
+      ],
+      "distractors": [
+        "Are you serious?",
+        "I'm joking.",
+        "I trust you."
+      ]
+    },
+    {
+      "id": "k-drama/joke",
+      "kind": "word",
+      "korean": "농담",
+      "english": "joke",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "농담"
+      ]
+    },
+    {
+      "id": "k-drama/just-kidding",
+      "kind": "sentence",
+      "korean": "농담이야.",
+      "english": "Just kidding.",
+      "context": "everyday",
+      "register": "casual",
+      "note": "Takes back a tease. Joking with elders is fine, but say 농담이에요.",
+      "lexemes": [
+        "농담"
+      ],
+      "distractors": [
+        "Are you kidding?",
+        "I'm serious.",
+        "That's funny."
+      ]
+    },
+    {
+      "id": "k-drama/listen-to-me",
+      "kind": "sentence",
+      "korean": "내 말 들어.",
+      "english": "Listen to me.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "Firm and bossy. 좀 softens it: 내 말 좀 들어 봐.",
+      "lexemes": [
+        "나",
+        "말",
+        "듣다"
+      ],
+      "distractors": [
+        "Did you hear me?",
+        "I'm listening.",
+        "Say something."
+      ]
+    },
+    {
+      "id": "k-drama/totally",
+      "kind": "word",
+      "korean": "완전",
+      "english": "totally (slang); complete",
+      "context": "vocabulary",
+      "register": "casual",
+      "lexemes": [
+        "완전"
+      ]
+    },
+    {
+      "id": "k-drama/totally-delicious",
+      "kind": "sentence",
+      "korean": "대박, 완전 맛있어!",
+      "english": "Wow, this is so delicious!",
+      "context": "reactions",
+      "register": "casual",
+      "note": "완전 as 'totally' is youth slang: fine with friends, not with elders.",
+      "lexemes": [
+        "대박",
+        "완전",
+        "맛있다"
+      ],
+      "distractors": [
+        "Wow, this is totally spicy!",
+        "Ugh, this is so bland!",
+        "Wow, this is totally cheap!"
+      ]
+    },
+    {
+      "id": "k-drama/because-of",
+      "kind": "word",
+      "korean": "때문",
+      "english": "because of, the reason",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "때문"
+      ]
+    },
+    {
+      "id": "k-drama/because-of-you",
+      "kind": "sentence",
+      "korean": "너 때문이야.",
+      "english": "It's because of you.",
+      "context": "arguments",
+      "register": "casual",
+      "note": "때문 marks a cause, usually a bad one; for good causes Koreans say 덕분 (thanks to).",
+      "lexemes": [
+        "너",
+        "때문"
+      ],
+      "distractors": [
+        "It's all thanks to me.",
+        "It's not your fault.",
+        "It's for you."
+      ]
+    },
+    {
+      "id": "k-drama/treat-you-to-a-meal",
+      "kind": "sentence",
+      "korean": "밥 사 줄게.",
+      "english": "I'll buy you a meal.",
+      "context": "everyday",
+      "register": "casual",
+      "note": "Treating someone to a meal is the Korean way to say thanks. Polite: 밥 살게요.",
+      "lexemes": [
+        "밥",
+        "사다"
+      ],
+      "distractors": [
+        "Buy me a meal.",
+        "I'll cook for you.",
+        "I already paid."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "진짜? 고마워!",
+            "english": "Really? Thanks!"
+          },
+          {
+            "korean": "아니야, 이번엔 내가 살게.",
+            "english": "No, this time it's on me."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "아니, 안 떨려.",
+            "english": "No, I'm not nervous."
+          },
+          {
+            "korean": "다음 역에서 내려.",
+            "english": "Get off at the next stop."
+          },
+          {
+            "korean": "잘 자, 내일 봐.",
+            "english": "Good night, see you tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/to-take-someone",
+      "kind": "word",
+      "korean": "데려다주다",
+      "english": "to take (someone) somewhere",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "데려다주다"
+      ]
+    },
+    {
+      "id": "k-drama/take-you-home",
+      "kind": "sentence",
+      "korean": "집까지 데려다줄게.",
+      "english": "I'll take you home.",
+      "context": "romance",
+      "register": "casual",
+      "note": "Walking or driving someone home: the classic ending of a drama date.",
+      "lexemes": [
+        "집",
+        "데려다주다"
+      ],
+      "distractors": [
+        "Take me home.",
+        "I'll wait for you at home.",
+        "I'll call you when I get home."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "괜찮아, 혼자 갈 수 있어.",
+            "english": "It's okay, I can go alone."
+          },
+          {
+            "korean": "고마워, 그럼 같이 가자.",
+            "english": "Thanks, let's go together then."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 맛있게 먹어.",
+            "english": "Okay, enjoy your meal."
+          },
+          {
+            "korean": "그거 얼마야?",
+            "english": "How much is that?"
+          },
+          {
+            "korean": "나 삼 번 출구야.",
+            "english": "I'm at exit three."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/get-home-safe",
+      "kind": "sentence",
+      "korean": "조심히 들어가.",
+      "english": "Get home safe.",
+      "context": "everyday",
+      "register": "casual",
+      "note": "The standard goodbye at night: 들어가 means going back home. Polite: 조심히 들어가세요.",
+      "lexemes": [
+        "조심히",
+        "들어가다"
+      ],
+      "distractors": [
+        "Come on in.",
+        "Call me when you arrive.",
+        "Let's go home together."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "응, 도착하면 연락할게.",
+            "english": "Okay, I'll text you when I get there."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 잘 먹었어.",
+            "english": "Yeah, I ate well."
+          },
+          {
+            "korean": "아니, 안 매워.",
+            "english": "No, it's not spicy."
+          },
+          {
+            "korean": "이거 누구 거야?",
+            "english": "Whose is this?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/dont-leave-me",
+      "kind": "sentence",
+      "korean": "나 버리지 마.",
+      "english": "Don't leave me.",
+      "context": "romance",
+      "register": "casual",
+      "note": "버리다 is 'to throw away'; begging not to be abandoned is peak melodrama. Only with a partner.",
+      "lexemes": [
+        "나",
+        "버리다"
+      ],
+      "distractors": [
+        "Don't forget me.",
+        "Don't wait for me.",
+        "Don't follow me."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "안 버려, 걱정하지 마.",
+            "english": "I won't leave you, don't worry."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "그거 얼마야?",
+            "english": "How much is that?"
+          },
+          {
+            "korean": "오늘 토요일이야.",
+            "english": "It's Saturday today."
+          },
+          {
+            "korean": "응, 배불러.",
+            "english": "Yeah, I'm full."
+          }
+        ]
+      }
+    },
+    {
+      "id": "k-drama/what-are-you-doing",
+      "kind": "sentence",
+      "korean": "뭐 해?",
+      "english": "What are you doing?",
+      "context": "everyday",
+      "register": "casual",
+      "note": "Also the classic text opener, like 'hey, what's up?'. Only with close friends.",
+      "lexemes": [
+        "뭐",
+        "하다"
+      ],
+      "distractors": [
+        "What should I do?",
+        "What did you do?",
+        "What is it?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그냥 집에 있어. 왜?",
+            "english": "Just at home. Why?"
+          },
+          {
+            "korean": "드라마 봐.",
+            "english": "Watching a drama."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "응, 괜찮아.",
+            "english": "Yeah, I'm okay."
+          },
+          {
+            "korean": "다음 주에 만나.",
+            "english": "Let's meet next week."
+          },
+          {
+            "korean": "만 원이에요.",
+            "english": "It's ten thousand won."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2364 @@
+{
+  "id": "shopping",
+  "version": 1,
+  "title": "Shopping",
+  "description": "Clothes, sizes, prices, discounts, exchanges, the convenience store and the market.",
+  "unlock_level": 3,
+  "items": [
+    {
+      "id": "shopping/to-look-for",
+      "kind": "word",
+      "korean": "찾다",
+      "english": "to look for",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "찾다"
+      ]
+    },
+    {
+      "id": "shopping/looking-for-anything",
+      "kind": "sentence",
+      "korean": "찾으시는 거 있으세요?",
+      "english": "Are you looking for anything in particular?",
+      "context": "browsing",
+      "register": "polite",
+      "note": "Staff greet you with this. 그냥 구경하는 거예요 politely turns down help.",
+      "lexemes": [
+        "찾다",
+        "것",
+        "있다"
+      ],
+      "distractors": [
+        "Did you find what you were looking for?",
+        "Do you need a bag?",
+        "Is this what you were looking for?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그냥 구경하는 거예요.",
+            "english": "I'm just looking."
+          },
+          {
+            "korean": "바지 좀 보려고요.",
+            "english": "I'd like to look at some trousers."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "카드로 할게요.",
+            "english": "I'll pay by card."
+          },
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "네, 데워 주세요.",
+            "english": "Yes, please heat it up."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/just",
+      "kind": "word",
+      "korean": "그냥",
+      "english": "just",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "그냥"
+      ]
+    },
+    {
+      "id": "shopping/to-look-around",
+      "kind": "word",
+      "korean": "구경하다",
+      "english": "to look around",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "구경하다"
+      ]
+    },
+    {
+      "id": "shopping/just-looking",
+      "kind": "sentence",
+      "korean": "그냥 구경하는 거예요.",
+      "english": "I'm just looking.",
+      "context": "browsing",
+      "register": "polite",
+      "lexemes": [
+        "그냥",
+        "구경하다",
+        "것"
+      ],
+      "distractors": [
+        "I'm just waiting for a friend.",
+        "I'm looking for a gift.",
+        "I already bought it."
+      ]
+    },
+    {
+      "id": "shopping/jeans",
+      "kind": "word",
+      "korean": "청바지",
+      "english": "jeans",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "청바지"
+      ],
+      "image": "jeans"
+    },
+    {
+      "id": "shopping/do-you-have-jeans",
+      "kind": "sentence",
+      "korean": "청바지 있어요?",
+      "english": "Do you have jeans?",
+      "context": "browsing",
+      "register": "polite",
+      "lexemes": [
+        "청바지",
+        "있다"
+      ],
+      "distractors": [
+        "Where are the jeans?",
+        "Are these jeans?",
+        "Do you have a bigger size?"
+      ]
+    },
+    {
+      "id": "shopping/colour",
+      "kind": "word",
+      "korean": "색",
+      "english": "colour",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "색"
+      ]
+    },
+    {
+      "id": "shopping/other-colours",
+      "kind": "sentence",
+      "korean": "이거 다른 색도 있어요?",
+      "english": "Does this come in other colours?",
+      "context": "colours",
+      "register": "polite",
+      "lexemes": [
+        "이거",
+        "다른",
+        "색",
+        "있다"
+      ],
+      "distractors": [
+        "Does this come in other sizes?",
+        "Is this colour popular?",
+        "Do you have this in black?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 검은색하고 흰색도 있어요.",
+            "english": "Yes, we also have it in black and white."
+          },
+          {
+            "korean": "죄송해요, 이 색만 남았어요.",
+            "english": "Sorry, only this colour is left."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "일시불로 해 드릴까요?",
+            "english": "Would you like to pay in full?"
+          },
+          {
+            "korean": "탈의실은 저쪽이에요.",
+            "english": "The fitting room is over there."
+          },
+          {
+            "korean": "한 봉지에 오천 원이에요.",
+            "english": "It's five thousand won a bag."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/red",
+      "kind": "word",
+      "korean": "빨간색",
+      "english": "red",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "빨간색"
+      ]
+    },
+    {
+      "id": "shopping/no-red",
+      "kind": "sentence",
+      "korean": "빨간색은 없어요?",
+      "english": "Don't you have it in red?",
+      "context": "colours",
+      "register": "polite",
+      "lexemes": [
+        "빨간색",
+        "없다"
+      ],
+      "distractors": [
+        "Don't you have it in blue?",
+        "Is the red one sold out?",
+        "Don't you like red?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "빨간색은 다 팔렸어요.",
+            "english": "The red ones are sold out."
+          },
+          {
+            "korean": "잠시만요, 창고에 확인해 볼게요.",
+            "english": "One moment, I'll check the stockroom."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "여기 사인해 주세요.",
+            "english": "Please sign here."
+          },
+          {
+            "korean": "젓가락 드릴까요?",
+            "english": "Would you like chopsticks?"
+          },
+          {
+            "korean": "영수증 있으세요?",
+            "english": "Do you have the receipt?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/black",
+      "kind": "word",
+      "korean": "검은색",
+      "english": "black",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "검은색"
+      ]
+    },
+    {
+      "id": "shopping/in-black-please",
+      "kind": "sentence",
+      "korean": "검은색으로 주세요.",
+      "english": "In black, please.",
+      "context": "colours",
+      "register": "polite",
+      "lexemes": [
+        "검은색",
+        "주다"
+      ],
+      "distractors": [
+        "In white, please.",
+        "Do you have a black one?",
+        "Black doesn't suit me."
+      ]
+    },
+    {
+      "id": "shopping/white",
+      "kind": "word",
+      "korean": "흰색",
+      "english": "white",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "흰색"
+      ]
+    },
+    {
+      "id": "shopping/to-suit-look-good-on",
+      "kind": "word",
+      "korean": "어울리다",
+      "english": "to suit, look good on",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "어울리다"
+      ]
+    },
+    {
+      "id": "shopping/white-suits-you-better",
+      "kind": "sentence",
+      "korean": "흰색이 더 잘 어울려요.",
+      "english": "White suits you better.",
+      "context": "colours",
+      "register": "polite",
+      "lexemes": [
+        "흰색",
+        "더",
+        "잘",
+        "어울리다"
+      ],
+      "distractors": [
+        "Black suits you better.",
+        "White doesn't suit you.",
+        "White is more expensive."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그래요? 그럼 흰색으로 할게요.",
+            "english": "Really? Then I'll go with white."
+          },
+          {
+            "korean": "저도 그렇게 생각해요.",
+            "english": "I think so too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "한 개에 천 원이에요.",
+            "english": "They're a thousand won each."
+          },
+          {
+            "korean": "현금으로 할게요.",
+            "english": "I'll pay in cash."
+          },
+          {
+            "korean": "전자레인지는 저쪽에 있어요.",
+            "english": "The microwave is over there."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/what-size-are-you",
+      "kind": "sentence",
+      "korean": "사이즈가 어떻게 되세요?",
+      "english": "What size are you?",
+      "context": "sizes",
+      "register": "polite",
+      "lexemes": [
+        "사이즈",
+        "어떻게",
+        "되다"
+      ],
+      "distractors": [
+        "Does the size fit?",
+        "What colour would you like?",
+        "Do you need a bigger size?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "잘 모르겠어요. 입어 볼게요.",
+            "english": "I'm not sure. I'll try it on."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "카드로 할게요.",
+            "english": "I'll pay by card."
+          },
+          {
+            "korean": "검은색으로 주세요.",
+            "english": "In black, please."
+          },
+          {
+            "korean": "봉투는 괜찮아요.",
+            "english": "I'm fine without a bag."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/bigger-size",
+      "kind": "sentence",
+      "korean": "더 큰 사이즈 있어요?",
+      "english": "Do you have a bigger size?",
+      "context": "sizes",
+      "register": "polite",
+      "lexemes": [
+        "더",
+        "크다",
+        "사이즈",
+        "있다"
+      ],
+      "distractors": [
+        "Do you have a smaller size?",
+        "Is this the biggest size?",
+        "Do you have it in another colour?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 가져다 드릴게요.",
+            "english": "Yes, I'll bring it for you."
+          },
+          {
+            "korean": "죄송해요, 그게 제일 큰 거예요.",
+            "english": "Sorry, that's the biggest one."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "데워 드릴까요?",
+            "english": "Shall I heat it up for you?"
+          },
+          {
+            "korean": "영수증은 버려 주세요.",
+            "english": "Please throw away the receipt."
+          },
+          {
+            "korean": "이만 원 받았습니다.",
+            "english": "I've received twenty thousand won."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/think-its-small",
+      "kind": "sentence",
+      "korean": "좀 작은 것 같아요.",
+      "english": "I think it's a bit small.",
+      "context": "sizes",
+      "register": "polite",
+      "lexemes": [
+        "좀",
+        "작다",
+        "것"
+      ],
+      "distractors": [
+        "I think it's a bit big.",
+        "It's a bit short.",
+        "It fits perfectly."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼 한 치수 큰 걸로 드릴까요?",
+            "english": "Then shall I get you one size up?"
+          },
+          {
+            "korean": "이거 한번 입어 보세요.",
+            "english": "Try this one on."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "일시불로 해 주세요.",
+            "english": "In full, please."
+          },
+          {
+            "korean": "네, 원 플러스 원이에요.",
+            "english": "Yes, it's buy one, get one free."
+          },
+          {
+            "korean": "이 근처에 있어요.",
+            "english": "It's near here."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/to-be-tight",
+      "kind": "word",
+      "korean": "끼다",
+      "english": "to be tight",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "끼다"
+      ]
+    },
+    {
+      "id": "shopping/bit-tight",
+      "kind": "sentence",
+      "korean": "좀 껴요.",
+      "english": "It's a bit tight.",
+      "context": "sizes",
+      "register": "polite",
+      "note": "끼다 is for clothes or shoes that are tight; too loose is 헐렁해요.",
+      "lexemes": [
+        "좀",
+        "끼다"
+      ],
+      "distractors": [
+        "It's a bit loose.",
+        "It's a bit long.",
+        "It's too heavy."
+      ]
+    },
+    {
+      "id": "shopping/trousers",
+      "kind": "word",
+      "korean": "바지",
+      "english": "trousers",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "바지"
+      ],
+      "image": "trousers"
+    },
+    {
+      "id": "shopping/try-on-trousers",
+      "kind": "sentence",
+      "korean": "이 바지 입어 봐도 돼요?",
+      "english": "Can I try on these trousers?",
+      "context": "trying-on",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "바지",
+        "입다",
+        "보다",
+        "되다"
+      ],
+      "distractors": [
+        "Can I try on this skirt?",
+        "Can I exchange these trousers?",
+        "Do these trousers come in black?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼요, 탈의실은 저쪽이에요.",
+            "english": "Of course, the fitting room is over there."
+          },
+          {
+            "korean": "네, 이쪽으로 오세요.",
+            "english": "Sure, come this way."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이만 원 받았습니다.",
+            "english": "I've received twenty thousand won."
+          },
+          {
+            "korean": "봉투 하나 주세요.",
+            "english": "One bag, please."
+          },
+          {
+            "korean": "전자레인지는 저쪽에 있어요.",
+            "english": "The microwave is over there."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/fitting-room",
+      "kind": "word",
+      "korean": "탈의실",
+      "english": "fitting room",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "탈의실"
+      ],
+      "image": "fitting room"
+    },
+    {
+      "id": "shopping/where-fitting-room",
+      "kind": "sentence",
+      "korean": "탈의실이 어디예요?",
+      "english": "Where's the fitting room?",
+      "context": "trying-on",
+      "register": "polite",
+      "lexemes": [
+        "탈의실",
+        "어디",
+        "이다"
+      ],
+      "distractors": [
+        "Where's the restroom?",
+        "Where's the checkout?",
+        "Is the fitting room free?"
+      ]
+    },
+    {
+      "id": "shopping/to-wear",
+      "kind": "word",
+      "korean": "신다",
+      "english": "to wear (shoes, socks)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "신다"
+      ]
+    },
+    {
+      "id": "shopping/try-shoes-on",
+      "kind": "sentence",
+      "korean": "신어 봐도 돼요?",
+      "english": "Can I try them on?",
+      "context": "trying-on",
+      "register": "polite",
+      "note": "신다 is for shoes and socks, 입다 for clothes.",
+      "lexemes": [
+        "신다",
+        "보다",
+        "되다"
+      ],
+      "distractors": [
+        "Can I take them off?",
+        "Can I buy them?",
+        "Can I see them?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 신어 보세요.",
+            "english": "Sure, go ahead."
+          },
+          {
+            "korean": "몇 신으세요?",
+            "english": "What size do you wear?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이 근처에 편의점 있어요.",
+            "english": "There's a convenience store near here."
+          },
+          {
+            "korean": "현금이면 더 싸요.",
+            "english": "It's cheaper in cash."
+          },
+          {
+            "korean": "이번 주 일요일까지예요.",
+            "english": "Until this Sunday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/what-shoe-size",
+      "kind": "sentence",
+      "korean": "몇 신으세요?",
+      "english": "What shoe size do you wear?",
+      "context": "trying-on",
+      "register": "polite",
+      "note": "Shoe sizes are in millimetres: 이백오십 is 250 mm.",
+      "lexemes": [
+        "몇",
+        "신다"
+      ],
+      "distractors": [
+        "How many pairs would you like?",
+        "What colour would you like?",
+        "Are they comfortable?"
+      ]
+    },
+    {
+      "id": "shopping/fits-well",
+      "kind": "sentence",
+      "korean": "잘 맞아요.",
+      "english": "It fits well.",
+      "context": "trying-on",
+      "register": "polite",
+      "lexemes": [
+        "잘",
+        "맞다"
+      ],
+      "distractors": [
+        "It doesn't fit.",
+        "It looks good on me.",
+        "It's a bit tight."
+      ]
+    },
+    {
+      "id": "shopping/looks-great-on-you",
+      "kind": "sentence",
+      "korean": "잘 어울리세요.",
+      "english": "It looks great on you.",
+      "context": "trying-on",
+      "register": "polite",
+      "lexemes": [
+        "잘",
+        "어울리다"
+      ],
+      "distractors": [
+        "It doesn't suit you.",
+        "It's too small for you.",
+        "It's very popular."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "감사합니다. 이걸로 할게요.",
+            "english": "Thanks. I'll take this one."
+          },
+          {
+            "korean": "그래요? 다른 색도 보여 주세요.",
+            "english": "Really? Show me the other colours too."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "한 봉지에 오천 원이에요.",
+            "english": "It's five thousand won a bag."
+          },
+          {
+            "korean": "데워 드릴까요?",
+            "english": "Shall I heat it up for you?"
+          },
+          {
+            "korean": "저쪽 계산대로 가세요.",
+            "english": "Please go to the counter over there."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/ill-take-this-one",
+      "kind": "sentence",
+      "korean": "이걸로 할게요.",
+      "english": "I'll take this one.",
+      "context": "trying-on",
+      "register": "polite",
+      "lexemes": [
+        "이거",
+        "하다"
+      ],
+      "distractors": [
+        "I'll think about it.",
+        "I'll try this one on.",
+        "I'll take the other one."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 계산은 이쪽에서 도와드릴게요.",
+            "english": "Sure, I'll ring you up over here."
+          },
+          {
+            "korean": "선물 포장해 드릴까요?",
+            "english": "Shall I gift-wrap it?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "어서 오세요.",
+            "english": "Welcome."
+          },
+          {
+            "korean": "탈의실은 저쪽이에요.",
+            "english": "The fitting room is over there."
+          },
+          {
+            "korean": "다 국산이에요.",
+            "english": "It's all Korean-grown."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/think-about-it",
+      "kind": "sentence",
+      "korean": "좀 더 생각해 볼게요.",
+      "english": "I'll think about it a bit more.",
+      "context": "trying-on",
+      "register": "polite",
+      "lexemes": [
+        "좀",
+        "더",
+        "생각하다",
+        "보다"
+      ],
+      "distractors": [
+        "I'll take it.",
+        "I'll look around a bit more.",
+        "I'll come back tomorrow."
+      ]
+    },
+    {
+      "id": "shopping/to-be-on-sale",
+      "kind": "word",
+      "korean": "세일하다",
+      "english": "to be on sale",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "세일하다"
+      ]
+    },
+    {
+      "id": "shopping/is-there-a-sale",
+      "kind": "sentence",
+      "korean": "지금 세일해요?",
+      "english": "Is there a sale on now?",
+      "context": "sales",
+      "register": "polite",
+      "lexemes": [
+        "지금",
+        "세일하다"
+      ],
+      "distractors": [
+        "When does the sale start?",
+        "Is this the sale price?",
+        "Is the shop open now?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 모든 상품 삼십 퍼센트 할인이에요.",
+            "english": "Yes, everything is thirty percent off."
+          },
+          {
+            "korean": "이쪽 상품만 세일해요.",
+            "english": "Only the items over here are on sale."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "봉투 하나 주세요.",
+            "english": "One bag, please."
+          },
+          {
+            "korean": "잘 어울리세요.",
+            "english": "It looks great on you."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/sale",
+      "kind": "word",
+      "korean": "세일",
+      "english": "sale",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "세일"
+      ]
+    },
+    {
+      "id": "shopping/sale-until-when",
+      "kind": "sentence",
+      "korean": "세일은 언제까지예요?",
+      "english": "How long is the sale on?",
+      "context": "sales",
+      "register": "polite",
+      "lexemes": [
+        "세일",
+        "언제",
+        "이다"
+      ],
+      "distractors": [
+        "When does the sale start?",
+        "Is the sale over?",
+        "How big is the discount?"
+      ]
+    },
+    {
+      "id": "shopping/discount",
+      "kind": "word",
+      "korean": "할인",
+      "english": "discount",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "할인"
+      ]
+    },
+    {
+      "id": "shopping/student-discount",
+      "kind": "sentence",
+      "korean": "학생 할인 있어요?",
+      "english": "Is there a student discount?",
+      "context": "sales",
+      "register": "polite",
+      "lexemes": [
+        "학생",
+        "할인",
+        "있다"
+      ],
+      "distractors": [
+        "Is there a group discount?",
+        "Is this the student price?",
+        "Are you a student?"
+      ]
+    },
+    {
+      "id": "shopping/percent",
+      "kind": "word",
+      "korean": "퍼센트",
+      "english": "percent",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "퍼센트"
+      ]
+    },
+    {
+      "id": "shopping/to-give-a-discount",
+      "kind": "word",
+      "korean": "할인하다",
+      "english": "to give a discount",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "할인하다"
+      ]
+    },
+    {
+      "id": "shopping/thirty-percent-off",
+      "kind": "sentence",
+      "korean": "지금 삼십 퍼센트 할인해요.",
+      "english": "It's thirty percent off right now.",
+      "context": "sales",
+      "register": "polite",
+      "lexemes": [
+        "지금",
+        "삼십",
+        "퍼센트",
+        "할인하다"
+      ],
+      "distractors": [
+        "It's thirteen percent off right now.",
+        "The sale starts next week.",
+        "It's thirty percent off tomorrow."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "와, 그럼 두 개 살게요.",
+            "english": "Wow, then I'll buy two."
+          },
+          {
+            "korean": "할인된 가격이 얼마예요?",
+            "english": "What's the discounted price?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "네, 데워 주세요.",
+            "english": "Yes, please heat it up."
+          },
+          {
+            "korean": "탈의실은 저쪽이에요.",
+            "english": "The fitting room is over there."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/buy-one-get-one-free",
+      "kind": "word",
+      "korean": "원 플러스 원",
+      "english": "buy one, get one free",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "원 플러스 원"
+      ]
+    },
+    {
+      "id": "shopping/buy-one-get-one",
+      "kind": "sentence",
+      "korean": "이거 원 플러스 원이에요.",
+      "english": "This one's buy one, get one free.",
+      "context": "convenience-store",
+      "register": "polite",
+      "note": "Signs say 1+1: take a second one free. 투 플러스 원 (2+1) means buy two, get one free.",
+      "lexemes": [
+        "이거",
+        "원 플러스 원",
+        "이다"
+      ],
+      "distractors": [
+        "This one's on sale.",
+        "This one's a thousand won.",
+        "This one's sold out."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "아, 그래요? 그럼 하나 더 가져올게요.",
+            "english": "Oh really? Then I'll grab another one."
+          },
+          {
+            "korean": "와, 몰랐어요. 감사합니다.",
+            "english": "Oh, I didn't know. Thank you."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "저쪽 끝에 있어요.",
+            "english": "It's at the far end over there."
+          },
+          {
+            "korean": "잘 어울리세요.",
+            "english": "It looks great on you."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/boss-shop-owner",
+      "kind": "word",
+      "korean": "사장님",
+      "english": "boss, shop owner",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "사장님"
+      ]
+    },
+    {
+      "id": "shopping/boss-how-much",
+      "kind": "sentence",
+      "korean": "사장님, 이거 얼마예요?",
+      "english": "Excuse me, how much is this?",
+      "context": "market",
+      "register": "polite",
+      "note": "Shop owners and market vendors are politely called 사장님, literally \"boss\".",
+      "lexemes": [
+        "사장님",
+        "이거",
+        "얼마",
+        "이다"
+      ],
+      "distractors": [
+        "Excuse me, is this fresh?",
+        "Excuse me, how many are there?",
+        "Excuse me, what is this?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "한 개에 천 원이에요.",
+            "english": "They're a thousand won each."
+          },
+          {
+            "korean": "그건 만 오천 원이에요.",
+            "english": "That one's fifteen thousand won."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "탈의실은 저쪽이에요.",
+            "english": "The fitting room is over there."
+          },
+          {
+            "korean": "저도 그렇게 생각해요.",
+            "english": "I think so too."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/apple",
+      "kind": "word",
+      "korean": "사과",
+      "english": "apple",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "사과"
+      ],
+      "image": "apples"
+    },
+    {
+      "id": "shopping/bag-packet",
+      "kind": "word",
+      "korean": "봉지",
+      "english": "bag, packet (counter)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "봉지"
+      ],
+      "image": "plastic bag"
+    },
+    {
+      "id": "shopping/bag-of-apples-price",
+      "kind": "sentence",
+      "korean": "사과 한 봉지에 얼마예요?",
+      "english": "How much for a bag of apples?",
+      "context": "market",
+      "register": "polite",
+      "lexemes": [
+        "사과",
+        "한",
+        "봉지",
+        "얼마",
+        "이다"
+      ],
+      "distractors": [
+        "How much for one apple?",
+        "How much for a box of apples?",
+        "How much for two bags of apples?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "한 봉지에 오천 원이에요.",
+            "english": "It's five thousand won a bag."
+          },
+          {
+            "korean": "만 원이요.",
+            "english": "Ten thousand won."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "네, 데워 드릴게요.",
+            "english": "Sure, I'll heat it up."
+          },
+          {
+            "korean": "선물 포장해 드릴까요?",
+            "english": "Shall I gift-wrap it?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/five-thousand-a-bag",
+      "kind": "sentence",
+      "korean": "한 봉지에 오천 원이에요.",
+      "english": "It's five thousand won a bag.",
+      "context": "market",
+      "register": "polite",
+      "lexemes": [
+        "한",
+        "봉지",
+        "오",
+        "천",
+        "원",
+        "이다"
+      ],
+      "distractors": [
+        "It's fifteen thousand won a bag.",
+        "It's five hundred won a bag.",
+        "It's five thousand won each."
+      ]
+    },
+    {
+      "id": "shopping/knock-a-little-off",
+      "kind": "sentence",
+      "korean": "좀 깎아 주세요.",
+      "english": "Could you give me a little discount?",
+      "context": "market",
+      "register": "polite",
+      "note": "Haggling is normal at traditional markets, rare in shops and chains. 깎다 also means to peel.",
+      "lexemes": [
+        "좀",
+        "깎다",
+        "주다"
+      ],
+      "distractors": [
+        "Could you peel it for me?",
+        "Could you wrap it for me?",
+        "Could you give me a bag?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼 만 원만 주세요.",
+            "english": "Then just give me ten thousand won."
+          },
+          {
+            "korean": "이미 싸게 드리는 거예요.",
+            "english": "I'm already giving you a good price."
+          },
+          {
+            "korean": "두 봉지 사시면 깎아 드릴게요.",
+            "english": "Buy two bags and I'll knock some off."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "탈의실은 저쪽이에요.",
+            "english": "The fitting room is over there."
+          },
+          {
+            "korean": "일시불로 해 드릴까요?",
+            "english": "Would you like to pay in full?"
+          },
+          {
+            "korean": "데워 드릴까요?",
+            "english": "Shall I heat it up for you?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/how-much-for-two",
+      "kind": "sentence",
+      "korean": "두 개 사면 얼마예요?",
+      "english": "How much if I buy two?",
+      "context": "market",
+      "register": "polite",
+      "lexemes": [
+        "두",
+        "개",
+        "사다",
+        "얼마",
+        "이다"
+      ],
+      "distractors": [
+        "How much is one?",
+        "Can I buy two?",
+        "How much if I buy three?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "두 개면 만 오천 원에 드릴게요.",
+            "english": "For two, I'll let you have them for fifteen thousand won."
+          },
+          {
+            "korean": "두 개 사시면 천 원 빼 드릴게요.",
+            "english": "If you buy two, I'll take a thousand off."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "전자레인지는 저쪽에 있어요.",
+            "english": "The microwave is over there."
+          },
+          {
+            "korean": "이번 주 일요일까지예요.",
+            "english": "Until this Sunday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/good-price-for-you",
+      "kind": "sentence",
+      "korean": "싸게 해 드릴게요.",
+      "english": "I'll give you a good price.",
+      "context": "market",
+      "register": "polite",
+      "lexemes": [
+        "싸다",
+        "하다",
+        "드리다"
+      ],
+      "distractors": [
+        "I'll give you a bag.",
+        "It's already cheap.",
+        "I'll wrap it for you."
+      ]
+    },
+    {
+      "id": "shopping/free-extra",
+      "kind": "word",
+      "korean": "덤",
+      "english": "free extra",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "덤"
+      ]
+    },
+    {
+      "id": "shopping/throw-in-one-more",
+      "kind": "sentence",
+      "korean": "덤으로 하나 더 드릴게요.",
+      "english": "I'll throw in an extra one for free.",
+      "context": "market",
+      "register": "polite",
+      "note": "덤 is the free extra a market vendor adds to your bag, a warm market custom.",
+      "lexemes": [
+        "덤",
+        "하나",
+        "더",
+        "드리다"
+      ],
+      "distractors": [
+        "Would you like one more?",
+        "One more costs extra.",
+        "I'll sell you one more bag."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "와, 감사합니다!",
+            "english": "Wow, thank you!"
+          },
+          {
+            "korean": "사장님 최고예요!",
+            "english": "You're the best!"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "여기 사인해 주세요.",
+            "english": "Please sign here."
+          },
+          {
+            "korean": "영수증 있으세요?",
+            "english": "Do you have the receipt?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/made-in-korea",
+      "kind": "word",
+      "korean": "국산",
+      "english": "made in Korea",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "국산"
+      ]
+    },
+    {
+      "id": "shopping/is-this-korean-grown",
+      "kind": "sentence",
+      "korean": "이거 국산이에요?",
+      "english": "Is this Korean-grown?",
+      "context": "market",
+      "register": "polite",
+      "note": "국산 means made or grown in Korea; many shoppers happily pay more for it.",
+      "lexemes": [
+        "이거",
+        "국산",
+        "이다"
+      ],
+      "distractors": [
+        "Is this fresh?",
+        "Is this imported?",
+        "Is this organic?"
+      ]
+    },
+    {
+      "id": "shopping/cash",
+      "kind": "word",
+      "korean": "현금",
+      "english": "cash",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "현금"
+      ],
+      "image": "cash banknotes"
+    },
+    {
+      "id": "shopping/cheaper-in-cash",
+      "kind": "sentence",
+      "korean": "현금으로 하면 더 싸요?",
+      "english": "Is it cheaper if I pay cash?",
+      "context": "market",
+      "register": "polite",
+      "lexemes": [
+        "현금",
+        "하다",
+        "더",
+        "싸다"
+      ],
+      "distractors": [
+        "Can I pay in cash?",
+        "Is it cheaper by card?",
+        "Is it more expensive in cash?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 현금이면 천 원 빼 드릴게요.",
+            "english": "Yes, with cash I'll take a thousand off."
+          },
+          {
+            "korean": "아니요, 카드도 똑같아요.",
+            "english": "No, it's the same by card."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "탈의실은 저쪽이에요.",
+            "english": "The fitting room is over there."
+          },
+          {
+            "korean": "세일은 내일까지예요.",
+            "english": "The sale is until tomorrow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/where-do-i-pay",
+      "kind": "sentence",
+      "korean": "계산은 어디서 해요?",
+      "english": "Where do I pay?",
+      "context": "paying",
+      "register": "polite",
+      "lexemes": [
+        "계산",
+        "어디",
+        "하다"
+      ],
+      "distractors": [
+        "How do I pay?",
+        "Can I pay here?",
+        "Where's the exit?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "저쪽 계산대로 가세요.",
+            "english": "Please go to the counter over there."
+          },
+          {
+            "korean": "여기서 해 드릴게요.",
+            "english": "I can ring you up here."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "덤으로 하나 더 드릴게요.",
+            "english": "I'll throw in an extra one for free."
+          },
+          {
+            "korean": "이거 원 플러스 원이에요.",
+            "english": "This one's buy one, get one free."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/pay-in-cash",
+      "kind": "sentence",
+      "korean": "현금으로 할게요.",
+      "english": "I'll pay in cash.",
+      "context": "paying",
+      "register": "polite",
+      "lexemes": [
+        "현금",
+        "하다"
+      ],
+      "distractors": [
+        "I'll pay by card.",
+        "Do you take cash?",
+        "I don't have any cash."
+      ]
+    },
+    {
+      "id": "shopping/single-payment",
+      "kind": "word",
+      "korean": "일시불",
+      "english": "single payment",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "일시불"
+      ]
+    },
+    {
+      "id": "shopping/pay-in-full",
+      "kind": "sentence",
+      "korean": "일시불로 해 드릴까요?",
+      "english": "Would you like to pay in full?",
+      "context": "paying",
+      "register": "polite",
+      "note": "Card payments ask 일시불 (one payment) or 할부 (monthly instalments).",
+      "lexemes": [
+        "일시불",
+        "하다",
+        "드리다"
+      ],
+      "distractors": [
+        "Would you like a receipt?",
+        "Would you like to pay in instalments?",
+        "Would you like to pay by card?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 일시불로 해 주세요.",
+            "english": "Yes, in full, please."
+          },
+          {
+            "korean": "삼 개월 할부로 해 주세요.",
+            "english": "Three monthly instalments, please."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "덤으로 하나 더 드릴게요.",
+            "english": "I'll throw in an extra one for free."
+          },
+          {
+            "korean": "그냥 구경하는 거예요.",
+            "english": "I'm just looking."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/bag-envelope",
+      "kind": "word",
+      "korean": "봉투",
+      "english": "bag / envelope",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "봉투"
+      ],
+      "image": "paper bag"
+    },
+    {
+      "id": "shopping/need-a-bag",
+      "kind": "sentence",
+      "korean": "봉투 필요하세요?",
+      "english": "Do you need a bag?",
+      "context": "paying",
+      "register": "polite",
+      "note": "Bags usually cost a little extra, so many people bring their own.",
+      "lexemes": [
+        "봉투",
+        "필요하다"
+      ],
+      "distractors": [
+        "Do you need a receipt?",
+        "Do you have a bag?",
+        "Do you need chopsticks?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 하나 주세요.",
+            "english": "Yes, one, please."
+          },
+          {
+            "korean": "아니요, 괜찮아요.",
+            "english": "No, I'm fine."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "사장님 최고예요!",
+            "english": "You're the best!"
+          },
+          {
+            "korean": "이번 주 일요일까지예요.",
+            "english": "Until this Sunday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/no-bag-thanks",
+      "kind": "sentence",
+      "korean": "봉투는 괜찮아요.",
+      "english": "I'm fine without a bag.",
+      "context": "paying",
+      "register": "polite",
+      "lexemes": [
+        "봉투",
+        "괜찮다"
+      ],
+      "distractors": [
+        "One bag, please.",
+        "The bag is too small.",
+        "I'm fine without a receipt."
+      ]
+    },
+    {
+      "id": "shopping/can-you-gift-wrap",
+      "kind": "sentence",
+      "korean": "선물 포장해 주실 수 있어요?",
+      "english": "Could you gift-wrap it?",
+      "context": "paying",
+      "register": "polite",
+      "note": "포장 is gift-wrapping in a shop, but takeout in a restaurant.",
+      "lexemes": [
+        "선물",
+        "포장하다",
+        "주다"
+      ],
+      "distractors": [
+        "Could you put it in a bag?",
+        "Could you recommend a gift?",
+        "Is gift-wrapping extra?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 포장해 드릴게요.",
+            "english": "Sure, I'll wrap it for you."
+          },
+          {
+            "korean": "포장비는 삼천 원이에요.",
+            "english": "Wrapping is three thousand won."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "덤으로 하나 더 드릴게요.",
+            "english": "I'll throw in an extra one for free."
+          },
+          {
+            "korean": "다 국산이에요.",
+            "english": "It's all Korean-grown."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/to-throw-away",
+      "kind": "word",
+      "korean": "버리다",
+      "english": "to throw away",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "버리다"
+      ]
+    },
+    {
+      "id": "shopping/throw-away-receipt",
+      "kind": "sentence",
+      "korean": "영수증은 버려 주세요.",
+      "english": "Please throw away the receipt.",
+      "context": "paying",
+      "register": "polite",
+      "note": "A common way to turn down the receipt at a convenience store.",
+      "lexemes": [
+        "영수증",
+        "버리다",
+        "주다"
+      ],
+      "distractors": [
+        "Please give me the receipt.",
+        "I lost the receipt.",
+        "Please put the receipt in the bag."
+      ]
+    },
+    {
+      "id": "shopping/received-twenty-thousand",
+      "kind": "sentence",
+      "korean": "이만 원 받았습니다.",
+      "english": "I've received twenty thousand won.",
+      "context": "paying",
+      "register": "formal",
+      "lexemes": [
+        "이",
+        "만",
+        "원",
+        "받다"
+      ],
+      "distractors": [
+        "That's twenty thousand won.",
+        "I've received twelve thousand won.",
+        "Here's twenty thousand won in change."
+      ]
+    },
+    {
+      "id": "shopping/change",
+      "kind": "word",
+      "korean": "거스름돈",
+      "english": "change (money)",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "거스름돈"
+      ]
+    },
+    {
+      "id": "shopping/heres-your-change",
+      "kind": "sentence",
+      "korean": "거스름돈 여기 있습니다.",
+      "english": "Here's your change.",
+      "context": "paying",
+      "register": "formal",
+      "lexemes": [
+        "거스름돈",
+        "여기",
+        "있다"
+      ],
+      "distractors": [
+        "Here's your receipt.",
+        "Here's your card.",
+        "I don't have any change."
+      ]
+    },
+    {
+      "id": "shopping/all-altogether",
+      "kind": "word",
+      "korean": "모두",
+      "english": "all, altogether",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "모두"
+      ]
+    },
+    {
+      "id": "shopping/how-much-altogether",
+      "kind": "sentence",
+      "korean": "모두 얼마예요?",
+      "english": "How much is it altogether?",
+      "context": "paying",
+      "register": "polite",
+      "lexemes": [
+        "모두",
+        "얼마",
+        "이다"
+      ],
+      "distractors": [
+        "How much is each one?",
+        "How many are there altogether?",
+        "Is that everything?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "모두 만 오천 원입니다.",
+            "english": "That's fifteen thousand won altogether."
+          },
+          {
+            "korean": "이만 원이에요.",
+            "english": "Twenty thousand won."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "탈의실은 저쪽이에요.",
+            "english": "The fitting room is over there."
+          },
+          {
+            "korean": "흰색이 더 잘 어울려요.",
+            "english": "White suits you better."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/to-exchange",
+      "kind": "word",
+      "korean": "교환하다",
+      "english": "to exchange",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "교환하다"
+      ]
+    },
+    {
+      "id": "shopping/want-to-exchange",
+      "kind": "sentence",
+      "korean": "이거 교환하고 싶어요.",
+      "english": "I'd like to exchange this.",
+      "context": "exchanges",
+      "register": "polite",
+      "lexemes": [
+        "이거",
+        "교환하다"
+      ],
+      "distractors": [
+        "I'd like a refund for this.",
+        "I'd like to try this on.",
+        "I'd like to buy this."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "영수증 있으세요?",
+            "english": "Do you have the receipt?"
+          },
+          {
+            "korean": "어떤 걸로 바꿔 드릴까요?",
+            "english": "What would you like to swap it for?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "덤으로 하나 더 드릴게요.",
+            "english": "I'll throw in an extra one for free."
+          },
+          {
+            "korean": "데워 드릴까요?",
+            "english": "Shall I heat it up for you?"
+          },
+          {
+            "korean": "한 봉지에 오천 원이에요.",
+            "english": "It's five thousand won a bag."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/to-refund",
+      "kind": "word",
+      "korean": "환불하다",
+      "english": "to refund",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "환불하다"
+      ]
+    },
+    {
+      "id": "shopping/want-a-refund",
+      "kind": "sentence",
+      "korean": "환불하고 싶어요.",
+      "english": "I'd like a refund.",
+      "context": "exchanges",
+      "register": "polite",
+      "lexemes": [
+        "환불하다"
+      ],
+      "distractors": [
+        "I'd like to exchange it.",
+        "I'd like a receipt.",
+        "I'd like to pay now."
+      ]
+    },
+    {
+      "id": "shopping/do-you-have-receipt",
+      "kind": "sentence",
+      "korean": "영수증 있으세요?",
+      "english": "Do you have the receipt?",
+      "context": "exchanges",
+      "register": "polite",
+      "lexemes": [
+        "영수증",
+        "있다"
+      ],
+      "distractors": [
+        "Do you need a receipt?",
+        "Would you like a receipt?",
+        "Did you lose the receipt?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 여기 있어요.",
+            "english": "Yes, here it is."
+          },
+          {
+            "korean": "아니요, 잃어버렸어요.",
+            "english": "No, I lost it."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "사장님 최고예요!",
+            "english": "You're the best!"
+          },
+          {
+            "korean": "이번 주 일요일까지예요.",
+            "english": "Until this Sunday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/product-item",
+      "kind": "word",
+      "korean": "상품",
+      "english": "product, item",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "상품"
+      ]
+    },
+    {
+      "id": "shopping/refund",
+      "kind": "word",
+      "korean": "환불",
+      "english": "refund",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "환불"
+      ]
+    },
+    {
+      "id": "shopping/no-refunds-on-sale-items",
+      "kind": "sentence",
+      "korean": "죄송하지만 세일 상품은 환불이 안 돼요.",
+      "english": "Sorry, sale items can't be refunded.",
+      "context": "exchanges",
+      "register": "polite",
+      "lexemes": [
+        "죄송하다",
+        "세일",
+        "상품",
+        "환불",
+        "안",
+        "되다"
+      ],
+      "distractors": [
+        "Sorry, sale items can't be exchanged.",
+        "Sorry, the sale is over.",
+        "Sorry, refunds take a week."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "그럼 교환은 돼요?",
+            "english": "Can I exchange it, then?"
+          },
+          {
+            "korean": "아, 알겠어요.",
+            "english": "Oh, I see."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "덤으로 하나 더 드릴게요.",
+            "english": "I'll throw in an extra one for free."
+          },
+          {
+            "korean": "흰색이 더 잘 어울려요.",
+            "english": "White suits you better."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/exchange",
+      "kind": "word",
+      "korean": "교환",
+      "english": "exchange",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "교환"
+      ]
+    },
+    {
+      "id": "shopping/exchange-with-receipt",
+      "kind": "sentence",
+      "korean": "영수증 있으면 교환 가능해요.",
+      "english": "You can exchange it if you have the receipt.",
+      "context": "exchanges",
+      "register": "polite",
+      "lexemes": [
+        "영수증",
+        "있다",
+        "교환",
+        "가능하다"
+      ],
+      "distractors": [
+        "You can get a refund without a receipt.",
+        "You need the receipt to pay.",
+        "You can't exchange it without a card."
+      ]
+    },
+    {
+      "id": "shopping/never-worn-it",
+      "kind": "sentence",
+      "korean": "한 번도 안 입었어요.",
+      "english": "I haven't worn it even once.",
+      "context": "exchanges",
+      "register": "polite",
+      "lexemes": [
+        "한",
+        "번",
+        "안",
+        "입다"
+      ],
+      "distractors": [
+        "I've only worn it once.",
+        "I wore it once.",
+        "I haven't washed it yet."
+      ]
+    },
+    {
+      "id": "shopping/stain",
+      "kind": "word",
+      "korean": "얼룩",
+      "english": "stain",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "얼룩"
+      ],
+      "image": "stain"
+    },
+    {
+      "id": "shopping/theres-a-stain",
+      "kind": "sentence",
+      "korean": "여기 얼룩이 있어요.",
+      "english": "There's a stain here.",
+      "context": "exchanges",
+      "register": "polite",
+      "lexemes": [
+        "여기",
+        "얼룩",
+        "있다"
+      ],
+      "distractors": [
+        "There's a hole here.",
+        "There's a price tag here.",
+        "There's a button missing here."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "죄송합니다. 새 걸로 바꿔 드릴게요.",
+            "english": "I'm sorry. I'll swap it for a new one."
+          },
+          {
+            "korean": "정말 죄송해요. 환불해 드릴까요?",
+            "english": "I'm so sorry. Shall I refund you?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "한 봉지에 오천 원이에요.",
+            "english": "It's five thousand won a bag."
+          },
+          {
+            "korean": "일시불로 해 주세요.",
+            "english": "In full, please."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/convenience-store-nearby",
+      "kind": "sentence",
+      "korean": "이 근처에 편의점 있어요?",
+      "english": "Is there a convenience store near here?",
+      "context": "convenience-store",
+      "register": "polite",
+      "lexemes": [
+        "이",
+        "근처",
+        "편의점",
+        "있다"
+      ],
+      "distractors": [
+        "Is there a pharmacy near here?",
+        "Is the convenience store open?",
+        "Where's the nearest bank?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 저 건물 일 층에 있어요.",
+            "english": "Yes, on the ground floor of that building."
+          },
+          {
+            "korean": "길 건너편에 있어요.",
+            "english": "There's one across the street."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "덤으로 하나 더 드릴게요.",
+            "english": "I'll throw in an extra one for free."
+          },
+          {
+            "korean": "영수증은 버려 주세요.",
+            "english": "Please throw away the receipt."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/to-heat-up",
+      "kind": "word",
+      "korean": "데우다",
+      "english": "to heat up",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "데우다"
+      ]
+    },
+    {
+      "id": "shopping/shall-i-heat-it",
+      "kind": "sentence",
+      "korean": "데워 드릴까요?",
+      "english": "Shall I heat it up for you?",
+      "context": "convenience-store",
+      "register": "polite",
+      "note": "Convenience store staff offer to microwave lunch boxes (도시락) and snacks.",
+      "lexemes": [
+        "데우다",
+        "드리다"
+      ],
+      "distractors": [
+        "Would you like a bag?",
+        "Shall I wrap it for you?",
+        "Would you like it cold?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "네, 데워 주세요.",
+            "english": "Yes, please heat it up."
+          },
+          {
+            "korean": "아니요, 괜찮아요.",
+            "english": "No, I'm fine."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "이번 주 일요일까지예요.",
+            "english": "Until this Sunday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/microwave",
+      "kind": "word",
+      "korean": "전자레인지",
+      "english": "microwave",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "전자레인지"
+      ],
+      "image": "microwave oven"
+    },
+    {
+      "id": "shopping/where-microwave",
+      "kind": "sentence",
+      "korean": "전자레인지는 어디 있어요?",
+      "english": "Where's the microwave?",
+      "context": "convenience-store",
+      "register": "polite",
+      "lexemes": [
+        "전자레인지",
+        "어디",
+        "있다"
+      ],
+      "distractors": [
+        "Where are the chopsticks?",
+        "Is there a microwave?",
+        "Where's the fridge?"
+      ]
+    },
+    {
+      "id": "shopping/cosmetics",
+      "kind": "word",
+      "korean": "화장품",
+      "english": "cosmetics",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "화장품"
+      ],
+      "image": "cosmetics"
+    },
+    {
+      "id": "shopping/cosmetics-floor",
+      "kind": "sentence",
+      "korean": "화장품은 몇 층에 있어요?",
+      "english": "What floor are the cosmetics on?",
+      "context": "department-store",
+      "register": "polite",
+      "lexemes": [
+        "화장품",
+        "몇",
+        "층",
+        "있다"
+      ],
+      "distractors": [
+        "Where is the cosmetics shop?",
+        "What floor is the food court on?",
+        "Are the cosmetics on the first floor?"
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "일 층에 있어요.",
+            "english": "They're on the first floor."
+          },
+          {
+            "korean": "지하 일 층으로 가세요.",
+            "english": "Go to the first basement floor."
+          }
+        ],
+        "bad": [
+          {
+            "korean": "엠 사이즈요.",
+            "english": "A medium."
+          },
+          {
+            "korean": "덤으로 하나 더 드릴게요.",
+            "english": "I'll throw in an extra one for free."
+          },
+          {
+            "korean": "영수증은 버려 주세요.",
+            "english": "Please throw away the receipt."
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping/price-tag",
+      "kind": "word",
+      "korean": "가격표",
+      "english": "price tag",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "가격표"
+      ],
+      "image": "price tag"
+    },
+    {
+      "id": "shopping/no-price-tag",
+      "kind": "sentence",
+      "korean": "가격표가 없어요.",
+      "english": "There's no price tag.",
+      "context": "department-store",
+      "register": "polite",
+      "lexemes": [
+        "가격표",
+        "없다"
+      ],
+      "distractors": [
+        "The price tag is wrong.",
+        "There's no size label.",
+        "I lost the receipt."
+      ]
+    },
+    {
+      "id": "shopping/sold-out",
+      "kind": "word",
+      "korean": "품절",
+      "english": "sold out",
+      "context": "vocabulary",
+      "register": "neutral",
+      "lexemes": [
+        "품절"
+      ]
+    },
+    {
+      "id": "shopping/size-sold-out",
+      "kind": "sentence",
+      "korean": "죄송합니다, 그 사이즈는 품절이에요.",
+      "english": "Sorry, that size is sold out.",
+      "context": "department-store",
+      "register": "polite",
+      "lexemes": [
+        "죄송하다",
+        "그",
+        "사이즈",
+        "품절",
+        "이다"
+      ],
+      "distractors": [
+        "Sorry, that size is on sale.",
+        "Sorry, that colour is sold out.",
+        "Sorry, that size doesn't fit."
+      ],
+      "replies": {
+        "good": [
+          {
+            "korean": "언제 다시 들어와요?",
+            "english": "When will it be back in stock?"
+          },
+          {
+            "korean": "그럼 다른 색은 있어요?",
+            "english": "Then do you have another colour?"
+          }
+        ],
+        "bad": [
+          {
+            "korean": "이백오십 신어요.",
+            "english": "I wear a 250."
+          },
+          {
+            "korean": "사장님 최고예요!",
+            "english": "You're the best!"
+          },
+          {
+            "korean": "네, 데워 주세요.",
+            "english": "Yes, please heat it up."
+          }
+        ]
+      }
+    }
+  ]
+}

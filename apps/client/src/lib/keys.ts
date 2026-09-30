@@ -9,13 +9,15 @@ export type Action =
   | { type: "replay" }
   | { type: "erase" }
   | { type: "focus" }
-  | { type: "mode" }
+  /** Next screen (`Tab`, step 1) or previous one (`Shift+Tab`, step -1). */
+  | { type: "mode"; step: 1 | -1 }
   | { type: "hide" };
 
 export interface KeyLike {
   key: string;
   /** Physical key (`KeyboardEvent.code`); keeps shortcuts on the same keys on AZERTY, QWERTZ… */
   code?: string;
+  shiftKey?: boolean;
   ctrlKey?: boolean;
   altKey?: boolean;
   metaKey?: boolean;
@@ -60,7 +62,7 @@ export function actionFor(event: KeyLike): Action | null {
     case "Escape":
       return { type: "hide" };
     case "Tab":
-      return { type: "mode" };
+      return { type: "mode", step: event.shiftKey ? -1 : 1 };
     default:
       return null;
   }

@@ -6,4 +6,5 @@ pub mod progression;
 mod rng;
 pub mod scheduler;
 pub mod scoring;
+pub mod stats;
 pub mod typing;

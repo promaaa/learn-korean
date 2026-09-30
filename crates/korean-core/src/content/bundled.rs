@@ -1,63 +1,81 @@
 use super::glossary::Glossary;
 use super::model::Pack;
 
-/// Packs shipped inside the binary, in unlock order.
-const BUNDLED: &[(&str, &str)] = &[
-    (
-        "starter",
-        include_str!("../../../../content/starter/pack.json"),
-    ),
-    (
-        "legacy",
-        include_str!("../../../../content/legacy/pack.json"),
-    ),
-    (
-        "everyday-words",
-        include_str!("../../../../content/everyday-words/pack.json"),
-    ),
-    (
-        "small-talk",
-        include_str!("../../../../content/small-talk/pack.json"),
-    ),
-    (
-        "restaurants",
-        include_str!("../../../../content/restaurants/pack.json"),
-    ),
-];
+/// `(id, pack.json, glossary.json)` of each listed pack directory `content/<id>/`.
+macro_rules! bundle {
+    ($($id:literal),+ $(,)?) => {
+        &[$((
+            $id,
+            include_str!(concat!("../../../../content/", $id, "/pack.json")),
+            include_str!(concat!("../../../../content/", $id, "/glossary.json")),
+        )),+]
+    };
+}
 
-const GLOSSARY: &str = include_str!("../../../../content/glossary.json");
+/// Packs shipped inside the binary, in unlock order. A word's gloss lives in the glossary of the
+/// first of these packs whose lines use it.
+const BUNDLED: &[(&str, &str, &str)] = bundle! {
+    "starter",
+    "legacy",
+    "everyday-words",
+    "small-talk",
+    "restaurants",
+    "numbers-time",
+    "transport",
+    "shopping",
+    "phone-calls",
+    "doctor",
+    "workplace",
+    "k-drama",
+};
+
+/// Ids of the bundled packs, in bundle (unlock) order.
+pub fn bundled_pack_ids() -> Vec<&'static str> {
+    BUNDLED.iter().map(|(id, ..)| *id).collect()
+}
 
 /// Parses the bundled packs. They are validated in CI, so a parse failure is a build defect.
 pub fn bundled_packs() -> Vec<Pack> {
     BUNDLED
         .iter()
-        .map(|(name, json)| {
+        .map(|(id, json, _)| {
             serde_json::from_str(json)
-                .unwrap_or_else(|e| panic!("bundled pack {name} is invalid: {e}"))
+                .unwrap_or_else(|e| panic!("bundled content/{id}/pack.json is invalid: {e}"))
         })
         .collect()
 }
 
-/// Parses the bundled glossary, validated against the packs in CI.
+/// The glossary of each bundled pack, in bundle order.
+fn bundled_glossaries() -> Vec<Glossary> {
+    BUNDLED
+        .iter()
+        .map(|(id, _, json)| {
+            serde_json::from_str(json)
+                .unwrap_or_else(|e| panic!("bundled content/{id}/glossary.json is invalid: {e}"))
+        })
+        .collect()
+}
+
+/// The glossaries of all bundled packs merged, validated against the packs in CI.
 pub fn bundled_glossary() -> Glossary {
-    serde_json::from_str(GLOSSARY)
-        .unwrap_or_else(|e| panic!("bundled content/glossary.json is invalid: {e}"))
+    bundled_glossaries().into_iter().flatten().collect()
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::content::{validate_glossary, validate_packs};
+    use crate::content::{validate_glossary, validate_packs, validate_word_cards};
 
     #[test]
     fn bundled_content_is_valid() {
         let packs = bundled_packs();
-        for (pack, (name, _)) in packs.iter().zip(BUNDLED) {
-            assert_eq!(&pack.id, name, "pack id must match its directory");
+        for (pack, (id, ..)) in packs.iter().zip(BUNDLED) {
+            assert_eq!(&pack.id, id, "pack id must match its directory");
         }
         let errors: Vec<_> = [
             validate_packs(&packs),
-            validate_glossary(&packs, &bundled_glossary()),
+            validate_glossary(&packs, &bundled_glossaries()),
+            validate_word_cards(&packs),
         ]
         .into_iter()
         .filter_map(Result::err)
@@ -67,31 +85,5 @@ mod tests {
             let report: Vec<String> = errors.iter().map(ToString::to_string).collect();
             panic!("invalid content:\n{}", report.join("\n"));
         }
-    }
-
-    /// Particles, the copula and grammar patterns: taught through sentences, never as word cards.
-    const GRAMMAR: &[&str] = &["이다", "에 있다", "하고", "만"];
-
-    #[test]
-    fn every_sentence_lexeme_has_a_word_card() {
-        use crate::content::ItemKind;
-        use std::collections::HashSet;
-        let packs = bundled_packs();
-        let items = || packs.iter().flat_map(|p| &p.items);
-        let carded: HashSet<&str> = items()
-            .filter(|i| i.kind == ItemKind::Word)
-            .flat_map(|i| i.lexemes.iter().map(String::as_str))
-            .collect();
-        let missing: Vec<String> = items()
-            .filter(|i| i.kind == ItemKind::Sentence)
-            .flat_map(|i| i.lexemes.iter().map(move |l| (l.as_str(), i.id.as_str())))
-            .filter(|(l, _)| !carded.contains(l) && !GRAMMAR.contains(l))
-            .map(|(l, id)| format!("{l} (in {id})"))
-            .collect();
-        assert!(
-            missing.is_empty(),
-            "sentence lexemes without a word card:\n{}",
-            missing.join("\n")
-        );
     }
 }

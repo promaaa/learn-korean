@@ -6,11 +6,13 @@
 //! restoring that file is always possible.
 
 pub mod content;
+pub mod hangul;
 pub mod images;
 mod open;
 pub mod progress;
 pub mod reviews;
 pub mod settings;
+pub mod stats;
 pub mod sync;
 
 pub use open::{Database, OpenError};
