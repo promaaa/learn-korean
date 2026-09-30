@@ -21,6 +21,8 @@ before 1.0, a minor bump is a new feature and a patch bump is a fix.
 
 ### Fixed
 - macOS: the global shortcut is **Ctrl+Option+Z**; Super+Z was Command+Z and took Undo from every app.
+- macOS: Ctrl+Option+Z uses the key labelled Z in the current keyboard layout (it used the QWERTY position, so on AZERTY only Ctrl+Option+W worked).
+- macOS: after `Esc`, clicking the Dock icon or opening the app again (Finder, Spotlight) shows the window, and hiding it hands the keyboard back to the previous app instead of an invisible one.
 
 ## [0.6.0]
 
