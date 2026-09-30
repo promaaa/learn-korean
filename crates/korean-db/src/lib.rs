@@ -6,8 +6,8 @@
 //! restoring that file is always possible.
 
 pub mod content;
-pub mod hangul;
 pub mod images;
+pub mod lessons;
 mod open;
 pub mod progress;
 pub mod reviews;

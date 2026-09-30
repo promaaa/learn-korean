@@ -212,15 +212,38 @@ export function typingLayout(): Promise<KeyCap[]> {
   return invoke("typing_layout");
 }
 
-export function typingStart(): Promise<DrillView> {
-  return invoke("typing_start");
+/** A lesson of the Typing Gym's keyboard course. */
+export interface KeyLesson {
+  id: string;
+  title: string;
+  /** The keys the lesson's stage teaches. */
+  keys: string[];
+  unlocked: boolean;
+  passed: boolean;
+}
+
+export function typingLessons(): Promise<KeyLesson[]> {
+  return invoke("typing_lessons");
+}
+
+/** Starts a course lesson (fails when locked), or a round of words for `null`. */
+export function typingStart(lesson: number | null): Promise<DrillView> {
+  return invoke("typing_start", { lesson });
+}
+
+/** The unfinished round left when the screen was switched away, if any. */
+export function typingCurrent(): Promise<{ lesson: number | null; view: DrillView } | null> {
+  return invoke("typing_current");
 }
 
 export function typingPress(code: string, shift: boolean, atMs: number): Promise<Pressed> {
   return invoke("typing_press", { code, shift, atMs });
 }
 
-export function typingNext(): Promise<DrillView | null> {
+/** A course lesson's result is scored (a pass is recorded); a round of words has none. */
+export type TypingNext = { type: "line"; view: DrillView } | { type: "over"; result: LessonResult | null };
+
+export function typingNext(): Promise<TypingNext> {
   return invoke("typing_next");
 }
 
@@ -305,7 +328,7 @@ export interface HangulLesson {
 }
 
 export interface LessonResult {
-  /** Index of the lesson in `hangulLessons()`. */
+  /** Index of the lesson in its list (`hangulLessons()`, `typingLessons()`). */
   lesson: number;
   accuracy: number;
   keystrokes: number;

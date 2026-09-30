@@ -1,10 +1,11 @@
 //! Hangul typing engine: 2-set (dubeolsik) layout on physical keys, jamo decomposition,
-//! IME-style composition, a strict typing drill, rounds of drills and the Hangul primer. Pure
-//! logic: no I/O, no clock reads.
+//! IME-style composition, a strict typing drill, rounds of drills, the keyboard course and the
+//! Hangul primer. Pure logic: no I/O, no clock reads.
 
 pub mod compose;
 pub mod drill;
 pub mod jamo;
+pub mod keyboard;
 pub mod layout;
 pub mod primer;
 mod round;

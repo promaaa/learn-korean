@@ -58,6 +58,8 @@ body {
 
 .stage {
   display: grid;
+  /* One row as tall as the stage, so a screen's long list scrolls instead of growing it. */
+  grid-template-rows: minmax(0, 1fr);
   place-items: center;
   min-height: 0;
 }

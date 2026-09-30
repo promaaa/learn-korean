@@ -1,17 +1,18 @@
 //! Hangul primer commands. Lessons and the pass rule live in `korean_core::typing::primer`;
-//! passes are stored by `korean_db::hangul`. The round is separate from the Typing Gym's, so
+//! passes are stored by `korean_db::lessons`. The round is separate from the Typing Gym's, so
 //! switching screens mid-round leaves both where they were.
 
 use std::sync::Mutex;
 
 use korean_core::typing::Round;
-use korean_core::typing::primer::{NewJamo, PASS_PERCENT, Primer, bundled_primer, round_passes};
+use korean_core::typing::primer::{NewJamo, Primer, bundled_primer};
+use korean_db::lessons::Course;
 use serde::Serialize;
 use tauri::State;
 
 use crate::session::now_ms;
 use crate::state::AppState;
-use crate::typing::{DrillView, Pressed, new_round, press, view};
+use crate::typing::{DrillView, LessonResult, Pressed, new_round, press, view};
 
 struct LessonRound {
     lesson: usize,
@@ -44,19 +45,6 @@ pub struct LessonView {
 }
 
 #[derive(Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct LessonResult {
-    /// Index of the lesson in the list.
-    lesson: usize,
-    accuracy: f64,
-    keystrokes: usize,
-    errors: usize,
-    passed: bool,
-    /// Accuracy needed to pass, in percent.
-    pass_percent: usize,
-}
-
-#[derive(Serialize)]
 #[serde(tag = "type", rename_all = "camelCase")]
 pub enum HangulNext {
     Line { view: DrillView },
@@ -69,7 +57,7 @@ pub async fn hangul_lessons(
     app: State<'_, AppState>,
     hangul: State<'_, HangulPrimer>,
 ) -> Result<Vec<LessonView>, String> {
-    let passed = korean_db::hangul::passed_lessons(app.db()?.pool())
+    let passed = korean_db::lessons::passed_lessons(app.db()?.pool(), Course::Hangul)
         .await
         .map_err(|e| e.to_string())?;
     let primer = &hangul.primer;
@@ -95,7 +83,7 @@ pub async fn hangul_start(
     app: State<'_, AppState>,
     hangul: State<'_, HangulPrimer>,
 ) -> Result<DrillView, String> {
-    let passed = korean_db::hangul::passed_lessons(app.db()?.pool())
+    let passed = korean_db::lessons::passed_lessons(app.db()?.pool(), Course::Hangul)
         .await
         .map_err(|e| e.to_string())?;
     let primer = &hangul.primer;
@@ -159,21 +147,12 @@ pub async fn hangul_next(
         guard.take().expect("checked above")
     };
     let LessonRound { lesson, round } = finished;
-    let passed = round_passes(&round);
-    if passed {
+    let result = LessonResult::of(lesson, &round);
+    if result.passed() {
         let id = &hangul.primer.lessons[lesson].id;
-        korean_db::hangul::record_pass(app.db()?.pool(), id, now_ms())
+        korean_db::lessons::record_pass(app.db()?.pool(), Course::Hangul, id, now_ms())
             .await
             .map_err(|e| e.to_string())?;
     }
-    Ok(HangulNext::Over {
-        result: LessonResult {
-            lesson,
-            accuracy: round.accuracy(),
-            keystrokes: round.keystrokes(),
-            errors: round.errors(),
-            passed,
-            pass_percent: PASS_PERCENT,
-        },
-    })
+    Ok(HangulNext::Over { result })
 }

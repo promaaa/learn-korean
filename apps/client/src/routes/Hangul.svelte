@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import LessonList from "../components/LessonList.svelte";
   import RoundSummary from "../components/RoundSummary.svelte";
   import ScreenTitle from "../components/ScreenTitle.svelte";
   import TypingDrill from "../components/TypingDrill.svelte";
@@ -210,18 +211,10 @@
   <ScreenTitle label={stage === "list" || !lesson ? "Hangul" : `Hangul · ${lesson.title}`} {count} />
 
   {#if stage === "list"}
-    <ol class="lessons">
-      {#each lessons as item, index (item.id)}
-        <li class:selected={index === selected} class:locked={!item.unlocked}>
-          <span class="number">{index + 1}</span>
-          <span class="name">{item.title}</span>
-          <span class="letters" lang="ko">{item.jamo.map((j) => j.jamo).join(" ")}</span>
-          <span class="status" class:passed={item.passed}>
-            {item.passed ? "passed" : item.unlocked ? "" : "locked"}
-          </span>
-        </li>
-      {/each}
-    </ol>
+    <LessonList
+      lessons={lessons.map((item) => ({ ...item, letters: item.jamo.map((j) => j.jamo).join(" ") }))}
+      {selected}
+    />
   {:else if stage === "intro" && lesson}
     {@const current = lesson.jamo[shown]}
     <div class="strip" lang="ko">
@@ -274,60 +267,6 @@
     align-items: center;
     justify-content: center;
     gap: 6px;
-  }
-
-  .lessons {
-    width: 100%;
-    max-width: 560px;
-    margin: 24px 0 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .lessons li {
-    display: grid;
-    grid-template-columns: 28px 1fr auto 64px;
-    align-items: baseline;
-    gap: 14px;
-    padding: 8px 14px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    color: var(--fg-dim);
-  }
-
-  .lessons li.selected {
-    border-color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 10%, var(--panel));
-    color: var(--fg);
-  }
-
-  .lessons li.locked {
-    opacity: 0.4;
-  }
-
-  .number {
-    color: var(--muted);
-    font-variant-numeric: tabular-nums;
-    text-align: right;
-  }
-
-  .letters {
-    font-family: var(--font-ko);
-    color: var(--fg);
-    letter-spacing: 0.05em;
-  }
-
-  .status {
-    font-size: 12px;
-    color: var(--muted);
-    text-align: right;
-  }
-
-  .status.passed {
-    color: var(--good);
   }
 
   .strip {

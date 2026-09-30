@@ -27,6 +27,7 @@ Tauri 2 · Rust · Svelte 5 · TypeScript · SQLite · FSRS.
 | arrows or `H` `J` `K` `L` | after answering: show the English of each Korean word |
 | `Space` | next card |
 | `R` | replay audio |
+| `J` / `K`, `Enter`, `Backspace` | Typing Gym: choose a lesson, start / next, back to the lessons |
 | `J` / `K`, `H` / `L`, `Enter`, `Backspace` | Hangul primer: choose a lesson, browse its new letters, start / next, back to the lessons |
 | `F` | focus: words only → words, then sentences → everything |
 | `Tab` / `Shift + Tab` | next / previous screen: review → Typing Gym → Hangul → stats |

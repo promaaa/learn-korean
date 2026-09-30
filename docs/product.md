@@ -37,7 +37,24 @@ word on the row above or below.
 
 ### Typing Gym
 
-Rounds of 8 lines from unlocked packs, items already met first, short to long. Keys are read by
+A touch-typing course, like typingclub.com, then free practice. The list works like the Hangul
+primer's: `↑ ↓` (or `J K`) and `Enter`; lesson 1 is always open, each next one opens once the
+previous is passed.
+
+1. **Keyboard course**: 69 lessons that add a key pair at a time, from the home row out: ㄹ ㅓ
+   (index fingers on F and J), ㅇ ㅏ, ㄴ ㅣ, ㅎ ㅗ, ㅁ, then the top row (ㄱ ㅕ, ㄷ ㅑ, ㅅ ㅛ, ㅈ ㅐ,
+   ㅂ ㅔ), the bottom row (ㅍ ㅡ, ㅠ ㅜ, ㅊ `,`, ㅌ `.`, ㅋ) and the Shift doubles (ㄲ ㅆ, ㄸ ㅉ ㅃ,
+   ㅒ ㅖ). Each stage drills its new keys alone as lone jamo (ㄹㄹ ㅓㅓㅓ), then in syllables
+   (러 럴러, borrowing learned vowels or consonants when the stage has none), then twice mixed with
+   every key learned before, half the keys still new. Hangul composes as it is typed, so groups
+   are either lone consonants, lone vowels that do not combine, or real syllables. Every line is
+   random, generated again on each attempt, and types every new key. The summary shows speed,
+   accuracy and mistakes; **90 %** accuracy passes. `Enter` opens the next lesson after a pass and
+   retries otherwise; `Backspace` returns to the list. Passes are saved and synced.
+2. **Free practice**, the last row: rounds of 8 lines from unlocked packs, items already met
+   first, short to long.
+
+Leaving the screen mid-round (`Tab`) keeps the round: coming back resumes it. Keys are read by
 physical position (`KeyboardEvent.code`), so the standard 2-set (dubeolsik) layout works on any
 hardware layout (QWERTY, AZERTY…) without an OS Korean IME. The on-screen keyboard highlights the
 next key and Shift, names the finger, and flashes wrong keys; the line composes live like an IME

@@ -265,9 +265,20 @@ impl Primer {
     /// The first lesson is always open; the next one opens once the previous is passed. A passed
     /// lesson stays open (a lesson inserted before it by a later release does not lock it).
     pub fn is_unlocked(&self, index: usize, passed: &HashSet<String>) -> bool {
-        let is_passed = |i: usize| self.lessons.get(i).is_some_and(|l| passed.contains(&l.id));
-        index < self.lessons.len() && (index == 0 || is_passed(index) || is_passed(index - 1))
+        opens_in_order(&self.lessons, |lesson| &lesson.id, index, passed)
     }
+}
+
+/// Lessons open in order: the first always, the next once the previous is passed. A passed lesson
+/// stays open (a lesson inserted before it by a later release does not lock it).
+pub(super) fn opens_in_order<T>(
+    lessons: &[T],
+    id: impl Fn(&T) -> &str,
+    index: usize,
+    passed: &HashSet<String>,
+) -> bool {
+    let is_passed = |i: usize| lessons.get(i).is_some_and(|l| passed.contains(id(l)));
+    index < lessons.len() && (index == 0 || is_passed(index) || is_passed(index - 1))
 }
 
 /// A lesson is passed when its whole round is typed with at least [`PASS_PERCENT`] accuracy.

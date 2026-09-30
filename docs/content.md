@@ -157,7 +157,7 @@ lesson, so that lesson has new jamo to present. `Primer::validate` checks all of
 `bundled_primer_is_valid` test (`crates/korean-core/src/typing/primer.rs`) runs it on the file.
 
 Drill targets are `hangul/<lesson id>/<line number>` (from 1). Passes are `settings` rows
-`hangul_passed/<lesson id>` (`korean_db::hangul`), one per lesson so that sync, which keeps the
+`hangul_passed/<lesson id>` (`korean_db::lessons`), one per lesson so that sync, which keeps the
 latest row per key, merges passes from several devices.
 
 ## Legacy Anki deck
