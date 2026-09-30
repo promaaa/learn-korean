@@ -8,7 +8,9 @@ Super+Z ─▶ hyprland bind ─▶ learn-korean --toggle ─▶ single-instance
 ```
 
 On X11 and Windows the app registers Super+Z itself (`tauri-plugin-global-shortcut`); on macOS it
-registers Ctrl+Option+Z, since Super there is Command and Command+Z is Undo.
+registers Ctrl+Option+Z, since Super there is Command and Command+Z is Undo. The Z is the key
+labelled Z in the keyboard layout active at start (AZERTY: the QWERTY W position). Clicking the
+Dock icon or opening the app again also brings the window back.
 
 ## Install
 

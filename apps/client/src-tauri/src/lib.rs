@@ -88,6 +88,14 @@ pub fn run() {
             );
             Ok(())
         })
-        .run(tauri::generate_context!())
-        .expect("error while running learn-korean");
+        .build(tauri::generate_context!())
+        .expect("error while building learn-korean")
+        .run(|_app, _event| {
+            // Opening the running app again (Dock icon, Finder, Spotlight, `open -a`) brings the
+            // window back; macOS sends this instead of starting a second instance.
+            #[cfg(target_os = "macos")]
+            if let tauri::RunEvent::Reopen { .. } = _event {
+                shell::apply(_app, shell::Launch::Show);
+            }
+        });
 }

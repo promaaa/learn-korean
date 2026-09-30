@@ -64,11 +64,20 @@ pub fn apply(app: &AppHandle, launch: Launch) {
 
 fn toggle(app: &AppHandle, window: WebviewWindow) -> tauri::Result<()> {
     if window.is_visible()? && window.is_focused()? {
-        window.hide()?;
-        sync::push_later(app);
+        hide(app, &window)?;
     } else {
         summon(app, window);
     }
+    Ok(())
+}
+
+/// Hides the window. On macOS the app is hidden too, as Cmd+H does, so the keyboard goes back
+/// to the previous app instead of staying with an app that has no visible window.
+fn hide(app: &AppHandle, window: &WebviewWindow) -> tauri::Result<()> {
+    window.hide()?;
+    #[cfg(target_os = "macos")]
+    app.hide()?;
+    sync::push_later(app);
     Ok(())
 }
 
@@ -84,6 +93,10 @@ fn summon(app: &AppHandle, window: WebviewWindow) {
 }
 
 fn show(window: &WebviewWindow, synced: bool) -> tauri::Result<()> {
+    // Unhides and activates the app hidden by `hide`; showing the window alone would leave it
+    // behind the active app, without the keyboard.
+    #[cfg(target_os = "macos")]
+    window.app_handle().show()?;
     window.show()?;
     window.unminimize()?;
     window.set_focus()?;
@@ -92,9 +105,57 @@ fn show(window: &WebviewWindow, synced: bool) -> tauri::Result<()> {
 
 #[tauri::command]
 pub fn hide_window(window: WebviewWindow) -> Result<(), String> {
-    window.hide().map_err(|e| e.to_string())?;
-    sync::push_later(window.app_handle());
-    Ok(())
+    hide(window.app_handle(), &window).map_err(|e| e.to_string())
+}
+
+/// Physical key (`Code`, a QWERTY position) that carries the letter Z in a macOS keyboard
+/// layout, e.g. `com.apple.keylayout.French-PC`: global shortcuts are registered by position,
+/// but the learner presses the key labelled Z.
+fn z_key_for_layout(layout: &str) -> tauri_plugin_global_shortcut::Code {
+    use tauri_plugin_global_shortcut::Code;
+    let name = layout.rsplit('.').next().unwrap_or(layout);
+    const AZERTY: [&str; 2] = ["French", "Belgian"];
+    const QWERTZ: [&str; 12] = [
+        "German",
+        "Swiss",
+        "Austrian",
+        "Czech",
+        "Slovak",
+        "Hungarian",
+        "Croatian",
+        "Slovenian",
+        "Serbian-Latin",
+        "Polish",
+        "Bosnian",
+        "Albanian",
+    ];
+    if name.contains("Dvorak") {
+        Code::Slash
+    } else if name.contains("QWERTY") || name == "PolishPro" {
+        Code::KeyZ
+    } else if AZERTY.iter().any(|l| name.starts_with(l)) {
+        Code::KeyW
+    } else if QWERTZ.iter().any(|l| name.starts_with(l)) {
+        Code::KeyY
+    } else {
+        Code::KeyZ
+    }
+}
+
+/// The current macOS keyboard layout id, if one is selected.
+#[cfg(target_os = "macos")]
+fn current_layout() -> Option<String> {
+    let out = std::process::Command::new("defaults")
+        .args([
+            "read",
+            "com.apple.HIToolbox",
+            "AppleCurrentKeyboardLayoutInputSourceID",
+        ])
+        .output()
+        .ok()?;
+    out.status
+        .success()
+        .then(|| String::from_utf8_lossy(&out.stdout).trim().to_owned())
 }
 
 /// Registers the global shortcut where the platform allows applications to grab global keys:
@@ -111,12 +172,18 @@ pub fn register_global_shortcut(app: &AppHandle) {
         log::info!("Wayland session: global shortcut is provided by the compositor");
         return;
     }
-    let (modifiers, label) = if cfg!(target_os = "macos") {
-        (Modifiers::CONTROL | Modifiers::ALT, "Ctrl+Option+Z")
+    let (modifiers, key, label) = if cfg!(target_os = "macos") {
+        #[cfg(target_os = "macos")]
+        let layout = current_layout().unwrap_or_default();
+        #[cfg(not(target_os = "macos"))]
+        let layout = String::new();
+        let key = z_key_for_layout(&layout);
+        log::info!("global shortcut: Ctrl+Option+Z is {key:?} in layout {layout:?}");
+        (Modifiers::CONTROL | Modifiers::ALT, key, "Ctrl+Option+Z")
     } else {
-        (Modifiers::SUPER, "Super+Z")
+        (Modifiers::SUPER, Code::KeyZ, "Super+Z")
     };
-    let shortcut = Shortcut::new(Some(modifiers), Code::KeyZ);
+    let shortcut = Shortcut::new(Some(modifiers), key);
     let plugin = tauri_plugin_global_shortcut::Builder::new()
         .with_handler(move |app, pressed, event| {
             if pressed == &shortcut && event.state() == ShortcutState::Pressed {
@@ -135,7 +202,8 @@ pub fn register_global_shortcut(app: &AppHandle) {
 
 #[cfg(test)]
 mod tests {
-    use super::Launch;
+    use super::{Launch, z_key_for_layout};
+    use tauri_plugin_global_shortcut::Code;
 
     #[test]
     fn no_argument_shows_the_window() {
@@ -154,5 +222,24 @@ mod tests {
             Launch::from_args(["--hidden", "--bogus", "--toggle"]),
             Launch::Toggle
         );
+    }
+
+    #[test]
+    fn z_is_found_where_each_layout_puts_it() {
+        for (layout, code) in [
+            ("com.apple.keylayout.US", Code::KeyZ),
+            ("com.apple.keylayout.ABC", Code::KeyZ),
+            ("com.apple.keylayout.French-PC", Code::KeyW),
+            ("com.apple.keylayout.French", Code::KeyW),
+            ("com.apple.keylayout.Belgian", Code::KeyW),
+            ("com.apple.keylayout.German", Code::KeyY),
+            ("com.apple.keylayout.SwissFrench", Code::KeyY),
+            ("com.apple.keylayout.Czech-QWERTY", Code::KeyZ),
+            ("com.apple.keylayout.PolishPro", Code::KeyZ),
+            ("com.apple.keylayout.Dvorak", Code::Slash),
+            ("", Code::KeyZ),
+        ] {
+            assert_eq!(z_key_for_layout(layout), code, "{layout}");
+        }
     }
 }
