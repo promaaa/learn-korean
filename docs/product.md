@@ -30,6 +30,11 @@ back resumes it (or restarts it, if another device's progress was merged meanwhi
 | Build | production | assemble the sentence from shuffled chunks |
 | Typing Gym (`Tab`) | typing | type Korean on a dubeolsik keyboard with live hints |
 
+A card never seen before is not asked at once: it is first shown on an **intro card**, its Korean
+spoken aloud with its English (and note); `Space` moves on. Its question comes a few cards later,
+so the first answer is never a guess. Nothing is recorded for the intro, and answers in the
+session of the intro count as Good at most, so a word is not known before a later session.
+
 After answering, every Korean word on the card (the line, Reply options, the placed Build chunks)
 is dotted underlined; hovering it shows its English, e.g. 했어요? → "did (하다)". The arrow keys
 (or `H J K L`) show them without the mouse: ← → word by word in reading order, ↑ ↓ to the nearest
@@ -95,7 +100,7 @@ coming back resumes it.
 | everything | every card, as soon as it is due or next in line |
 
 A word is known once its listening card has left FSRS's short learning steps (a correct answer
-again in a later session, or an easy first answer). A sentence waiting for its words is not
+again in a later session). A sentence waiting for its words is not
 served, even when due; its words not seen yet are introduced in its place, so the words taught
 first are the ones the next sentences need. Words that are forgotten (lapsed) pause their
 sentences until relearned. Lemmas without a word card (particles, the copula 이다) never block a

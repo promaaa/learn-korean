@@ -108,6 +108,14 @@ pub fn session_current(active: State<'_, ActiveSession>) -> Result<Current, Stri
     })
 }
 
+/// Dismisses the intro card of a new item; nothing is recorded until it is answered.
+#[tauri::command]
+pub fn session_seen(active: State<'_, ActiveSession>) -> Result<(), String> {
+    let mut guard = active.0.lock().map_err(|e| e.to_string())?;
+    let session = guard.as_mut().ok_or("no session")?;
+    session.seen().map_err(|e| e.to_string())
+}
+
 #[derive(Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Answered {

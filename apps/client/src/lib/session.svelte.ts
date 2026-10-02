@@ -1,6 +1,7 @@
 import {
   sessionAnswer,
   sessionCurrent,
+  sessionSeen,
   sessionStart,
   setFocus,
   type Answer,
@@ -98,6 +99,15 @@ export class SessionController {
   async next(): Promise<void> {
     if (this.phase !== "feedback") return;
     await this.#guard(() => this.#loadCurrent());
+  }
+
+  /** Leaves the intro card of a new item for the next card. */
+  async seen(): Promise<void> {
+    if (this.phase !== "exercise" || this.exercise?.prompt.type !== "intro") return;
+    await this.#guard(async () => {
+      await sessionSeen();
+      await this.#loadCurrent();
+    });
   }
 
   async #loadCurrent(): Promise<void> {

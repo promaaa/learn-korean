@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
   import Build from "../games/Build.svelte";
+  import Intro from "../games/Intro.svelte";
   import Listening from "../games/Listening.svelte";
   import Reply from "../games/Reply.svelte";
   import { formatInterval } from "../lib/format";
@@ -43,7 +44,11 @@
   const prompt = $derived(session.exercise?.prompt ?? null);
   const exerciseKey = $derived(session.exercise ? session.serial : 0);
   const choices = $derived(
-    prompt && prompt.type !== "build" ? prompt.options.length : (prompt?.chunks.length ?? 0),
+    prompt?.type === "build"
+      ? prompt.chunks.length
+      : prompt && "options" in prompt
+        ? prompt.options.length
+        : 0,
   );
 
   // A new card: reset the controls and speak it (the build game would give the answer away,
@@ -72,6 +77,16 @@
         { keys: "Space", label: "place" },
         { keys: "⌫", label: "undo" },
         { keys: "Enter", label: "check" },
+        hide,
+      ];
+    }
+    if (session.phase === "exercise" && prompt?.type === "intro") {
+      const words = Object.keys(prompt.glosses).length > 0;
+      return [
+        { keys: "Space", label: "next" },
+        ...(words ? [{ keys: "← ↑ ↓ →", label: "words" }] : []),
+        { keys: "R", label: "replay" },
+        focus,
         hide,
       ];
     }
@@ -177,6 +192,11 @@
     } else if (action.type === "confirm") void choose(cursor);
   }
 
+  function introAction(action: Action): void {
+    if (action.type === "continue" || action.type === "confirm") void session.seen();
+    else if (action.type === "move") browseWords(action.direction);
+  }
+
   /** Shows the gloss of the next word in `direction`, as if it were hovered. */
   function browseWords(direction: Direction): void {
     const words = [...(card?.querySelectorAll<HTMLElement>(WORD_SELECTOR) ?? [])];
@@ -199,7 +219,8 @@
     }
     switch (session.phase) {
       case "exercise":
-        if (prompt?.type === "build") buildAction(action);
+        if (prompt?.type === "intro") introAction(action);
+        else if (prompt?.type === "build") buildAction(action);
         else choiceAction(action);
         break;
       case "feedback":
@@ -248,6 +269,18 @@
             {cursor}
             audio={speaker.status}
             onpick={place}
+            onreplay={replay}
+          />
+        {:else if prompt?.type === "intro"}
+          <Intro
+            itemId={session.exercise.card.itemId}
+            image={session.exercise.image}
+            kind={session.exercise.kind}
+            korean={prompt.korean}
+            english={prompt.english}
+            note={prompt.note}
+            glosses={prompt.glosses}
+            audio={speaker.status}
             onreplay={replay}
           />
         {:else if prompt}
