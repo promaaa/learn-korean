@@ -16,6 +16,15 @@ export interface Card {
 }
 
 export type Prompt =
+  | {
+      /** A card never seen before, shown with its meaning before it is asked. */
+      type: "intro";
+      korean: string;
+      english: string;
+      note: string | null;
+      /** English of each Korean word, keyed by the word as displayed. */
+      glosses: Record<string, string>;
+    }
   | { type: "listening"; korean: string; options: string[] }
   | { type: "response"; korean: string; options: string[] }
   | { type: "build"; english: string; chunks: string[] };
@@ -105,6 +114,11 @@ export function sessionCurrent(): Promise<Current> {
 
 export function sessionAnswer(answer: Answer, elapsedMs: number): Promise<Answered> {
   return invoke("session_answer", { answer, elapsedMs });
+}
+
+/** Dismisses the intro card on screen; its question comes a few cards later. */
+export function sessionSeen(): Promise<void> {
+  return invoke("session_seen");
 }
 
 /** Speaks Korean text (synthesized in Rust, played natively). */

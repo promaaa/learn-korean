@@ -37,6 +37,8 @@ function backend({ total = 1, queue = [exercise, null], fail }: Backend = {}) {
       }
       case "session_start":
         return { total, due: 0, new: total, focus };
+      case "session_seen":
+        return null;
       case "session_current":
         return { exercise: queue.shift() ?? null, progress: latest } satisfies Current;
       case "session_answer":
@@ -121,6 +123,23 @@ describe("SessionController", () => {
     await s.answer({ type: "choice", index: 0 });
     const args = calls.find((c) => c.cmd === "session_answer")?.args as { elapsedMs: number };
     expect(args.elapsedMs).toBe(1_500);
+  });
+
+  it("leaves an intro card for the next card without answering it", async () => {
+    const intro: ExerciseView = {
+      ...exercise,
+      kind: "word",
+      prompt: { type: "intro", korean: "이거", english: "this", note: null, glosses: {} },
+    };
+    const calls = backend({ queue: [intro, exercise, null] });
+    const s = new SessionController(clock().now);
+    await s.start();
+    expect(s.exercise?.prompt.type).toBe("intro");
+    await s.next();
+    await s.seen();
+    expect(s.exercise?.prompt.type).toBe("listening");
+    await s.seen();
+    expect(calls.map((c) => c.cmd)).toEqual(["session_start", "session_current", "session_seen", "session_current"]);
   });
 
   it("drops a second answer while the first is in flight", async () => {

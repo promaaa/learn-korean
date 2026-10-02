@@ -1,12 +1,12 @@
 //! A running review session: serves exercises, checks answers, updates memory.
 
-use std::collections::{BTreeMap, HashMap, VecDeque};
+use std::collections::{BTreeMap, HashMap, HashSet, VecDeque};
 
 use serde::{Deserialize, Serialize};
 
 use super::exercise::{self, Exercise, ExerciseView, Expected, Prompt};
 use super::plan::{Card, Plan};
-use crate::content::{Glossary, Item};
+use crate::content::{Glossary, Item, Skill};
 use crate::rng::Rng;
 use crate::scheduler::{MemoryState, Rating, Scheduler};
 use crate::{progression, scoring};
@@ -80,6 +80,8 @@ pub enum SessionError {
     NoCurrentExercise,
     #[error("answer does not fit the exercise")]
     InvalidAnswer,
+    #[error("no intro card is on screen")]
+    NoIntro,
 }
 
 pub struct Session {
@@ -89,6 +91,8 @@ pub struct Session {
     states: HashMap<Card, MemoryState>,
     scheduler: Scheduler,
     retries: HashMap<Card, u8>,
+    /// Items whose intro card was shown in this session.
+    introduced: HashSet<String>,
     current: Option<Exercise>,
     rng: Rng,
     progress: Progress,
@@ -121,6 +125,7 @@ impl Session {
             states,
             scheduler,
             retries: HashMap::new(),
+            introduced: HashSet::new(),
             current: None,
             rng: Rng::new(seed),
             progress,
@@ -132,18 +137,39 @@ impl Session {
     }
 
     /// The exercise to play now; the same one until it is answered. `None` when finished.
+    ///
+    /// An item never answered is first shown on an intro card (see [`Session::seen`]), so its
+    /// first answer is not a guess.
     pub fn current(&mut self) -> Option<&ExerciseView> {
         if self.current.is_none() {
             let card = self.queue.pop_front()?;
             let item = &self.items[&card.item_id];
-            let pool: Vec<&Item> = self
-                .items
-                .values()
-                .filter(|o| o.id.split('/').next() == item.id.split('/').next())
-                .collect();
-            self.current = Some(exercise::build(&card, item, &pool, &mut self.rng));
+            let never_seen = card.skill == Skill::Listening && !self.states.contains_key(&card);
+            self.current = Some(
+                if never_seen && self.introduced.insert(card.item_id.clone()) {
+                    exercise::intro(&card, item, &self.glossary)
+                } else {
+                    let pool: Vec<&Item> = self
+                        .items
+                        .values()
+                        .filter(|o| o.id.split('/').next() == item.id.split('/').next())
+                        .collect();
+                    exercise::build(&card, item, &pool, &mut self.rng)
+                },
+            );
         }
         self.current.as_ref().map(|e| &e.view)
+    }
+
+    /// Dismisses the intro card on screen. Nothing is recorded: its card comes back to be
+    /// answered after a few others, as a missed card does.
+    pub fn seen(&mut self) -> Result<(), SessionError> {
+        let Some(exercise) = self.current.take_if(|e| e.expected == Expected::Seen) else {
+            return Err(SessionError::NoIntro);
+        };
+        let at = RETRY_GAP.min(self.queue.len());
+        self.queue.insert(at, exercise.view.card);
+        Ok(())
     }
 
     pub fn answer(
@@ -161,9 +187,13 @@ impl Session {
         let card = exercise.view.card;
         let item = &self.items[&card.item_id];
         let chunks = item.build_chunks().len();
-        let rating = scoring::grade(card.skill, correct, elapsed_ms, chunks);
         let previous = self.states.get(&card);
         let first_review = previous.is_none();
+        let mut rating = scoring::grade(card.skill, correct, elapsed_ms, chunks);
+        if self.introduced.contains(&card.item_id) {
+            // Introduced minutes ago: a quick answer is short-term memory, not yet recall.
+            rating = rating.min(Rating::Good);
+        }
         let reps = previous.map_or(0, |s| s.reps);
         let state = self
             .scheduler
@@ -192,7 +222,7 @@ impl Session {
         p.xp += u64::from(xp);
         let options: &[String] = match &exercise.view.prompt {
             Prompt::Response { options, .. } => options,
-            Prompt::Listening { .. } | Prompt::Build { .. } => &[],
+            Prompt::Listening { .. } | Prompt::Build { .. } | Prompt::Intro { .. } => &[],
         };
         let glosses = self.glossary.glosses(
             std::iter::once(item.korean.as_str()).chain(options.iter().map(String::as_str)),
@@ -202,7 +232,7 @@ impl Session {
                 correct,
                 correct_index: match exercise.expected {
                     Expected::Choice(index) => Some(index),
-                    Expected::Order(_) => None,
+                    Expected::Order(_) | Expected::Seen => None,
                 },
                 translations: exercise.translations,
                 glosses,
@@ -264,7 +294,8 @@ fn check(prompt: &Prompt, expected: &Expected, answer: &Answer) -> Result<bool, 
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::content::{ItemKind, Register, Skill};
+    use crate::content::{ItemKind, Register};
+    use crate::scheduler::MINUTE_MS;
 
     const NOW: i64 = 1_000_000_000;
 
@@ -289,29 +320,37 @@ mod tests {
         }
     }
 
-    fn session(n: usize) -> Session {
+    /// `n` listening cards, `seen` before (in learning steps) or never.
+    fn session_of(n: usize, seen: bool) -> Session {
         let items: Vec<Item> = (0..n)
             .map(|i| {
                 let korean = format!("{}예요.", char::from_u32(0xAC00 + i as u32).unwrap());
                 sentence(&format!("a/{i}"), &korean, &format!("E{i}"))
             })
             .collect();
+        let cards: Vec<Card> = items
+            .iter()
+            .map(|i| Card::new(&i.id, Skill::Listening))
+            .collect();
+        let scheduler = Scheduler::with_defaults(0);
+        let states = cards
+            .iter()
+            .filter(|_| seen)
+            .map(|c| {
+                let state = scheduler.review(None, Rating::Good, NOW - MINUTE_MS * 60, 0.5);
+                (c.clone(), state)
+            })
+            .collect();
         let plan = Plan {
-            cards: items
-                .iter()
-                .map(|i| Card::new(&i.id, Skill::Listening))
-                .collect(),
+            cards,
             due: 0,
             new: n,
         };
-        Session::new(
-            plan,
-            items,
-            HashMap::new(),
-            Scheduler::with_defaults(0),
-            Glossary::default(),
-            7,
-        )
+        Session::new(plan, items, states, scheduler, Glossary::default(), 7)
+    }
+
+    fn session(n: usize) -> Session {
+        session_of(n, true)
     }
 
     fn correct_index(s: &mut Session) -> usize {
@@ -332,7 +371,7 @@ mod tests {
             assert!(out.feedback.correct);
             assert_eq!(out.feedback.rating, Rating::Easy);
             assert_eq!(out.feedback.streak, expected_streak);
-            assert_eq!(out.state.reps, 1);
+            assert_eq!(out.state.reps, 2);
             assert!(
                 out.feedback.due_in_ms >= crate::scheduler::DAY_MS,
                 "easy graduates to days"
@@ -344,6 +383,58 @@ mod tests {
             (p.done, p.correct, p.best_streak, p.remaining),
             (3, 3, 3, 0)
         );
+    }
+
+    #[test]
+    fn a_new_card_is_introduced_then_asked_after_a_gap() {
+        let mut s = session_of(5, false);
+        let first = s.current().unwrap().clone();
+        let Prompt::Intro { english, .. } = &first.prompt else {
+            panic!("intro expected");
+        };
+        assert_eq!(english, "E0");
+        assert_eq!(
+            s.answer(&Answer::Choice { index: 0 }, 1_000, NOW),
+            Err(SessionError::InvalidAnswer)
+        );
+        s.seen().unwrap();
+        assert_eq!(
+            s.progress(),
+            Progress {
+                remaining: 5,
+                ..Progress::default()
+            }
+        );
+
+        // Intros of the next cards, then the first card's question, RETRY_GAP cards later.
+        for _ in 0..RETRY_GAP {
+            assert!(matches!(s.current().unwrap().prompt, Prompt::Intro { .. }));
+            s.seen().unwrap();
+        }
+        assert_eq!(s.current().unwrap().card, first.card);
+        assert_eq!(s.seen(), Err(SessionError::NoIntro));
+        let wrong = (correct_index(&mut s) + 1) % 4;
+        let out = s
+            .answer(&Answer::Choice { index: wrong }, 1_000, NOW)
+            .unwrap();
+        assert!(out.feedback.retry);
+
+        // Retried without a second intro; fast answers in the session of the intro are not Easy.
+        let mut ratings = Vec::new();
+        while let Some(view) = s.current() {
+            if matches!(view.prompt, Prompt::Intro { .. }) {
+                s.seen().unwrap();
+                continue;
+            }
+            let index = correct_index(&mut s);
+            ratings.push(
+                s.answer(&Answer::Choice { index }, 1_000, NOW)
+                    .unwrap()
+                    .feedback
+                    .rating,
+            );
+        }
+        assert_eq!(ratings, [Rating::Good; 5]);
     }
 
     #[test]

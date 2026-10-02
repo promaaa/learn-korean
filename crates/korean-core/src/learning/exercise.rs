@@ -1,18 +1,29 @@
 //! Turning a card into something to play.
 
+use std::collections::BTreeMap;
+
 use serde::Serialize;
 
 use super::plan::Card;
-use crate::content::{Item, ItemKind, Line, Skill};
+use crate::content::{Glossary, Item, ItemKind, Line, Skill};
 use crate::rng::Rng;
 
 /// Number of options in a multiple-choice exercise.
 pub const CHOICES: usize = 4;
 
-/// What the UI shows. The correct answer is never part of it.
+/// What the UI shows. The correct answer is never part of it, except on an intro card.
 #[derive(Debug, Clone, PartialEq, Serialize)]
 #[serde(tag = "type", rename_all = "camelCase")]
 pub enum Prompt {
+    /// A card never seen before: its Korean (spoken) and meaning, shown before it is asked.
+    #[serde(rename_all = "camelCase")]
+    Intro {
+        korean: String,
+        english: String,
+        note: Option<String>,
+        /// English of each word, as in `Feedback::glosses`.
+        glosses: BTreeMap<String, String>,
+    },
     /// Hear/read Korean, pick the English meaning.
     #[serde(rename_all = "camelCase")]
     Listening {
@@ -40,6 +51,8 @@ pub enum Expected {
     Choice(usize),
     /// Chunks in the right order (compared by text: repeated chunks are interchangeable).
     Order(Vec<String>),
+    /// An intro card: nothing to answer.
+    Seen,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
@@ -78,13 +91,34 @@ fn generated_distractors<'a>(item: &Item, pool: &[&'a Item], rng: &mut Rng) -> V
     candidates
 }
 
-pub fn build(card: &Card, item: &Item, pool: &[&Item], rng: &mut Rng) -> Exercise {
-    let view = |prompt| ExerciseView {
+fn view(card: &Card, item: &Item, prompt: Prompt) -> ExerciseView {
+    ExerciseView {
         card: card.clone(),
         kind: item.kind,
         image: item.image.is_some(),
         prompt,
-    };
+    }
+}
+
+pub fn intro(card: &Card, item: &Item, glossary: &Glossary) -> Exercise {
+    Exercise {
+        view: view(
+            card,
+            item,
+            Prompt::Intro {
+                korean: item.korean.clone(),
+                english: item.english.clone(),
+                note: item.note.clone(),
+                glosses: glossary.glosses([item.korean.as_str()]),
+            },
+        ),
+        expected: Expected::Seen,
+        translations: Vec::new(),
+    }
+}
+
+pub fn build(card: &Card, item: &Item, pool: &[&Item], rng: &mut Rng) -> Exercise {
+    let view = |prompt| view(card, item, prompt);
     match card.skill {
         Skill::Listening => {
             let mut options: Vec<String> = if item.distractors.is_empty() {
@@ -179,14 +213,14 @@ mod tests {
     fn options(ex: &Exercise) -> &[String] {
         match &ex.view.prompt {
             Prompt::Listening { options, .. } | Prompt::Response { options, .. } => options,
-            Prompt::Build { .. } => panic!("not a choice prompt"),
+            Prompt::Build { .. } | Prompt::Intro { .. } => panic!("not a choice prompt"),
         }
     }
 
     fn correct(ex: &Exercise) -> usize {
         match ex.expected {
             Expected::Choice(i) => i,
-            Expected::Order(_) => panic!("not a choice exercise"),
+            Expected::Order(_) | Expected::Seen => panic!("not a choice exercise"),
         }
     }
 

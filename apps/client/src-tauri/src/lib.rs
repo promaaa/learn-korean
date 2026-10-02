@@ -48,6 +48,7 @@ pub fn run() {
             session::session_start,
             session::session_current,
             session::session_answer,
+            session::session_seen,
             session::set_focus,
             speech::speak,
             images::item_image,
